@@ -10,7 +10,34 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: inquiries
+    description: Inquiry and booking request operations
 paths:
+  /inquiries:
+    post:
+      operationId: createInquiry
+      tags: [inquiries]
+      summary: Submit an inquiry or booking request
+      description: Stores an inquiry/booking request for manual follow-up
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InquiryInput"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Inquiry"
+        "400":
+          description: Invalid input
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ApiErrorMessage"
   /healthz:
     get:
       operationId: healthCheck
@@ -33,4 +60,57 @@ components:
           type: string
       required:
         - status
+    ApiErrorMessage:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
+    InquiryInput:
+      type: object
+      required: [name, email, inquiryType, message]
+      properties:
+        name:
+          type: string
+          minLength: 1
+        email:
+          type: string
+          minLength: 3
+        phone:
+          type: string
+        inquiryType:
+          type: string
+          enum: [consultation, treatment, clinic, personal-treatment, general]
+        interest:
+          type: string
+          description: Treatment, package, practitioner, or clinic of interest
+        preferredLocation:
+          type: string
+          description: e.g. Ixtapa-Zihuatanejo Mexico, Penticton Canada, In-home
+        message:
+          type: string
+          minLength: 1
+    Inquiry:
+      type: object
+      required: [id, name, email, inquiryType, message, createdAt]
+      properties:
+        id:
+          type: number
+        name:
+          type: string
+        email:
+          type: string
+        phone:
+          type: ["string", "null"]
+        inquiryType:
+          type: string
+        interest:
+          type: ["string", "null"]
+        preferredLocation:
+          type: ["string", "null"]
+        message:
+          type: string
+        createdAt:
+          type: string
 

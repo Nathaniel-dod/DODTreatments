@@ -1,0 +1,120 @@
+import { Link } from 'wouter';
+import { Seo } from '@/components/Seo';
+import { MapPin, ArrowRight } from 'lucide-react';
+
+export default function Clinics() {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'MedicalWebPage',
+      name: 'Doc of Detox Treatment Clinics',
+      description: 'Find Doc of Detox treatment clinics in Ixtapa-Zihuatanejo México and Penticton BC Canada. Advanced energy medicine at world-class facilities.',
+      lastReviewed: '2025-01-15',
+      reviewedBy: {
+        '@type': 'Person',
+        name: 'Dr. Darrell Wolfe',
+        honorificSuffix: 'N.D.',
+        jobTitle: 'Doctor of Naturopathic Medicine',
+      },
+    },
+  ];
+
+  return (
+    <>
+      <Seo
+        title="Clinics | Doc of Detox Treatment Centers"
+        description="Experience advanced energy medicine treatments at our clinics in Ixtapa-Zihuatanejo México (5-Star Healing & Training Retreat) and Penticton BC Canada."
+        path="/clinics"
+        structuredData={structuredData}
+      />
+
+      {/* Hero */}
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
+              Our Clinics
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              Experience world-class advanced energy medicine at our healing centers in México and Canada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Clinic Cards */}
+      <section className="pb-20 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            
+            {/* Ixtapa */}
+            <Link href="/clinics/ixtapa-zihuatanejo">
+              <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
+                <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <MapPin className="w-24 h-24 text-primary/40" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
+                    5-Star Healing & Training Retreat
+                  </div>
+                  <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h2>
+                  <p className="text-muted-foreground mb-4">Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe</p>
+                  <p className="text-sm text-foreground/80 leading-relaxed mb-6">
+                    Nestled within the captivating landscapes of Ixtapa-Zihuatanejo, Mexico, indulge in a beautiful picturesque jungle backdrop with life-changing, life-saving amenities as you immerse your whole being into our 5 Star Health & Healing Retreat.
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                    Learn More <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Penticton */}
+            <Link href="/clinics/penticton">
+              <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
+                <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 relative">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <MapPin className="w-24 h-24 text-primary/40" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
+                    Professional Clinic
+                  </div>
+                  <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Penticton, BC Canada</h2>
+                  <p className="text-muted-foreground mb-4">Hosted by Master Practitioner Rita Marialaki</p>
+                  <p className="text-sm text-foreground/80 leading-relaxed mb-6">
+                    Experience advanced energy medicine treatments at our Penticton clinic, where Master Practitioner Rita Marialaki provides personalized Wolfe Non-Surgical therapy and comprehensive health consultations in a professional, welcoming environment.
+                  </p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                    Learn More <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="pb-20 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Find More Practitioners</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Search our global network of certified practitioners through the BraveHeartNation directory.
+            </p>
+            <Link href="/practitioners">
+              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
+                Search Practitioners
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

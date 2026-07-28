@@ -1,0 +1,150 @@
+import { Link } from 'wouter';
+import { Seo } from '@/components/Seo';
+import { Button } from '@/components/ui/button';
+import { CheckCircle2, ArrowRight } from 'lucide-react';
+
+const treatments = [
+  'Abdominal Lift', 'Ankle Restoration', 'Arthritis - Joint Restoration', 'Breast Restoration',
+  'Carpal Tunnel Restoration', 'Eye Restoration', 'Face Lift', 'Frozen Shoulder',
+  'Hearing Loss', 'Heart Release', 'Hip Restoration', 'Joint Replacement Prevention',
+  'Knee Restoration', 'Lung Restoration', 'Neck Sprains & Strains', 'Pain-Free Pregnancy',
+  'Pelvic Clearance', 'Post Surgery Scar Tissue Removal', 'Scoliosis', 'Sinus Restoration',
+  'Slipped, Bulged or Compressed Disc', 'Spinal Restoration', 'Surgery Prevention',
+  'Tennis Elbow', 'TMJ Restoration', 'Trigeminal Neuralgia', 'Whiplash', 'And more upon request',
+];
+
+const conditions = [
+  'Abdominal Pain', 'Ankle Problems', 'Back Pain', 'Bladder Conditions',
+  'Bone Spurs', 'Bursitis', 'Disc Problems', 'Displaced Calcium',
+  'Fibroids & Cysts', 'Fibromyalgia', 'Frozen Neck', 'Headache & Migraines',
+  'Hip Problems', 'Knee Problems', 'Muscle Spasm', 'Neck Pain',
+  'Nerve Pain', 'Numbness & Tingling', 'Osteoarthritis', 'Overuse Syndrome',
+  'Pregnancy Complications', 'Prostate Conditions', 'Rheumatoid Arthritis', 'Sciatica',
+  'Shin Splints', 'Sports Injuries', 'Sprains & Strains', 'Tendinitis', 'And more upon request',
+];
+
+export default function WolfeNonSurgical() {
+  const structuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: 'Wolfe Non-Surgical',
+      description: "The World's Most Powerful Bodywork. Addresses scar tissue, inflammation, calcification, and crystallization for rapid pain relief and healing.",
+      image: 'https://docofdetoxtreatments.com/images/hero-treatments.jpg',
+      url: 'https://docofdetoxtreatments.com/treatments/wolfe-non-surgical',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'MedicalWebPage',
+      name: 'Wolfe Non-Surgical Bodywork Treatment',
+      description: 'Non-invasive bodywork therapy targeting scar tissue, inflammation, and calcification for pain relief and healing in 1-3 sessions.',
+      lastReviewed: '2025-01-15',
+      reviewedBy: {
+        '@type': 'Person',
+        name: 'Dr. Darrell Wolfe',
+        honorificSuffix: 'N.D.',
+        jobTitle: 'Doctor of Naturopathic Medicine',
+      },
+    },
+  ];
+
+  return (
+    <>
+      <Seo
+        title="Wolfe Non-Surgical | The World's Most Powerful Bodywork"
+        description="Wolfe Non-Surgical addresses scar tissue, inflammation, calcification, and crystallization that create pain and disease. Reverse issues in 1-3 treatments."
+        path="/treatments/wolfe-non-surgical"
+        structuredData={structuredData}
+      />
+
+      {/* Hero */}
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+              Bodywork Therapy
+            </div>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
+              Wolfe Non-Surgical
+            </h1>
+            <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
+              The World's Most Powerful Bodywork
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the scar tissue, inflammation, calcification, and crystallization that create physical blocks.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Works */}
+      <section className="py-20 md:py-32 bg-card/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Why Wolfe Non-Surgical Works</h2>
+            <div className="glass-panel rounded-2xl p-8 md:p-12">
+              <p className="text-lg text-foreground/90 leading-relaxed">
+                You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the <strong>scar tissue, inflammation, calcification, and crystallization</strong> that create physical blocks. These blocks are the underlying source of aches, pains, lumps, bumps, and disease; by focusing on this root cause, Wolfe Non-Surgical practitioners can truly <strong>reverse issues in just a few treatments—and sometimes only one.</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Treatments List */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Wolfe Non-Surgical Treatments</h2>
+          <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {treatments.map((treatment, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">{treatment}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Conditions */}
+      <section className="py-20 md:py-32 bg-card/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Effective On All Joints & Organs</h2>
+          <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {conditions.map((condition, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-sm">{condition}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non-Surgical</h2>
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Find a certified practitioner near you or book a consultation to learn more about how Wolfe Non-Surgical can help you.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/practitioners">
+                <Button size="lg" className="gold-glow">Find a Practitioner Near You</Button>
+              </Link>
+              <Link href="/consultations">
+                <Button size="lg" variant="outline">Book Consultation</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
