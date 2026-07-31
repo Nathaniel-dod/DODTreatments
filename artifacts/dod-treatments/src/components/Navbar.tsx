@@ -5,10 +5,6 @@ import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Treatments', href: '/treatments' },
-  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical' },
-  { name: 'CellSonic', href: '/treatments/cellsonic-regeneration' },
-  { name: 'Cardio MedBed', href: '/treatments/cardio-medbed' },
-  { name: 'Consultations', href: '/treatments/consultations' },
   { name: 'Personal Treatments & Training', href: '/personal-treatment' },
   { name: 'Clinics', href: '/clinics' },
   { name: 'DOD5Star Ixtapa', href: '/clinics/ixtapa-zihuatanejo' },
