@@ -76,20 +76,20 @@
   --elevate-2: rgba(0, 0, 0, 0.08);
 
   /* Deep forest teal background */
-  --background: 218 45% 8%;
+  --background: 218 40% 14%;
   --foreground: 38 55% 92%;
 
   /* Borders */
-  --border: 218 30% 18%;
-  --input: 218 25% 25%;
+  --border: 218 28% 26%;
+  --input: 218 25% 32%;
   --ring: 42 96% 65%;
 
   /* Glass panels */
-  --card: 218 40% 12%;
+  --card: 218 36% 18%;
   --card-foreground: 38 55% 92%;
-  --card-border: 218 30% 20%;
+  --card-border: 218 28% 28%;
 
-  --popover: 218 42% 10%;
+  --popover: 218 38% 16%;
   --popover-foreground: 38 55% 92%;
   --popover-border: 218 30% 18%;
 
@@ -102,7 +102,7 @@
   --secondary-foreground: 218 45% 12%;
 
   /* Muted teal */
-  --muted: 218 35% 15%;
+  --muted: 218 32% 21%;
   --muted-foreground: 38 25% 70%;
 
   /* Light gold accent */
@@ -233,9 +233,9 @@
       /* fine grain noise */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
       /* brushed-metal diagonal sheen */
-      linear-gradient(115deg, transparent 0%, rgba(148, 180, 226, 0.05) 28%, transparent 42%, rgba(148, 180, 226, 0.035) 62%, transparent 78%),
+      linear-gradient(115deg, transparent 0%, rgba(163, 192, 233, 0.07) 28%, transparent 42%, rgba(163, 192, 233, 0.05) 62%, transparent 78%),
       /* cool steel vertical depth */
-      linear-gradient(180deg, hsl(218 42% 11%) 0%, hsl(218 45% 8%) 34%, hsl(220 48% 6%) 100%);
+      linear-gradient(180deg, hsl(218 38% 18%) 0%, hsl(218 40% 14%) 34%, hsl(220 42% 11%) 100%);
     background-attachment: fixed;
   }
 }
