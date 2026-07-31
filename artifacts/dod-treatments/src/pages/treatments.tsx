@@ -3,6 +3,45 @@ import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Globe, MapPin } from 'lucide-react';
 
+const treatmentProducts = [
+  {
+    href: '/treatments/wolfe-non-surgical',
+    name: 'Wolfe Non-Surgical',
+    category: 'Bodywork Therapy',
+    tagline: "The World's Most Powerful Bodywork",
+    blurb: 'Addresses scar tissue, inflammation, calcification, and crystallization — reversing the root cause of pain in just a few treatments.',
+    priceLabel: 'Inquire',
+    glyph: '✦',
+  },
+  {
+    href: '/treatments/cellsonic-regeneration',
+    name: 'CellSonic Regeneration ESWT',
+    category: 'Shock Wave Therapy',
+    tagline: 'Cell & Tissue Regeneration',
+    blurb: 'Non-invasive shock wave therapy promoting tissue regeneration, pain relief, and accelerated healing across the whole body.',
+    priceLabel: 'Inquire',
+    glyph: '◆',
+  },
+  {
+    href: '/treatments/cardio-medbed',
+    name: 'Cardio MedBed EECP',
+    category: 'Cardiovascular Therapy',
+    tagline: 'Heart & Circulatory Regeneration',
+    blurb: 'FDA-approved Enhanced External Counter Pulsation therapy, clinically proven to increase blood flow and cardiovascular health.',
+    priceLabel: 'Inquire',
+    glyph: '❖',
+  },
+  {
+    href: '/treatments/consultations',
+    name: 'Health Consultations',
+    category: 'Personalized Guidance',
+    tagline: 'Your Roadmap to Total Regeneration',
+    blurb: 'One-hour consultations with Dr. Darrell Wolfe or Master Practitioners — emotional, nutritional, Perfect Day, and water fasting.',
+    priceLabel: '$450 with Dr. Wolfe',
+    glyph: '✦',
+  },
+];
+
 export default function Treatments() {
   const structuredData = [
     {
@@ -46,112 +85,30 @@ export default function Treatments() {
       {/* Treatment Cards */}
       <section className="pb-20 md:pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12 max-w-6xl mx-auto">
-            
-            {/* Wolfe Non-Surgical */}
-            <div className="glass-panel rounded-3xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
-                <div>
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    Bodywork Therapy
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {treatmentProducts.map((product) => (
+              <Link key={product.href} href={product.href}>
+                <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
+                  <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative">
+                    <span className="text-6xl gold-gradient">{product.glyph}</span>
+                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/60 backdrop-blur-sm text-primary text-xs font-medium">
+                      {product.category}
+                    </span>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Wolfe Non-Surgical</h2>
-                  <p className="text-lg text-foreground/70 font-medium mb-4">
-                    The World's Most Powerful Bodywork
-                  </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the scar tissue, inflammation, calcification, and crystallization that create physical blocks. These blocks are the underlying source of aches, pains, lumps, bumps, and disease; by focusing on this root cause, Wolfe Non-Surgical practitioners can truly reverse issues in just a few treatments—and sometimes only one.
-                  </p>
-                  <Link href="/treatments/wolfe-non-surgical">
-                    <Button size="lg">
-                      Learn More <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
-                </div>
-                <div className="aspect-[4/3] lg:aspect-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                  <span className="text-8xl gold-gradient">✦</span>
-                </div>
-              </div>
-            </div>
-
-            {/* CellSonic */}
-            <div className="glass-panel rounded-3xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
-                <div className="order-2 lg:order-1 aspect-[4/3] lg:aspect-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                  <span className="text-8xl gold-gradient">◆</span>
-                </div>
-                <div className="order-1 lg:order-2">
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    Shock Wave Therapy
+                  <div className="p-5 flex flex-col flex-1">
+                    <h2 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h2>
+                    <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
+                    <div className="flex items-center justify-between mt-auto">
+                      <span className="text-sm font-medium text-primary">{product.priceLabel}</span>
+                      <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
+                        View <ArrowRight className="w-4 h-4" />
+                      </span>
+                    </div>
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">CellSonic Regeneration ESWT</h2>
-                  <p className="text-lg text-foreground/70 font-medium mb-4">
-                    Extracorporeal Shock Wave Therapy for Cell & Tissue Regeneration
-                  </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power, promoting tissue regeneration, pain relief, and accelerated healing. As a non-invasive therapy, it is widely used in orthopedics, sports medicine, urology, and rehabilitation, helping restore your body's natural balance and vitality.
-                  </p>
-                  <Link href="/treatments/cellsonic-regeneration">
-                    <Button size="lg">
-                      Learn More <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
                 </div>
-              </div>
-            </div>
-
-            {/* Cardio MedBed */}
-            <div className="glass-panel rounded-3xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
-                <div>
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    Cardiovascular Therapy
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Cardio MedBed EECP</h2>
-                  <p className="text-lg text-foreground/70 font-medium mb-4">
-                    Complete Regeneration Of Heart & Circulatory System
-                  </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Enhanced External Counter Pulsation (EECP) – A Non-Invasive Therapy Backed by Science. EECP is an internationally recognized, non-invasive treatment with clinically proven benefits for cardiovascular health. FDA-Approved (USA), endorsed by the European Society of Cardiology (ESC), and clinically validated through studies confirming EECP's effectiveness in patients with coronary artery disease. This technology is safe, medically approved, and widely used in leading cardiology centers worldwide.
-                  </p>
-                  <Link href="/treatments/cardio-medbed">
-                    <Button size="lg">
-                      Learn More <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
-                </div>
-                <div className="aspect-[4/3] lg:aspect-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                  <span className="text-8xl gold-gradient">❖</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Consultations */}
-            <div className="glass-panel rounded-3xl overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
-                <div>
-                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                    Personalized Guidance
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Health Consultations</h2>
-                  <p className="text-lg text-foreground/70 font-medium mb-4">
-                    Your Personalized Roadmap to Total Regeneration
-                  </p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Every treatment plan starts with the right guidance. Book a personalized 1-hour consultation with Dr. Darrell Wolfe ($450, including lifetime support), or choose an Emotional, Perfect Day, Nutritional, or Water Fasting consultation with Master Practitioners Sandra and Rita.
-                  </p>
-                  <Link href="/treatments/consultations">
-                    <Button size="lg">
-                      Explore Consultations <ArrowRight className="ml-2 w-5 h-5" />
-                    </Button>
-                  </Link>
-                </div>
-                <div className="aspect-[4/3] lg:aspect-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
-                  <span className="text-8xl gold-gradient">✦</span>
-                </div>
-              </div>
-            </div>
-
+              </Link>
+            ))}
           </div>
         </div>
       </section>
