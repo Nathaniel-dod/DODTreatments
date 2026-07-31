@@ -294,18 +294,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Practitioner Finder CTA */}
-      <section className="py-20 md:py-32 bg-card/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Find a Practitioner Near You</h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Access our global network of certified practitioners through the BraveHeartNation directory.
-          </p>
-          <Link href="/practitioners">
-            <Button size="lg" variant="outline">Search Practitioners</Button>
-          </Link>
-        </div>
-      </section>
     </>
   );
 }
