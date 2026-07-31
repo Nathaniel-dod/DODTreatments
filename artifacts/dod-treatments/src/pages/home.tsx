@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, MapPin, User } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Globe, MapPin, User } from 'lucide-react';
 
 export default function Home() {
   const structuredData = [
@@ -207,7 +207,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Ixtapa */}
             <Link href="/clinics/ixtapa-zihuatanejo">
               <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
@@ -241,6 +241,35 @@ export default function Home() {
                   <p className="text-sm text-foreground/70 mb-4">Hosted by Master Practitioner Rita Marialaki</p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            {/* Practitioner Map */}
+            <Link href="/practitioners">
+              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/10 relative">
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 opacity-25"
+                    style={{
+                      backgroundImage: `url(${import.meta.env.BASE_URL}images/world-map.svg)`,
+                      backgroundSize: '160% auto',
+                      backgroundPosition: 'center 40%',
+                      backgroundRepeat: 'no-repeat',
+                    }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Globe className="w-16 h-16 text-primary/40" />
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Practitioner Map</h3>
+                  <p className="text-muted-foreground mb-4">Certified Practitioners Worldwide</p>
+                  <p className="text-sm text-foreground/70 mb-4">Search the BraveHeartNation directory near you</p>
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                    Find a Practitioner <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </div>
