@@ -208,6 +208,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 45 Years of Functional Medicine */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 gold-gradient">45 Years in the Trenches of Functional Medicine</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              Wolfe Non-Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. Personalized to each patient, these strategies have helped reverse the so-called irreversible in thousands of people living with chronic conditions.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Together they address healing at every level — from the cells to inflammation, scar tissue, calcification, emotions, and nutrition — for true whole-body regeneration.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Personal Treatment CTA */}
       <section className="py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
