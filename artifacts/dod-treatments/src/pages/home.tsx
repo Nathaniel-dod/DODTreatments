@@ -86,7 +86,7 @@ export default function Home() {
       </section>
 
       {/* Quick Navigation */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             <Link href="/treatments">
@@ -128,7 +128,7 @@ export default function Home() {
 
 
       {/* Clinics */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-20 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4 gold-gradient">Our Clinics</h2>
@@ -209,7 +209,7 @@ export default function Home() {
       </section>
 
       {/* 45 Years of Functional Medicine */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 gold-gradient">45 Years in the Trenches of Functional Medicine</h2>
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* Personal Treatment CTA */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <User className="w-16 h-16 mx-auto mb-6 text-primary" />
