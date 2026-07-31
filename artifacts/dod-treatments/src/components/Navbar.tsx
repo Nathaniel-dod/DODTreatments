@@ -5,8 +5,15 @@ import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Treatments', href: '/treatments' },
+  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical' },
+  { name: 'CellSonic', href: '/treatments/cellsonic-regeneration' },
+  { name: 'Cardio MedBed', href: '/treatments/cardio-medbed' },
+  { name: 'Consultations', href: '/treatments/consultations' },
   { name: 'Personal Treatments & Training', href: '/personal-treatment' },
-  { name: 'DOD5Star', href: '/clinics/ixtapa-zihuatanejo' },
+  { name: 'Clinics', href: '/clinics' },
+  { name: 'DOD5Star Ixtapa', href: '/clinics/ixtapa-zihuatanejo' },
+  { name: 'Penticton', href: '/clinics/penticton' },
+  { name: 'Practitioners', href: '/practitioners' },
 ];
 
 export function Navbar() {
@@ -16,7 +23,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between gap-2 min-h-20 py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-accent to-primary/80 flex items-center justify-center shadow-lg">
@@ -29,12 +36,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex flex-wrap items-center justify-center gap-y-1 flex-1 px-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                className={`px-2.5 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
                   location === item.href || location.startsWith(item.href + '/')
                     ? 'bg-primary/10 text-primary'
                     : 'text-foreground/80 hover:text-foreground hover:bg-white/5'
@@ -49,7 +56,7 @@ export function Navbar() {
           <div className="hidden lg:flex items-center space-x-3">
             <a href="tel:1-855-900-4544" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span className="hidden xl:inline">1-855-900-4544</span>
+              <span className="hidden 2xl:inline whitespace-nowrap">1-855-900-4544</span>
             </a>
             <Link href="/treatments/consultations">
               <Button size="sm" className="gold-glow">Book Consultation</Button>
