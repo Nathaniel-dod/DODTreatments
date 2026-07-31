@@ -160,7 +160,7 @@ export default function CardioMedBed() {
               <Link href="/clinics">
                 <Button size="lg" className="gold-glow">Find a Clinic</Button>
               </Link>
-              <Link href="/consultations">
+              <Link href="/treatments/consultations">
                 <Button size="lg" variant="outline">Book Consultation</Button>
               </Link>
             </div>

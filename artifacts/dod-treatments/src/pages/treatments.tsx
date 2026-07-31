@@ -126,6 +126,32 @@ export default function Treatments() {
               </div>
             </div>
 
+            {/* Consultations */}
+            <div className="glass-panel rounded-3xl overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 p-8 md:p-12">
+                <div>
+                  <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                    Personalized Guidance
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold mb-4">Health Consultations</h2>
+                  <p className="text-lg text-foreground/70 font-medium mb-4">
+                    Your Personalized Roadmap to Total Regeneration
+                  </p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Every treatment plan starts with the right guidance. Book a personalized 1-hour consultation with Dr. Darrell Wolfe ($450, including lifetime support), or choose an Emotional, Perfect Day, Nutritional, or Water Fasting consultation with Master Practitioners Sandra and Rita.
+                  </p>
+                  <Link href="/treatments/consultations">
+                    <Button size="lg">
+                      Explore Consultations <ArrowRight className="ml-2 w-5 h-5" />
+                    </Button>
+                  </Link>
+                </div>
+                <div className="aspect-[4/3] lg:aspect-auto rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center">
+                  <span className="text-8xl gold-gradient">✦</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -139,7 +165,7 @@ export default function Treatments() {
               Book a consultation with Dr. Darrell Wolfe or one of our Master Practitioners to create your personalized treatment plan.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/consultations">
+              <Link href="/treatments/consultations">
                 <Button size="lg" className="gold-glow">Book Consultation</Button>
               </Link>
               <Link href="/practitioners">

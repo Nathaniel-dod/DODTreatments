@@ -138,7 +138,7 @@ export default function WolfeNonSurgical() {
               <Link href="/practitioners">
                 <Button size="lg" className="gold-glow">Find a Practitioner Near You</Button>
               </Link>
-              <Link href="/consultations">
+              <Link href="/treatments/consultations">
                 <Button size="lg" variant="outline">Book Consultation</Button>
               </Link>
             </div>

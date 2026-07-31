@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Treatments', href: '/treatments' },
-  { name: 'Consultations', href: '/consultations' },
   { name: 'Clinics', href: '/clinics' },
   { name: 'Personal Treatment', href: '/personal-treatment' },
   { name: 'Find Practitioners', href: '/practitioners' },
@@ -53,7 +52,7 @@ export function Navbar() {
               <Phone className="w-4 h-4" />
               <span className="hidden xl:inline">1-855-900-4544</span>
             </a>
-            <Link href="/consultations">
+            <Link href="/treatments/consultations">
               <Button size="sm" className="gold-glow">Book Consultation</Button>
             </Link>
           </div>
@@ -92,7 +91,7 @@ export function Navbar() {
                 <Phone className="w-4 h-4" />
                 1-855-900-4544
               </a>
-              <Link href="/consultations" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/treatments/consultations" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full">Book Consultation</Button>
               </Link>
             </div>

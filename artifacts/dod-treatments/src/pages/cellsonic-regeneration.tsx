@@ -149,7 +149,7 @@ export default function CellSonicRegeneration() {
               <Link href="/practitioners">
                 <Button size="lg" className="gold-glow">Find a CellSonic Practitioner</Button>
               </Link>
-              <Link href="/consultations">
+              <Link href="/treatments/consultations">
                 <Button size="lg" variant="outline">Book Consultation</Button>
               </Link>
             </div>

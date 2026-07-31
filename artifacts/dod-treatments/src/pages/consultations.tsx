@@ -44,13 +44,13 @@ export default function Consultations() {
       description:
         '1-hour personalized health consultation with Dr. Darrell Wolfe including lifetime support. Step-by-step strategy covering nutritional, emotional, and physical health.',
       image: 'https://docofdetoxtreatments.com/images/og-default.jpg',
-      url: 'https://docofdetoxtreatments.com/consultations',
+      url: 'https://docofdetoxtreatments.com/treatments/consultations',
       offers: {
         '@type': 'Offer',
         price: 450,
         priceCurrency: 'USD',
         availability: 'https://schema.org/InStock',
-        url: 'https://docofdetoxtreatments.com/consultations',
+        url: 'https://docofdetoxtreatments.com/treatments/consultations',
       },
     },
     {
@@ -81,7 +81,8 @@ export default function Consultations() {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://docofdetoxtreatments.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Consultations', item: 'https://docofdetoxtreatments.com/consultations' },
+        { '@type': 'ListItem', position: 2, name: 'Treatments', item: 'https://docofdetoxtreatments.com/treatments' },
+        { '@type': 'ListItem', position: 3, name: 'Consultations', item: 'https://docofdetoxtreatments.com/treatments/consultations' },
       ],
     },
   ];
@@ -91,7 +92,7 @@ export default function Consultations() {
       <Seo
         title="Health Consultations | Doc of Detox"
         description="Book a personalized $450 consultation with Dr. Darrell Wolfe including lifetime support, or choose Emotional, Perfect Day, Nutritional, or Water Fasting consultations."
-        path="/consultations"
+        path="/treatments/consultations"
         structuredData={structuredData}
       />
 

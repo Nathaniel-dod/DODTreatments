@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
+import { Redirect, Route, Switch, Router as WouterRouter } from 'wouter';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 import Home from '@/pages/home';
@@ -30,7 +30,10 @@ function Router() {
           <Route path="/treatments/wolfe-non-surgical" component={WolfeNonSurgical} />
           <Route path="/treatments/cellsonic-regeneration" component={CellSonicRegeneration} />
           <Route path="/treatments/cardio-medbed" component={CardioMedBed} />
-          <Route path="/consultations" component={Consultations} />
+          <Route path="/treatments/consultations" component={Consultations} />
+          <Route path="/consultations">
+            <Redirect to="/treatments/consultations" replace />
+          </Route>
           <Route path="/clinics" component={Clinics} />
           <Route path="/clinics/ixtapa-zihuatanejo" component={IxtapaZihuatanejo} />
           <Route path="/clinics/penticton" component={Penticton} />

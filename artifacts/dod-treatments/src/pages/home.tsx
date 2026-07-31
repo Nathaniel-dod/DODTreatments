@@ -75,7 +75,7 @@ export default function Home() {
                   Explore Treatments <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/consultations">
+              <Link href="/treatments/consultations">
                 <Button size="lg" variant="outline" className="text-lg px-8 h-14">
                   Book Consultation
                 </Button>
