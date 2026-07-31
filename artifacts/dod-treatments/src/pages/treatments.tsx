@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe, MapPin } from 'lucide-react';
 
 export default function Treatments() {
   const structuredData = [
@@ -152,6 +152,65 @@ export default function Treatments() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Clinics & Practitioner Finder */}
+      <section className="pb-20 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Where to Experience These Treatments</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Visit one of our destination clinics or find a certified practitioner near you.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <Link href="/clinics/ixtapa-zihuatanejo">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium text-primary">Ixtapa-Zihuatanejo, México</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">5-Star Healing & Training Retreat</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  A luxury oceanside retreat hosted by Dr. Darrell Wolfe and Dr. Sage Wolfe — immersive treatment and training for total-body transformation.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  Visit the Retreat <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/clinics/penticton">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <div className="flex items-center gap-2 mb-4">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium text-primary">Penticton, BC Canada</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Penticton Clinic</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Wolfe Non-Surgical treatments and health consultations in British Columbia, hosted by Master Practitioner Rita Marialaki.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  Explore the Clinic <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/practitioners">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <div className="flex items-center gap-2 mb-4">
+                  <Globe className="w-5 h-5 text-primary" />
+                  <span className="text-sm font-medium text-primary">Worldwide</span>
+                </div>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Practitioner Map</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Search the BraveHeartNation directory by location to find certified practitioners offering these treatments near you.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  Find a Practitioner <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
