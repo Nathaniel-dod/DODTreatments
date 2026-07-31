@@ -5,9 +5,8 @@ import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Treatments', href: '/treatments' },
-  { name: 'Clinics', href: '/clinics' },
-  { name: 'Personal Treatment', href: '/personal-treatment' },
-  { name: 'Find Practitioners', href: '/practitioners' },
+  { name: 'Personal Treatments & Training', href: '/personal-treatment' },
+  { name: 'DOD5Star', href: '/clinics/ixtapa-zihuatanejo' },
 ];
 
 export function Navbar() {
