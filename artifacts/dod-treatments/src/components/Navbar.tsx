@@ -7,9 +7,6 @@ const navigation = [
   { name: 'Treatments', href: '/treatments' },
   { name: 'Personal Treatments & Training', href: '/personal-treatment' },
   { name: 'Clinics', href: '/clinics' },
-  { name: 'DOD5Star Ixtapa', href: '/clinics/ixtapa-zihuatanejo' },
-  { name: 'Penticton', href: '/clinics/penticton' },
-  { name: 'Practitioners', href: '/practitioners' },
 ];
 
 export function Navbar() {
