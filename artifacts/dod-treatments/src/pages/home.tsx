@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Doc of Detox Treatments | Advanced Energy Medicine"
+        title="DOCOFDETOX TREATMENTS"
         description="Wolfe Non-Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP. Life-changing regenerative treatments at our clinics or in your home."
         path="/"
         structuredData={structuredData}
@@ -64,10 +64,10 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 gold-gradient gold-glow animate-fade-in-up">
-              Advanced Energy Medicine
+              Total Regeneration Starts Here
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-              Wolfe Non-Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP treatments for life-changing regenerative healing — available at our clinics or in your home.
+              From the world's most powerful bodywork to advanced medical technology, find the clinics and practitioners dedicated to reversing the root cause of pain and disease.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
               <Link href="/treatments">

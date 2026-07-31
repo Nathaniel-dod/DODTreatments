@@ -25,8 +25,8 @@ export function Navbar() {
               <span className="text-background font-bold text-lg">D</span>
             </div>
             <div className="hidden sm:block">
-              <div className="text-lg font-bold gold-gradient">Doc of Detox</div>
-              <div className="text-xs text-muted-foreground -mt-1">Advanced Energy Medicine</div>
+              <div className="text-lg font-bold gold-gradient tracking-wide">DOCOFDETOX</div>
+              <div className="text-xs text-muted-foreground -mt-1 tracking-[0.2em]">TREATMENTS</div>
             </div>
           </Link>
 
