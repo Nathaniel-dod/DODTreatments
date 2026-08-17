@@ -19,8 +19,14 @@ const benefits = [
 ];
 
 const treatmentAreas = [
-  'Joints & Mobility', 'Pain Relief', 'Wounds', 'Bones',
-  'Jaw, Mouth, & Dental', 'Tissues', 'Tendons & Ligaments', 'Erectile Dysfunction',
+  { title: 'Joints & Mobility', image: 'images/cellsonic-joints.png' },
+  { title: 'Pain Relief', image: 'images/cellsonic-pain-relief.png' },
+  { title: 'Wounds', image: 'images/cellsonic-wounds.png' },
+  { title: 'Bones', image: 'images/cellsonic-bones.png' },
+  { title: 'Jaw, Mouth, & Dental', image: 'images/cellsonic-jaw.png' },
+  { title: 'Tissues', image: 'images/cellsonic-tissues.png' },
+  { title: 'Tendons & Ligaments', image: 'images/cellsonic-tendons.png' },
+  { title: 'Erectile Dysfunction', image: 'images/cellsonic-erectile-dysfunction.png' },
 ];
 
 const mechanisms = [
@@ -116,8 +122,13 @@ export default function CellSonicRegeneration() {
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {treatmentAreas.map((area, index) => (
               <div key={index} className="glass-panel rounded-xl p-6 text-center">
-                <div className="text-3xl gold-gradient mb-3">◆</div>
-                <h3 className="font-bold text-sm">{area}</h3>
+                <img
+                  src={`${import.meta.env.BASE_URL}${area.image}`}
+                  alt={`CellSonic treatment for ${area.title}`}
+                  className="w-28 h-28 mx-auto rounded-full object-contain mb-4"
+                  loading="lazy"
+                />
+                <h3 className="font-bold text-sm">{area.title}</h3>
               </div>
             ))}
           </div>
