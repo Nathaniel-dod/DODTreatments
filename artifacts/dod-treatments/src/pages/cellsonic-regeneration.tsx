@@ -38,7 +38,7 @@ export default function CellSonicRegeneration() {
       '@type': 'Product',
       name: 'CellSonic Regeneration ESWT',
       description: 'Extracorporeal Shock Wave Therapy for cell and tissue regeneration. Non-invasive treatment for pain relief, wound healing, and cellular repair.',
-      image: 'https://docofdetoxtreatments.com/images/hero-treatments.jpg',
+      image: 'https://docofdetoxtreatments.com/images/cellsonic-machine.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/cellsonic-regeneration',
     },
     {
@@ -82,6 +82,11 @@ export default function CellSonicRegeneration() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
             </p>
+            <img
+              src={`${import.meta.env.BASE_URL}images/cellsonic-energy.png`}
+              alt="Athlete in motion surrounded by rings of cellular energy"
+              className="w-full max-w-2xl mx-auto mt-12"
+            />
           </div>
         </div>
       </section>
@@ -106,6 +111,29 @@ export default function CellSonicRegeneration() {
       <section className="py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">CellSonic Regeneration Treatments</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/cellsonic-spine.jpg`}
+                alt="CellSonic shock wave treatment applied along the spine"
+                className="w-full h-56 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/cellsonic-knee.jpg`}
+                alt="CellSonic shock wave treatment targeting the knee joint"
+                className="w-full h-56 object-cover"
+              />
+            </div>
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}images/cellsonic-ankle.png`}
+                alt="CellSonic device delivering shock waves to the ankle and heel"
+                className="w-full h-56 object-cover"
+              />
+            </div>
+          </div>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {treatmentAreas.map((area, index) => (
               <div key={index} className="glass-panel rounded-xl p-6 text-center">
@@ -120,11 +148,25 @@ export default function CellSonicRegeneration() {
       {/* How It Works */}
       <section className="py-20 md:py-32 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient">SWT Shockwave Therapy for Regeneration & Pain Relief</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Extracorporeal Shock Wave Therapy promotes tissue regeneration, pain relief, and accelerated healing. As a non-invasive therapy, it is widely used in orthopedics, sports medicine, urology, and rehabilitation, helping restore your body's natural balance and vitality.
-            </p>
+          <div className="max-w-5xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient text-center">SWT Shockwave Therapy for Regeneration & Pain Relief</h2>
+            <div className="glass-panel rounded-2xl overflow-hidden md:grid md:grid-cols-2 items-center">
+              <img
+                src={`${import.meta.env.BASE_URL}images/cellsonic-machine.jpg`}
+                alt="CellSonic Regeneration shock wave therapy machine"
+                className="w-full h-64 md:h-full object-cover"
+              />
+              <div className="p-8 md:p-12">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Extracorporeal Shock Wave Therapy promotes tissue regeneration, pain relief, and accelerated healing. As a non-invasive therapy, it is widely used in orthopedics, sports medicine, urology, and rehabilitation, helping restore your body's natural balance and vitality.
+                </p>
+                <img
+                  src={`${import.meta.env.BASE_URL}images/cellsonic-device.png`}
+                  alt="CellSonic applicator sending shock waves into tissue at the cellular level"
+                  className="w-40 h-40 object-cover rounded-full mt-8 mx-auto md:mx-0"
+                />
+              </div>
+            </div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {mechanisms.map((mech, index) => (
