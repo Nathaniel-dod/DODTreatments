@@ -1,6 +1,8 @@
+import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
-import { InquiryForm } from '@/components/InquiryForm';
-import { Phone, MapPin } from 'lucide-react';
+import { Dod5StarNav } from '@/components/Dod5StarNav';
+import { Button } from '@/components/ui/button';
+import { ArrowRight, Phone, MapPin, BedDouble, Sparkles, Users } from 'lucide-react';
 
 export default function IxtapaZihuatanejo() {
   const structuredData = [
@@ -40,9 +42,10 @@ export default function IxtapaZihuatanejo() {
         path="/clinics/ixtapa-zihuatanejo"
         structuredData={structuredData}
       />
+      <Dod5StarNav />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-16 pb-16 md:pt-24 md:pb-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -108,6 +111,51 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
+      {/* Explore the Retreat */}
+      <section className="py-16 md:py-24 bg-card/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/clinics/ixtapa-zihuatanejo/residence">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <BedDouble className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Residence</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Private suites, chef-prepared cuisine, pools, and treatment rooms in a luxury jungle estate.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  Tour the House <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/clinics/ixtapa-zihuatanejo/treatments">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <Sparkles className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Treatments</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Daily Wolfe Non-Surgical, CellSonic, Cardio MedBed, and personalized healing protocols.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  See the Treatments <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/clinics/ixtapa-zihuatanejo/team">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <Users className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Your Team</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Dr. Darrell Wolfe, Dr. Sage Wolfe, and the consultants guiding your transformation.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  Meet the Team <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Contact */}
       <section className="py-20 md:py-32 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,18 +186,12 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="py-20 md:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Request Information</h2>
-            <p className="text-lg text-muted-foreground">
-              Fill out the form below and we'll reach out personally within 24 hours.
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <InquiryForm defaultType="clinic" defaultLocation="Ixtapa-Zihuatanejo, México" />
-          </div>
+      {/* Plan Your Stay CTA */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Link href="/clinics/ixtapa-zihuatanejo/inquire">
+            <Button size="lg" className="gold-glow">Plan Your Stay <ArrowRight className="ml-2 w-5 h-5" /></Button>
+          </Link>
         </div>
       </section>
     </>

@@ -12,6 +12,10 @@ import CardioMedBed from '@/pages/cardio-medbed';
 import Consultations from '@/pages/consultations';
 import Clinics from '@/pages/clinics';
 import IxtapaZihuatanejo from '@/pages/ixtapa-zihuatanejo';
+import Dod5StarResidence from '@/pages/dod5star-residence';
+import Dod5StarTreatments from '@/pages/dod5star-treatments';
+import Dod5StarTeam from '@/pages/dod5star-team';
+import Dod5StarInquire from '@/pages/dod5star-inquire';
 import Penticton from '@/pages/penticton';
 import PersonalTreatment from '@/pages/personal-treatment';
 import Practitioners from '@/pages/practitioners';
@@ -36,6 +40,10 @@ function Router() {
           </Route>
           <Route path="/clinics" component={Clinics} />
           <Route path="/clinics/ixtapa-zihuatanejo" component={IxtapaZihuatanejo} />
+          <Route path="/clinics/ixtapa-zihuatanejo/residence" component={Dod5StarResidence} />
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments" component={Dod5StarTreatments} />
+          <Route path="/clinics/ixtapa-zihuatanejo/team" component={Dod5StarTeam} />
+          <Route path="/clinics/ixtapa-zihuatanejo/inquire" component={Dod5StarInquire} />
           <Route path="/clinics/penticton" component={Penticton} />
           <Route path="/personal-treatment" component={PersonalTreatment} />
           <Route path="/practitioners" component={Practitioners} />
