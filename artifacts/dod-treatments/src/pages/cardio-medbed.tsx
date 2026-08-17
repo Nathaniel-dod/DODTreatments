@@ -55,7 +55,7 @@ export default function CardioMedBed() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -76,7 +76,7 @@ export default function CardioMedBed() {
       </section>
 
       {/* Credentials */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center gold-gradient">
@@ -109,7 +109,7 @@ export default function CardioMedBed() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center gold-gradient">How The Cardio MedBed Works</h2>
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
@@ -134,7 +134,7 @@ export default function CardioMedBed() {
       </section>
 
       {/* Benefits */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How Cardio MedBed Can Help</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -149,7 +149,7 @@ export default function CardioMedBed() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Cardio MedBed EECP</h2>

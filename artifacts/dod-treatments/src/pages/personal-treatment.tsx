@@ -37,7 +37,7 @@ export default function PersonalTreatment() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -59,7 +59,7 @@ export default function PersonalTreatment() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How Personal Treatment Works</h2>
@@ -79,7 +79,7 @@ export default function PersonalTreatment() {
       </section>
 
       {/* Practitioners */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Our Elite Practitioners</h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -113,7 +113,7 @@ export default function PersonalTreatment() {
       </section>
 
       {/* Program Options */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Program Options</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -154,7 +154,7 @@ export default function PersonalTreatment() {
       </section>
 
       {/* Inquiry Form */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Request Your Personal Program</h2>

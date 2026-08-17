@@ -66,7 +66,7 @@ export default function CellSonicRegeneration() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-12 items-center">
@@ -94,7 +94,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* How It Can Help */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How CellSonic Regeneration Can Help</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -110,7 +110,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* Treatment Areas */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">CellSonic Regeneration Treatments</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -125,7 +125,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient">SWT Shockwave Therapy for Regeneration & Pain Relief</h2>
@@ -145,7 +145,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience CellSonic Regeneration</h2>

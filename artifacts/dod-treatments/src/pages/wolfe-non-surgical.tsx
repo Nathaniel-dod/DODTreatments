@@ -62,7 +62,7 @@ export default function WolfeNonSurgical() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/wns-hero.jpg`}
           alt="Wolfe Non-Surgical practitioner treating a patient's neck and shoulder"
@@ -88,7 +88,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* Why It Works */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Why Wolfe Non-Surgical Works</h2>
@@ -107,7 +107,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* Treatments List */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Wolfe Non-Surgical Treatments</h2>
           <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12">
@@ -124,7 +124,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* Conditions */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Effective On All Joints & Organs</h2>
           <div className="max-w-5xl mx-auto mb-8 rounded-2xl overflow-hidden">
@@ -148,7 +148,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non-Surgical</h2>
@@ -168,7 +168,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* Patient Testimonials */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Patient Testimonials</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -199,7 +199,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* Certification Testimonials */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Want to Get Trained in Wolfe Non-Surgical?</h2>

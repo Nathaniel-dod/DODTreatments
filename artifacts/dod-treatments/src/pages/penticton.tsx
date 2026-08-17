@@ -43,7 +43,7 @@ export default function Penticton() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+      <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/penticton.jpg`}
           alt="View of Penticton, BC and Okanagan Lake with mountains"
@@ -70,7 +70,7 @@ export default function Penticton() {
       </section>
 
       {/* Description */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Experience Healing in Penticton</h2>
@@ -88,7 +88,7 @@ export default function Penticton() {
       </section>
 
       {/* Services */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Services Available</h2>
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -109,7 +109,7 @@ export default function Penticton() {
       </section>
 
       {/* Booking */}
-      <section className="py-20 md:py-32 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Book Your Treatment</h2>
@@ -130,7 +130,7 @@ export default function Penticton() {
       </section>
 
       {/* Inquiry Form */}
-      <section className="py-20 md:py-32">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Request Information</h2>
