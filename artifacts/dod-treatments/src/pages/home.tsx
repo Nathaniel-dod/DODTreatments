@@ -141,10 +141,12 @@ export default function Home() {
             {/* Ixtapa */}
             <Link href="/clinics/ixtapa-zihuatanejo">
               <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/10 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <MapPin className="w-16 h-16 text-primary/40" />
-                  </div>
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
+                    alt="Aerial view of Ixtapa-Zihuatanejo, México"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h3>
