@@ -23,7 +23,7 @@ export default function IxtapaZihuatanejo() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Ixtapa-Zihuatanejo México Clinic - 5-Star Healing Retreat',
-      description: 'Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México. Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe.',
+      description: 'Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México. Hosted by Dr. Sage Wolfe & Jesse Malcolm.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -38,7 +38,7 @@ export default function IxtapaZihuatanejo() {
     <>
       <Seo
         title="Ixtapa-Zihuatanejo Clinic | 5-Star Healing Retreat"
-        description="Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México, hosted by Dr. Darrell Wolfe. Call 1-469-861-8884."
+        description="Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México, hosted by Dr. Sage Wolfe. Call 1-469-861-8884."
         path="/clinics/ixtapa-zihuatanejo"
         structuredData={structuredData}
       />
@@ -65,7 +65,7 @@ export default function IxtapaZihuatanejo() {
               The Ultimate Healing & Training Retreat
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-              Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe
+              Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
             </p>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function IxtapaZihuatanejo() {
                 <Users className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Your Team</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Dr. Darrell Wolfe, Dr. Sage Wolfe, and the consultants guiding your transformation.
+                  Hosts Dr. Sage Wolfe and Jesse Malcolm, house manager Cinthia, and founder Dr. Darrell Wolfe.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
                   Meet the Team <ArrowRight className="w-4 h-4" />

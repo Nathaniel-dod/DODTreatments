@@ -7,13 +7,23 @@ import { User } from 'lucide-react';
 const team = [
   {
     name: 'Dr. Darrell Wolfe',
-    role: 'Founder & Host',
-    bio: 'With 45 years in the trenches of functional medicine, Dr. Wolfe created Wolfe Non-Surgical and the Doc of Detox approach to reversing the so-called irreversible.',
+    role: 'Founder',
+    bio: 'Creator of the DOD5Star retreat. With 45 years in the trenches of functional medicine, Dr. Wolfe created Wolfe Non-Surgical and the Doc of Detox approach to reversing the so-called irreversible.',
   },
   {
     name: 'Dr. Sage Wolfe',
-    role: 'Co-Host & Practitioner',
-    bio: 'Co-host of the retreat, guiding guests through their personalized healing and training experience. Full bio coming soon.',
+    role: 'Host & Master Practitioner',
+    bio: 'Host Master Practitioner of the retreat, guiding guests through their personalized healing and training experience. Full bio coming soon.',
+  },
+  {
+    name: 'Jesse Malcolm',
+    role: 'Host & Master Practitioner',
+    bio: 'Host Master Practitioner of the retreat, delivering personalized treatment and training throughout your stay. Full bio coming soon.',
+  },
+  {
+    name: 'Cinthia',
+    role: 'House Manager',
+    bio: 'Your house manager at the retreat, making sure every detail of your stay is taken care of. Full bio coming soon.',
   },
 ];
 
@@ -22,7 +32,7 @@ export default function Dod5StarTeam() {
     <>
       <Seo
         title="Your Team | DOD5Star Retreat, Ixtapa-Zihuatanejo"
-        description="Meet Dr. Darrell Wolfe, Dr. Sage Wolfe, and the consultants who guide your healing and training at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
+        description="Meet founder Dr. Darrell Wolfe, hosts Dr. Sage Wolfe and Jesse Malcolm, and house manager Cinthia at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
         path="/clinics/ixtapa-zihuatanejo/team"
       />
       <Dod5StarNav />

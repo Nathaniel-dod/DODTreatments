@@ -60,7 +60,7 @@ export default function Clinics() {
                     5-Star Healing & Training Retreat
                   </div>
                   <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h2>
-                  <p className="text-muted-foreground mb-4">Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe</p>
+                  <p className="text-muted-foreground mb-4">Hosted by Dr. Sage Wolfe & Jesse Malcolm</p>
                   <p className="text-sm text-foreground/80 leading-relaxed mb-6">
                     Nestled within the captivating landscapes of Ixtapa-Zihuatanejo, Mexico, indulge in a beautiful picturesque jungle backdrop with life-changing, life-saving amenities as you immerse your whole being into our 5 Star Health & Healing Retreat.
                   </p>

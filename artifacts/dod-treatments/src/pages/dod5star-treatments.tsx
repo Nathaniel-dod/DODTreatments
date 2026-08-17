@@ -48,7 +48,7 @@ export default function Dod5StarTreatments() {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Treatments at the Retreat</h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Your days are built around intensive, personalized treatment — delivered by Dr. Darrell Wolfe, Dr. Sage Wolfe, and the retreat team.
+              Your days are built around intensive, personalized treatment — delivered by host Master Practitioners Dr. Sage Wolfe and Jesse Malcolm.
             </p>
           </div>
         </div>

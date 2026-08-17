@@ -164,7 +164,7 @@ export default function Treatments() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">5-Star Healing & Training Retreat</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  A luxury oceanside retreat hosted by Dr. Darrell Wolfe and Dr. Sage Wolfe — immersive treatment and training for total-body transformation.
+                  A luxury oceanside retreat hosted by Dr. Sage Wolfe and Jesse Malcolm — immersive treatment and training for total-body transformation.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Visit the Retreat <ArrowRight className="w-4 h-4" />
