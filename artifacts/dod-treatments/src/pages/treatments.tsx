@@ -11,6 +11,8 @@ const treatmentProducts = [
     tagline: "The World's Most Powerful Bodywork",
     blurb: 'Addresses scar tissue, inflammation, calcification, and crystallization — reversing the root cause of pain in just a few treatments.',
     glyph: '✦',
+    image: 'images/wns-hero.jpg',
+    imageAlt: "Wolfe Non-Surgical practitioner treating a patient's neck and shoulder",
   },
   {
     href: '/treatments/cellsonic-regeneration',
@@ -114,8 +116,16 @@ export default function Treatments() {
             {treatmentProducts.map((product) => (
               <Link key={product.href} href={product.href}>
                 <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
-                  <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative">
-                    <span className="text-6xl gold-gradient">{product.glyph}</span>
+                  <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                    {'image' in product ? (
+                      <img
+                        src={`${import.meta.env.BASE_URL}${product.image}`}
+                        alt={product.imageAlt}
+                        className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <span className="text-6xl gold-gradient">{product.glyph}</span>
+                    )}
                     <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/80 text-primary text-xs font-medium">
                       {product.category}
                     </span>
