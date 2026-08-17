@@ -221,17 +221,7 @@ export default function WolfeNonSurgical() {
               </div>
             ))}
           </div>
-          <div className="text-center mb-12">
-            <a
-              href="https://youtube.com/playlist?list=PLGL9YQNm1Tc9mEQ1Nk2JZabjphRhxuZDn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-6 py-3 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
-            >
-              View More
-            </a>
-          </div>
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="https://www.bhnuniversity.com/"
               target="_blank"
@@ -239,6 +229,14 @@ export default function WolfeNonSurgical() {
               className="inline-block px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
             >
               Become Wolfe Non-Surgical Certified
+            </a>
+            <a
+              href="https://youtube.com/playlist?list=PLGL9YQNm1Tc9mEQ1Nk2JZabjphRhxuZDn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-full border border-primary/40 text-primary text-sm font-medium hover:bg-primary/10 transition-colors"
+            >
+              View More
             </a>
           </div>
         </div>
