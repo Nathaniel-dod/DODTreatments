@@ -7,7 +7,15 @@ const navigation = [
   { name: 'Treatments', href: '/treatments' },
   { name: 'Personal Treatments & Training', href: '/personal-treatment' },
   { name: 'Clinics', href: '/clinics' },
+  { name: 'DOD5Star', href: '/clinics/ixtapa-zihuatanejo' },
 ];
+
+function isActive(item: { href: string }, location: string) {
+  const inDod5Star = location.startsWith('/clinics/ixtapa-zihuatanejo');
+  if (item.href === '/clinics/ixtapa-zihuatanejo') return inDod5Star;
+  if (item.href === '/clinics') return !inDod5Star && (location === '/clinics' || location.startsWith('/clinics/'));
+  return location === item.href || location.startsWith(item.href + '/');
+}
 
 export function Navbar() {
   const [location] = useLocation();
@@ -35,7 +43,7 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={`px-2.5 py-2 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
-                  location === item.href || location.startsWith(item.href + '/')
+                  isActive(item, location)
                     ? 'bg-primary/10 text-primary'
                     : 'text-foreground/80 hover:text-foreground hover:bg-white/5'
                 }`}
@@ -75,7 +83,7 @@ export function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={`block px-4 py-3 rounded-lg text-base font-medium ${
-                    location === item.href || location.startsWith(item.href + '/')
+                    isActive(item, location)
                       ? 'bg-primary/10 text-primary'
                       : 'text-foreground/80 hover:bg-white/5'
                   }`}
