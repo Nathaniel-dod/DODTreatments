@@ -30,7 +30,7 @@ export default function WolfeNonSurgical() {
       '@type': 'Product',
       name: 'Wolfe Non-Surgical',
       description: "The World's Most Powerful Bodywork. Addresses scar tissue, inflammation, calcification, and crystallization for rapid pain relief and healing.",
-      image: 'https://docofdetoxtreatments.com/images/hero-treatments.jpg',
+      image: 'https://docofdetoxtreatments.com/images/wns-hero.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/wolfe-non-surgical',
     },
     {
@@ -59,7 +59,12 @@ export default function WolfeNonSurgical() {
 
       {/* Hero */}
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <img
+          src={`${import.meta.env.BASE_URL}images/wns-hero.jpg`}
+          alt="Wolfe Non-Surgical practitioner treating a patient's neck and shoulder"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
@@ -81,10 +86,15 @@ export default function WolfeNonSurgical() {
       {/* Why It Works */}
       <section className="py-20 md:py-32 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Why Wolfe Non-Surgical Works</h2>
-            <div className="glass-panel rounded-2xl p-8 md:p-12">
-              <p className="text-lg text-foreground/90 leading-relaxed">
+            <div className="glass-panel rounded-2xl overflow-hidden md:grid md:grid-cols-2">
+              <img
+                src={`${import.meta.env.BASE_URL}images/wns-treatment.jpg`}
+                alt="Practitioner's hands working along a patient's spine during a Wolfe Non-Surgical treatment"
+                className="w-full h-56 md:h-full object-cover"
+              />
+              <p className="text-lg text-foreground/90 leading-relaxed p-8 md:p-12">
                 You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the <strong>scar tissue, inflammation, calcification, and crystallization</strong> that create physical blocks. These blocks are the underlying source of aches, pains, lumps, bumps, and disease; by focusing on this root cause, Wolfe Non-Surgical practitioners can truly <strong>reverse issues in just a few treatments—and sometimes only one.</strong>
               </p>
             </div>
@@ -113,6 +123,13 @@ export default function WolfeNonSurgical() {
       <section className="py-20 md:py-32 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Effective On All Joints & Organs</h2>
+          <div className="max-w-5xl mx-auto mb-8 rounded-2xl overflow-hidden">
+            <img
+              src={`${import.meta.env.BASE_URL}images/wns-spine.jpg`}
+              alt="Illustration of the spine, knee, shoulder, and ankle highlighting common pain points"
+              className="w-full object-cover"
+            />
+          </div>
           <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12">
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {conditions.map((condition, index) => (
