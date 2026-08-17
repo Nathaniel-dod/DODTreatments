@@ -10,7 +10,6 @@ const treatmentProducts = [
     category: 'Bodywork Therapy',
     tagline: "The World's Most Powerful Bodywork",
     blurb: 'Addresses scar tissue, inflammation, calcification, and crystallization — reversing the root cause of pain in just a few treatments.',
-    priceLabel: 'Inquire',
     glyph: '✦',
   },
   {
@@ -19,7 +18,6 @@ const treatmentProducts = [
     category: 'Shock Wave Therapy',
     tagline: 'Cell & Tissue Regeneration',
     blurb: 'Non-invasive shock wave therapy promoting tissue regeneration, pain relief, and accelerated healing across the whole body.',
-    priceLabel: 'Inquire',
     glyph: '◆',
   },
   {
@@ -28,7 +26,6 @@ const treatmentProducts = [
     category: 'Cardiovascular Therapy',
     tagline: 'Heart & Circulatory Regeneration',
     blurb: 'FDA-approved Enhanced External Counter Pulsation therapy, clinically proven to increase blood flow and cardiovascular health.',
-    priceLabel: 'Inquire',
     glyph: '❖',
   },
   {
@@ -37,7 +34,6 @@ const treatmentProducts = [
     category: 'Personalized Guidance',
     tagline: 'Your Roadmap to Total Regeneration',
     blurb: 'One-hour consultations with Dr. Darrell Wolfe or Master Practitioners — emotional, nutritional, Perfect Day, and water fasting.',
-    priceLabel: '$450 with Dr. Wolfe',
     glyph: '✦',
   },
   {
@@ -46,7 +42,6 @@ const treatmentProducts = [
     category: 'Core & Pelvic Therapy',
     tagline: 'Pelvic Floor & Deep Core Strengthening',
     blurb: 'Pelvic floor restoration, urinary incontinence, sexual wellness, and deep core strengthening — for both women and men.',
-    priceLabel: 'Inquire',
     glyph: '◆',
   },
   {
@@ -55,7 +50,6 @@ const treatmentProducts = [
     category: 'Diagnostic Assessment',
     tagline: 'Radiation-Free Bone Density Assessment',
     blurb: 'Track skeletal health and regeneration across every DOD protocol — safely, with no radiation exposure.',
-    priceLabel: 'Inquire',
     glyph: '❖',
   },
   {
@@ -64,7 +58,6 @@ const treatmentProducts = [
     category: 'Phototherapy',
     tagline: 'Deep Infrared Phototherapy',
     blurb: 'The latest in deep infrared phototherapy. Effective for the reversal of many conditions.',
-    priceLabel: 'Inquire',
     glyph: '✦',
   },
   {
@@ -73,7 +66,6 @@ const treatmentProducts = [
     category: 'Light Therapy',
     tagline: 'Naturally Increase Your Vitamin D',
     blurb: 'Vitamin D Light Therapy is an extremely efficient way to naturally increase vitamin D in the body.',
-    priceLabel: 'Inquire',
     glyph: '◆',
   },
 ];
@@ -132,8 +124,7 @@ export default function Treatments() {
                     <h2 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h2>
                     <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
-                    <div className="flex items-center justify-between mt-auto">
-                      <span className="text-sm font-medium text-primary">{product.priceLabel}</span>
+                    <div className="flex items-center justify-end mt-auto">
                       <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
                         View <ArrowRight className="w-4 h-4" />
                       </span>
