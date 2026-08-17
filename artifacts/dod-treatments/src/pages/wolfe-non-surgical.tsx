@@ -143,6 +143,55 @@ export default function WolfeNonSurgical() {
         </div>
       </section>
 
+      {/* Patient Testimonials */}
+      <section className="py-20 md:py-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Patient Testimonials</h2>
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLGL9YQNm1Tc-rK1v7zk_F0wlIzykuQiRj"
+              title="Wolfe Non-Surgical patient testimonials"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Certification Testimonials */}
+      <section className="py-20 md:py-32 bg-card/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Want to Get Trained in Wolfe Non-Surgical?</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Your clients are looking for answers. This is the training that gives you the tools to truly deliver them.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden aspect-video mb-12">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLGL9YQNm1Tc9mEQ1Nk2JZabjphRhxuZDn"
+              title="Wolfe Non-Surgical certification testimonials"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+          <div className="text-center">
+            <a
+              href="https://www.bhnuniversity.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
+            >
+              Become Wolfe Non-Surgical Certified
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 md:py-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
