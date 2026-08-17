@@ -46,7 +46,12 @@ export default function IxtapaZihuatanejo() {
 
       {/* Hero */}
       <section className="pt-16 pb-16 md:pt-24 md:pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <img
+          src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
+          alt="Aerial view of Ixtapa-Zihuatanejo, México — jungle, marina, and Pacific coastline"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-6">
