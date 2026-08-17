@@ -69,19 +69,26 @@ export default function CellSonicRegeneration() {
       <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              Shock Wave Therapy
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[3fr_2fr] gap-12 items-center">
+            <div className="text-center md:text-left">
+              <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                Shock Wave Therapy
+              </div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
+                CellSonic Regeneration ESWT
+              </h1>
+              <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
+                Extracorporeal Shock Wave Therapy for Cell & Tissue Regeneration
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
+              </p>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
-              CellSonic Regeneration ESWT
-            </h1>
-            <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
-              Extracorporeal Shock Wave Therapy for Cell & Tissue Regeneration
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
-            </p>
+            <img
+              src={`${import.meta.env.BASE_URL}images/cellsonic-unit.png`}
+              alt="CellSonic Regeneration shock wave therapy unit"
+              className="w-full max-w-sm mx-auto md:max-w-none max-h-[32rem] object-contain"
+            />
           </div>
         </div>
       </section>

@@ -21,6 +21,9 @@ const treatmentProducts = [
     tagline: 'Cell & Tissue Regeneration',
     blurb: 'Non-invasive shock wave therapy promoting tissue regeneration, pain relief, and accelerated healing across the whole body.',
     glyph: '◆',
+    image: 'images/cellsonic-unit.png',
+    imageAlt: 'CellSonic Regeneration shock wave therapy unit',
+    imageContain: true,
   },
   {
     href: '/treatments/cardio-medbed',
@@ -121,7 +124,7 @@ export default function Treatments() {
                       <img
                         src={`${import.meta.env.BASE_URL}${product.image}`}
                         alt={product.imageAlt}
-                        className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        className={`absolute inset-0 w-full h-full ${'imageContain' in product ? 'object-contain p-4' : 'object-cover object-top'} group-hover:scale-105 transition-transform duration-500`}
                       />
                     ) : (
                       <span className="text-6xl gold-gradient">{product.glyph}</span>
