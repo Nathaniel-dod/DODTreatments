@@ -27,6 +27,10 @@ const therapies = [
   { name: 'CellSonic Regeneration ESWT', href: '/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
   { name: 'Cardio MedBed EECP', href: '/treatments/cardio-medbed', note: 'Heart & circulatory regeneration' },
   { name: 'Health Consultations', href: '/treatments/consultations', note: 'Your personalized roadmap' },
+  { name: 'DOD Core Restore', href: '/treatments/dod-core-restore', note: 'Pelvic floor, incontinence, sexual wellness & deep core — for women and men' },
+  { name: 'DOD Advanced Bone Density Scanner', href: '/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
+  { name: 'Infrared Light Healing', href: '/treatments/infrared-light-healing', note: 'Deep infrared phototherapy' },
+  { name: 'Vitamin D Light', href: '/treatments/vitamin-d-light', note: 'Naturally increase vitamin D' },
 ];
 
 export default function Dod5StarTreatments() {

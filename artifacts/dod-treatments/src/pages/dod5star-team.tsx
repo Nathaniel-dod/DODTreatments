@@ -22,7 +22,7 @@ export default function Dod5StarTeam() {
     <>
       <Seo
         title="Your Team | DOD5Star Retreat, Ixtapa-Zihuatanejo"
-        description="Meet Dr. Darrell Wolfe, Dr. Sage Wolfe, and the consultants who guide your healing at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
+        description="Meet Dr. Darrell Wolfe, Dr. Sage Wolfe, and the consultants who guide your healing and training at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
         path="/clinics/ixtapa-zihuatanejo/team"
       />
       <Dod5StarNav />

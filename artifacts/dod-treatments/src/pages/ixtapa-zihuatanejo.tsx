@@ -38,7 +38,7 @@ export default function IxtapaZihuatanejo() {
     <>
       <Seo
         title="Ixtapa-Zihuatanejo Clinic | 5-Star Healing Retreat"
-        description="Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México. Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe. Call 1-469-861-8884."
+        description="Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México, hosted by Dr. Darrell Wolfe. Call 1-469-861-8884."
         path="/clinics/ixtapa-zihuatanejo"
         structuredData={structuredData}
       />

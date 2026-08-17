@@ -8,7 +8,7 @@ export default function Dod5StarInquire() {
     <>
       <Seo
         title="Plan Your Stay | DOD5Star Retreat, Ixtapa-Zihuatanejo"
-        description="Book your stay at the DOD5Star healing retreat in Ixtapa-Zihuatanejo, México. Call Dr. Darrell Wolfe at 1-469-861-8884 or send an inquiry."
+        description="Book your stay at the DOD5Star healing retreat in Ixtapa-Zihuatanejo, México. Call Dr. Darrell Wolfe at 1-469-861-8884 or send an inquiry today."
         path="/clinics/ixtapa-zihuatanejo/inquire"
       />
       <Dod5StarNav />

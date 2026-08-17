@@ -40,6 +40,42 @@ const treatmentProducts = [
     priceLabel: '$450 with Dr. Wolfe',
     glyph: '✦',
   },
+  {
+    href: '/treatments/dod-core-restore',
+    name: 'DOD Core Restore',
+    category: 'Core & Pelvic Therapy',
+    tagline: 'Pelvic Floor & Deep Core Strengthening',
+    blurb: 'Pelvic floor restoration, urinary incontinence, sexual wellness, and deep core strengthening — for both women and men.',
+    priceLabel: 'Inquire',
+    glyph: '◆',
+  },
+  {
+    href: '/treatments/bone-density-scanner',
+    name: 'DOD Advanced Bone Density Scanner',
+    category: 'Diagnostic Assessment',
+    tagline: 'Radiation-Free Bone Density Assessment',
+    blurb: 'Track skeletal health and regeneration across every DOD protocol — safely, with no radiation exposure.',
+    priceLabel: 'Inquire',
+    glyph: '❖',
+  },
+  {
+    href: '/treatments/infrared-light-healing',
+    name: 'Infrared Light Healing',
+    category: 'Phototherapy',
+    tagline: 'Deep Infrared Phototherapy',
+    blurb: 'The latest in deep infrared phototherapy. Effective for the reversal of many conditions.',
+    priceLabel: 'Inquire',
+    glyph: '✦',
+  },
+  {
+    href: '/treatments/vitamin-d-light',
+    name: 'Vitamin D Light',
+    category: 'Light Therapy',
+    tagline: 'Naturally Increase Your Vitamin D',
+    blurb: 'Vitamin D Light Therapy is an extremely efficient way to naturally increase vitamin D in the body.',
+    priceLabel: 'Inquire',
+    glyph: '◆',
+  },
 ];
 
 export default function Treatments() {
@@ -88,7 +124,7 @@ export default function Treatments() {
                 <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
                   <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative">
                     <span className="text-6xl gold-gradient">{product.glyph}</span>
-                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/60 backdrop-blur-sm text-primary text-xs font-medium">
+                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/80 text-primary text-xs font-medium">
                       {product.category}
                     </span>
                   </div>

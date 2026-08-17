@@ -10,6 +10,10 @@ import WolfeNonSurgical from '@/pages/wolfe-non-surgical';
 import CellSonicRegeneration from '@/pages/cellsonic-regeneration';
 import CardioMedBed from '@/pages/cardio-medbed';
 import Consultations from '@/pages/consultations';
+import DodCoreRestore from '@/pages/dod-core-restore';
+import BoneDensityScanner from '@/pages/bone-density-scanner';
+import InfraredLightHealing from '@/pages/infrared-light-healing';
+import VitaminDLight from '@/pages/vitamin-d-light';
 import Clinics from '@/pages/clinics';
 import IxtapaZihuatanejo from '@/pages/ixtapa-zihuatanejo';
 import Dod5StarResidence from '@/pages/dod5star-residence';
@@ -35,6 +39,10 @@ function Router() {
           <Route path="/treatments/cellsonic-regeneration" component={CellSonicRegeneration} />
           <Route path="/treatments/cardio-medbed" component={CardioMedBed} />
           <Route path="/treatments/consultations" component={Consultations} />
+          <Route path="/treatments/dod-core-restore" component={DodCoreRestore} />
+          <Route path="/treatments/bone-density-scanner" component={BoneDensityScanner} />
+          <Route path="/treatments/infrared-light-healing" component={InfraredLightHealing} />
+          <Route path="/treatments/vitamin-d-light" component={VitaminDLight} />
           <Route path="/consultations">
             <Redirect to="/treatments/consultations" replace />
           </Route>
