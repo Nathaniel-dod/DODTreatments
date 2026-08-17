@@ -19,22 +19,16 @@ const benefits = [
 ];
 
 const treatmentAreas = [
-  { name: 'Joints & Mobility', image: 'images/cellsonic-area-joints.jpg' },
-  { name: 'Pain Relief', image: 'images/cellsonic-area-pain.jpg' },
-  { name: 'Wounds', image: 'images/cellsonic-area-wounds.jpg' },
-  { name: 'Bones', image: 'images/cellsonic-area-bones.jpg' },
-  { name: 'Jaw, Mouth, & Dental', image: 'images/cellsonic-area-jaw.jpg' },
-  { name: 'Tissues', image: 'images/cellsonic-device.png' },
-  { name: 'Tendons & Ligaments', image: 'images/cellsonic-ankle.png' },
-  { name: 'Erectile Dysfunction', image: 'images/cellsonic-area-ed.jpg' },
+  'Joints & Mobility', 'Pain Relief', 'Wounds', 'Bones',
+  'Jaw, Mouth, & Dental', 'Tissues', 'Tendons & Ligaments', 'Erectile Dysfunction',
 ];
 
 const mechanisms = [
-  { title: 'Better Blood Flow, More Oxygen, ED Treatment', icon: 'images/cellsonic-picto-1.png' },
-  { title: 'Collagen Stimulation & Cellulite Reduction', icon: 'images/cellsonic-picto-2.png' },
-  { title: 'Breaks Down Calcium Deposits', icon: 'images/cellsonic-picto-3.png' },
-  { title: 'Activates Stem Cell Growth', icon: 'images/cellsonic-picto-4.png' },
-  { title: 'Reduces Cellular Inflammation', icon: 'images/cellsonic-picto-5.png' },
+  { title: 'Better Blood Flow, More Oxygen, ED Treatment', icon: '◈' },
+  { title: 'Collagen Stimulation & Cellulite Reduction', icon: '◈' },
+  { title: 'Breaks Down Calcium Deposits', icon: '◈' },
+  { title: 'Activates Stem Cell Growth', icon: '◈' },
+  { title: 'Reduces Cellular Inflammation', icon: '◈' },
 ];
 
 export default function CellSonicRegeneration() {
@@ -44,7 +38,7 @@ export default function CellSonicRegeneration() {
       '@type': 'Product',
       name: 'CellSonic Regeneration ESWT',
       description: 'Extracorporeal Shock Wave Therapy for cell and tissue regeneration. Non-invasive treatment for pain relief, wound healing, and cellular repair.',
-      image: 'https://docofdetoxtreatments.com/images/cellsonic-machine.jpg',
+      image: 'https://docofdetoxtreatments.com/images/hero-treatments.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/cellsonic-regeneration',
     },
     {
@@ -89,29 +83,6 @@ export default function CellSonicRegeneration() {
               A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12 items-center">
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}images/cellsonic-spine.jpg`}
-                alt="CellSonic shock wave treatment applied along the spine"
-                className="w-full h-52 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}images/cellsonic-machine.jpg`}
-                alt="CellSonic Regeneration shock wave therapy machine"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-            <div className="rounded-2xl overflow-hidden">
-              <img
-                src={`${import.meta.env.BASE_URL}images/cellsonic-knee.jpg`}
-                alt="CellSonic shock wave treatment targeting the knee joint"
-                className="w-full h-52 object-cover"
-              />
-            </div>
-          </div>
         </div>
       </section>
 
@@ -128,11 +99,6 @@ export default function CellSonicRegeneration() {
               </div>
             ))}
           </div>
-          <img
-            src={`${import.meta.env.BASE_URL}images/cellsonic-energy.png`}
-            alt="Athlete in motion surrounded by rings of cellular energy"
-            className="w-full max-w-2xl mx-auto mt-16"
-          />
         </div>
       </section>
 
@@ -142,13 +108,9 @@ export default function CellSonicRegeneration() {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">CellSonic Regeneration Treatments</h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {treatmentAreas.map((area, index) => (
-              <div key={index} className="glass-panel rounded-xl overflow-hidden text-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}${area.image}`}
-                  alt={`CellSonic Regeneration treatment for ${area.name}`}
-                  className="w-full aspect-square object-cover"
-                />
-                <h3 className="font-bold text-sm p-4">{area.name}</h3>
+              <div key={index} className="glass-panel rounded-xl p-6 text-center">
+                <div className="text-3xl gold-gradient mb-3">◆</div>
+                <h3 className="font-bold text-sm">{area}</h3>
               </div>
             ))}
           </div>
@@ -167,11 +129,7 @@ export default function CellSonicRegeneration() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
             {mechanisms.map((mech, index) => (
               <div key={index} className="glass-panel rounded-xl p-6 text-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}${mech.icon}`}
-                  alt=""
-                  className="w-20 h-20 object-contain mx-auto mb-4"
-                />
+                <div className="text-4xl gold-gradient mb-4">{mech.icon}</div>
                 <p className="text-sm font-medium leading-snug">{mech.title}</p>
               </div>
             ))}
