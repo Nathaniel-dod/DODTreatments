@@ -3,7 +3,7 @@ import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
-const patientTestimonialVideos = ['7_r8mZ5ARrI', 'Qb4FgBQlte0'];
+const patientTestimonialVideos = ['7_r8mZ5ARrI', 'Qb4FgBQlte0', '4xEpZNQIpmc'];
 
 const certificationTestimonialVideos = ['Vcz11YbC37I', 'dDRNfKkzgtg', 'oYARa0ivUaY'];
 
