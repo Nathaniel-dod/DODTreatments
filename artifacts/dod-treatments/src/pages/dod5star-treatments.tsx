@@ -70,7 +70,12 @@ export default function Dod5StarTreatments() {
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="space-y-3">
               {therapies.map((t) => (
-                <Link key={t.href} href={t.href}>
+                <a
+                  key={t.href}
+                  href={`${import.meta.env.BASE_URL}${t.href.replace(/^\//, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <div className="glass-panel rounded-xl px-6 py-4 flex items-center justify-between hover:border-primary/30 transition-all group">
                     <div>
                       <div className="font-bold group-hover:text-primary transition-colors">{t.name}</div>
@@ -78,7 +83,7 @@ export default function Dod5StarTreatments() {
                     </div>
                     <ArrowRight className="w-5 h-5 text-primary shrink-0" />
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
