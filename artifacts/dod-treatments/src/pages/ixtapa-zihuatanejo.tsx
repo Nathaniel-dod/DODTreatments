@@ -86,7 +86,14 @@ export default function IxtapaZihuatanejo() {
                 />
               </div>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Take Back Your Personal Power to Heal</h2>
+                <div className="mb-7">
+                  <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-3">A founder&apos;s message</p>
+                  <h2 className="text-3xl md:text-[2.6rem] font-bold leading-[1.08] tracking-tight">
+                    <span className="block">Take Back Your</span>
+                    <span className="block gold-gradient">Personal Power to Heal</span>
+                  </h2>
+                  <div className="mt-5 h-px w-16 bg-primary/70" aria-hidden="true" />
+                </div>
                 <blockquote>
                   <p className="text-lg text-foreground/90 leading-relaxed mb-6">
                     DOD5Star is a winning strategy for people ready to take control of their healing journey for the first time in their lives. It is designed to help you reclaim the personal power to heal that may have been taken from you without your knowledge or consent. From the moment you arrive until the moment you leave, get ready for what can become the most amazing holiday healing experience of your life.
