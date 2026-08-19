@@ -10,7 +10,7 @@ export default function IxtapaZihuatanejo() {
       '@context': 'https://schema.org',
       '@type': 'MedicalBusiness',
       name: 'Doc of Detox 5-Star Healing & Training Retreat',
-      description: 'Luxury healing retreat in Ixtapa-Zihuatanejo, México offering advanced energy medicine treatments, training, and personalized health protocols.',
+       description: 'DOD5Star is a 5-star healing retreat in Ixtapa-Zihuatanejo, México offering personalized treatments, practitioner support, and restorative stays.',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Ixtapa-Zihuatanejo',
@@ -22,8 +22,8 @@ export default function IxtapaZihuatanejo() {
     {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
-      name: 'Ixtapa-Zihuatanejo México Clinic - 5-Star Healing Retreat',
-      description: 'Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México. Hosted by Dr. Sage Wolfe & Jesse Malcolm.',
+       name: 'DOD5Star Healing Retreat in Ixtapa-Zihuatanejo, México',
+       description: 'Take control of your healing at DOD5Star, a 5-star retreat in Ixtapa-Zihuatanejo, México with personalized treatments and restorative stays.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -37,8 +37,8 @@ export default function IxtapaZihuatanejo() {
   return (
     <>
       <Seo
-        title="Ixtapa-Zihuatanejo Clinic | 5-Star Healing Retreat"
-        description="Experience advanced energy medicine at our luxury healing retreat in Ixtapa-Zihuatanejo, México, hosted by Dr. Sage Wolfe. Call 1-469-861-8884."
+         title="DOD5Star Healing Retreat in Ixtapa-Zihuatanejo, Mexico"
+         description="Take control of your healing at DOD5Star, a 5-star retreat in Ixtapa-Zihuatanejo, Mexico with personalized treatments, support, and restorative stays."
         path="/clinics/ixtapa-zihuatanejo"
         structuredData={structuredData}
       />
@@ -62,10 +62,10 @@ export default function IxtapaZihuatanejo() {
               5-Star Healing & Training Retreat
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              The Ultimate Healing & Training Retreat
+               A winning strategy for taking control of your healing
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-              Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
+               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
             </p>
           </div>
         </div>
@@ -75,12 +75,25 @@ export default function IxtapaZihuatanejo() {
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">The Journey Of A Lifetime That Will Last Your Whole Lifetime</h2>
+             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Take Back Your Personal Power to Heal</h2>
             <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-              Nestled within the captivating landscapes of Ixtapa-Zihuatanejo, Mexico, indulge in a beautiful picturesque jungle backdrop with life-changing, life-saving amenities as you immerse your whole being into our 5 Star Health & Healing Retreat.
+               DOD5Star is a winning strategy for people ready to take control of their healing journey for the first time in their lives. It is designed to help you reclaim the personal power to heal that may have been taken from you without your knowledge or consent. From the moment you arrive until the moment you leave, get ready for what can become the most amazing holiday healing experience of your life.
             </p>
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Your personalized health & healing journey is built on 40 years of Dr. Darrell Wolfe's clinical and in-the-trenches experience of proving that your body along with proven strategies and advanced energy-medicine will reverse the so-called Irreversible. Where the Mind goes the Body follows. Let us guide you, support you emotionally and physically so that you take the Impossible and create the <strong>I AM Possible</strong>.
+               For those who have taken life to the edge of the cliff and need more support, this is where you come to bring the thunder down. Your personalized experience is built on 40 years of Dr. Darrell Wolfe's clinical and in-the-trenches work, with care and guidance from our team.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The setting */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold tracking-[0.18em] uppercase text-primary mb-4">Mexico&apos;s peaceful hidden gem</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient">A Restorative Setting in Ixtapa-Zihuatanejo</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              At the end of a cobblestone street beside a 5-star golf course, the retreat is surrounded by beautiful jungle and moments from the coastal calm of Ixtapa-Zihuatanejo.
             </p>
           </div>
         </div>

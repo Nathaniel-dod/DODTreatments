@@ -67,7 +67,7 @@ export default function Home() {
               Total Regeneration Starts Here
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-              From the world's most powerful bodywork to advanced medical technology, find the clinics and practitioners dedicated to reversing the root cause of pain and disease.
+               From the world's most powerful bodywork to the world's most advanced energy medicine technology, find the clinics and practitioners dedicated to reversing the root cause of pain and disease.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
               <Link href="/treatments">
