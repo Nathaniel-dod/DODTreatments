@@ -74,14 +74,31 @@ export default function IxtapaZihuatanejo() {
       {/* Description */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto glass-panel rounded-3xl p-8 md:p-12">
-             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Take Back Your Personal Power to Heal</h2>
-            <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-               DOD5Star is a winning strategy for people ready to take control of their healing journey for the first time in their lives. It is designed to help you reclaim the personal power to heal that may have been taken from you without your knowledge or consent. From the moment you arrive until the moment you leave, get ready for what can become the most amazing holiday healing experience of your life.
-            </p>
-            <p className="text-lg text-foreground/90 leading-relaxed">
-               For those who have taken life to the edge of the cliff and need more support, this is where you come to bring the thunder down. Your personalized experience is built on 40 years of Dr. Darrell Wolfe's clinical and in-the-trenches work, with care and guidance from our team.
-            </p>
+          <div className="max-w-5xl mx-auto glass-panel rounded-3xl p-6 md:p-8">
+            <div className="grid md:grid-cols-[minmax(13rem,0.72fr)_1.8fr] gap-8 md:gap-10 items-center">
+              <img
+                src={`${import.meta.env.BASE_URL}images/dr-darrell-wolfe.png`}
+                alt="Dr. Darrell Wolfe, founder of the DOD5Star Healing Retreat"
+                width={4068}
+                height={3421}
+                className="w-full max-w-[19rem] mx-auto md:max-w-none rounded-2xl object-cover object-center shadow-xl"
+              />
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">Take Back Your Personal Power to Heal</h2>
+                <blockquote>
+                  <p className="text-lg text-foreground/90 leading-relaxed mb-6">
+                    DOD5Star is a winning strategy for people ready to take control of their healing journey for the first time in their lives. It is designed to help you reclaim the personal power to heal that may have been taken from you without your knowledge or consent. From the moment you arrive until the moment you leave, get ready for what can become the most amazing holiday healing experience of your life.
+                  </p>
+                  <p className="text-lg text-foreground/90 leading-relaxed">
+                    For those who have taken life to the edge of the cliff and need more support, this is where you come to bring the thunder down. Your personalized experience is built on 40 years of Dr. Darrell Wolfe's clinical and in-the-trenches work, with care and guidance from our team.
+                  </p>
+                  <footer className="mt-6 flex items-center gap-3 text-primary font-semibold">
+                    <span className="w-8 h-px bg-primary/70" aria-hidden="true" />
+                    Dr. Darrell Wolfe
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
           </div>
         </div>
       </section>
