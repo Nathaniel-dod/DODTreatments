@@ -76,13 +76,15 @@ export default function IxtapaZihuatanejo() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto glass-panel rounded-3xl p-6 md:p-8">
             <div className="grid md:grid-cols-[minmax(13rem,0.72fr)_1.8fr] gap-8 md:gap-10 items-center">
-              <img
-                src={`${import.meta.env.BASE_URL}images/dr-darrell-wolfe.png`}
-                alt="Dr. Darrell Wolfe, founder of the DOD5Star Healing Retreat"
-                width={4068}
-                height={3421}
-                className="w-full max-w-[19rem] mx-auto md:max-w-none rounded-2xl object-cover object-center shadow-xl"
-              />
+              <div className="min-h-[20rem] md:min-h-0 self-stretch">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/dr-darrell-wolfe.png`}
+                  alt="Dr. Darrell Wolfe, founder of the DOD5Star Healing Retreat"
+                  width={4068}
+                  height={3421}
+                  className="w-full h-full rounded-2xl object-cover object-center shadow-xl"
+                />
+              </div>
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">Take Back Your Personal Power to Heal</h2>
                 <blockquote>
