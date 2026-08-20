@@ -203,8 +203,8 @@ export default function Home() {
       {/* 45 Years of Functional Medicine */}
       <section className="py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="text-center lg:text-left">
+          <div className="max-w-6xl mx-auto grid items-stretch gap-10 lg:grid-cols-2 lg:gap-16">
+            <div className="order-1 text-center lg:order-2 lg:text-left">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 gold-gradient">45 Years in the Trenches of Functional Medicine</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 Wolfe Non-Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. Personalized to each patient, these strategies have helped reverse the so-called irreversible in thousands of people living with chronic conditions.
@@ -213,11 +213,11 @@ export default function Home() {
                 Together they address healing at every level — from the cells to inflammation, scar tissue, calcification, emotions, and nutrition — for true whole-body regeneration.
               </p>
             </div>
-            <div className="relative">
+            <div className="relative order-2 self-stretch lg:order-1">
               <img
                 src={`${import.meta.env.BASE_URL}images/body-regeneration-3d.jpg`}
                 alt="Three-dimensional illustration of the body transitioning from pain toward renewal"
-                className="aspect-square h-full w-full object-cover [mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)]"
+                className="aspect-square h-full w-full object-cover lg:aspect-auto [mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)]"
               />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-primary/5" />
             </div>
