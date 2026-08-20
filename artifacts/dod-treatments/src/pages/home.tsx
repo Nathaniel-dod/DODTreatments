@@ -213,13 +213,13 @@ export default function Home() {
                 Together they address healing at every level — from the cells to inflammation, scar tissue, calcification, emotions, and nutrition — for true whole-body regeneration.
               </p>
             </div>
-            <div className="relative overflow-hidden rounded-3xl border border-primary/20 bg-card shadow-[0_20px_55px_rgba(0,0,0,0.28)]">
+            <div className="relative">
               <img
                 src={`${import.meta.env.BASE_URL}images/body-regeneration-3d.jpg`}
                 alt="Three-dimensional illustration of the body transitioning from pain toward renewal"
-                className="aspect-square h-full w-full object-cover"
+                className="aspect-square h-full w-full object-cover [mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)]"
               />
-              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-tr from-background/25 via-transparent to-primary/10" />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-primary/5" />
             </div>
           </div>
         </div>
