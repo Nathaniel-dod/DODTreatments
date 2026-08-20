@@ -21,9 +21,8 @@ const treatmentProducts = [
     tagline: 'Cell & Tissue Regeneration',
     blurb: 'Non-invasive shock wave therapy promoting tissue regeneration, pain relief, and accelerated healing across the whole body.',
     glyph: '◆',
-    image: 'images/cellsonic-unit.png',
-    imageAlt: 'CellSonic Regeneration shock wave therapy unit',
-    imageContain: true,
+    image: 'images/cellsonic-universe.png',
+    imageAlt: 'CellSonic Regeneration shock wave therapy unit against a cosmic background',
   },
   {
     href: '/treatments/cardio-medbed',
