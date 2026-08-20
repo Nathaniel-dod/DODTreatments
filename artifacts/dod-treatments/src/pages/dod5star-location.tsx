@@ -38,31 +38,37 @@ const activities = [
     title: 'Xihuacan Archaeological Site',
     category: 'History & culture',
     description: 'Visit the ancient ceremonial center at Soledad de Maciel and explore the history of the pre-Columbian communities that gathered there.',
+    image: 'images/ixtapa-activities/xihuacan-archaeological-site.jpg',
   },
   {
     title: 'Beaches & Snorkeling',
     category: 'Coastline',
     description: 'Spend time at laid-back beaches with calm-water swimming, snorkeling, colorful fish, coral, and fresh local food nearby.',
+    image: 'images/ixtapa-activities/beaches-snorkeling.jpg',
   },
   {
     title: 'Jungle Bike Trails',
     category: 'Outdoor activity',
     description: 'Follow the shaded route from the Ixtapa marina toward Playa Linda, with opportunities to spot local birds, iguanas, and other wildlife.',
+    image: 'images/ixtapa-activities/jungle-bike-trails.jpg',
   },
   {
     title: 'Turtle Release',
     category: 'Seasonal experience',
     description: 'Join a qualified conservation program to learn about local sea turtles and, when available, help release hatchlings toward the ocean.',
+    image: 'images/ixtapa-activities/turtle-release.jpg',
   },
   {
     title: 'Marina Ixtapa Golf Club',
     category: 'Golf',
     description: 'Play the Robert von Hagge-designed course beside the marina, with challenging fairways, water features, and options for different skill levels.',
+    image: 'images/ixtapa-activities/marina-ixtapa-golf-club.jpg',
   },
   {
     title: 'Ocean Sports',
     category: 'On the water',
     description: 'Explore surfing, paddleboarding, sailing, kayaking, and snorkeling around Ixtapa-Zihuatanejo and nearby Troncones.',
+    image: 'images/ixtapa-activities/ocean-sports.jpg',
   },
 ];
 
@@ -156,13 +162,22 @@ export default function Dod5StarLocation() {
 
           <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {activities.map((activity, index) => (
-              <article key={activity.title} className="glass-panel rounded-2xl p-6">
-                <div className="mb-5 flex items-center justify-between gap-4">
-                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{activity.category}</span>
-                  <span className="text-sm font-semibold text-primary/75">0{index + 1}</span>
+              <article key={activity.title} className="glass-panel overflow-hidden rounded-2xl">
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}${activity.image}`}
+                    alt={activity.title}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-card/65 to-transparent" aria-hidden="true" />
+                  <span className="absolute right-5 top-4 text-sm font-semibold text-primary drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">0{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-bold">{activity.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{activity.description}</p>
+                <div className="p-6">
+                  <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">{activity.category}</span>
+                  <h3 className="mt-4 text-xl font-bold">{activity.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{activity.description}</p>
+                </div>
               </article>
             ))}
           </div>
