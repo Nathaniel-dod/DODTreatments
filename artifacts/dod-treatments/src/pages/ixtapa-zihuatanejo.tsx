@@ -71,6 +71,51 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
+      {/* Explore the Retreat */}
+      <section className="py-16 md:py-24 bg-card/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
+          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/clinics/ixtapa-zihuatanejo/residence">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <BedDouble className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Residence</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Private suites, a salt-water pool, wellness technology, airport support, and more in a luxury jungle estate.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  Explore the Residence <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/clinics/ixtapa-zihuatanejo/treatments">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <Sparkles className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Treatments</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Daily Wolfe Non-Surgical, CellSonic, Cardio MedBed, and personalized healing protocols.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  See the Treatments <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/clinics/ixtapa-zihuatanejo/team">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <Users className="w-8 h-8 text-primary mb-4" />
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Your Team</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                  Hosts Dr. Sage Wolfe and Jesse Malcolm, house manager Cinthia, and founder Dr. Darrell Wolfe.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
+                  Meet the Team <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Description */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,51 +166,6 @@ export default function IxtapaZihuatanejo() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               At the end of a cobblestone street beside a 5-star golf course, the retreat is surrounded by beautiful jungle and moments from the coastal calm of Ixtapa-Zihuatanejo.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Explore the Retreat */}
-      <section className="py-16 md:py-24 bg-card/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
-          <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link href="/clinics/ixtapa-zihuatanejo/residence">
-              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <BedDouble className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Residence</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Private suites, a salt-water pool, wellness technology, airport support, and more in a luxury jungle estate.
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
-                  Explore the Residence <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/clinics/ixtapa-zihuatanejo/treatments">
-              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <Sparkles className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Treatments</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Daily Wolfe Non-Surgical, CellSonic, Cardio MedBed, and personalized healing protocols.
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
-                  See the Treatments <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/clinics/ixtapa-zihuatanejo/team">
-              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <Users className="w-8 h-8 text-primary mb-4" />
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Your Team</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Hosts Dr. Sage Wolfe and Jesse Malcolm, house manager Cinthia, and founder Dr. Darrell Wolfe.
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
-                  Meet the Team <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
           </div>
         </div>
       </section>
