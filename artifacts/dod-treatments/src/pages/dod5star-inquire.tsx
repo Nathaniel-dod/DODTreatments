@@ -44,6 +44,10 @@ export default function Dod5StarInquire() {
 
       <section className="pb-16 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-primary/30 bg-primary/10 p-6 text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">DOD5Star Exclusive</span>
+            <p className="mt-2 text-lg font-semibold">Book a Cardio MedBed treatment during your retreat and receive a complimentary DOD Core Restore session.</p>
+          </div>
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Request Information</h2>
             <p className="text-lg text-muted-foreground">
