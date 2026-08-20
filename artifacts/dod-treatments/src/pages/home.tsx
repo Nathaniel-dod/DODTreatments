@@ -46,20 +46,15 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        <div
+        <img
           aria-hidden="true"
-          className="absolute inset-0 z-0 opacity-[0.09]"
-          style={{
-            backgroundImage: `url(${import.meta.env.BASE_URL}images/world-map.svg)`,
-            backgroundSize: '130% auto',
-            backgroundPosition: 'center 38%',
-            backgroundRepeat: 'no-repeat',
-            maskImage: 'radial-gradient(ellipse 75% 65% at 50% 45%, black 35%, transparent 80%)',
-            WebkitMaskImage: 'radial-gradient(ellipse 75% 65% at 50% 45%, black 35%, transparent 80%)',
-          }}
+          src={`${import.meta.env.BASE_URL}images/home-3d-world-map.jpg`}
+          alt=""
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-80"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background z-0" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--gold-core)_0%,_transparent_50%)] opacity-5" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071421]/85 via-[#071421]/45 to-background" />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_72%_62%_at_center,_rgba(7,20,33,0.4)_0%,_transparent_75%)]" />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--gold-core)_0%,_transparent_50%)] opacity-10" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
