@@ -51,6 +51,8 @@ const treatmentProducts = [
     tagline: 'Pelvic Floor & Deep Core Strengthening',
     blurb: 'Pelvic floor restoration, urinary incontinence, sexual wellness, and deep core strengthening — for both women and men.',
     glyph: '◆',
+    image: 'images/dod-core-restore-lifestyle.png',
+    imageAlt: 'Person receiving DOD Core Restore therapy beside the treatment device',
   },
   {
     href: '/treatments/bone-density-scanner',
