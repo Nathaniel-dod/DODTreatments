@@ -13,6 +13,7 @@ const treatmentProducts = [
     glyph: '✦',
     image: 'images/wns-hero.jpg',
     imageAlt: "Wolfe Non-Surgical practitioner treating a patient's neck and shoulder",
+    imagePosition: 'object-[center_35%]',
   },
   {
     href: '/treatments/cellsonic-regeneration',
@@ -21,8 +22,8 @@ const treatmentProducts = [
     tagline: 'Cell & Tissue Regeneration',
     blurb: 'Non-invasive shock wave therapy promoting tissue regeneration, pain relief, and accelerated healing across the whole body.',
     glyph: '◆',
-    image: 'images/cellsonic-universe.png',
-    imageAlt: 'CellSonic Regeneration shock wave therapy unit against a cosmic background',
+    image: 'images/cellsonic-ankle-treatment.png',
+    imageAlt: 'CellSonic Regeneration treatment being applied to an ankle',
   },
   {
     href: '/treatments/cardio-medbed',
@@ -61,6 +62,8 @@ const treatmentProducts = [
     tagline: 'Radiation-Free Bone Density Assessment',
     blurb: 'Track skeletal health and regeneration across every DOD protocol — safely, with no radiation exposure.',
     glyph: '❖',
+    image: 'images/bone-density-scanner-lifestyle.png',
+    imageAlt: 'Practitioner performing a DOD Advanced Bone Density Scanner assessment',
   },
   {
     href: '/treatments/infrared-light-healing',
@@ -180,7 +183,7 @@ export default function Treatments() {
                             <img
                               src={`${import.meta.env.BASE_URL}${product.image}`}
                               alt={product.imageAlt}
-                              className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              className={`absolute inset-0 w-full h-full object-cover ${'imagePosition' in product ? product.imagePosition : 'object-top'} group-hover:scale-105 transition-transform duration-500`}
                             />
                           ) : (
                             <span className="text-5xl gold-gradient">{product.glyph}</span>
