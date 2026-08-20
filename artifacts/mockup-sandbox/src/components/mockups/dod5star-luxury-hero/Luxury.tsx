@@ -49,7 +49,7 @@ export function Luxury() {
               <span>Ixtapa-Zihuatanejo, México</span>
             </div>
             <h1 className="dod-luxury__title">
-              5-Star Healing <em>&amp; Training</em> Retreat
+              5-Star Healing <em>&amp; Training Retreat</em>
             </h1>
             <p className="dod-luxury__subtitle">
               A winning strategy for taking control of your healing

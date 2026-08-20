@@ -159,7 +159,10 @@
 }
 
 .dod-luxury__title em {
-  color: var(--gold);
+  background: linear-gradient(110deg, #f8d98a 0%, #e8b85f 46%, #fff0b0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-style: normal;
   white-space: nowrap;
 }
@@ -234,6 +237,7 @@
   }
   .dod-luxury__location { margin-bottom: 1.7rem; padding: 0.6rem 0.75rem; font-size: 0.7rem; }
   .dod-luxury__title { font-size: clamp(3.5rem, 16vw, 5.8rem); }
+  .dod-luxury__title em { font-size: 0.79em; }
   .dod-luxury__subtitle { margin-top: 2rem; font-size: 1.35rem; }
   .dod-luxury__aside { width: 100%; margin-top: 3rem; }
   .dod-luxury__aside-mark { height: 34px; margin-bottom: 0.85rem; }
