@@ -80,6 +80,44 @@ const treatmentProducts = [
   },
 ];
 
+const treatmentGoalGroups = [
+  {
+    title: 'Pain, Mobility & Scar Tissue',
+    description: 'Start with therapies focused on restoring movement and addressing physical restrictions.',
+    treatments: [treatmentProducts[0]],
+  },
+  {
+    title: 'Regeneration & Recovery',
+    description: 'Explore focused support for tissue renewal, recovery, and whole-body restoration.',
+    treatments: [treatmentProducts[1]],
+  },
+  {
+    title: 'Heart & Circulation',
+    description: 'Discover cardiovascular support designed to promote healthy circulation.',
+    treatments: [treatmentProducts[2]],
+  },
+  {
+    title: 'Core & Pelvic Wellness',
+    description: 'Find dedicated support for deep core strength and pelvic wellness.',
+    treatments: [treatmentProducts[4]],
+  },
+  {
+    title: 'Assessment & Monitoring',
+    description: 'Use clear, non-invasive information to understand and track your health.',
+    treatments: [treatmentProducts[5]],
+  },
+  {
+    title: 'Light-Based Therapies',
+    description: 'Explore light-based options that support restorative routines and wellness goals.',
+    treatments: [treatmentProducts[6], treatmentProducts[7]],
+  },
+  {
+    title: 'Personalized Guidance',
+    description: 'Get a tailored roadmap and one-on-one guidance for your next steps.',
+    treatments: [treatmentProducts[3]],
+  },
+];
+
 export default function Treatments() {
   const structuredData = [
     {
@@ -120,36 +158,52 @@ export default function Treatments() {
       {/* Treatment Cards */}
       <section className="pb-20 md:pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {treatmentProducts.map((product) => (
-              <Link key={product.href} href={product.href}>
-                <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] hover:border-primary/30 transition-all duration-300 group h-full flex flex-col">
-                  <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
-                    {'image' in product ? (
-                      <img
-                        src={`${import.meta.env.BASE_URL}${product.image}`}
-                        alt={product.imageAlt}
-                        className={`absolute inset-0 w-full h-full ${'imageContain' in product ? 'object-contain p-4' : 'object-cover object-top'} group-hover:scale-105 transition-transform duration-500`}
-                      />
-                    ) : (
-                      <span className="text-6xl gold-gradient">{product.glyph}</span>
-                    )}
-                    <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/80 text-primary text-xs font-medium">
-                      {product.category}
-                    </span>
-                  </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <h2 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h2>
-                    <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
-                    <div className="flex items-center justify-end mt-auto">
-                      <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
-                        View <ArrowRight className="w-4 h-4" />
-                      </span>
-                    </div>
-                  </div>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Find Your Starting Point</h2>
+            <p className="text-lg text-muted-foreground">
+              Explore treatments by the outcome or area of support that matters most to you.
+            </p>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {treatmentGoalGroups.map((group) => (
+              <section key={group.title} className="glass-panel rounded-3xl p-6 md:p-8">
+                <div className="mb-6">
+                  <h2 className="text-2xl font-bold gold-gradient">{group.title}</h2>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">{group.description}</p>
                 </div>
-              </Link>
+                <div className={`grid gap-4 ${group.treatments.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+                  {group.treatments.map((product) => (
+                    <Link key={product.href} href={product.href}>
+                      <div className="rounded-2xl overflow-hidden border border-border/60 bg-background/30 hover:border-primary/40 transition-all duration-300 group h-full flex flex-col">
+                        <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                          {'image' in product ? (
+                            <img
+                              src={`${import.meta.env.BASE_URL}${product.image}`}
+                              alt={product.imageAlt}
+                              className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            />
+                          ) : (
+                            <span className="text-5xl gold-gradient">{product.glyph}</span>
+                          )}
+                          <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
+                            {product.category}
+                          </span>
+                        </div>
+                        <div className="p-5 flex flex-col flex-1">
+                          <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h3>
+                          <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
+                          <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
+                          <div className="flex items-center justify-end mt-auto">
+                            <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
+                              View <ArrowRight className="w-4 h-4" />
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
             ))}
           </div>
         </div>
