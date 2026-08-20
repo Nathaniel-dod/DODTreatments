@@ -45,28 +45,38 @@ export default function IxtapaZihuatanejo() {
       <Dod5StarNav />
 
       {/* Hero */}
-      <section className="pt-16 pb-16 md:pt-24 md:pb-24 relative overflow-hidden">
+      <section className="relative isolate flex min-h-[34rem] items-center overflow-hidden md:min-h-[40rem]">
         <img
           src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
           alt="Aerial view of Ixtapa-Zihuatanejo, México — jungle, marina, and Pacific coastline"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 -z-30 h-full w-full scale-[1.03] object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 mb-6">
-              <MapPin className="w-6 h-6 text-primary" />
-              <span className="text-sm font-medium text-primary">Ixtapa-Zihuatanejo, México</span>
+        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(5,18,29,0.9)_0%,rgba(5,18,29,0.63)_43%,rgba(5,18,29,0.16)_100%)]" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071421]/95 via-[#071421]/20 to-[#071421]/55" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-gradient-to-b from-background/45 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" aria-hidden="true" />
+
+        <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 md:py-32 lg:px-8 lg:py-40">
+          <div className="mx-auto max-w-5xl text-center">
+            <div className="mb-8 flex items-center justify-center gap-3 text-primary">
+              <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
+              <MapPin className="h-5 w-5" strokeWidth={1.75} />
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm">Ixtapa-Zihuatanejo, México</span>
+              <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
+            <h1 className="gold-gradient gold-glow mx-auto max-w-5xl text-5xl font-bold leading-[0.96] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
               5-Star Healing & Training Retreat
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-               A winning strategy for taking control of your healing
+            <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
+              A winning strategy for taking control of your healing
             </p>
-            <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
-            </p>
+            <div className="mx-auto mt-9 flex max-w-3xl items-center justify-center gap-4 text-foreground/80 md:mt-11">
+              <span className="h-px w-8 shrink-0 bg-primary/65" aria-hidden="true" />
+              <p className="text-sm leading-relaxed md:text-base">
+                Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
+              </p>
+              <span className="h-px w-8 shrink-0 bg-primary/65" aria-hidden="true" />
+            </div>
           </div>
         </div>
       </section>
