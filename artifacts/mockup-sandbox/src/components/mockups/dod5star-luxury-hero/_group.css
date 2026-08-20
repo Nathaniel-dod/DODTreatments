@@ -1,0 +1,103 @@
+/* DOD5Star Luxury Hero — group-level tokens and fonts */
+/* Scoped to this mockup group only; do not edit the sandbox global index.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
+
+  /* Deep forest teal background */
+  --background: 218 40% 14%;
+  --foreground: 38 55% 92%;
+
+  /* Borders */
+  --border: 218 28% 26%;
+  --input: 218 25% 32%;
+  --ring: 42 96% 65%;
+
+  /* Glass panels */
+  --card: 218 36% 18%;
+  --card-foreground: 38 55% 92%;
+  --card-border: 218 28% 28%;
+
+  --popover: 218 38% 16%;
+  --popover-foreground: 38 55% 92%;
+  --popover-border: 218 30% 18%;
+
+  /* Gold primary (core brand gold) */
+  --primary: 42 96% 65%;
+  --primary-foreground: 218 45% 8%;
+
+  /* Warm cream secondary */
+  --secondary: 38 45% 85%;
+  --secondary-foreground: 218 45% 12%;
+
+  /* Muted teal */
+  --muted: 218 32% 21%;
+  --muted-foreground: 38 25% 70%;
+
+  /* Light gold accent */
+  --accent: 44 97% 72%;
+  --accent-foreground: 218 45% 8%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 38 55% 92%;
+
+  --sidebar: 218 42% 10%;
+  --sidebar-foreground: 38 55% 92%;
+  --sidebar-border: 218 30% 18%;
+  --sidebar-primary: 42 96% 65%;
+  --sidebar-primary-foreground: 218 45% 8%;
+  --sidebar-accent: 218 35% 15%;
+  --sidebar-accent-foreground: 38 55% 92%;
+  --sidebar-ring: 42 96% 65%;
+
+  --chart-1: 42 96% 65%;
+  --chart-2: 218 60% 45%;
+  --chart-3: 38 70% 65%;
+  --chart-4: 218 40% 30%;
+  --chart-5: 44 90% 75%;
+
+  --app-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --app-font-serif: Georgia, serif;
+  --app-font-mono: Menlo, monospace;
+  --radius: 1rem;
+
+  /* Brand gold ramp */
+  --gold-core: #f4be45;
+  --gold-mid: #f6c95f;
+  --gold-light: #f6d479;
+  --gold-pale: #ffe79c;
+  --gold-sparkle: #fff0a3;
+  --gold-bright: #fff7c6;
+  --gold-deep: #b97618;
+  --gold-shadow: #1a1407;
+}
+
+/* Gold gradient text utility */
+.gold-gradient {
+  background: linear-gradient(135deg, var(--gold-deep) 0%, var(--gold-core) 30%, var(--gold-light) 60%, var(--gold-pale) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  text-shadow: 0 0 24px rgba(244, 190, 69, 0.15);
+}
+
+/* Body background matching the main app */
+body {
+  font-family: var(--app-font-sans);
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+    linear-gradient(115deg, transparent 0%, rgba(163, 192, 233, 0.07) 28%, transparent 42%, rgba(163, 192, 233, 0.05) 62%, transparent 78%),
+    linear-gradient(180deg, hsl(218 38% 18%) 0%, hsl(218 40% 14%) 34%, hsl(220 42% 11%) 100%);
+  background-attachment: fixed;
+}
