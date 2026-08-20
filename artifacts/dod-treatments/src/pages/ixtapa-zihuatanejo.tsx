@@ -125,36 +125,6 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Experience Options</h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="glass-panel rounded-2xl p-8 text-center">
-              <div className="text-4xl gold-gradient mb-4">✦</div>
-              <h3 className="text-xl font-bold mb-3">The Healing Experience</h3>
-              <p className="text-sm text-muted-foreground">
-                Rejuvenating therapies, personalized healing protocols, and elegantly designed suites for a transformative journey of renewal.
-              </p>
-            </div>
-            <div className="glass-panel rounded-2xl p-8 text-center">
-              <div className="text-4xl gold-gradient mb-4">◆</div>
-              <h3 className="text-xl font-bold mb-3">The Treatment Experience</h3>
-              <p className="text-sm text-muted-foreground">
-                Revolutionary Wolfe Non-Surgical treatments and advanced energy medicine therapies in a luxurious jungle estate.
-              </p>
-            </div>
-            <div className="glass-panel rounded-2xl p-8 text-center">
-              <div className="text-4xl gold-gradient mb-4">❖</div>
-              <h3 className="text-xl font-bold mb-3">The Training Experience</h3>
-              <p className="text-sm text-muted-foreground">
-                Learn revolutionary healing techniques while enjoying luxury accommodations and the serene backdrop of lush jungles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Explore the Retreat */}
       <section className="py-16 md:py-24 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
