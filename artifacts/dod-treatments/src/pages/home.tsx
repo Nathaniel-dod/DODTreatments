@@ -134,8 +134,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Ixtapa */}
-            <Link href="/clinics/ixtapa-zihuatanejo">
-              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
+            <Link href="/clinics/ixtapa-zihuatanejo" className="block h-full">
+              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
@@ -143,11 +143,11 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h3>
                   <p className="text-muted-foreground mb-4">5-Star Healing & Training Retreat</p>
                   <p className="text-sm text-foreground/70 mb-4">Hosted by Dr. Sage Wolfe & Jesse Malcolm</p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all mt-auto">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -155,8 +155,8 @@ export default function Home() {
             </Link>
 
             {/* Penticton */}
-            <Link href="/clinics/penticton">
-              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
+            <Link href="/clinics/penticton" className="block h-full">
+              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
                     src={`${import.meta.env.BASE_URL}images/penticton.jpg`}
@@ -164,11 +164,11 @@ export default function Home() {
                     className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Penticton, BC Canada</h3>
                   <p className="text-muted-foreground mb-4">Professional Clinic</p>
                   <p className="text-sm text-foreground/70 mb-4">Hosted by Master Practitioner Rita Marialaki</p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all mt-auto">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
@@ -176,8 +176,8 @@ export default function Home() {
             </Link>
 
             {/* Practitioner Map */}
-            <Link href="/practitioners">
-              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
+            <Link href="/practitioners" className="block h-full">
+              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
                 <div className="aspect-[4/3] relative overflow-hidden bg-background">
                   <img
                     src={`${import.meta.env.BASE_URL}images/practitioner-earth.jpg`}
@@ -186,11 +186,11 @@ export default function Home() {
                   />
                   <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-background/10" />
                 </div>
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Practitioner Map</h3>
                   <p className="text-muted-foreground mb-4">Certified Practitioners Worldwide</p>
                   <p className="text-sm text-foreground/70 mb-4">Search the BraveHeartNation directory near you</p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all mt-auto">
                     Find a Practitioner <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
