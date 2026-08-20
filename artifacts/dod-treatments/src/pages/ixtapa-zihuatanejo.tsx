@@ -70,13 +70,9 @@ export default function IxtapaZihuatanejo() {
             <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
               A winning strategy for taking control of your healing
             </p>
-            <div className="mx-auto mt-9 grid max-w-4xl grid-cols-[2.5rem_minmax(0,1fr)_2.5rem] items-center gap-4 text-foreground/80 md:mt-11 md:grid-cols-[3.5rem_minmax(0,1fr)_3.5rem]">
-              <span className="h-px w-full bg-primary/65" aria-hidden="true" />
-              <p className="text-center text-sm leading-relaxed md:text-base">
-                Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
-              </p>
-              <span className="h-px w-full bg-primary/65" aria-hidden="true" />
-            </div>
+            <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:mt-11 md:text-base">
+              Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
+            </p>
           </div>
         </div>
       </section>
