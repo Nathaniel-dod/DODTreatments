@@ -78,6 +78,48 @@ export default function IxtapaZihuatanejo() {
             <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:mt-11 md:text-base">
               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
             </p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10">
+              <Link href="/clinics/ixtapa-zihuatanejo/residence">
+                <Button size="lg" className="gold-glow min-w-56">
+                  View the Property &amp; Amenities
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+              <Link href="/clinics/ixtapa-zihuatanejo/inquire">
+                <Button size="lg" variant="outline" className="min-w-44 border-primary/60 bg-background/20 text-foreground hover:bg-primary/15 hover:text-foreground">
+                  Plan Your Stay
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who the retreat may suit */}
+      <section className="bg-card/30 py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-10 max-w-2xl md:mb-12">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Considering a stay</p>
+              <h2 className="text-3xl font-bold leading-tight md:text-4xl">Is DOD5Star Right for You?</h2>
+              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                DOD5Star may be a fit for people who want a more immersive and supported healing experience than an occasional appointment.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {[
+                'People seeking more intensive support than an occasional appointment',
+                'People combining several treatments as part of a personalized plan',
+                'People who want to learn how to continue supporting themselves at home',
+                'People comfortable travelling for a private healing experience',
+              ].map((point, index) => (
+                <div key={point} className="glass-panel flex items-start gap-5 rounded-2xl p-6">
+                  <span className="mt-0.5 text-sm font-semibold tracking-[0.16em] text-primary">0{index + 1}</span>
+                  <p className="text-base leading-relaxed text-foreground/90">{point}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
