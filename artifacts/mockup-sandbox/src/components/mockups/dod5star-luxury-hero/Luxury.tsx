@@ -45,7 +45,7 @@ export function Luxury() {
         <div className="dod-luxury__content">
           <div className="dod-luxury__main">
             <div className="dod-luxury__location">
-              <MapPin size={14} strokeWidth={1.5} aria-hidden="true" />
+              <MapPin size={18} strokeWidth={1.5} aria-hidden="true" />
               <span>Ixtapa-Zihuatanejo, México</span>
             </div>
             <h1 className="dod-luxury__title">

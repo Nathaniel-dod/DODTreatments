@@ -123,17 +123,21 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  margin-bottom: 2.3rem;
+  margin-bottom: 2.15rem;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(232, 201, 137, 0.52);
+  background: rgba(12, 31, 32, 0.62);
+  box-shadow: 0 12px 32px rgba(5, 17, 18, 0.2);
   color: var(--gold);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
 }
 
 .dod-luxury__location::before {
   display: block;
-  width: 42px;
+  width: 52px;
   height: 1px;
   background: var(--gold);
   content: '';
@@ -148,6 +152,9 @@
   font-weight: 400;
   letter-spacing: -0.055em;
   line-height: 0.92;
+  text-shadow:
+    0 2px 2px rgba(5, 17, 18, 0.5),
+    0 12px 34px rgba(5, 17, 18, 0.72);
   text-wrap: balance;
 }
 
@@ -225,7 +232,7 @@
     display: block;
     padding: 8.5rem 1.35rem 3rem;
   }
-  .dod-luxury__location { margin-bottom: 1.7rem; }
+  .dod-luxury__location { margin-bottom: 1.7rem; padding: 0.6rem 0.75rem; font-size: 0.7rem; }
   .dod-luxury__title { font-size: clamp(3.5rem, 16vw, 5.8rem); }
   .dod-luxury__subtitle { margin-top: 2rem; font-size: 1.35rem; }
   .dod-luxury__aside { width: 100%; margin-top: 3rem; }
