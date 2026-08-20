@@ -64,18 +64,18 @@ export default function IxtapaZihuatanejo() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm">Ixtapa-Zihuatanejo, México</span>
               <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
             </div>
-            <h1 className="gold-gradient gold-glow mx-auto max-w-5xl text-5xl font-bold leading-[0.96] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
+            <h1 className="gold-gradient gold-glow mx-auto max-w-5xl text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
               5-Star Healing & Training Retreat
             </h1>
             <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
               A winning strategy for taking control of your healing
             </p>
-            <div className="mx-auto mt-9 flex max-w-3xl items-center justify-center gap-4 text-foreground/80 md:mt-11">
-              <span className="h-px w-8 shrink-0 bg-primary/65" aria-hidden="true" />
-              <p className="text-sm leading-relaxed md:text-base">
+            <div className="mx-auto mt-9 grid max-w-4xl grid-cols-[2.5rem_minmax(0,1fr)_2.5rem] items-center gap-4 text-foreground/80 md:mt-11 md:grid-cols-[3.5rem_minmax(0,1fr)_3.5rem]">
+              <span className="h-px w-full bg-primary/65" aria-hidden="true" />
+              <p className="text-center text-sm leading-relaxed md:text-base">
                 Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
               </p>
-              <span className="h-px w-8 shrink-0 bg-primary/65" aria-hidden="true" />
+              <span className="h-px w-full bg-primary/65" aria-hidden="true" />
             </div>
           </div>
         </div>
