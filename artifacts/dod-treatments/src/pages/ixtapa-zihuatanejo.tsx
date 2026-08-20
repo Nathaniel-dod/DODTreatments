@@ -150,12 +150,6 @@ export default function IxtapaZihuatanejo() {
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
                 DOD5Star may be a fit for people who want a more immersive and supported healing experience than an occasional appointment.
               </p>
-              <div className="glass-panel mt-6 flex max-w-xl items-start gap-4 rounded-2xl p-5">
-                <Languages className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                <p className="text-sm leading-relaxed text-foreground/90">
-                  <span className="font-semibold text-foreground">Bilingual care:</span> Spanish-speaking consultants and practitioners are available to support you throughout your stay.
-                </p>
-              </div>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -170,6 +164,12 @@ export default function IxtapaZihuatanejo() {
                   <p className="text-base leading-relaxed text-foreground/90">{point}</p>
                 </div>
               ))}
+            </div>
+            <div className="glass-panel mt-4 flex items-start gap-4 rounded-2xl p-5">
+              <Languages className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm leading-relaxed text-foreground/90">
+                <span className="font-semibold text-foreground">Bilingual care:</span> Spanish-speaking consultants and practitioners are available to support you throughout your stay.
+              </p>
             </div>
           </div>
         </div>
