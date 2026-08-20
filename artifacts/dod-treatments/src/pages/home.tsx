@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, Globe, MapPin, User } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin, User } from 'lucide-react';
 
 export default function Home() {
   const structuredData = [
@@ -178,20 +178,13 @@ export default function Home() {
             {/* Practitioner Map */}
             <Link href="/practitioners">
               <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/10 relative">
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 opacity-25"
-                    style={{
-                      backgroundImage: `url(${import.meta.env.BASE_URL}images/world-map.svg)`,
-                      backgroundSize: '160% auto',
-                      backgroundPosition: 'center 40%',
-                      backgroundRepeat: 'no-repeat',
-                    }}
+                <div className="aspect-[4/3] relative overflow-hidden bg-background">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/practitioner-earth.jpg`}
+                    alt="Earth viewed from space"
+                    className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Globe className="w-16 h-16 text-primary/40" />
-                  </div>
+                  <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-background/35 via-transparent to-background/10" />
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Practitioner Map</h3>
