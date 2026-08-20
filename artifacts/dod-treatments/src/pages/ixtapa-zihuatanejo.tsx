@@ -64,8 +64,13 @@ export default function IxtapaZihuatanejo() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm">Ixtapa-Zihuatanejo, México</span>
               <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
             </div>
-            <h1 className="gold-gradient gold-glow mx-auto max-w-5xl text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
-              5-Star Healing & Training Retreat
+            <h1 className="gold-glow mx-auto max-w-5xl overflow-visible text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
+              <span className="block">
+                <span className="gold-gradient inline-block pb-[0.04em]">5-Star Healing &amp;</span>
+              </span>
+              <span className="block">
+                <span className="gold-gradient inline-block pb-[0.16em]">Training Retreat</span>
+              </span>
             </h1>
             <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
               A winning strategy for taking control of your healing
