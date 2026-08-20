@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
-import { MapPin, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Clinics() {
   const structuredData = [
@@ -50,10 +50,12 @@ export default function Clinics() {
             {/* Ixtapa */}
             <Link href="/clinics/ixtapa-zihuatanejo">
               <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <MapPin className="w-24 h-24 text-primary/40" />
-                  </div>
+                <div className="aspect-[16/10] relative overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
+                    alt="Aerial view of Ixtapa-Zihuatanejo, México"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-8">
                   <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
@@ -74,10 +76,12 @@ export default function Clinics() {
             {/* Penticton */}
             <Link href="/clinics/penticton">
               <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
-                <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <MapPin className="w-24 h-24 text-primary/40" />
-                  </div>
+                <div className="aspect-[16/10] relative overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/penticton.jpg`}
+                    alt="View of Penticton, BC and Okanagan Lake with mountains"
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
                 <div className="p-8">
                   <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
