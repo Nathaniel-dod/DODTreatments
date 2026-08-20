@@ -6,6 +6,7 @@ const items = [
   { name: 'Treatments', href: '/clinics/ixtapa-zihuatanejo/treatments' },
   { name: 'Your Team', href: '/clinics/ixtapa-zihuatanejo/team' },
   { name: 'Plan Your Stay', href: '/clinics/ixtapa-zihuatanejo/inquire' },
+  { name: 'Ixtapa-Zihuatanejo', href: '/clinics/ixtapa-zihuatanejo/location' },
 ];
 
 export function Dod5StarNav() {

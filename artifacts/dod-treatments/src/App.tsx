@@ -21,6 +21,7 @@ import Dod5StarResidence from '@/pages/dod5star-residence';
 import Dod5StarTreatments from '@/pages/dod5star-treatments';
 import Dod5StarTeam from '@/pages/dod5star-team';
 import Dod5StarInquire from '@/pages/dod5star-inquire';
+import Dod5StarLocation from '@/pages/dod5star-location';
 import Penticton from '@/pages/penticton';
 import PersonalTreatment from '@/pages/personal-treatment';
 import Practitioners from '@/pages/practitioners';
@@ -62,6 +63,7 @@ function Router() {
           <Route path="/clinics/ixtapa-zihuatanejo/treatments" component={Dod5StarTreatments} />
           <Route path="/clinics/ixtapa-zihuatanejo/team" component={Dod5StarTeam} />
           <Route path="/clinics/ixtapa-zihuatanejo/inquire" component={Dod5StarInquire} />
+          <Route path="/clinics/ixtapa-zihuatanejo/location" component={Dod5StarLocation} />
           <Route path="/clinics/penticton" component={Penticton} />
           <Route path="/personal-treatment" component={PersonalTreatment} />
           <Route path="/practitioners" component={Practitioners} />
