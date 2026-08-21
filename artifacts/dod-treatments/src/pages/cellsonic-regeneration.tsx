@@ -113,9 +113,9 @@ export default function CellSonicRegeneration() {
               </p>
             </div>
             <img
-              src={`${import.meta.env.BASE_URL}images/cellsonic-unit.png`}
-              alt="CellSonic Regeneration shock wave therapy unit"
-              className="w-full max-w-sm mx-auto md:max-w-none max-h-[32rem] object-contain"
+              src={`${import.meta.env.BASE_URL}images/cellsonic-ankle-treatment.png`}
+              alt="CellSonic Regeneration treatment being applied to an ankle"
+              className="w-full max-w-sm mx-auto md:max-w-none h-[20rem] md:h-[28rem] rounded-3xl border border-primary/20 object-cover object-center shadow-2xl"
             />
           </div>
         </div>

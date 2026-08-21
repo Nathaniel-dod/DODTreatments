@@ -108,6 +108,11 @@ export default function Consultations() {
               A personalized consultation gives you a step-by-step strategy for your health — nutritional, emotional, and physical — from Dr. Darrell Wolfe or a certified New World Master Practitioner.
             </p>
             <p className="text-2xl font-bold gold-gradient">3, 2, 1, We Got This!</p>
+            <img
+              src={`${import.meta.env.BASE_URL}images/perfect-day-consultation.jpg`}
+              alt="Woman speaking on the phone during a personal consultation"
+              className="mt-10 h-[16rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[24rem]"
+            />
           </div>
         </div>
       </section>

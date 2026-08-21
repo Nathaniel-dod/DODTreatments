@@ -71,6 +71,11 @@ export default function CardioMedBed() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Enhanced External Counter Pulsation (EECP) – A Non-Invasive Therapy Backed by Science. FDA-Approved (USA), endorsed by the European Society of Cardiology (ESC), and clinically validated for cardiovascular health.
             </p>
+            <img
+              src={`${import.meta.env.BASE_URL}images/cardio-medbed-lifestyle.png`}
+              alt="Patient receiving Cardio MedBed EECP therapy with a practitioner"
+              className="mt-10 h-[18rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[28rem]"
+            />
           </div>
         </div>
       </section>

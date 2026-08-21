@@ -82,6 +82,11 @@ export default function DodCoreRestore() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Clinical-grade High-Intensity Focused Electromagnetic (HIFEM) therapy designed to support pelvic-floor strength, deep-core stability, continence, and sexual wellness—for women and men, fully clothed in 28-minute sessions.
             </p>
+            <img
+              src={`${import.meta.env.BASE_URL}images/dod-core-restore-lifestyle.png`}
+              alt="Person receiving DOD Core Restore therapy beside the treatment device"
+              className="mt-10 h-[18rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[28rem]"
+            />
           </div>
         </div>
       </section>
