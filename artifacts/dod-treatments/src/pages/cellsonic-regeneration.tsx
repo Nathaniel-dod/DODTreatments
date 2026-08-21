@@ -48,6 +48,17 @@ const testimonialVideos = [
   { id: 'zRcSwamJCZw', title: "Lisa's CellSonic Story" },
 ];
 
+const practitionerTestimonialsPlaylist = 'PLGL9YQNm1Tc_ffdor2kFl99gxY70YJHmv';
+
+const practitionerTestimonials = [
+  { id: 'ktOWxbWpQ9I', title: "Monica's Story" },
+  { id: 'WvNCdjPeUQ8', title: "Stephanie's Testimonial" },
+  { id: 'VGUogtGeUgk', title: "Sahal's Testimonial" },
+  { id: 'gDbON2sHw2g', title: 'Practitioner Stephanie' },
+  { id: 'hqlWa4z4K5U', title: 'Practitioner Lisa' },
+  { id: 'pVDZ3EwOGII', title: "Brenda's Testimonial" },
+];
+
 export default function CellSonicRegeneration() {
   const structuredData = [
     {
@@ -247,6 +258,77 @@ export default function CellSonicRegeneration() {
                 className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-primary/40 px-6 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
               >
                 View All Patient Testimonials <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* At-Home, Clinic & Practitioner Stories */}
+      <section className="pb-20 md:pb-32">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold gold-gradient">Want a CellSonic Regeneration in Your Home or Clinic?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Learn more about bringing CellSonic Regeneration to your personal care setting or professional clinic.
+            </p>
+            <a
+              href="https://www.dodpowerpack.com/cellsonic"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
+            >
+              Learn More <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="max-w-6xl mx-auto mt-20">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">CellSonic Regeneration Practitioner Testimonials</h2>
+              <p className="text-lg text-muted-foreground">Hear from practitioners and care providers who work with CellSonic Regeneration.</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {practitionerTestimonials.map((video) => (
+                <a
+                  key={video.id}
+                  href={`https://www.youtube.com/watch?v=${video.id}&list=${practitionerTestimonialsPlaylist}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-panel rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="aspect-video relative overflow-hidden bg-background">
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+                      alt={`Video thumbnail for ${video.title}`}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/65 via-transparent to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110">
+                        <Play className="h-6 w-6 translate-x-0.5 fill-current" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold leading-snug group-hover:text-primary transition-colors">{video.title}</h3>
+                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                      Watch on YouTube <ExternalLink className="h-4 w-4" />
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <a
+                href={`https://www.youtube.com/playlist?list=${practitionerTestimonialsPlaylist}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-primary/40 px-6 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+              >
+                View All Practitioner Testimonials <ExternalLink className="h-4 w-4" />
               </a>
             </div>
           </div>
