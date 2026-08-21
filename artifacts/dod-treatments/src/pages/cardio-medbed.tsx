@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, ExternalLink, Play } from 'lucide-react';
+import { CheckCircle2, ExternalLink } from 'lucide-react';
 
 const benefits = [
   'Increase Nitric Oxide, Improving Vascular Health',
@@ -19,8 +19,6 @@ const steps = [
   { step: 'Step 3', title: 'Inflation of upper thigh cuffs 50ms later', desc: 'Blood propelled toward heart' },
   { step: 'Step 4', title: 'Deflation facilitates cardiac unloading', desc: 'Timed with heartbeat' },
 ];
-
-const practitionerVideosPlaylist = 'PLGL9YQNm1Tc8JJzwaRQ6FRj20Pdr-PbJA';
 
 export default function CardioMedBed() {
   const structuredData = [
@@ -186,7 +184,7 @@ export default function CardioMedBed() {
         </div>
       </section>
 
-      {/* At-Home, Clinic & Practitioner Stories */}
+      {/* At-Home & Clinic */}
       <section className="pb-20 md:pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
@@ -201,40 +199,6 @@ export default function CardioMedBed() {
               className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
             >
               Learn More <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-
-          <div className="max-w-4xl mx-auto mt-20">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Cardio MedBed Practitioner Videos</h2>
-              <p className="text-lg text-muted-foreground">Hear from practitioners and care providers who work with Cardio MedBed EECP.</p>
-            </div>
-
-            <a
-              href={`https://www.youtube.com/playlist?list=${practitionerVideosPlaylist}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-panel rounded-3xl overflow-hidden group hover:border-primary/30 transition-all duration-300 block"
-            >
-              <div className="aspect-[16/8] relative overflow-hidden bg-background">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/cardio-medbed-lifestyle.png`}
-                  alt="Cardio MedBed practitioner assisting a patient"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <Play className="h-7 w-7 translate-x-0.5 fill-current" />
-                  </span>
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <h3 className="text-2xl font-bold">Watch Cardio MedBed Practitioner Videos</h3>
-                  <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-primary">
-                    Open the YouTube Playlist <ExternalLink className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
             </a>
           </div>
         </div>
