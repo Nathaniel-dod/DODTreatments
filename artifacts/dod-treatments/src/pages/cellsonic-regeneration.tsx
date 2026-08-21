@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ExternalLink, Play } from 'lucide-react';
 
 const benefits = [
   { title: 'Pain Relief', desc: 'Reduce inflammation and accelerate natural healing.' },
@@ -35,6 +35,17 @@ const mechanisms = [
   { title: 'Breaks Down Calcium Deposits', icon: '◈' },
   { title: 'Activates Stem Cell Growth', icon: '◈' },
   { title: 'Reduces Cellular Inflammation', icon: '◈' },
+];
+
+const testimonialPlaylist = 'PLGL9YQNm1Tc9CCiVV3aHxohHgCBUFroPI';
+
+const testimonialVideos = [
+  { id: '4xEpZNQIpmc', title: 'Wrist Injury Testimonial' },
+  { id: '12FgjFsy6nE', title: 'CellSonic Regeneration Testimonial' },
+  { id: 'oeWP371CiIU', title: "Stephanie's Before & After Story" },
+  { id: 'TUvkjZXn_ks', title: 'Leg Ulcer Before & After' },
+  { id: 'BNT_l6K8Blg', title: "Renée's CellSonic Story" },
+  { id: 'zRcSwamJCZw', title: "Lisa's CellSonic Story" },
 ];
 
 export default function CellSonicRegeneration() {
@@ -170,6 +181,73 @@ export default function CellSonicRegeneration() {
               <Link href="/treatments/consultations">
                 <Button size="lg" variant="outline">Book Consultation</Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Research & Patient Testimonials */}
+      <section className="pb-16 md:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <a
+              href="https://www.dodpowerpack.com/research"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
+            >
+              Read the Studies <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Patient Testimonials</h2>
+              <p className="text-lg text-muted-foreground">Hear directly from people who have experienced CellSonic Regeneration.</p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {testimonialVideos.map((video) => (
+                <a
+                  key={video.id}
+                  href={`https://www.youtube.com/watch?v=${video.id}&list=${testimonialPlaylist}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="glass-panel rounded-2xl overflow-hidden group hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="aspect-video relative overflow-hidden bg-background">
+                    <img
+                      src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
+                      alt={`Video thumbnail for ${video.title}`}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/65 via-transparent to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110">
+                        <Play className="h-6 w-6 translate-x-0.5 fill-current" />
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-bold leading-snug group-hover:text-primary transition-colors">{video.title}</h3>
+                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-medium text-primary">
+                      Watch on YouTube <ExternalLink className="h-4 w-4" />
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            <div className="text-center mt-10">
+              <a
+                href={`https://www.youtube.com/playlist?list=${testimonialPlaylist}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-11 items-center justify-center gap-2 rounded-lg border border-primary/40 px-6 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+              >
+                View All Patient Testimonials <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </div>
         </div>
