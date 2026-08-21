@@ -120,6 +120,13 @@ export default function CardioMedBed() {
           <p className="text-lg text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
             Cardio MedBed Treatment is administered through three pairs of external inflatable cuffs that are applied around the lower legs, upper legs and buttocks. These cuffs continuously inflate and deflate between the resting period of the heartbeat and increase blood returned to the heart.
           </p>
+          <figure className="max-w-5xl mx-auto mb-12 overflow-hidden rounded-3xl border border-primary/20 bg-background/30 shadow-2xl">
+            <img
+              src={`${import.meta.env.BASE_URL}images/cardio-medbed-blood-flow.jpg`}
+              alt="Illustration of red blood cells flowing freely through a healthy blood vessel"
+              className="h-[16rem] w-full object-cover object-center md:h-[26rem]"
+            />
+          </figure>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {steps.map((item, index) => (
               <div key={index} className="glass-panel rounded-xl p-6 text-center">
