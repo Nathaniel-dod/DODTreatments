@@ -5,9 +5,9 @@ import { Button } from '@/components/ui/button';
 
 const navigation = [
   { name: 'Treatments', href: '/treatments' },
-  { name: 'Personal Treatments & Training', href: '/personal-treatment' },
-  { name: 'Clinics', href: '/clinics' },
   { name: 'DOD5Star', href: '/clinics/ixtapa-zihuatanejo' },
+  { name: 'Clinics', href: '/clinics' },
+  { name: 'Personal Treatment and Training', href: '/personal-treatment' },
 ];
 
 function isActive(item: { href: string }, location: string) {
