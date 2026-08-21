@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, ExternalLink } from 'lucide-react';
 
 const benefits = [
   { title: 'Pelvic Floor Strength', desc: 'Strengthen the foundation of the deep core without surgery, medication, or downtime.' },
@@ -152,6 +152,26 @@ export default function DodCoreRestore() {
             <p className="mt-8 text-center text-sm leading-relaxed text-muted-foreground">
               DOD Core Restore is a wellness device. It is not a substitute for medical diagnosis or treatment, and individual results vary.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Home & Clinic CTA */}
+      <section className="pb-16 md:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="glass-panel max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold gold-gradient">Want This for Your Home or Clinic?</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Learn more about bringing DOD Core Restore to your personal care setting or professional clinic.
+            </p>
+            <a
+              href="https://www.dodpowerpack.com/core-restore"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
+            >
+              Learn More <ExternalLink className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
