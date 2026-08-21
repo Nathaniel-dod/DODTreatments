@@ -20,7 +20,6 @@ const steps = [
   { step: 'Step 4', title: 'Deflation facilitates cardiac unloading', desc: 'Timed with heartbeat' },
 ];
 
-const patientTestimonialsPlaylist = 'PLGL9YQNm1Tc_hpfvYTBkmMR9KK5XnkeuM';
 const practitionerVideosPlaylist = 'PLGL9YQNm1Tc8JJzwaRQ6FRj20Pdr-PbJA';
 
 export default function CardioMedBed() {
@@ -171,10 +170,10 @@ export default function CardioMedBed() {
         </div>
       </section>
 
-      {/* Research & Patient Testimonials */}
+      {/* Research */}
       <section className="pb-16 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center">
             <a
               href="https://www.dodpowerpack.com/research"
               target="_blank"
@@ -182,40 +181,6 @@ export default function CardioMedBed() {
               className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
             >
               Read the Studies <ExternalLink className="h-4 w-4" />
-            </a>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Patient Testimonials</h2>
-              <p className="text-lg text-muted-foreground">Hear directly from people who have experienced Cardio MedBed EECP.</p>
-            </div>
-
-            <a
-              href={`https://www.youtube.com/playlist?list=${patientTestimonialsPlaylist}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-panel rounded-3xl overflow-hidden group hover:border-primary/30 transition-all duration-300 block"
-            >
-              <div className="aspect-[16/8] relative overflow-hidden bg-background">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/cardio-medbed-lifestyle.png`}
-                  alt="Patient receiving Cardio MedBed treatment"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg transition-transform duration-300 group-hover:scale-110">
-                    <Play className="h-7 w-7 translate-x-0.5 fill-current" />
-                  </span>
-                </div>
-                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                  <h3 className="text-2xl font-bold">Watch Cardio MedBed Patient Testimonials</h3>
-                  <span className="mt-2 inline-flex items-center gap-2 text-sm font-medium text-primary">
-                    Open the YouTube Playlist <ExternalLink className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
             </a>
           </div>
         </div>
