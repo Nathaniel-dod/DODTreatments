@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ExternalLink, Play } from 'lucide-react';
 
@@ -111,6 +112,7 @@ export default function CellSonicRegeneration() {
               <p className="text-lg text-muted-foreground leading-relaxed">
                 A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
               </p>
+              <TreatmentHeroCtas className="md:justify-start" />
             </div>
             <img
               src={`${import.meta.env.BASE_URL}images/cellsonic-ankle-treatment.png`}

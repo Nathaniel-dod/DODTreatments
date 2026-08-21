@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2 } from 'lucide-react';
 
@@ -53,6 +54,7 @@ export default function VitaminDLight() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Vitamin D Light Therapy is an extremely efficient way to naturally increase vitamin D in the body.
             </p>
+            <TreatmentHeroCtas />
           </div>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ExternalLink } from 'lucide-react';
 
@@ -76,6 +77,7 @@ export default function CardioMedBed() {
               alt="Patient receiving Cardio MedBed EECP therapy with a practitioner"
               className="mt-10 h-[18rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[28rem]"
             />
+            <TreatmentHeroCtas />
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import { Seo } from '@/components/Seo';
+import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { InquiryForm } from '@/components/InquiryForm';
 import { Phone, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -113,6 +114,7 @@ export default function Consultations() {
               alt="Woman speaking on the phone during a personal consultation"
               className="mt-10 h-[16rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[24rem]"
             />
+            <TreatmentHeroCtas />
           </div>
         </div>
       </section>

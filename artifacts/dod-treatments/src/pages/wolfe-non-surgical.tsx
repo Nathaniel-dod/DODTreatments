@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 
@@ -83,6 +84,7 @@ export default function WolfeNonSurgical() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the scar tissue, inflammation, calcification, and crystallization that create physical blocks.
             </p>
+            <TreatmentHeroCtas />
           </div>
         </div>
       </section>
