@@ -19,6 +19,7 @@ import {
   Table2,
   UtensilsCrossed,
   Waves,
+  Wifi,
 } from 'lucide-react';
 
 const wellnessAmenities = [
@@ -89,6 +90,16 @@ const homeAndLifestyleAmenities = [
     icon: UtensilsCrossed,
     title: 'Professional Blender',
     description: 'A professional blender ready for smoothies, soups, sauces, and more.',
+  },
+  {
+    icon: Wifi,
+    title: 'High-Speed Wi-Fi',
+    description: 'Stay connected throughout the Residence with reliable high-speed Wi-Fi.',
+  },
+  {
+    icon: RadioTower,
+    title: 'Power Perfect Energy Management System',
+    description: 'A whole-property system designed to neutralize negative frequencies within the house and across the property.',
   },
 ];
 
