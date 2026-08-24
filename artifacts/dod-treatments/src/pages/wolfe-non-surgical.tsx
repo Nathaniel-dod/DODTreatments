@@ -8,16 +8,6 @@ const patientTestimonialVideos = ['7_r8mZ5ARrI', 'Qb4FgBQlte0', '4xEpZNQIpmc'];
 
 const certificationTestimonialVideos = ['Vcz11YbC37I', 'dDRNfKkzgtg', 'oYARa0ivUaY'];
 
-const treatments = [
-  'Abdominal Lift', 'Ankle Restoration', 'Arthritis - Joint Restoration', 'Breast Restoration',
-  'Carpal Tunnel Restoration', 'Eye Restoration', 'Face Lift', 'Frozen Shoulder',
-  'Hearing Loss', 'Heart Release', 'Hip Restoration', 'Joint Replacement Prevention',
-  'Knee Restoration', 'Lung Restoration', 'Neck Sprains & Strains', 'Pain-Free Pregnancy',
-  'Pelvic Clearance', 'Post Surgery Scar Tissue Removal', 'Scoliosis', 'Sinus Restoration',
-  'Slipped, Bulged or Compressed Disc', 'Spinal Restoration', 'Surgery Prevention',
-  'Tennis Elbow', 'TMJ Restoration', 'Trigeminal Neuralgia', 'Whiplash', 'And more upon request',
-];
-
 const conditions = [
   'Abdominal Pain', 'Ankle Problems', 'Back Pain', 'Bladder Conditions',
   'Bone Spurs', 'Bursitis', 'Disc Problems', 'Displaced Calcium',
@@ -103,23 +93,6 @@ export default function WolfeNonSurgical() {
               <p className="text-lg text-foreground/90 leading-relaxed p-8 md:p-12">
                 You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the <strong>scar tissue, inflammation, calcification, and crystallization</strong> that create physical blocks. These blocks are the underlying source of aches, pains, lumps, bumps, and disease; by focusing on this root cause, Wolfe Non-Surgical practitioners can truly <strong>reverse issues in just a few treatments—and sometimes only one.</strong>
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatments List */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Wolfe Non-Surgical Treatments</h2>
-          <div className="max-w-5xl mx-auto glass-panel rounded-2xl p-8 md:p-12">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {treatments.map((treatment, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-sm">{treatment}</span>
-                </div>
-              ))}
             </div>
           </div>
         </div>
