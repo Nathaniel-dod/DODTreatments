@@ -67,11 +67,22 @@ const treatmentProducts = [
   },
   {
     href: '/treatments/infrared-light-healing',
-    name: 'Infrared Light Healing',
+    name: 'RX Infrared Light Healing',
     category: 'Phototherapy',
     tagline: 'Deep Infrared Phototherapy',
-    blurb: 'The latest in deep infrared phototherapy. Effective for the reversal of many conditions.',
-    glyph: '✦',
+    blurb: 'Comfortable broad-spectrum light therapy with seated and full-body device options.',
+    collage: [
+      {
+        src: 'images/rx-infrared-seat.png',
+        alt: 'RX Infrared Light seated device',
+        label: 'Seated',
+      },
+      {
+        src: 'images/rx-infrared-stand.png',
+        alt: 'RX Infrared Light stand-mounted full-body device',
+        label: 'Full-body',
+      },
+    ],
   },
   {
     href: '/treatments/vitamin-d-light',
@@ -185,6 +196,30 @@ export default function Treatments() {
                               alt={product.imageAlt}
                               className={`absolute inset-0 w-full h-full object-cover ${'imagePosition' in product ? product.imagePosition : 'object-top'} group-hover:scale-105 transition-transform duration-500`}
                             />
+                          ) : 'collage' in product && product.collage ? (
+                            <div className="absolute inset-0 grid grid-cols-[0.95fr_1.05fr] gap-px bg-primary/25">
+                              <div className="relative overflow-hidden bg-gradient-to-br from-background via-background/90 to-primary/10">
+                                <img
+                                  src={`${import.meta.env.BASE_URL}${product.collage[0].src}`}
+                                  alt={product.collage[0].alt}
+                                  className="absolute inset-x-0 bottom-0 mx-auto h-[94%] w-[88%] object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <span className="absolute bottom-2 left-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
+                                  {product.collage[0].label}
+                                </span>
+                              </div>
+                              <div className="relative overflow-hidden bg-background/70">
+                                <img
+                                  src={`${import.meta.env.BASE_URL}${product.collage[1].src}`}
+                                  alt={product.collage[1].alt}
+                                  className="absolute inset-0 h-full w-full object-cover object-[center_42%] transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
+                                <span className="absolute bottom-2 right-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
+                                  {product.collage[1].label}
+                                </span>
+                              </div>
+                            </div>
                           ) : (
                             <span className="text-5xl gold-gradient">{product.glyph}</span>
                           )}
