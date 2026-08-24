@@ -91,6 +91,13 @@ export default function VitaminDLight() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <article className="glass-panel rounded-3xl p-8">
+              <div className="h-44 rounded-2xl mb-7 overflow-hidden bg-black/75 flex items-center justify-center">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/solrx-e-series.png`}
+                  alt="SolRx E-Series narrowband UVB light panel"
+                  className="h-full w-full object-contain p-3"
+                />
+              </div>
               <Sun className="w-9 h-9 text-primary mb-6" aria-hidden="true" />
               <h3 className="text-2xl font-bold mb-4">SolRx Narrowband UVB Light</h3>
               <p className="text-muted-foreground leading-relaxed">
