@@ -59,8 +59,17 @@ export default function VitaminDLight() {
       {/* Hero */}
       <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-y-0 right-0 hidden md:flex w-[35%] items-center justify-center pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-to-l from-background via-background/50 to-transparent" />
+          <img
+            src={`${import.meta.env.BASE_URL}images/solrx-e-series.png`}
+            alt=""
+            aria-hidden="true"
+            className="relative z-10 h-[75%] max-h-96 w-full object-contain mix-blend-screen opacity-90"
+          />
+        </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center md:mx-0 md:max-w-3xl md:text-left">
             <div className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
               Narrowband UVB Light
             </div>
@@ -91,13 +100,6 @@ export default function VitaminDLight() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             <article className="glass-panel rounded-3xl p-8">
-              <div className="h-44 rounded-2xl mb-7 overflow-hidden bg-black/75 flex items-center justify-center">
-                <img
-                  src={`${import.meta.env.BASE_URL}images/solrx-e-series.png`}
-                  alt="SolRx E-Series narrowband UVB light panel"
-                  className="h-full w-full object-contain p-3"
-                />
-              </div>
               <Sun className="w-9 h-9 text-primary mb-6" aria-hidden="true" />
               <h3 className="text-2xl font-bold mb-4">SolRx Narrowband UVB Light</h3>
               <p className="text-muted-foreground leading-relaxed">
