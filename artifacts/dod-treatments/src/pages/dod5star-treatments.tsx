@@ -199,7 +199,7 @@ export default function Dod5StarTreatments() {
                 </div>
                 <DialogTrigger asChild>
                   <Button size="lg" className="gold-glow flex-shrink-0" data-testid="button-view-sample-protocol">
-                    Explore Therapies
+                    Explore What Your Day Might Look Like
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </DialogTrigger>
