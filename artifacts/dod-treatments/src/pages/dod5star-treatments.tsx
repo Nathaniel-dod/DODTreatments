@@ -10,6 +10,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
   ArrowRight,
   CalendarDays,
@@ -83,6 +84,96 @@ const protocolBlocks = [
 
 const personalizationFactors = ['Your personality', 'Your condition', 'Your goals', 'Your daily response'];
 
+const nutraceuticalBlocks = [
+  {
+    period: 'Morning',
+    timing: 'Establish your foundation',
+    title: 'Personalized internal support',
+    items: [
+      { label: 'Hydration & nourishment', description: 'Begin with supportive hydration and nourishment suited to your goals.' },
+      { label: 'Personalized review', description: 'Discuss your history, preferences, and what your body needs from the day.' },
+      { label: 'Foundational support', description: 'Explore appropriate internal support with your practitioner after arrival.' },
+    ],
+    icon: Sunrise,
+  },
+  {
+    period: 'Midday',
+    timing: 'Support the treatment window',
+    title: 'Adjust around your response',
+    items: [
+      { label: 'Treatment-aware support', description: 'Consider nourishment and internal support alongside the day’s selected sessions.' },
+      { label: 'Energy & comfort check', description: 'Notice how you are feeling and share your response with the team.' },
+      { label: 'Pause & replenish', description: 'Make room for fluids, nourishment, and a comfortable pace between sessions.' },
+    ],
+    icon: Sun,
+  },
+  {
+    period: 'Afternoon',
+    timing: 'Check and recalibrate',
+    title: 'Make space for response',
+    items: [
+      { label: 'Practitioner check-in', description: 'Review what is working for you and what may need to change.' },
+      { label: 'Refined support', description: 'Adjust the broader plan around your response, comfort, and daily goals.' },
+      { label: 'Recovery nourishment', description: 'Support your afternoon rhythm with personalized nourishment and rest.' },
+    ],
+    icon: Sunset,
+  },
+  {
+    period: 'Evening',
+    timing: 'Reflect and prepare',
+    title: 'Close the day thoughtfully',
+    items: [
+      { label: 'Daily reflection', description: 'Share observations about your energy, comfort, and overall response.' },
+      { label: 'Nourishment conversation', description: 'Reflect on the day and discuss helpful next steps with your team.' },
+      { label: 'Tomorrow’s direction', description: 'Use the day’s learnings to inform an evolving plan for tomorrow.' },
+    ],
+    icon: Moon,
+  },
+];
+
+function ProtocolTimeline({
+  blocks,
+  testIdPrefix,
+}: {
+  blocks: typeof protocolBlocks;
+  testIdPrefix: string;
+}) {
+  return (
+    <div className="relative space-y-4 before:absolute before:bottom-8 before:left-[1.25rem] before:top-8 before:w-px before:bg-primary/25 md:before:left-[1.65rem]">
+      {blocks.map((block) => (
+        <article
+          key={block.period}
+          data-testid={`card-${testIdPrefix}-${block.period.toLowerCase()}`}
+          className="glass-panel relative grid gap-5 rounded-2xl p-5 transition-colors hover:border-primary/30 md:grid-cols-[auto_1fr_auto] md:items-start md:gap-6 md:p-6"
+        >
+          <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-card text-primary shadow-[0_0_0_6px_hsl(var(--card))]">
+            <block.icon className="h-5 w-5" aria-hidden="true" />
+          </div>
+
+          <div>
+            <div className="mb-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h4 className="text-xl font-bold">{block.period}</h4>
+              <span className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{block.timing}</span>
+            </div>
+            <p className="mb-3 font-medium">{block.title}</p>
+            <div className="mt-4 grid gap-3 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
+              {block.items.map((item) => (
+                <div key={item.label} className="rounded-xl border border-primary/15 bg-primary/5 p-3">
+                  <div className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                    <Sparkles className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                    {item.label}
+                  </div>
+                  <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 export default function Dod5StarTreatments() {
   return (
     <>
@@ -155,49 +246,45 @@ export default function Dod5StarTreatments() {
                 </DialogHeader>
 
                 <div className="p-5 sm:p-8 md:p-10">
-                  <div className="mb-7 flex items-center justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Sample day at a glance</p>
-                      <h3 className="mt-2 text-2xl font-bold">A flexible rhythm, never a prescription</h3>
+                  <Tabs defaultValue="day-shape" className="w-full">
+                    <div className="mb-8 flex justify-center">
+                      <TabsList className="grid h-auto w-full max-w-md grid-cols-2 bg-background/40 p-1">
+                        <TabsTrigger value="day-shape" className="py-2.5">Day Shape</TabsTrigger>
+                        <TabsTrigger value="nutraceutical-support" className="py-2.5">Nutraceutical Support</TabsTrigger>
+                      </TabsList>
                     </div>
-                    <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
-                      <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
-                      Timing varies by guest
-                    </div>
-                  </div>
 
-                  <div className="relative space-y-4 before:absolute before:bottom-8 before:left-[1.25rem] before:top-8 before:w-px before:bg-primary/25 md:before:left-[1.65rem]">
-                    {protocolBlocks.map((block) => (
-                      <article
-                        key={block.period}
-                        data-testid={`card-protocol-${block.period.toLowerCase()}`}
-                        className="glass-panel relative grid gap-5 rounded-2xl p-5 transition-colors hover:border-primary/30 md:grid-cols-[auto_1fr_auto] md:items-start md:gap-6 md:p-6"
-                      >
-                        <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-card text-primary shadow-[0_0_0_6px_hsl(var(--card))]">
-                          <block.icon className="h-5 w-5" aria-hidden="true" />
-                        </div>
-
+                    <TabsContent value="day-shape" className="mt-0">
+                      <div className="mb-7 flex items-center justify-between gap-4">
                         <div>
-                          <div className="mb-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                            <h4 className="text-xl font-bold">{block.period}</h4>
-                            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{block.timing}</span>
-                          </div>
-                          <p className="mb-3 font-medium">{block.title}</p>
-                          <div className="mt-4 grid gap-3 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
-                            {block.items.map((item) => (
-                              <div key={item.label} className="rounded-xl border border-primary/15 bg-primary/5 p-3">
-                                <div className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
-                                  <Sparkles className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
-                                  {item.label}
-                                </div>
-                                <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{item.description}</p>
-                              </div>
-                            ))}
-                          </div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Sample day at a glance</p>
+                          <h3 className="mt-2 text-2xl font-bold">A flexible rhythm, never a prescription</h3>
                         </div>
-                      </article>
-                    ))}
-                  </div>
+                        <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
+                          <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                          Timing varies by guest
+                        </div>
+                      </div>
+                      <ProtocolTimeline blocks={protocolBlocks} testIdPrefix="protocol" />
+                    </TabsContent>
+
+                    <TabsContent value="nutraceutical-support" className="mt-0">
+                      <div className="mb-7 flex items-center justify-between gap-4">
+                        <div>
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized internal support</p>
+                          <h3 className="mt-2 text-2xl font-bold">A support rhythm that evolves with you</h3>
+                        </div>
+                        <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
+                          <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                          Reviewed daily
+                        </div>
+                      </div>
+                      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                        Nutraceutical and nutritional support is discussed after arrival, guided by your goals, preferences, history, and daily response—not selected from a fixed public formula.
+                      </p>
+                      <ProtocolTimeline blocks={nutraceuticalBlocks} testIdPrefix="nutraceutical" />
+                    </TabsContent>
+                  </Tabs>
 
                   <div className="mt-8 grid gap-6 rounded-2xl border border-border/60 bg-background/20 p-5 md:grid-cols-[1fr_auto] md:items-center md:p-6">
                     <div className="flex gap-4">
