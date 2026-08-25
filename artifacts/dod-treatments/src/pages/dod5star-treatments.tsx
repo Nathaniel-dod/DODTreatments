@@ -84,50 +84,24 @@ const protocolBlocks = [
 
 const personalizationFactors = ['Your personality', 'Your condition', 'Your goals', 'Your daily response'];
 
-const nutraceuticalBlocks = [
+const nutraceuticalStages = [
   {
-    period: 'Morning',
-    timing: 'Establish your foundation',
-    title: 'Personalized internal support',
-    items: [
-      { label: 'Hydration & nourishment', description: 'Begin with supportive hydration and nourishment suited to your goals.' },
-      { label: 'Personalized review', description: 'Discuss your history, preferences, and what your body needs from the day.' },
-      { label: 'Foundational support', description: 'Explore appropriate internal support with your practitioner after arrival.' },
-    ],
-    icon: Sunrise,
+    number: '01',
+    title: 'Before you arrive',
+    label: 'Set the starting protocol',
+    description: 'A practitioner discusses your goals, history, preferences, and expectations to establish a personalized starting point before your retreat begins.',
   },
   {
-    period: 'Midday',
-    timing: 'Support the treatment window',
-    title: 'Adjust around your response',
-    items: [
-      { label: 'Treatment-aware support', description: 'Consider nourishment and internal support alongside the day’s selected sessions.' },
-      { label: 'Energy & comfort check', description: 'Notice how you are feeling and share your response with the team.' },
-      { label: 'Pause & replenish', description: 'Make room for fluids, nourishment, and a comfortable pace between sessions.' },
-    ],
-    icon: Sun,
+    number: '02',
+    title: 'During your stay',
+    label: 'Review and refine',
+    description: 'Your practitioner reviews how you are responding and can refine the protocol around your experience, comfort, and evolving goals.',
   },
   {
-    period: 'Afternoon',
-    timing: 'Check and recalibrate',
-    title: 'Make space for response',
-    items: [
-      { label: 'Practitioner check-in', description: 'Review what is working for you and what may need to change.' },
-      { label: 'Refined support', description: 'Adjust the broader plan around your response, comfort, and daily goals.' },
-      { label: 'Recovery nourishment', description: 'Support your afternoon rhythm with personalized nourishment and rest.' },
-    ],
-    icon: Sunset,
-  },
-  {
-    period: 'Evening',
-    timing: 'Reflect and prepare',
-    title: 'Close the day thoughtfully',
-    items: [
-      { label: 'Daily reflection', description: 'Share observations about your energy, comfort, and overall response.' },
-      { label: 'Nourishment conversation', description: 'Reflect on the day and discuss helpful next steps with your team.' },
-      { label: 'Tomorrow’s direction', description: 'Use the day’s learnings to inform an evolving plan for tomorrow.' },
-    ],
-    icon: Moon,
+    number: '03',
+    title: 'At the end of your stay',
+    label: 'Adjust for what comes next',
+    description: 'Depending on your progress and the conversations throughout your stay, your practitioner may recommend an updated direction for your next steps.',
   },
 ];
 
@@ -272,17 +246,29 @@ export default function Dod5StarTreatments() {
                       <div className="mb-7 flex items-center justify-between gap-4">
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized internal support</p>
-                          <h3 className="mt-2 text-2xl font-bold">A support rhythm that evolves with you</h3>
+                          <h3 className="mt-2 text-2xl font-bold">A protocol that evolves with you</h3>
                         </div>
                         <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
                           <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
-                          Reviewed daily
+                          Reviewed as you progress
                         </div>
                       </div>
                       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                        Nutraceutical and nutritional support is discussed after arrival, guided by your goals, preferences, history, and daily response—not selected from a fixed public formula.
+                        Before you arrive, a practitioner discusses a starting protocol with you. During your stay, it is reviewed and refined; at the end, your progress can help guide any appropriate adjustment for what comes next.
                       </p>
-                      <ProtocolTimeline blocks={nutraceuticalBlocks} testIdPrefix="nutraceutical" />
+                      <div className="grid gap-4 md:grid-cols-3">
+                        {nutraceuticalStages.map((stage) => (
+                          <article key={stage.number} className="glass-panel rounded-2xl p-5">
+                            <div className="mb-5 flex items-center justify-between">
+                              <span className="text-2xl font-bold gold-gradient">{stage.number}</span>
+                              <Sparkles className="h-5 w-5 text-primary" aria-hidden="true" />
+                            </div>
+                            <h4 className="text-lg font-bold">{stage.title}</h4>
+                            <p className="mt-2 text-sm font-semibold text-primary">{stage.label}</p>
+                            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{stage.description}</p>
+                          </article>
+                        ))}
+                      </div>
                     </TabsContent>
                   </Tabs>
 
@@ -292,7 +278,7 @@ export default function Dod5StarTreatments() {
                       <div>
                         <h3 className="mb-2 font-bold">The framework changes with you</h3>
                         <p className="text-sm leading-relaxed text-muted-foreground">
-                          These are broad planning blocks for orientation only—not a guaranteed itinerary, treatment prescription, or medical advice. Your DOD5Star team builds the appropriate plan with you after arrival and refines it as your stay unfolds.
+                          This information is for orientation only—not a guaranteed itinerary, treatment prescription, or medical advice. Your DOD5Star team builds the appropriate plan with you and refines it as your stay unfolds.
                         </p>
                       </div>
                     </div>
