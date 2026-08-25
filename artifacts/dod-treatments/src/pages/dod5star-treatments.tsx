@@ -38,45 +38,45 @@ const therapies = [
 const protocolBlocks = [
   {
     period: 'Morning',
-    timing: 'Begin with intention',
-    title: 'Arrive & align',
+    timing: 'Assess & prepare',
+    title: 'Build the right treatment mix',
     items: [
-      { label: 'Arrival check-in', description: 'Orient the day with your practitioner and your personal goals.' },
-      { label: 'Breath & gentle movement', description: 'Begin with comfortable practices that help you settle into the day.' },
-      { label: 'Internal support discussion', description: 'Talk through nutrition, hydration, and internal support for your plan.' },
+      { label: 'Practitioner assessment', description: 'Review your goals, current condition, and response to shape the day’s therapy mix.' },
+      { label: 'Wolfe Non-Surgical bodywork', description: 'Begin with focused bodywork selected around your comfort and practitioner plan.' },
+      { label: 'Movement & restoration', description: 'Use breath, mobility, and recovery practices to prepare for and integrate sessions.' },
     ],
     icon: Sunrise,
   },
   {
     period: 'Midday',
-    timing: 'Personalized treatment window',
-    title: 'Explore & receive',
+    timing: 'Focused external therapies',
+    title: 'Receive the sessions selected for you',
     items: [
-      { label: 'Focused treatment', description: 'Make space for the session selected around your goals and response.' },
-      { label: 'Light & energy therapies', description: 'Explore available light-based and restorative modalities with your team.' },
-      { label: 'Hydration & nourishment', description: 'Pause for hydration and personalized nourishment throughout the day.' },
+      { label: 'CellSonic Regeneration ESWT', description: 'Explore a focused CellSonic ESWT session when selected by your team.' },
+      { label: 'Cardio MedBed EECP', description: 'Make space for Cardio MedBed EECP when it fits your goals and daily plan.' },
+      { label: 'DOD Core Restore', description: 'Include a Core Restore session when selected by your practitioners.' },
     ],
     icon: Sun,
   },
   {
     period: 'Afternoon',
-    timing: 'Restore & respond',
-    title: 'Make space for response',
+    timing: 'Light, energy & recovery',
+    title: 'Support your response between sessions',
     items: [
-      { label: 'Movement & restoration', description: 'Support gentle activity, recovery, and comfort at your own pace.' },
-      { label: 'Practitioner check-in', description: 'Review how you are responding and refine the plan when needed.' },
-      { label: 'Quiet recovery', description: 'Leave room for rest, reflection, and integration between sessions.' },
+      { label: 'RX Infrared Light Healing', description: 'Consider light-based support as part of the broader therapy experience.' },
+      { label: 'Vitamin D Light', description: 'Explore Vitamin D Light when appropriate for your personalized plan.' },
+      { label: 'Recovery & integration', description: 'Leave room for movement, restoration, and comfort at your own pace.' },
     ],
     icon: Sunset,
   },
   {
     period: 'Evening',
-    timing: 'Integrate & rest',
-    title: 'Close the day gently',
+    timing: 'Review & integrate',
+    title: 'Let the next step respond to you',
     items: [
-      { label: 'Wind-down practices', description: 'Transition into a slower evening rhythm that feels right for you.' },
-      { label: 'Nutrition conversation', description: 'Reflect on the day’s nourishment and any helpful next steps.' },
-      { label: 'Rest & reflection', description: 'Close the day gently and reset for tomorrow’s evolving plan.' },
+      { label: 'Practitioner check-in', description: 'Review how you responded to the day’s therapies and what you noticed.' },
+      { label: 'Quiet recovery', description: 'Allow time for rest and integration between treatment experiences.' },
+      { label: 'Next-session planning', description: 'Use the day’s response to inform an evolving plan for tomorrow.' },
     ],
     icon: Moon,
   },
@@ -207,7 +207,7 @@ export default function Dod5StarTreatments() {
             </p>
           </div>
 
-          {/* Sanitized protocol template */}
+          {/* Sanitized therapy framework */}
           <Dialog>
             <div className="max-w-4xl mx-auto mb-16">
               <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-card/70 to-accent/10 p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)] md:flex-row md:p-8 md:text-left">
@@ -216,16 +216,16 @@ export default function Dod5StarTreatments() {
                     <CalendarDays className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Illustrative guest protocol</p>
-                    <h2 className="mt-2 text-2xl font-bold gold-gradient">A Day Shaped Around You</h2>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Internal / External Therapies</p>
+                    <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Shaped Around You</h2>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                      See the shape of a personalized retreat day—without a fixed itinerary or prescription.
+                      Explore the external therapies and internal support that may be considered throughout your retreat.
                     </p>
                   </div>
                 </div>
                 <DialogTrigger asChild>
                   <Button size="lg" className="gold-glow flex-shrink-0" data-testid="button-view-sample-protocol">
-                    View Sample Protocol
+                    Explore Therapies
                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </DialogTrigger>
@@ -237,11 +237,11 @@ export default function Dod5StarTreatments() {
                 <DialogHeader className="border-b border-primary/20 bg-gradient-to-r from-primary/15 via-card/70 to-accent/10 p-6 text-center sm:p-10">
                   <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                     <CalendarDays className="h-4 w-4" aria-hidden="true" />
-                    Illustrative guest protocol
+                    Internal / External Therapies
                   </div>
-                  <DialogTitle className="mt-5 text-3xl font-bold md:text-4xl gold-gradient">A Day Shaped Around You</DialogTitle>
+                  <DialogTitle className="mt-5 text-3xl font-bold md:text-4xl gold-gradient">Internal / External Therapies</DialogTitle>
                   <DialogDescription className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-                    This sample framework shows the shape of a guest plan—not a fixed itinerary. Your personalized protocol is built after arrival and adjusted to your personality, condition, goals, and daily response.
+                    Explore the types of external therapies and internal support that may be considered during your retreat. Your plan is built after arrival and adjusted to your goals, condition, and daily response.
                   </DialogDescription>
                 </DialogHeader>
 
@@ -249,23 +249,23 @@ export default function Dod5StarTreatments() {
                   <Tabs defaultValue="day-shape" className="w-full">
                     <div className="mb-8 flex justify-center">
                       <TabsList className="grid h-auto w-full max-w-md grid-cols-2 bg-background/40 p-1">
-                        <TabsTrigger value="day-shape" className="py-2.5">Day Shape</TabsTrigger>
+                        <TabsTrigger value="therapies" className="whitespace-normal px-2 py-2.5 text-xs leading-tight sm:text-sm">Internal / External Therapies</TabsTrigger>
                         <TabsTrigger value="nutraceutical-support" className="py-2.5">Nutraceutical Support</TabsTrigger>
                       </TabsList>
                     </div>
 
-                    <TabsContent value="day-shape" className="mt-0">
+                    <TabsContent value="therapies" className="mt-0">
                       <div className="mb-7 flex items-center justify-between gap-4">
                         <div>
-                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Sample day at a glance</p>
-                          <h3 className="mt-2 text-2xl font-bold">A flexible rhythm, never a prescription</h3>
+                          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Therapies at a glance</p>
+                          <h3 className="mt-2 text-2xl font-bold">A focused rhythm, never a prescription</h3>
                         </div>
                         <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
                           <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
                           Timing varies by guest
                         </div>
                       </div>
-                      <ProtocolTimeline blocks={protocolBlocks} testIdPrefix="protocol" />
+                      <ProtocolTimeline blocks={protocolBlocks} testIdPrefix="therapy" />
                     </TabsContent>
 
                     <TabsContent value="nutraceutical-support" className="mt-0">
@@ -308,12 +308,12 @@ export default function Dod5StarTreatments() {
 
                   <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 p-6 text-center sm:flex-row sm:text-left">
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Make it personal</p>
-                      <p className="mt-2 text-lg font-semibold">Ready to talk through your own retreat rhythm?</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Make it personal</p>
+                    <p className="mt-2 text-lg font-semibold">Ready to talk through your own therapy plan?</p>
                     </div>
                     <Button asChild size="lg" className="gold-glow" data-testid="button-discuss-protocol">
                       <Link href="/clinics/ixtapa-zihuatanejo/inquire" data-testid="link-discuss-protocol">
-                        Discuss Your Protocol
+                        Discuss Your Therapy Plan
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
                       </Link>
                     </Button>
