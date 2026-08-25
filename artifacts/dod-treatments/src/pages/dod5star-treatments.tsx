@@ -292,7 +292,7 @@ export default function Dod5StarTreatments() {
                        <div className="mb-7 flex items-center justify-between gap-4">
                          <div>
                            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized nourishment</p>
-                           <h3 className="mt-2 text-2xl font-bold">Diet &amp; Nutrition Guidance</h3>
+                           <h3 className="mt-2 text-2xl font-bold">DOD Diet &amp; Nutrition Options</h3>
                          </div>
                          <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
                            <Utensils className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
@@ -300,30 +300,31 @@ export default function Dod5StarTreatments() {
                          </div>
                        </div>
                        <p className="mb-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-                         Your DOD5Star team can help you explore nourishing choices that support your goals, comfort, and daily rhythm. Guidance is personalized with your practitioner and adapted as your stay unfolds.
+                         During your stay at DOD5Star, you are encouraged to explore the DOD Watermelon Cleanse, DOD Grape Cure, DOD Advanced Juice Fast, Whole Plant Based Keto Lifestyle, or the DOD Baking Soda Miracle with guidance from your practitioner.
                        </p>
-                       <div className="grid gap-4 md:grid-cols-3">
-                         {[
-                           {
-                             title: 'Start with your goals',
-                             description: 'Share your preferences, routines, and what you hope to focus on during your retreat.',
-                           },
-                           {
-                             title: 'Keep it practical',
-                             description: 'Explore approachable choices that fit your schedule, comfort, and treatment rhythm.',
-                           },
-                           {
-                             title: 'Plan what comes next',
-                             description: 'Leave with general guidance to discuss and continue refining with your practitioner.',
-                           },
-                         ].map((stage) => (
-                           <article key={stage.title} className="glass-panel rounded-2xl p-5">
-                             <Utensils className="mb-5 h-5 w-5 text-primary" aria-hidden="true" />
-                             <h4 className="text-lg font-bold">{stage.title}</h4>
-                             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{stage.description}</p>
-                           </article>
-                         ))}
+                       <div className="rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 p-5 sm:p-6">
+                         <div className="flex items-start gap-4">
+                           <Utensils className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" aria-hidden="true" />
+                           <div>
+                             <h4 className="font-bold">Explore the DOD 4 Pillar approach</h4>
+                             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                               See more details in the DOD 4 Pillar Ultimate Healing Masterclass at Braveheart Nation Library.
+                             </p>
+                             <a
+                               href="https://braveheartnationlibrary.com"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary/80"
+                             >
+                               Open the DOD 4 Pillar Ultimate Healing Masterclass
+                               <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                             </a>
+                           </div>
+                         </div>
                        </div>
+                       <p className="mt-5 text-xs leading-relaxed text-muted-foreground">
+                         Dietary changes, fasting, and any baking soda practice should be reviewed with your practitioner to ensure they are appropriate for you.
+                       </p>
                      </TabsContent>
                   </Tabs>
 
