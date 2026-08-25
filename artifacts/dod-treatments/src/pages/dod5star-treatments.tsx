@@ -49,32 +49,44 @@ const protocolBlocks = [
     period: 'Morning',
     timing: 'Begin with intention',
     title: 'Arrive & align',
-    description: 'A calm start to orient your day, connect with your practitioner, and set a comfortable rhythm.',
-    categories: ['Arrival check-in', 'Breath & gentle movement', 'Internal support discussion'],
+    items: [
+      { label: 'Arrival check-in', description: 'Orient the day with your practitioner and your personal goals.' },
+      { label: 'Breath & gentle movement', description: 'Begin with comfortable practices that help you settle into the day.' },
+      { label: 'Internal support discussion', description: 'Talk through nutrition, hydration, and internal support for your plan.' },
+    ],
     icon: Sunrise,
   },
   {
     period: 'Midday',
     timing: 'Personalized treatment window',
     title: 'Explore & receive',
-    description: 'Time reserved for the external therapy categories and restorative practices that fit your evolving plan.',
-    categories: ['Focused treatment', 'Light & energy therapies', 'Hydration & nourishment'],
+    items: [
+      { label: 'Focused treatment', description: 'Make space for the session selected around your goals and response.' },
+      { label: 'Light & energy therapies', description: 'Explore available light-based and restorative modalities with your team.' },
+      { label: 'Hydration & nourishment', description: 'Pause for hydration and personalized nourishment throughout the day.' },
+    ],
     icon: Sun,
   },
   {
     period: 'Afternoon',
     timing: 'Restore & respond',
     title: 'Make space for response',
-    description: 'Room for movement, recovery, reflection, and thoughtful adjustments based on your experience that day.',
-    categories: ['Movement & restoration', 'Practitioner check-in', 'Quiet recovery'],
+    items: [
+      { label: 'Movement & restoration', description: 'Support gentle activity, recovery, and comfort at your own pace.' },
+      { label: 'Practitioner check-in', description: 'Review how you are responding and refine the plan when needed.' },
+      { label: 'Quiet recovery', description: 'Leave room for rest, reflection, and integration between sessions.' },
+    ],
     icon: Sunset,
   },
   {
     period: 'Evening',
     timing: 'Integrate & rest',
     title: 'Close the day gently',
-    description: 'A softer close with space to reflect, support your evening routine, and reset for tomorrow.',
-    categories: ['Wind-down practices', 'Nutrition conversation', 'Rest & reflection'],
+    items: [
+      { label: 'Wind-down practices', description: 'Transition into a slower evening rhythm that feels right for you.' },
+      { label: 'Nutrition conversation', description: 'Reflect on the day’s nourishment and any helpful next steps.' },
+      { label: 'Rest & reflection', description: 'Close the day gently and reset for tomorrow’s evolving plan.' },
+    ],
     icon: Moon,
   },
 ];
@@ -169,19 +181,17 @@ export default function Dod5StarTreatments() {
                           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{block.timing}</span>
                         </div>
                         <p className="mb-3 font-medium">{block.title}</p>
-                        <p className="text-sm leading-relaxed text-muted-foreground">{block.description}</p>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2 md:max-w-[13rem] md:justify-end">
-                        {block.categories.map((category) => (
-                          <span
-                            key={category}
-                            className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs text-muted-foreground"
-                          >
-                            <Sparkles className="h-3 w-3 text-primary" aria-hidden="true" />
-                            {category}
-                          </span>
-                        ))}
+                        <div className="mt-4 grid gap-3 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
+                          {block.items.map((item) => (
+                            <div key={item.label} className="rounded-xl border border-primary/15 bg-primary/5 p-3">
+                              <div className="flex items-center gap-1.5 text-sm font-semibold text-foreground">
+                                <Sparkles className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                                {item.label}
+                              </div>
+                              <p className="mt-1.5 text-xs leading-relaxed text-muted-foreground">{item.description}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </article>
                   ))}
