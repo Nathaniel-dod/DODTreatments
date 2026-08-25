@@ -214,7 +214,7 @@ export default function Dod5StarTreatments() {
                     Internal / External Therapies
                   </div>
                   <DialogTitle className="mt-5 text-3xl font-bold md:text-4xl gold-gradient">Internal / External Therapies</DialogTitle>
-                  <DialogDescription className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+                  <DialogDescription className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                     Explore the types of external therapies and internal support that may be considered during your retreat. Your plan is built after arrival and adjusted to your goals, condition, and daily response.
                   </DialogDescription>
                 </DialogHeader>
