@@ -88,9 +88,10 @@ const treatmentProducts = [
     href: '/treatments/vitamin-d-light',
     name: 'Vitamin D Light',
     category: 'Light Therapy',
-    tagline: 'Naturally Increase Your Vitamin D',
-    blurb: 'Vitamin D Light Therapy is an extremely efficient way to naturally increase vitamin D in the body.',
-    glyph: '◆',
+    tagline: 'SolRx UVB + Optional Quartz Crystal Panels',
+    blurb: 'Guided narrowband UVB light sessions with optional quartz crystal panels for a gentler experience.',
+    image: 'images/solrx-e-series.png',
+    imageAlt: 'SolRx E-Series narrowband UVB light panel',
   },
 ];
 
@@ -220,9 +221,7 @@ export default function Treatments() {
                                 </span>
                               </div>
                             </div>
-                          ) : (
-                            <span className="text-5xl gold-gradient">{product.glyph}</span>
-                          )}
+                          ) : null}
                           <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
                             {product.category}
                           </span>
