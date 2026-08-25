@@ -22,6 +22,7 @@ import {
   Sunrise,
   Sun,
   Sunset,
+  Utensils,
 } from 'lucide-react';
 
 const therapies = [
@@ -220,11 +221,27 @@ export default function Dod5StarTreatments() {
                 </DialogHeader>
 
                 <div className="p-5 sm:p-8 md:p-10">
-                  <Tabs defaultValue="day-shape" className="w-full">
-                    <div className="mb-8 flex justify-center">
-                      <TabsList className="grid h-auto w-full max-w-md grid-cols-2 bg-background/40 p-1">
-                        <TabsTrigger value="therapies" className="whitespace-normal px-2 py-2.5 text-xs leading-tight sm:text-sm">Internal / External Therapies</TabsTrigger>
-                        <TabsTrigger value="nutraceutical-support" className="py-2.5">Nutraceutical Support</TabsTrigger>
+                   <Tabs defaultValue="therapies" className="w-full">
+                     <div className="mb-8 flex justify-center">
+                       <TabsList className="grid h-auto w-full max-w-3xl grid-cols-3 gap-1 rounded-xl border border-primary/20 bg-background/60 p-1.5 shadow-inner">
+                         <TabsTrigger
+                           value="therapies"
+                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                         >
+                           Internal / External Therapies
+                         </TabsTrigger>
+                         <TabsTrigger
+                           value="nutraceutical-support"
+                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                         >
+                           Nutraceutical Support
+                         </TabsTrigger>
+                         <TabsTrigger
+                           value="diet-nutrition"
+                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                         >
+                           Diet &amp; Nutrition
+                         </TabsTrigger>
                       </TabsList>
                     </div>
 
@@ -270,6 +287,44 @@ export default function Dod5StarTreatments() {
                         ))}
                       </div>
                     </TabsContent>
+
+                     <TabsContent value="diet-nutrition" className="mt-0">
+                       <div className="mb-7 flex items-center justify-between gap-4">
+                         <div>
+                           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized nourishment</p>
+                           <h3 className="mt-2 text-2xl font-bold">Diet &amp; Nutrition Guidance</h3>
+                         </div>
+                         <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
+                           <Utensils className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                           Guided around your stay
+                         </div>
+                       </div>
+                       <p className="mb-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
+                         Your DOD5Star team can help you explore nourishing choices that support your goals, comfort, and daily rhythm. Guidance is personalized with your practitioner and adapted as your stay unfolds.
+                       </p>
+                       <div className="grid gap-4 md:grid-cols-3">
+                         {[
+                           {
+                             title: 'Start with your goals',
+                             description: 'Share your preferences, routines, and what you hope to focus on during your retreat.',
+                           },
+                           {
+                             title: 'Keep it practical',
+                             description: 'Explore approachable choices that fit your schedule, comfort, and treatment rhythm.',
+                           },
+                           {
+                             title: 'Plan what comes next',
+                             description: 'Leave with general guidance to discuss and continue refining with your practitioner.',
+                           },
+                         ].map((stage) => (
+                           <article key={stage.title} className="glass-panel rounded-2xl p-5">
+                             <Utensils className="mb-5 h-5 w-5 text-primary" aria-hidden="true" />
+                             <h4 className="text-lg font-bold">{stage.title}</h4>
+                             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{stage.description}</p>
+                           </article>
+                         ))}
+                       </div>
+                     </TabsContent>
                   </Tabs>
 
                   <div className="mt-8 grid gap-6 rounded-2xl border border-border/60 bg-background/20 p-5 md:grid-cols-[1fr_auto] md:items-center md:p-6">
