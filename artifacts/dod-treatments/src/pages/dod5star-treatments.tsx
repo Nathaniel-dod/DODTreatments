@@ -23,24 +23,6 @@ import {
   Sunset,
 } from 'lucide-react';
 
-const experiences = [
-  {
-    glyph: '✦',
-    title: 'The Healing Experience',
-    description: 'Rejuvenating therapies and personalized healing protocols in a transformative journey of renewal.',
-  },
-  {
-    glyph: '◆',
-    title: 'The Treatment Experience',
-    description: 'Revolutionary Wolfe Non-Surgical treatments and advanced energy medicine therapies, daily.',
-  },
-  {
-    glyph: '❖',
-    title: 'The Training Experience',
-    description: 'Learn revolutionary healing techniques directly from the masters while you restore your own health.',
-  },
-];
-
 const therapies = [
   { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical', note: "The World's Most Powerful Bodywork" },
   { name: 'CellSonic Regeneration ESWT', href: '/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
@@ -124,16 +106,6 @@ export default function Dod5StarTreatments() {
 
       <section className="pb-12 md:pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-16">
-            {experiences.map((e) => (
-              <div key={e.title} className="glass-panel rounded-2xl p-8 text-center">
-                <div className="text-4xl gold-gradient mb-4">{e.glyph}</div>
-                <h2 className="text-xl font-bold mb-3">{e.title}</h2>
-                <p className="text-sm text-muted-foreground leading-relaxed">{e.description}</p>
-              </div>
-            ))}
-          </div>
-
           <div className="max-w-4xl mx-auto mb-16 rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 via-card/85 to-accent/10 p-8 md:p-10 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)]">
             <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
               DOD5Star Exclusive
