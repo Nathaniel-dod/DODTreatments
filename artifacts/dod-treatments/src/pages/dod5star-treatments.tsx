@@ -2,7 +2,18 @@ import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { Button } from '@/components/ui/button';
-import { Activity, ArrowRight, CalendarDays, ClipboardList, Leaf, ShieldCheck, Sparkles } from 'lucide-react';
+import {
+  ArrowRight,
+  CalendarDays,
+  Check,
+  Clock3,
+  Moon,
+  ShieldCheck,
+  Sparkles,
+  Sunrise,
+  Sun,
+  Sunset,
+} from 'lucide-react';
 
 const experiences = [
   {
@@ -33,29 +44,42 @@ const therapies = [
   { name: 'Vitamin D Light', href: '/treatments/vitamin-d-light', note: 'Naturally increase vitamin D' },
 ];
 
-const externalTherapyExamples = [
+const protocolBlocks = [
   {
-    icon: Activity,
-    title: 'Movement & restoration',
-    description: 'Time for breathing practices, gentle movement, the vibration plate, and restorative use of the salt-water pool.',
+    period: 'Morning',
+    timing: 'Begin with intention',
+    title: 'Arrive & align',
+    description: 'A calm start to orient your day, connect with your practitioner, and set a comfortable rhythm.',
+    categories: ['Arrival check-in', 'Breath & gentle movement', 'Internal support discussion'],
+    icon: Sunrise,
   },
   {
-    icon: Sparkles,
-    title: 'Light & energy therapies',
-    description: 'Depending on your plan, this may include Bioptron, Avacen, infrared light, Vitamin D Light, or other on-site wellness devices.',
+    period: 'Midday',
+    timing: 'Personalized treatment window',
+    title: 'Explore & receive',
+    description: 'Time reserved for the external therapy categories and restorative practices that fit your evolving plan.',
+    categories: ['Focused treatment', 'Light & energy therapies', 'Hydration & nourishment'],
+    icon: Sun,
   },
   {
-    icon: ClipboardList,
-    title: 'Focused treatment sessions',
-    description: 'Your practitioner may coordinate Wolfe Non-Surgical, CellSonic, Cardio MedBed, or other therapies around your goals and response.',
+    period: 'Afternoon',
+    timing: 'Restore & respond',
+    title: 'Make space for response',
+    description: 'Room for movement, recovery, reflection, and thoughtful adjustments based on your experience that day.',
+    categories: ['Movement & restoration', 'Practitioner check-in', 'Quiet recovery'],
+    icon: Sunset,
+  },
+  {
+    period: 'Evening',
+    timing: 'Integrate & rest',
+    title: 'Close the day gently',
+    description: 'A softer close with space to reflect, support your evening routine, and reset for tomorrow.',
+    categories: ['Wind-down practices', 'Nutrition conversation', 'Rest & reflection'],
+    icon: Moon,
   },
 ];
 
-const internalSupportExamples = [
-  'A daily rhythm that fits your energy, preferences, and time at the retreat.',
-  'Personalized nutrition, hydration, and internal-support conversations with your practitioner.',
-  'Regular check-ins so the plan can be adjusted as your needs change during the stay.',
-];
+const personalizationFactors = ['Your personality', 'Your condition', 'Your goals', 'Your daily response'];
 
 export default function Dod5StarTreatments() {
   return (
@@ -100,79 +124,101 @@ export default function Dod5StarTreatments() {
             </p>
           </div>
 
-          {/* Personalized protocol examples */}
+          {/* Sanitized protocol template */}
           <div className="max-w-6xl mx-auto mb-16">
-            <div className="rounded-3xl border border-primary/30 bg-card/60 p-8 md:p-12">
-              <div className="max-w-3xl mx-auto text-center mb-10">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+            <div className="overflow-hidden rounded-3xl border border-primary/30 bg-card/60 shadow-[0_18px_55px_rgba(0,0,0,0.2)]">
+              <div className="border-b border-primary/20 bg-gradient-to-r from-primary/15 via-card/70 to-accent/10 p-8 md:p-12">
+                <div className="mx-auto max-w-3xl text-center">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                   <CalendarDays className="w-4 h-4" aria-hidden="true" />
-                  A sample retreat framework
+                    Illustrative guest protocol
+                  </div>
+                  <h2 className="mt-5 text-3xl font-bold md:text-4xl gold-gradient">A Day Shaped Around You</h2>
+                  <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+                    This sample framework shows the shape of a guest plan—not a fixed itinerary. Your personalized protocol is built after arrival and adjusted to your personality, condition, goals, and daily response.
+                  </p>
                 </div>
-                <h2 className="mt-5 text-3xl font-bold md:text-4xl gold-gradient">Your Protocol Is Built Around You</h2>
-                <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                  The examples below show the kinds of support a guest may explore at DOD5Star. Your personalized plan is created when you arrive and refined around your personality, condition, goals, and daily experience.
-                </p>
               </div>
 
-              <div className="grid lg:grid-cols-2 gap-6">
-                <article className="glass-panel rounded-2xl p-7 md:p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="rounded-xl bg-primary/10 p-3">
-                      <Activity className="w-7 h-7 text-primary" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary mb-2">Example only</p>
-                      <h3 className="text-2xl font-bold">Internal & External Therapies</h3>
-                    </div>
+              <div className="p-6 md:p-10">
+                <div className="mb-7 flex items-center justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Sample day at a glance</p>
+                    <h3 className="mt-2 text-2xl font-bold">A flexible rhythm, never a prescription</h3>
                   </div>
-                  <div className="space-y-5">
-                    {externalTherapyExamples.map((item) => (
-                      <div key={item.title} className="flex gap-4">
-                        <item.icon className="w-5 h-5 text-primary flex-shrink-0 mt-1" aria-hidden="true" />
-                        <div>
-                          <h4 className="font-bold mb-1">{item.title}</h4>
-                          <p className="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
-                        </div>
+                  <div className="hidden rounded-full border border-border/70 px-3 py-1.5 text-xs font-medium text-muted-foreground sm:inline-flex sm:items-center sm:gap-2">
+                    <Clock3 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                    Timing varies by guest
+                  </div>
+                </div>
+
+                <div className="relative space-y-4 before:absolute before:bottom-8 before:left-[1.25rem] before:top-8 before:w-px before:bg-primary/25 md:before:left-[1.65rem]">
+                  {protocolBlocks.map((block) => (
+                    <article
+                      key={block.period}
+                      data-testid={`card-protocol-${block.period.toLowerCase()}`}
+                      className="glass-panel relative grid gap-5 rounded-2xl p-5 transition-colors hover:border-primary/30 md:grid-cols-[auto_1fr_auto] md:items-start md:gap-6 md:p-6"
+                    >
+                      <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full border border-primary/40 bg-card text-primary shadow-[0_0_0_6px_hsl(var(--card))]">
+                        <block.icon className="h-5 w-5" aria-hidden="true" />
                       </div>
-                    ))}
-                  </div>
-                </article>
 
-                <article className="glass-panel rounded-2xl p-7 md:p-8">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="rounded-xl bg-primary/10 p-3">
-                      <Leaf className="w-7 h-7 text-primary" aria-hidden="true" />
-                    </div>
+                      <div>
+                        <div className="mb-1 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                          <h4 className="text-xl font-bold">{block.period}</h4>
+                          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">{block.timing}</span>
+                        </div>
+                        <p className="mb-3 font-medium">{block.title}</p>
+                        <p className="text-sm leading-relaxed text-muted-foreground">{block.description}</p>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 md:max-w-[13rem] md:justify-end">
+                        {block.categories.map((category) => (
+                          <span
+                            key={category}
+                            className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1.5 text-xs text-muted-foreground"
+                          >
+                            <Sparkles className="h-3 w-3 text-primary" aria-hidden="true" />
+                            {category}
+                          </span>
+                        ))}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+
+                <div className="mt-8 grid gap-6 rounded-2xl border border-border/60 bg-background/20 p-5 md:grid-cols-[1fr_auto] md:items-center md:p-6">
+                  <div className="flex gap-4">
+                    <ShieldCheck className="mt-0.5 h-6 w-6 flex-shrink-0 text-primary" aria-hidden="true" />
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary mb-2">Example only</p>
-                      <h3 className="text-2xl font-bold">Personalized Internal Support</h3>
+                      <h3 className="mb-2 font-bold">The framework changes with you</h3>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        These are broad planning blocks for orientation only—not a guaranteed itinerary, treatment prescription, or medical advice. Your DOD5Star team builds the appropriate plan with you after arrival and refines it as your stay unfolds.
+                      </p>
                     </div>
                   </div>
-                  <ul className="space-y-4">
-                    {internalSupportExamples.map((item) => (
-                      <li key={item} className="flex gap-3 text-sm leading-relaxed text-muted-foreground">
-                        <span className="mt-1.5 h-2 w-2 rounded-full bg-primary flex-shrink-0" aria-hidden="true" />
-                        {item}
-                      </li>
+                  <div className="flex flex-wrap gap-x-4 gap-y-2 md:max-w-[19rem] md:justify-end">
+                    {personalizationFactors.map((factor) => (
+                      <span key={factor} className="inline-flex items-center gap-1.5 text-xs font-medium text-foreground/80">
+                        <Check className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
+                        {factor}
+                      </span>
                     ))}
-                  </ul>
-                  <div className="mt-7 rounded-xl border border-primary/20 bg-primary/5 p-5">
-                    <h4 className="font-bold mb-2">Nutrition & diet guidance</h4>
-                    <p className="text-sm leading-relaxed text-muted-foreground">
-                      A separate nutrition resource will provide more detail about the broader Perfect Day approach. We will link to that information here when the resource is ready.
-                    </p>
-                    <span className="mt-4 inline-flex rounded-full border border-primary/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-primary">
-                      More information coming soon
-                    </span>
                   </div>
-                </article>
-              </div>
+                </div>
 
-              <div className="mt-8 flex gap-4 rounded-2xl border border-border/60 bg-background/20 p-5 md:p-6">
-                <ShieldCheck className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" aria-hidden="true" />
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  These are examples for orientation, not a guaranteed itinerary or medical, nutrition, or treatment prescription. Your DOD5Star team will build the appropriate protocol with you after you arrive and will adjust it as needed.
-                </p>
+                <div className="mt-8 flex flex-col items-center justify-between gap-5 rounded-2xl border border-primary/25 bg-gradient-to-r from-primary/10 via-transparent to-accent/10 p-6 text-center sm:flex-row sm:text-left">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Make it personal</p>
+                    <p className="mt-2 text-lg font-semibold">Ready to talk through your own retreat rhythm?</p>
+                  </div>
+                  <Button asChild size="lg" className="gold-glow" data-testid="button-discuss-protocol">
+                    <Link href="/clinics/ixtapa-zihuatanejo/inquire" data-testid="link-discuss-protocol">
+                      Discuss Your Protocol
+                      <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
