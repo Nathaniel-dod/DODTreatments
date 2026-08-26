@@ -199,7 +199,7 @@ export default function Dod5StarTreatments() {
       />
       <Dod5StarNav />
 
-      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="pt-14 pb-10 md:pt-20 md:pb-14">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Treatments at the Retreat</h1>
@@ -210,11 +210,11 @@ export default function Dod5StarTreatments() {
         </div>
       </section>
 
-      <section className="pb-12 md:pb-20">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Sanitized therapy framework */}
           <Dialog>
-            <div className="max-w-4xl mx-auto mb-16">
+            <div className="max-w-4xl mx-auto mb-12">
               <div className="flex flex-col items-center justify-between gap-6 rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-card/70 to-accent/10 p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)] md:flex-row md:p-8 md:text-left">
                 <div className="flex items-start gap-4">
                   <div className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-primary/40 bg-card/70 text-primary">
@@ -395,7 +395,7 @@ export default function Dod5StarTreatments() {
             </DialogContent>
           </Dialog>
 
-           <div className="mx-auto mb-16 max-w-5xl">
+           <div className="mx-auto mb-12 max-w-5xl">
              <div className="mx-auto mb-9 max-w-3xl text-center">
                <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
                  Included With Your Stay
@@ -467,7 +467,7 @@ export default function Dod5StarTreatments() {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-24">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link href="/clinics/ixtapa-zihuatanejo/inquire">
             <Button size="lg" className="gold-glow">Plan Your Stay</Button>

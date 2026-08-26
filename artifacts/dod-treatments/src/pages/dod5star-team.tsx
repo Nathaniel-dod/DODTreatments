@@ -37,7 +37,7 @@ export default function Dod5StarTeam() {
       />
       <Dod5StarNav />
 
-      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="pt-14 pb-10 md:pt-20 md:pb-14">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Your Team</h1>
@@ -48,7 +48,7 @@ export default function Dod5StarTeam() {
         </div>
       </section>
 
-      <section className="pb-12 md:pb-20">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {team.map((member) => (
@@ -68,7 +68,7 @@ export default function Dod5StarTeam() {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-24">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link href="/clinics/ixtapa-zihuatanejo/inquire">
             <Button size="lg" className="gold-glow">Plan Your Stay</Button>

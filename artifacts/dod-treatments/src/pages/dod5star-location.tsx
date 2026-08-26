@@ -82,7 +82,7 @@ export default function Dod5StarLocation() {
       />
       <Dod5StarNav />
 
-      <section className="relative isolate overflow-hidden py-24 md:py-32">
+      <section className="relative isolate overflow-hidden py-16 md:py-24">
         <img
           src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
           alt="Aerial view of the Ixtapa-Zihuatanejo coastline and marina"
@@ -103,7 +103,7 @@ export default function Dod5StarLocation() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center md:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Video showcase</p>
@@ -150,7 +150,7 @@ export default function Dod5StarLocation() {
         </div>
       </section>
 
-      <section className="bg-card/30 py-16 md:py-24">
+      <section className="bg-card/30 py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-10 max-w-3xl text-center md:mb-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Beyond the retreat</p>

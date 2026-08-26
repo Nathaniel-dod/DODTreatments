@@ -96,7 +96,7 @@ export default function IxtapaZihuatanejo() {
       </section>
 
       {/* Explore the Retreat */}
-      <section className="py-16 md:py-24 bg-card/30">
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
           <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -141,7 +141,7 @@ export default function IxtapaZihuatanejo() {
       </section>
 
       {/* Who the retreat may suit */}
-      <section className="bg-card/30 py-16 md:py-24">
+      <section className="bg-card/30 py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-5xl">
             <div className="mb-10 max-w-2xl md:mb-12">
@@ -286,7 +286,7 @@ export default function IxtapaZihuatanejo() {
       </section>
 
       {/* Plan Your Stay CTA */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link href="/clinics/ixtapa-zihuatanejo/inquire">
             <Button size="lg" className="gold-glow">Plan Your Stay <ArrowRight className="ml-2 w-5 h-5" /></Button>

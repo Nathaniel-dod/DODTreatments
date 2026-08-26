@@ -13,7 +13,7 @@ export default function Dod5StarInquire() {
       />
       <Dod5StarNav />
 
-      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="pt-14 pb-10 md:pt-20 md:pb-14">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Plan Your Stay</h1>
@@ -42,7 +42,7 @@ export default function Dod5StarInquire() {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-24">
+      <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto mb-10 rounded-2xl border border-primary/30 bg-primary/10 p-6 text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">DOD5Star Exclusive</span>
