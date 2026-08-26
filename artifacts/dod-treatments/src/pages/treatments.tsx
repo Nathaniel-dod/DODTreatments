@@ -149,6 +149,73 @@ const treatmentGoalGroups = [
   },
 ];
 
+function TreatmentGoalCard({ group }: { group: (typeof treatmentGoalGroups)[number] }) {
+  return (
+    <section className="glass-panel rounded-3xl p-6 md:p-8">
+      <div className="mb-6">
+        <h2 className="text-2xl font-bold gold-gradient">{group.title}</h2>
+        <p className="text-sm text-muted-foreground leading-relaxed mt-2">{group.description}</p>
+      </div>
+      <div className={`grid gap-4 ${group.treatments.length > 1 ? 'sm:grid-cols-2' : ''}`}>
+        {group.treatments.map((product) => (
+          <Link key={product.href} href={product.href}>
+            <div className="rounded-2xl overflow-hidden border border-border/60 bg-background/30 hover:border-primary/40 transition-all duration-300 group h-full flex flex-col">
+              <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
+                {'image' in product ? (
+                  <img
+                    src={`${import.meta.env.BASE_URL}${product.image}`}
+                    alt={product.imageAlt}
+                    className={`absolute inset-0 w-full h-full object-cover ${'imagePosition' in product ? product.imagePosition : 'object-top'} group-hover:scale-105 transition-transform duration-500`}
+                  />
+                ) : 'collage' in product && product.collage ? (
+                  <div className="absolute inset-0 grid grid-cols-[0.95fr_1.05fr] gap-px bg-primary/25">
+                    <div className="relative overflow-hidden bg-gradient-to-br from-background via-background/90 to-primary/10">
+                      <img
+                        src={`${import.meta.env.BASE_URL}${product.collage[0].src}`}
+                        alt={product.collage[0].alt}
+                        className="absolute inset-x-0 bottom-0 mx-auto h-[94%] w-[88%] object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <span className="absolute bottom-2 left-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
+                        {product.collage[0].label}
+                      </span>
+                    </div>
+                    <div className="relative overflow-hidden bg-background/70">
+                      <img
+                        src={`${import.meta.env.BASE_URL}${product.collage[1].src}`}
+                        alt={product.collage[1].alt}
+                        className="absolute inset-0 h-full w-full object-cover object-[center_42%] transition-transform duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
+                      <span className="absolute bottom-2 right-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
+                        {product.collage[1].label}
+                      </span>
+                    </div>
+                  </div>
+                ) : 'glyph' in product ? (
+                  <span className="text-5xl text-primary" aria-hidden="true">{product.glyph}</span>
+                ) : null}
+                <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
+                  {product.category}
+                </span>
+              </div>
+              <div className="p-5 flex flex-col flex-1">
+                <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h3>
+                <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
+                <div className="flex items-center justify-end mt-auto">
+                  <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
+                    View <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export default function Treatments() {
   const structuredData = [
     {
@@ -195,71 +262,22 @@ export default function Treatments() {
               Explore treatments by the outcome or area of support that matters most to you.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 max-w-6xl mx-auto">
+          <div className="mx-auto max-w-6xl space-y-6 lg:hidden">
             {treatmentGoalGroups.map((group) => (
-              <section key={group.title} className="glass-panel rounded-3xl p-6 md:p-8">
-                <div className="mb-6">
-                  <h2 className="text-2xl font-bold gold-gradient">{group.title}</h2>
-                  <p className="text-sm text-muted-foreground leading-relaxed mt-2">{group.description}</p>
-                </div>
-                <div className={`grid gap-4 ${group.treatments.length > 1 ? 'sm:grid-cols-2' : ''}`}>
-                  {group.treatments.map((product) => (
-                    <Link key={product.href} href={product.href}>
-                      <div className="rounded-2xl overflow-hidden border border-border/60 bg-background/30 hover:border-primary/40 transition-all duration-300 group h-full flex flex-col">
-                        <div className="aspect-[16/10] bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center relative overflow-hidden">
-                          {'image' in product ? (
-                            <img
-                              src={`${import.meta.env.BASE_URL}${product.image}`}
-                              alt={product.imageAlt}
-                              className={`absolute inset-0 w-full h-full object-cover ${'imagePosition' in product ? product.imagePosition : 'object-top'} group-hover:scale-105 transition-transform duration-500`}
-                            />
-                          ) : 'collage' in product && product.collage ? (
-                            <div className="absolute inset-0 grid grid-cols-[0.95fr_1.05fr] gap-px bg-primary/25">
-                              <div className="relative overflow-hidden bg-gradient-to-br from-background via-background/90 to-primary/10">
-                                <img
-                                  src={`${import.meta.env.BASE_URL}${product.collage[0].src}`}
-                                  alt={product.collage[0].alt}
-                                  className="absolute inset-x-0 bottom-0 mx-auto h-[94%] w-[88%] object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
-                                />
-                                <span className="absolute bottom-2 left-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
-                                  {product.collage[0].label}
-                                </span>
-                              </div>
-                              <div className="relative overflow-hidden bg-background/70">
-                                <img
-                                  src={`${import.meta.env.BASE_URL}${product.collage[1].src}`}
-                                  alt={product.collage[1].alt}
-                                  className="absolute inset-0 h-full w-full object-cover object-[center_42%] transition-transform duration-500 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background/45 via-transparent to-transparent" />
-                                <span className="absolute bottom-2 right-2 rounded-full bg-background/85 px-2 py-1 text-[10px] font-semibold text-primary">
-                                  {product.collage[1].label}
-                                </span>
-                              </div>
-                            </div>
-                          ) : 'glyph' in product ? (
-                            <span className="text-5xl text-primary" aria-hidden="true">{product.glyph}</span>
-                          ) : null}
-                          <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
-                            {product.category}
-                          </span>
-                        </div>
-                        <div className="p-5 flex flex-col flex-1">
-                          <h3 className="text-lg font-bold mb-1 group-hover:text-primary transition-colors">{product.name}</h3>
-                          <p className="text-sm text-foreground/70 mb-3">{product.tagline}</p>
-                          <p className="text-xs text-muted-foreground leading-relaxed mb-4 flex-1">{product.blurb}</p>
-                          <div className="flex items-center justify-end mt-auto">
-                            <span className="flex items-center text-primary text-sm font-medium group-hover:gap-2 gap-1 transition-all">
-                              View <ArrowRight className="w-4 h-4" />
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </section>
+              <TreatmentGoalCard key={group.title} group={group} />
             ))}
+          </div>
+          <div className="mx-auto hidden max-w-6xl grid-cols-2 gap-8 lg:grid">
+            <div className="space-y-8">
+              {[0, 2, 4, 6].map((index) => (
+                <TreatmentGoalCard key={treatmentGoalGroups[index].title} group={treatmentGoalGroups[index]} />
+              ))}
+            </div>
+            <div className="space-y-8">
+              {[1, 3, 5].map((index) => (
+                <TreatmentGoalCard key={treatmentGoalGroups[index].title} group={treatmentGoalGroups[index]} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
