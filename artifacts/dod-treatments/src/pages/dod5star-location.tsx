@@ -82,7 +82,7 @@ export default function Dod5StarLocation() {
       />
       <Dod5StarNav />
 
-      <section className="relative isolate overflow-hidden py-16 md:py-24">
+      <section className="relative isolate overflow-hidden py-24 md:py-32">
         <img
           src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
           alt="Aerial view of the Ixtapa-Zihuatanejo coastline and marina"

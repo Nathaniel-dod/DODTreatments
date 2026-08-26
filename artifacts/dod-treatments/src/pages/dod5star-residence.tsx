@@ -104,7 +104,7 @@ export default function Dod5StarResidence() {
       />
       <Dod5StarNav />
 
-      <section className="pt-14 pb-10 md:pt-20 md:pb-14">
+      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex items-center justify-center gap-2 mb-6">
