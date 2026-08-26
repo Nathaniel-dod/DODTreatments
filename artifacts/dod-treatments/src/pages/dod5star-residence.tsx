@@ -3,11 +3,10 @@ import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { Button } from '@/components/ui/button';
 import {
-  Activity,
+  ArrowRight,
   Bike,
   Car,
   ChefHat,
-  CircleDot,
   Dumbbell,
   GlassWater,
   ImageIcon,
@@ -15,34 +14,14 @@ import {
   Plane,
   RadioTower,
   Sparkles,
-  Sun,
   Table2,
   UtensilsCrossed,
+  Users,
   Waves,
   Wifi,
 } from 'lucide-react';
 
-const wellnessAmenities = [
-  {
-    icon: Activity,
-    title: 'Vibration Plate',
-    description: 'A movement and recovery tool available for you to use throughout your stay.',
-  },
-  {
-    icon: Sun,
-    title: 'Bioptron Light',
-    description: 'Full-spectrum light technology with a fullerene lens.',
-  },
-  {
-    icon: CircleDot,
-    title: 'Avacen',
-    description: 'A microcirculation-support device available at the Residence.',
-  },
-  {
-    icon: RadioTower,
-    title: 'Sentient Element PEMF',
-    description: 'A powerful PEMF device with an extensive range of frequencies.',
-  },
+const movementAmenities = [
   {
     icon: Dumbbell,
     title: 'Professional Rebounder',
@@ -51,12 +30,7 @@ const wellnessAmenities = [
   {
     icon: Waves,
     title: 'Structured Ionized Salt-Water Pool',
-    description: 'A beautiful healing pool for restorative time outdoors.',
-  },
-  {
-    icon: Sun,
-    title: 'Vitamin D Crystal Panel',
-    description: 'Vitamin D light with a crystal panel, available as part of your stay.',
+    description: 'A beautiful pool for restorative time and gentle movement outdoors.',
   },
 ];
 
@@ -191,19 +165,59 @@ export default function Dod5StarResidence() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <Sparkles className="w-6 h-6 text-primary" />
-                <h3 className="text-2xl font-bold">Wellness & Movement</h3>
+                 <h3 className="text-2xl font-bold">Wellness &amp; Treatments</h3>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {wellnessAmenities.map((amenity) => (
-                  <article key={amenity.title} className="glass-panel rounded-2xl p-6 h-full">
-                    <amenity.icon className="w-7 h-7 text-primary mb-5" aria-hidden="true" />
-                    <h4 className="text-lg font-bold mb-2">{amenity.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{amenity.description}</p>
-                    <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
-                  </article>
-                ))}
+               <div className="grid gap-5 md:grid-cols-2">
+                 <article className="glass-panel flex h-full flex-col rounded-2xl p-7">
+                   <Sparkles className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+                   <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                   <h4 className="text-xl font-bold">Wellness &amp; Energy Medicine Devices</h4>
+                   <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                     Explore the wellness and energy medicine devices available for residents to use at the Residence with no additional treatment fee.
+                   </p>
+                   <Link
+                     href="/clinics/ixtapa-zihuatanejo/treatments"
+                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                   >
+                     See All
+                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                   </Link>
+                 </article>
+
+                 <article className="glass-panel flex h-full flex-col rounded-2xl border-primary/25 p-7">
+                   <Users className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+                   <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Available by appointment</span>
+                   <h4 className="text-xl font-bold">On-Site Practitioners for Specialized Treatments</h4>
+                   <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                     On-site practitioners are available to deliver specialized treatments. Practitioner-delivered therapies are not included in the residence rental and are charged separately.
+                   </p>
+                   <Link
+                     href="/clinics/ixtapa-zihuatanejo/treatments"
+                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                   >
+                     Explore Specialized Treatments
+                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                   </Link>
+                 </article>
               </div>
             </div>
+
+             <div>
+               <div className="flex items-center gap-3 mb-6">
+                 <Dumbbell className="w-6 h-6 text-primary" />
+                 <h3 className="text-2xl font-bold">Movement &amp; Recovery</h3>
+               </div>
+               <div className="grid gap-5 sm:grid-cols-2">
+                 {movementAmenities.map((amenity) => (
+                   <article key={amenity.title} className="glass-panel h-full rounded-2xl p-6">
+                     <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                     <h4 className="mb-2 text-lg font-bold">{amenity.title}</h4>
+                     <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
+                     <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                   </article>
+                 ))}
+               </div>
+             </div>
 
             <div>
               <div className="flex items-center gap-3 mb-6">
