@@ -212,16 +212,6 @@ export default function Dod5StarTreatments() {
 
       <section className="pb-12 md:pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto mb-16 rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 via-card/85 to-accent/10 p-8 md:p-10 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)]">
-            <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-              DOD5Star Exclusive
-            </span>
-            <h2 className="mt-5 text-2xl font-bold md:text-3xl gold-gradient">Receive a Complimentary Core Restore Treatment</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Book a Cardio MedBed treatment during your retreat and receive a DOD Core Restore session at no additional cost.
-            </p>
-          </div>
-
           {/* Sanitized therapy framework */}
           <Dialog>
             <div className="max-w-4xl mx-auto mb-16">
@@ -464,6 +454,16 @@ export default function Dod5StarTreatments() {
                Your treatment plan is built with your team before your arrival, then refined throughout your stay according to your goals, condition, and daily response.
             </p>
           </div>
+
+           <div className="mx-auto mt-12 max-w-4xl rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/15 via-card/85 to-accent/10 p-8 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)] md:p-10">
+             <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+               DOD5Star Exclusive
+             </span>
+             <h2 className="mt-5 text-2xl font-bold md:text-3xl gold-gradient">Receive a Complimentary Core Restore Treatment</h2>
+             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+               Book a Cardio MedBed treatment during your retreat and receive a DOD Core Restore session at no additional cost.
+             </p>
+           </div>
         </div>
       </section>
 
