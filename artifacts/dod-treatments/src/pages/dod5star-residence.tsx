@@ -9,7 +9,6 @@ import {
   ChefHat,
   Dumbbell,
   GlassWater,
-  ImageIcon,
   MapPin,
   Plane,
   RadioTower,
@@ -20,6 +19,61 @@ import {
   Waves,
   Wifi,
 } from 'lucide-react';
+
+const residencePhotoGroups = [
+  {
+    eyebrow: 'The estate',
+    title: 'A Private Jungle Residence',
+    description: 'See the full property from above, surrounded by the lush landscape of Ixtapa-Zihuatanejo.',
+    photos: [
+      { src: 'arial-frontview.webp', alt: 'Aerial front view of the DOD5Star Residence', label: 'Front view' },
+      { src: 'arial-back-overview.webp', alt: 'Aerial overview of the rear of the DOD5Star Residence', label: 'Back overview' },
+      { src: 'arial-top.webp', alt: 'Top-down aerial view of the DOD5Star Residence and grounds', label: 'Estate & grounds' },
+    ],
+  },
+  {
+    eyebrow: 'Private accommodations',
+    title: 'Three Restful Suites',
+    description: 'Comfortable, individually named rooms give each guest a private place to rest and reset.',
+    photos: [
+      { src: 'king-palm-suite.webp', alt: 'King Palm Suite at the DOD5Star Residence', label: 'King Palm Suite' },
+      { src: 'lions-den-king-suite.webp', alt: 'Lions Den King Suite at the DOD5Star Residence', label: 'Lions Den King Suite' },
+      { src: 'coconut-grove-queen-room.webp', alt: 'Coconut Grove Queen Room at the DOD5Star Residence', label: 'Coconut Grove Queen Room' },
+    ],
+  },
+  {
+    eyebrow: 'Gather & nourish',
+    title: 'Living, Kitchen & Dining',
+    description: 'Open shared spaces make it easy to prepare meals, dine together, or settle in for a quiet evening.',
+    photos: [
+      { src: 'living-room.webp', alt: 'Living room at the DOD5Star Residence', label: 'Living Room' },
+      { src: 'chefs-table-and-5-star-kitchen.webp', alt: 'Chef’s table and kitchen at the DOD5Star Residence', label: 'Chef’s Table & Kitchen' },
+      { src: 'breakfast-bar-5-star-kitchen.webp', alt: 'Breakfast bar and kitchen at the DOD5Star Residence', label: 'Breakfast Bar & Kitchen' },
+    ],
+  },
+  {
+    eyebrow: 'Restore & reconnect',
+    title: 'Pool & Lounging Areas',
+    description: 'Move between sun, shade, salt water, and comfortable gathering spaces throughout the day.',
+    photos: [
+      { src: 'pool.webp', alt: 'Salt-water pool at the DOD5Star Residence', label: 'Salt-Water Pool' },
+      { src: 'pool-and-lounge-at-night.webp', alt: 'Pool and outdoor lounge illuminated at night', label: 'Poolside at Night', wide: true },
+      { src: 'lounging-area.webp', alt: 'Outdoor lounging area at the DOD5Star Residence', label: 'Outdoor Lounging' },
+      { src: 'lounging-area-2.webp', alt: 'Covered lounging area at the DOD5Star Residence', label: 'Covered Lounge' },
+      { src: 'lounge.webp', alt: 'Indoor lounge at the DOD5Star Residence', label: 'Lounge' },
+      { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table and lounge area at the DOD5Star Residence', label: 'Ping Pong & Lounge' },
+    ],
+  },
+  {
+    eyebrow: 'Everyday ease',
+    title: 'Thoughtful Spaces Throughout',
+    description: 'Dedicated wellness and practical home spaces support both restorative routines and longer stays.',
+    photos: [
+      { src: 'zen-room.webp', alt: 'Zen room at the DOD5Star Residence', label: 'Zen Room' },
+      { src: 'laundry-room-area.webp', alt: 'Laundry room area at the DOD5Star Residence', label: 'Laundry Room Area' },
+    ],
+  },
+] as const;
 
 const movementAmenities = [
   {
@@ -116,32 +170,59 @@ export default function Dod5StarResidence() {
               A luxury jungle estate designed for healing — every amenity in service of your transformation.
             </p>
           </div>
+          <div className="relative mx-auto mt-10 max-w-6xl overflow-hidden rounded-3xl border border-white/10 shadow-2xl md:mt-14">
+            <img
+              src={`${import.meta.env.BASE_URL}images/residence/arial-frontview.webp`}
+              alt="Aerial view of the DOD5Star Residence surrounded by tropical greenery"
+              className="aspect-[16/8] w-full object-cover"
+              fetchPriority="high"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+            <p className="absolute bottom-4 left-5 text-xs font-semibold uppercase tracking-[0.16em] text-white/90 md:bottom-6 md:left-7">
+              Your private retreat in Ixtapa-Zihuatanejo
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Gallery */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-10">
               <p className="text-sm font-semibold tracking-[0.18em] uppercase text-primary mb-4">A look inside</p>
               <h2 className="text-3xl md:text-4xl font-bold gold-gradient mb-4">Residence Photo Gallery</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Step inside the suites, shared spaces, jungle surroundings, and retreat amenities. Property photos will be added here soon.
+                Step inside the private suites, shared living spaces, tropical grounds, and restorative amenities that shape your stay.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {['The Residence', 'Suites & Living', 'Jungle & Pool'].map((label, index) => (
-                <div
-                  key={label}
-                  className={`glass-panel rounded-2xl min-h-52 p-6 flex flex-col justify-between border-dashed ${
-                    index === 0 ? 'sm:col-span-2 lg:col-span-2 lg:min-h-72' : ''
-                  }`}
-                >
-                  <ImageIcon className="w-9 h-9 text-primary/70" aria-hidden="true" />
-                  <div>
-                    <p className="text-xs font-semibold tracking-[0.16em] uppercase text-primary/80 mb-2">Photo gallery</p>
-                    <h3 className="text-xl font-bold">{label}</h3>
+            <div className="space-y-14 md:space-y-16">
+              {residencePhotoGroups.map((group) => (
+                <div key={group.title}>
+                  <div className="mb-6 max-w-3xl">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">{group.eyebrow}</p>
+                    <h3 className="mb-2 text-2xl font-bold md:text-3xl">{group.title}</h3>
+                    <p className="leading-relaxed text-muted-foreground">{group.description}</p>
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                    {group.photos.map((photo) => (
+                      <figure
+                        key={photo.src}
+                        className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg ${
+                          'wide' in photo && photo.wide ? 'sm:col-span-2 lg:col-span-2' : ''
+                        }`}
+                      >
+                        <img
+                          src={`${import.meta.env.BASE_URL}images/residence/${photo.src}`}
+                          alt={photo.alt}
+                          className="aspect-[4/3] h-full min-h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+                          loading="lazy"
+                        />
+                        <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-14">
+                          <figcaption className="text-sm font-semibold text-white">{photo.label}</figcaption>
+                        </div>
+                      </figure>
+                    ))}
                   </div>
                 </div>
               ))}
