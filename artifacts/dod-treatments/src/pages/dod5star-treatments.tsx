@@ -12,11 +12,14 @@ import {
 } from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
+  Activity,
   ArrowRight,
   CalendarDays,
   Check,
+  CircleDot,
   Clock3,
   Moon,
+  RadioTower,
   ShieldCheck,
   Sparkles,
   Sunrise,
@@ -34,6 +37,39 @@ const therapies = [
   { name: 'DOD Advanced Bone Density Scanner', href: '/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
   { name: 'Infrared Light Healing', href: '/treatments/infrared-light-healing', note: 'Deep infrared phototherapy' },
   { name: 'Vitamin D Light', href: '/treatments/vitamin-d-light', note: 'Naturally increase vitamin D' },
+];
+
+const includedWellnessDevices = [
+  {
+    icon: Activity,
+    name: 'Vibration Plate',
+    description: 'A movement and recovery device available for resident use throughout your stay.',
+  },
+  {
+    icon: Sun,
+    name: 'Bioptron Light',
+    description: 'Full-spectrum light technology with a fullerene lens, available at the Residence.',
+  },
+  {
+    icon: CircleDot,
+    name: 'Avacen',
+    description: 'A microcirculation-support device available for resident use.',
+  },
+  {
+    icon: RadioTower,
+    name: 'Sentient Element PEMF',
+    description: 'PEMF technology with an extensive range of frequencies available during your stay.',
+  },
+  {
+    icon: Sun,
+    name: 'Vitamin D Crystal Panel',
+    description: 'Vitamin D light with a crystal panel, included as part of your stay.',
+  },
+  {
+    icon: Sunrise,
+    name: 'RX Infrared Light Healing',
+    description: 'RX infrared light technology available for residents to use at the Residence.',
+  },
 ];
 
 const protocolBlocks = [
@@ -365,8 +401,34 @@ export default function Dod5StarTreatments() {
             </DialogContent>
           </Dialog>
 
+           <div className="mx-auto mb-16 max-w-5xl">
+             <div className="mx-auto mb-9 max-w-3xl text-center">
+               <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
+                 Included With Your Stay
+               </span>
+               <h2 className="mt-5 text-2xl font-bold md:text-3xl gold-gradient">Wellness &amp; Energy Medicine Devices</h2>
+               <p className="mt-4 leading-relaxed text-muted-foreground">
+                 In addition to your personalized therapy plan, DOD5Star residents have access to selected wellness and energy medicine devices at the Residence with no additional treatment fee.
+               </p>
+             </div>
+             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+               {includedWellnessDevices.map((device) => (
+                 <article key={device.name} className="glass-panel flex h-full flex-col rounded-2xl p-6">
+                   <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                   <h3 className="text-lg font-bold">{device.name}</h3>
+                   <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
+                   <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                 </article>
+               ))}
+             </div>
+             <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground">
+               Availability and recommended use may vary. The DOD5Star team can provide setup and usage guidance during your stay.
+             </p>
+           </div>
+
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
+             <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-primary">Practitioner-delivered care</p>
+             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="space-y-3">
               {therapies.map((t) => (
                 <a
@@ -386,7 +448,7 @@ export default function Dod5StarTreatments() {
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
-              Your day-by-day treatment schedule is personalized with your team after arrival.
+               Your treatment plan is built with your team before your arrival, then refined throughout your stay according to your goals, condition, and daily response.
             </p>
           </div>
         </div>
