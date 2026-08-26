@@ -35,16 +35,9 @@ const therapies = [
   { name: 'Health Consultations', href: '/treatments/consultations', note: 'Your personalized roadmap' },
   { name: 'DOD Core Restore', href: '/treatments/dod-core-restore', note: 'Pelvic floor, incontinence, sexual wellness & deep core — for women and men' },
   { name: 'DOD Advanced Bone Density Scanner', href: '/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
-  { name: 'Infrared Light Healing', href: '/treatments/infrared-light-healing', note: 'Deep infrared phototherapy' },
-  { name: 'Vitamin D Light', href: '/treatments/vitamin-d-light', note: 'Naturally increase vitamin D' },
 ];
 
 const includedWellnessDevices = [
-  {
-    icon: Activity,
-    name: 'Vibration Plate',
-    description: 'A movement and recovery device available for resident use throughout your stay.',
-  },
   {
     icon: Sun,
     name: 'Bioptron Light',
@@ -58,11 +51,6 @@ const includedWellnessDevices = [
     href: '/treatments/avacen',
   },
   {
-    icon: RadioTower,
-    name: 'Sentient Element PEMF',
-    description: 'PEMF technology with an extensive range of frequencies available during your stay.',
-  },
-  {
     icon: Sun,
     name: 'Vitamin D Crystal Panel',
     description: 'Vitamin D light with a crystal panel, included as part of your stay.',
@@ -73,6 +61,16 @@ const includedWellnessDevices = [
     name: 'RX Infrared Light Healing',
     description: 'RX infrared light technology available for residents to use at the Residence.',
     href: '/treatments/infrared-light-healing',
+  },
+  {
+    icon: Activity,
+    name: 'Vibration Plate',
+    description: 'A movement and recovery device available for resident use throughout your stay.',
+  },
+  {
+    icon: RadioTower,
+    name: 'Sentient Element PEMF',
+    description: 'PEMF technology with an extensive range of frequencies available during your stay.',
   },
 ];
 
