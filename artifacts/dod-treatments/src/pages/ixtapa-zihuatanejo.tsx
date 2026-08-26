@@ -140,32 +140,6 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
-      {/* Personalized treatment experience */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-card/70 to-accent/10 p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)] md:flex-row md:p-8 md:text-left">
-            <div className="flex items-start gap-4">
-              <div className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-primary/40 bg-card/70 text-primary">
-                <CalendarDays className="h-5 w-5" aria-hidden="true" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Internal / External Therapies</p>
-                <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Shaped Around You</h2>
-                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                  Explore the external therapies, internal support, and nutrition options that may be considered throughout your retreat.
-                </p>
-              </div>
-            </div>
-            <Link href="/clinics/ixtapa-zihuatanejo/treatments">
-              <Button size="lg" className="gold-glow flex-shrink-0">
-                Explore the DOD5Star Treatment Experience
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Who the retreat may suit */}
       <section className="bg-card/30 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -197,6 +171,32 @@ export default function IxtapaZihuatanejo() {
                 <span className="font-semibold text-foreground">Bilingual care:</span> Spanish-speaking consultants and practitioners are available to support you throughout your stay.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Personalized treatment experience */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-card/70 to-accent/10 p-6 text-center shadow-[0_18px_55px_rgba(0,0,0,0.2)] md:flex-row md:p-8 md:text-left">
+            <div className="flex items-start gap-4">
+              <div className="mt-1 flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-primary/40 bg-card/70 text-primary">
+                <CalendarDays className="h-5 w-5" aria-hidden="true" />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Internal / External Therapies</p>
+                <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Shaped Around You</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                  Explore the external therapies, internal support, and nutrition options that may be considered throughout your retreat.
+                </p>
+              </div>
+            </div>
+            <Link href="/clinics/ixtapa-zihuatanejo/treatments">
+              <Button size="lg" className="gold-glow flex-shrink-0">
+                Explore the DOD5Star Treatment Experience
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
