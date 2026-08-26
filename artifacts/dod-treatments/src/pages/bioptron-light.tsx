@@ -69,7 +69,7 @@ export default function BioptronLight() {
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
               Bioptron uses polarized light across a broad spectrum to provide a comfortable, non-invasive light experience that can complement personal wellness, skin-care, and comfort-focused routines.
             </p>
-            <TreatmentHeroCtas />
+            <TreatmentHeroCtas dod5StarLabel="Included with DOD5Star Stays" />
           </div>
         </div>
       </section>

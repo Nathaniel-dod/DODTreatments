@@ -93,6 +93,22 @@ const treatmentProducts = [
     image: 'images/solrx-e-series.png',
     imageAlt: 'SolRx E-Series narrowband UVB light panel',
   },
+  {
+    href: '/treatments/bioptron-light',
+    name: 'Bioptron Light',
+    category: 'Polarized Light Therapy',
+    tagline: 'Broad-Spectrum, Non-UV Light',
+    blurb: 'A comfortable, non-invasive polarized-light experience designed to complement personal wellness and comfort-focused routines.',
+    glyph: '☀',
+  },
+  {
+    href: '/treatments/avacen',
+    name: 'Avacen',
+    category: 'Thermal Wellness Technology',
+    tagline: 'Gentle Thermal Microcirculation Support',
+    blurb: 'A non-invasive hand-warming session designed to support temporary comfort, relaxation, and general wellness.',
+    glyph: '◉',
+  },
 ];
 
 const treatmentGoalGroups = [
@@ -124,7 +140,7 @@ const treatmentGoalGroups = [
   {
     title: 'Light-Based Therapies',
     description: 'Explore light-based options that support restorative routines and wellness goals.',
-    treatments: [treatmentProducts[6], treatmentProducts[7]],
+    treatments: [treatmentProducts[6], treatmentProducts[7], treatmentProducts[8], treatmentProducts[9]],
   },
   {
     title: 'Personalized Guidance',
@@ -221,6 +237,8 @@ export default function Treatments() {
                                 </span>
                               </div>
                             </div>
+                          ) : 'glyph' in product ? (
+                            <span className="text-5xl text-primary" aria-hidden="true">{product.glyph}</span>
                           ) : null}
                           <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
                             {product.category}

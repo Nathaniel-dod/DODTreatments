@@ -73,7 +73,7 @@ export default function InfraredLightHealing() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               RX Infrared Light Healing uses the same broad-spectrum phototherapy technology in two comfortable device configurations: a seated light that shines upward and an adjustable full-body treatment light.
             </p>
-            <TreatmentHeroCtas />
+            <TreatmentHeroCtas dod5StarLabel="Included with DOD5Star Stays" />
           </div>
         </div>
       </section>

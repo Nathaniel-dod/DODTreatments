@@ -82,7 +82,7 @@ export default function VitaminDLight() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               A provider-guided narrowband UVB light session designed to support vitamin D synthesis and skin wellness. Natural quartz crystal panels can be added to diffuse the light for a gentler experience.
             </p>
-            <TreatmentHeroCtas />
+            <TreatmentHeroCtas dod5StarLabel="Included with DOD5Star Stays" />
           </div>
         </div>
       </section>

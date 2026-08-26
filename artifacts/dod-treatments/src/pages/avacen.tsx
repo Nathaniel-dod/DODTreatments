@@ -69,7 +69,7 @@ export default function Avacen() {
             <p className="mx-auto max-w-3xl text-lg leading-relaxed text-muted-foreground">
               Avacen is a non-invasive thermal wellness device that combines controlled heat with gentle negative pressure at the palm to support microcirculation and temporary muscle and joint comfort.
             </p>
-            <TreatmentHeroCtas />
+            <TreatmentHeroCtas dod5StarLabel="Included with DOD5Star Stays" />
           </div>
         </div>
       </section>
