@@ -42,33 +42,11 @@ const residencePhotoGroups = [
     ],
   },
   {
-    eyebrow: 'Gather & nourish',
-    title: 'Living, Kitchen & Dining',
-    description: 'Open shared spaces make it easy to prepare meals, dine together, or settle in for a quiet evening.',
-    photos: [
-      { src: 'living-room.webp', alt: 'Living room at the DOD5Star Residence', label: 'Living Room' },
-      { src: 'chefs-table-and-5-star-kitchen.webp', alt: 'Chef’s table and kitchen at the DOD5Star Residence', label: 'Chef’s Table & Kitchen' },
-      { src: 'breakfast-bar-5-star-kitchen.webp', alt: 'Breakfast bar and kitchen at the DOD5Star Residence', label: 'Breakfast Bar & Kitchen' },
-    ],
-  },
-  {
-    eyebrow: 'Restore & reconnect',
-    title: 'Pool & Lounging Areas',
-    description: 'Move between sun, shade, salt water, and comfortable gathering spaces throughout the day.',
-    photos: [
-      { src: 'pool.webp', alt: 'Salt-water pool at the DOD5Star Residence', label: 'Salt-Water Pool' },
-      { src: 'pool-and-lounge-at-night.webp', alt: 'Pool and outdoor lounge illuminated at night', label: 'Poolside at Night', wide: true },
-      { src: 'lounging-area.webp', alt: 'Outdoor lounging area at the DOD5Star Residence', label: 'Outdoor Lounging' },
-      { src: 'lounging-area-2.webp', alt: 'Covered lounging area at the DOD5Star Residence', label: 'Covered Lounge' },
-      { src: 'lounge.webp', alt: 'Indoor lounge at the DOD5Star Residence', label: 'Lounge' },
-      { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table and lounge area at the DOD5Star Residence', label: 'Ping Pong & Lounge' },
-    ],
-  },
-  {
     eyebrow: 'Everyday ease',
     title: 'Thoughtful Spaces Throughout',
-    description: 'Dedicated wellness and practical home spaces support both restorative routines and longer stays.',
+    description: 'Shared, wellness, and practical home spaces support both restorative routines and longer stays.',
     photos: [
+      { src: 'living-room.webp', alt: 'Living room at the DOD5Star Residence', label: 'Living Room' },
       { src: 'zen-room.webp', alt: 'Zen room at the DOD5Star Residence', label: 'Zen Room' },
       { src: 'laundry-room-area.webp', alt: 'Laundry room area at the DOD5Star Residence', label: 'Laundry Room Area' },
     ],
@@ -81,33 +59,53 @@ const movementAmenities = [
     title: 'Professional Rebounder',
     description: 'A professional-grade rebounder for movement and daily wellness routines.',
   },
-  {
-    icon: Waves,
-    title: 'Structured Ionized Salt-Water Pool',
-    description: 'A beautiful pool for restorative time and gentle movement outdoors.',
-  },
 ];
 
-const homeAndLifestyleAmenities = [
+const poolAmenity = {
+  icon: Waves,
+  title: 'Structured Ionized Salt-Water Pool',
+  description: 'A beautiful pool for restorative time and gentle movement outdoors.',
+  photos: [
+    { src: 'pool.webp', alt: 'Structured ionized salt-water pool in daylight' },
+    { src: 'pool-and-lounge-at-night.webp', alt: 'Pool and surrounding terrace illuminated at night' },
+  ],
+};
+
+const featuredHomeAmenities = [
   {
     icon: Table2,
-    title: 'Upstairs Ping Pong Table',
+    title: 'Ping Pong Table',
     description: 'A fun, easy way to unwind between sessions or at the end of the day.',
+    photos: [
+      { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table beside a comfortable lounge area' },
+    ],
   },
   {
     icon: Sparkles,
     title: 'Beautiful Lounging Areas',
     description: 'Comfortable indoor and outdoor spaces to rest, read, connect, and recharge.',
-  },
-  {
-    icon: Bike,
-    title: 'Two Bicycles',
-    description: 'Explore the neighborhood and nearby surroundings at your own pace.',
+    photos: [
+      { src: 'lounging-area.webp', alt: 'Open-air lounging area at the Residence' },
+      { src: 'lounging-area-2.webp', alt: 'Covered outdoor lounging area at the Residence' },
+      { src: 'lounge.webp', alt: 'Comfortable lounge seating at the Residence' },
+    ],
   },
   {
     icon: ChefHat,
     title: 'Fully Furnished Chef’s Kitchen',
     description: 'A complete kitchen for preparing food that fits your personal preferences.',
+    photos: [
+      { src: 'chefs-table-and-5-star-kitchen.webp', alt: 'Chef’s table and fully furnished kitchen' },
+      { src: 'breakfast-bar-5-star-kitchen.webp', alt: 'Breakfast bar in the fully furnished kitchen' },
+    ],
+  },
+] as const;
+
+const homeAndLifestyleAmenities = [
+  {
+    icon: Bike,
+    title: 'Two Bicycles',
+    description: 'Explore the neighborhood and nearby surroundings at your own pace.',
   },
   {
     icon: GlassWater,
@@ -232,7 +230,7 @@ export default function Dod5StarResidence() {
       </section>
 
       {/* Included amenities */}
-      <section className="py-12 md:py-16">
+      <section id="amenities" className="scroll-mt-32 py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <p className="text-sm font-semibold tracking-[0.18em] uppercase text-primary mb-4">Included with your stay</p>
@@ -248,15 +246,38 @@ export default function Dod5StarResidence() {
                  <Dumbbell className="w-6 h-6 text-primary" />
                  <h3 className="text-2xl font-bold">Movement &amp; Recovery</h3>
                </div>
-               <div className="grid gap-5 sm:grid-cols-2">
-                 {movementAmenities.map((amenity) => (
-                   <article key={amenity.title} className="glass-panel h-full rounded-2xl p-6">
-                     <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
-                     <h4 className="mb-2 text-lg font-bold">{amenity.title}</h4>
-                     <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
+               <div className="space-y-5">
+                 <article className="grid overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg lg:grid-cols-[0.8fr_1.2fr]">
+                   <div className="flex flex-col justify-center p-7 md:p-9">
+                     <poolAmenity.icon className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+                     <h4 className="mb-3 text-xl font-bold">{poolAmenity.title}</h4>
+                     <p className="mb-5 text-sm leading-relaxed text-muted-foreground">{poolAmenity.description}</p>
                      <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                   </div>
+                   <div className="grid min-h-72 grid-cols-2 gap-1 lg:min-h-80">
+                     {poolAmenity.photos.map((photo) => (
+                       <img
+                         key={photo.src}
+                         src={`${import.meta.env.BASE_URL}images/residence/${photo.src}`}
+                         alt={photo.alt}
+                         className="h-full w-full object-cover"
+                         loading="lazy"
+                       />
+                     ))}
+                   </div>
+                 </article>
+                 <div className="grid gap-5 sm:grid-cols-2">
+                 {movementAmenities.map((amenity) => (
+                    <article key={amenity.title} className="glass-panel h-full rounded-2xl">
+                      <div className="p-6">
+                        <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                        <h4 className="mb-2 text-lg font-bold">{amenity.title}</h4>
+                        <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
+                        <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                      </div>
                    </article>
                  ))}
+                 </div>
                </div>
              </div>
 
@@ -265,13 +286,47 @@ export default function Dod5StarResidence() {
                 <ChefHat className="w-6 h-6 text-primary" />
                 <h3 className="text-2xl font-bold">Home & Lifestyle</h3>
               </div>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+               <div className="mb-5 space-y-5">
+                 {featuredHomeAmenities.map((amenity, amenityIndex) => (
+                   <article
+                     key={amenity.title}
+                     className="grid overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg lg:grid-cols-[0.8fr_1.2fr]"
+                   >
+                     <div className={`flex flex-col justify-center p-7 md:p-9 ${amenityIndex % 2 === 1 ? 'lg:order-2' : ''}`}>
+                       <amenity.icon className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+                       <h4 className="mb-3 text-xl font-bold">{amenity.title}</h4>
+                       <p className="mb-5 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
+                       <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                     </div>
+                     <div
+                       className={`grid min-h-72 gap-1 lg:min-h-80 ${
+                         amenity.photos.length === 3 ? 'grid-cols-2 grid-rows-2' : amenity.photos.length === 2 ? 'grid-cols-2' : 'grid-cols-1'
+                       } ${amenityIndex % 2 === 1 ? 'lg:order-1' : ''}`}
+                     >
+                       {amenity.photos.map((photo, photoIndex) => (
+                         <img
+                           key={photo.src}
+                           src={`${import.meta.env.BASE_URL}images/residence/${photo.src}`}
+                           alt={photo.alt}
+                           className={`h-full w-full object-cover ${
+                             amenity.photos.length === 3 && photoIndex === 0 ? 'row-span-2' : ''
+                           }`}
+                           loading="lazy"
+                         />
+                       ))}
+                     </div>
+                   </article>
+                 ))}
+               </div>
+               <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {homeAndLifestyleAmenities.map((amenity) => (
-                  <article key={amenity.title} className="glass-panel rounded-2xl p-6 h-full">
-                    <amenity.icon className="w-7 h-7 text-primary mb-5" aria-hidden="true" />
-                    <h4 className="text-lg font-bold mb-2">{amenity.title}</h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-4">{amenity.description}</p>
-                    <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                   <article key={amenity.title} className="glass-panel h-full rounded-2xl">
+                     <div className="p-6">
+                       <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                       <h4 className="mb-2 text-lg font-bold">{amenity.title}</h4>
+                       <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
+                       <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                     </div>
                   </article>
                 ))}
               </div>
