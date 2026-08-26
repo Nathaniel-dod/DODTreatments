@@ -15,6 +15,8 @@ import DodCoreRestore from '@/pages/dod-core-restore';
 import BoneDensityScanner from '@/pages/bone-density-scanner';
 import InfraredLightHealing from '@/pages/infrared-light-healing';
 import VitaminDLight from '@/pages/vitamin-d-light';
+import BioptronLight from '@/pages/bioptron-light';
+import Avacen from '@/pages/avacen';
 import Clinics from '@/pages/clinics';
 import IxtapaZihuatanejo from '@/pages/ixtapa-zihuatanejo';
 import Dod5StarResidence from '@/pages/dod5star-residence';
@@ -54,6 +56,8 @@ function Router() {
           <Route path="/treatments/bone-density-scanner" component={BoneDensityScanner} />
           <Route path="/treatments/infrared-light-healing" component={InfraredLightHealing} />
           <Route path="/treatments/vitamin-d-light" component={VitaminDLight} />
+          <Route path="/treatments/bioptron-light" component={BioptronLight} />
+          <Route path="/treatments/avacen" component={Avacen} />
           <Route path="/consultations">
             <Redirect to="/treatments/consultations" replace />
           </Route>

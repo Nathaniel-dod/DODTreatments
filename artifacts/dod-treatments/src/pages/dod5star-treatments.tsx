@@ -49,11 +49,13 @@ const includedWellnessDevices = [
     icon: Sun,
     name: 'Bioptron Light',
     description: 'Full-spectrum light technology with a fullerene lens, available at the Residence.',
+    href: '/treatments/bioptron-light',
   },
   {
     icon: CircleDot,
     name: 'Avacen',
     description: 'A microcirculation-support device available for resident use.',
+    href: '/treatments/avacen',
   },
   {
     icon: RadioTower,
@@ -64,11 +66,13 @@ const includedWellnessDevices = [
     icon: Sun,
     name: 'Vitamin D Crystal Panel',
     description: 'Vitamin D light with a crystal panel, included as part of your stay.',
+    href: '/treatments/vitamin-d-light',
   },
   {
     icon: Sunrise,
     name: 'RX Infrared Light Healing',
     description: 'RX infrared light technology available for residents to use at the Residence.',
+    href: '/treatments/infrared-light-healing',
   },
 ];
 
@@ -418,6 +422,15 @@ export default function Dod5StarTreatments() {
                    <h3 className="text-lg font-bold">{device.name}</h3>
                    <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                    <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+                   {device.href && (
+                     <Link
+                       href={device.href}
+                       className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+                     >
+                       View More
+                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                     </Link>
+                   )}
                  </article>
                ))}
              </div>
