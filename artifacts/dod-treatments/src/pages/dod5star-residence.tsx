@@ -162,46 +162,6 @@ export default function Dod5StarResidence() {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-14">
-            <div>
-              <div className="flex items-center gap-3 mb-6">
-                <Sparkles className="w-6 h-6 text-primary" />
-                 <h3 className="text-2xl font-bold">Wellness &amp; Treatments</h3>
-              </div>
-               <div className="grid gap-5 md:grid-cols-2">
-                 <article className="glass-panel flex h-full flex-col rounded-2xl p-7">
-                   <Sparkles className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
-                   <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
-                   <h4 className="text-xl font-bold">Wellness &amp; Energy Medicine Devices</h4>
-                   <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                     Explore the wellness and energy medicine devices available for residents to use at the Residence with no additional treatment fee.
-                   </p>
-                   <Link
-                     href="/clinics/ixtapa-zihuatanejo/treatments"
-                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-                   >
-                     See All
-                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                   </Link>
-                 </article>
-
-                 <article className="glass-panel flex h-full flex-col rounded-2xl border-primary/25 p-7">
-                   <Users className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
-                   <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Available by appointment</span>
-                   <h4 className="text-xl font-bold">On-Site Practitioners for Specialized Treatments</h4>
-                   <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                     On-site practitioners are available to deliver specialized treatments. Practitioner-delivered therapies are not included in the residence rental and are charged separately.
-                   </p>
-                   <Link
-                     href="/clinics/ixtapa-zihuatanejo/treatments"
-                     className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-                   >
-                     Explore Specialized Treatments
-                     <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                   </Link>
-                 </article>
-              </div>
-            </div>
-
              <div>
                <div className="flex items-center gap-3 mb-6">
                  <Dumbbell className="w-6 h-6 text-primary" />
@@ -300,6 +260,50 @@ export default function Dod5StarResidence() {
           </div>
         </div>
       </section>
+
+     <section className="pb-12 md:pb-16">
+       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+         <div className="mx-auto max-w-6xl">
+           <div className="mb-6 flex items-center gap-3">
+             <Sparkles className="h-6 w-6 text-primary" />
+             <h2 className="text-2xl font-bold">Wellness &amp; Treatments</h2>
+           </div>
+           <div className="grid gap-5 md:grid-cols-2">
+             <article className="glass-panel flex h-full flex-col rounded-2xl p-7">
+               <Sparkles className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+               <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
+               <h3 className="text-xl font-bold">Wellness &amp; Energy Medicine Devices</h3>
+               <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                 Explore the wellness and energy medicine devices available for residents to use at the Residence with no additional treatment fee.
+               </p>
+               <Link
+                 href="/clinics/ixtapa-zihuatanejo/treatments"
+                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+               >
+                 See All
+                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
+               </Link>
+             </article>
+
+             <article className="glass-panel flex h-full flex-col rounded-2xl border-primary/25 p-7">
+               <Users className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
+               <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Available by appointment</span>
+               <h3 className="text-xl font-bold">On-Site Practitioners for Specialized Treatments</h3>
+               <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                 On-site practitioners are available to deliver specialized treatments. Practitioner-delivered therapies are not included in the residence rental and are charged separately.
+               </p>
+               <Link
+                 href="/clinics/ixtapa-zihuatanejo/treatments"
+                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+               >
+                 Explore Specialized Treatments
+                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
+               </Link>
+             </article>
+           </div>
+         </div>
+       </div>
+     </section>
 
       <section className="pb-16 md:pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
