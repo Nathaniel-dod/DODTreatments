@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
@@ -130,6 +131,14 @@ const homeAndLifestyleAmenities = [
 ];
 
 export default function Dod5StarResidence() {
+  useEffect(() => {
+    if (window.location.hash !== '#amenities') return;
+
+    window.requestAnimationFrame(() => {
+      document.getElementById('amenities')?.scrollIntoView({ block: 'start' });
+    });
+  }, []);
+
   const structuredData = [
     {
       '@context': 'https://schema.org',

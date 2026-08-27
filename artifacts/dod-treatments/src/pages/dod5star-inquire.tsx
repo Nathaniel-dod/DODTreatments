@@ -1,7 +1,8 @@
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { InquiryForm } from '@/components/InquiryForm';
-import { Phone } from 'lucide-react';
+import { dod5StarTeam } from '@/data/dod5starTeam';
+import { Phone, User } from 'lucide-react';
 
 export default function Dod5StarInquire() {
   return (
@@ -38,6 +39,30 @@ export default function Dod5StarInquire() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="scroll-mt-32 pb-12 md:pb-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Your Hosts &amp; Support</p>
+            <h2 className="gold-gradient text-3xl font-bold md:text-4xl">Meet Your DOD5Star Team</h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              The doctors, practitioners, and residence support dedicated to your treatment experience and stay.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
+            {dod5StarTeam.map((member) => (
+              <article key={member.name} className="glass-panel rounded-2xl p-7 text-center">
+                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/10">
+                  <User className="h-7 w-7 text-primary/70" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold">{member.name}</h3>
+                <p className="mb-3 mt-1 text-sm font-medium text-primary">{member.role}</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>

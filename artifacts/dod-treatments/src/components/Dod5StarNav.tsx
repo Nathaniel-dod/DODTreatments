@@ -3,8 +3,8 @@ import { Link, useLocation } from 'wouter';
 const items = [
   { name: 'Overview', href: '/clinics/ixtapa-zihuatanejo' },
   { name: 'The Residence', href: '/clinics/ixtapa-zihuatanejo/residence' },
+  { name: 'Amenities', href: '/clinics/ixtapa-zihuatanejo/residence#amenities', anchor: true },
   { name: 'Treatments', href: '/clinics/ixtapa-zihuatanejo/treatments' },
-  { name: 'Your Team', href: '/clinics/ixtapa-zihuatanejo/team' },
   { name: 'Plan Your Stay', href: '/clinics/ixtapa-zihuatanejo/inquire' },
   { name: 'Ixtapa-Zihuatanejo', href: '/clinics/ixtapa-zihuatanejo/location' },
 ];
@@ -19,19 +19,27 @@ export function Dod5StarNav() {
           <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase whitespace-nowrap pr-3 border-r border-white/10 mr-2">
             DOD5Star
           </span>
-          {items.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
-                location === item.href
-                  ? 'bg-primary/10 text-primary'
-                  : 'text-foreground/70 hover:text-foreground hover:bg-white/5'
-              }`}
-            >
-              {item.name}
-            </Link>
-          ))}
+          {items.map((item) => {
+            const isActive =
+              'anchor' in item
+                ? location === '/clinics/ixtapa-zihuatanejo/residence' && window.location.hash === '#amenities'
+                : location === item.href && window.location.hash !== '#amenities';
+            const className = `px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+              isActive
+                ? 'bg-primary/10 text-primary'
+                : 'text-foreground/70 hover:text-foreground hover:bg-white/5'
+            }`;
+
+            return 'anchor' in item ? (
+              <a key={item.href} href={item.href} className={className}>
+                {item.name}
+              </a>
+            ) : (
+              <Link key={item.href} href={item.href} className={className}>
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </div>

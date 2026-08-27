@@ -3,29 +3,7 @@ import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { Button } from '@/components/ui/button';
 import { User } from 'lucide-react';
-
-const team = [
-  {
-    name: 'Dr. Darrell Wolfe',
-    role: 'Founder',
-    bio: 'Creator of the DOD5Star retreat. With 45 years in the trenches of functional medicine, Dr. Wolfe created Wolfe Non-Surgical and the Doc of Detox approach to reversing the so-called irreversible.',
-  },
-  {
-    name: 'Dr. Sage Wolfe',
-    role: 'Host & Master Practitioner',
-    bio: 'Host Master Practitioner of the retreat, guiding guests through their personalized healing and training experience. Full bio coming soon.',
-  },
-  {
-    name: 'Jesse Malcolm',
-    role: 'Host & Master Practitioner',
-    bio: 'Host Master Practitioner of the retreat, delivering personalized treatment and training throughout your stay. Full bio coming soon.',
-  },
-  {
-    name: 'Cinthia',
-    role: 'House Manager',
-    bio: 'Your house manager at the retreat, making sure every detail of your stay is taken care of. Full bio coming soon.',
-  },
-];
+import { dod5StarTeam } from '@/data/dod5starTeam';
 
 export default function Dod5StarTeam() {
   return (
@@ -51,7 +29,7 @@ export default function Dod5StarTeam() {
       <section className="pb-12 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {team.map((member) => (
+            {dod5StarTeam.map((member) => (
               <div key={member.name} className="glass-panel rounded-2xl p-8 text-center">
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center mx-auto mb-6">
                   <User className="w-10 h-10 text-primary/60" />
