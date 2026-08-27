@@ -99,7 +99,9 @@ const treatmentProducts = [
     category: 'Polarized Light Therapy',
     tagline: 'Broad-Spectrum, Non-UV Light',
     blurb: 'A comfortable, non-invasive polarized-light experience designed to complement personal wellness and comfort-focused routines.',
-    glyph: '☀',
+    image: 'images/bioptron-light.webp',
+    imageAlt: 'Bioptron polarized light therapy device',
+    imagePosition: 'object-contain p-5',
   },
   {
     href: '/treatments/avacen',
