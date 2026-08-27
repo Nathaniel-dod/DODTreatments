@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'wouter';
 
 const items = [
@@ -11,6 +12,25 @@ const items = [
 
 export function Dod5StarNav() {
   const [location] = useLocation();
+  const [isAmenitiesVisible, setIsAmenitiesVisible] = useState(false);
+
+  useEffect(() => {
+    if (location !== '/clinics/ixtapa-zihuatanejo/residence') {
+      setIsAmenitiesVisible(false);
+      return;
+    }
+
+    const amenities = document.getElementById('amenities');
+    if (!amenities) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsAmenitiesVisible(entry.isIntersecting),
+      { rootMargin: '-25% 0px -60% 0px' },
+    );
+
+    observer.observe(amenities);
+    return () => observer.disconnect();
+  }, [location]);
 
   return (
     <div className="sticky top-20 z-40 border-b border-white/5 bg-background/80 backdrop-blur-md">
@@ -22,8 +42,8 @@ export function Dod5StarNav() {
           {items.map((item) => {
             const isActive =
               'anchor' in item
-                ? location === '/clinics/ixtapa-zihuatanejo/residence' && window.location.hash === '#amenities'
-                : location === item.href && window.location.hash !== '#amenities';
+                ? location === '/clinics/ixtapa-zihuatanejo/residence' && isAmenitiesVisible
+                : location === item.href && !isAmenitiesVisible;
             const className = `px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
               isActive
                 ? 'bg-primary/10 text-primary'
