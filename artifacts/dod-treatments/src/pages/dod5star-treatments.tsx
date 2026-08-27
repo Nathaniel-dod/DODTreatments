@@ -412,19 +412,27 @@ export default function Dod5StarTreatments() {
                   <article key={device.name} className="glass-panel flex h-full flex-col rounded-2xl">
                     <div className="flex flex-1 flex-col p-6">
                       {'image' in device && device.image ? (
-                        <div className="mb-5 flex h-10 w-12 items-center justify-center">
-                          <img
-                            src={`${import.meta.env.BASE_URL}${device.image}`}
-                            alt=""
-                            className="h-full w-full object-contain drop-shadow-lg"
-                            loading="lazy"
-                          />
+                        <div className="flex flex-1 items-start gap-4">
+                          <div className="min-w-0 flex-1">
+                            <h3 className="text-lg font-bold">{device.name}</h3>
+                            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
+                          </div>
+                          <div className="flex h-20 w-24 flex-shrink-0 items-center justify-center">
+                            <img
+                              src={`${import.meta.env.BASE_URL}${device.image}`}
+                              alt=""
+                              className="h-full w-full object-contain drop-shadow-lg"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
                       ) : (
-                        <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                        <>
+                          <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                          <h3 className="text-lg font-bold">{device.name}</h3>
+                          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
+                        </>
                       )}
-                      <h3 className="text-lg font-bold">{device.name}</h3>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                       <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
                       {device.href && (
                         <Link
