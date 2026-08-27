@@ -111,7 +111,7 @@ const treatmentProducts = [
     blurb: 'A non-invasive hand-warming session designed to support temporary comfort, relaxation, and general wellness.',
     image: 'images/avacen.webp',
     imageAlt: 'Avacen thermal microcirculation device',
-    imagePosition: 'object-contain p-5 scale-75 -translate-y-3',
+    imagePosition: 'object-contain px-4 pb-3 pt-20',
   },
 ];
 
