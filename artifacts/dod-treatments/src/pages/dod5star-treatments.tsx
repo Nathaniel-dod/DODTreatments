@@ -404,8 +404,8 @@ export default function Dod5StarTreatments() {
                </p>
              </div>
              <div className="mx-auto max-w-3xl space-y-3">
-               {includedWellnessDevices.map((device) => (
-                  <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
+                {includedWellnessDevices.map((device) => {
+                  const content = (
                     <div className="flex items-center justify-between gap-5">
                       <div className="min-w-0">
                         <h3 className="font-bold transition-colors group-hover:text-primary">{device.name}</h3>
@@ -416,22 +416,33 @@ export default function Dod5StarTreatments() {
                           Included with<br />your stay
                         </span>
                         {device.href ? (
-                          <a
-                            href={`${import.meta.env.BASE_URL}${device.href.replace(/^\//, '')}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`View ${device.name}`}
-                            className="flex h-8 w-8 items-center justify-center text-primary transition-transform group-hover:translate-x-1"
-                          >
+                           <span className="flex h-8 w-8 items-center justify-center text-primary transition-transform group-hover:translate-x-1">
                             <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                          </a>
+                           </span>
                         ) : (
                           <device.icon className="h-5 w-5 text-primary" aria-hidden="true" />
                         )}
                       </div>
                     </div>
-                 </article>
-               ))}
+                  );
+
+                  return device.href ? (
+                    <a
+                      key={device.name}
+                      href={`${import.meta.env.BASE_URL}${device.href.replace(/^\//, '')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View ${device.name}`}
+                      className="glass-panel group block rounded-xl px-6 py-4 transition-all hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    >
+                      {content}
+                    </a>
+                  ) : (
+                    <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
+                      {content}
+                    </article>
+                  );
+                })}
              </div>
              <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground">
                Availability and recommended use may vary. The DOD5Star team can provide setup and usage guidance during your stay.
