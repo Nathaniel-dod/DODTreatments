@@ -403,23 +403,32 @@ export default function Dod5StarTreatments() {
                  In addition to your personalized therapy plan, DOD5Star residents have access to selected wellness and energy medicine devices at the Residence with no additional treatment fee.
                </p>
              </div>
-             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+             <div className="mx-auto max-w-3xl space-y-3">
                {includedWellnessDevices.map((device) => (
-                  <article key={device.name} className="glass-panel flex h-full flex-col rounded-2xl">
-                    <div className="flex flex-1 flex-col p-6">
-                      <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
-                      <h3 className="text-lg font-bold">{device.name}</h3>
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
-                      <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
-                      {device.href && (
-                        <Link
-                          href={device.href}
-                          className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
-                        >
-                          View More
-                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                        </Link>
-                      )}
+                  <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
+                    <div className="flex items-center justify-between gap-5">
+                      <div className="min-w-0">
+                        <h3 className="font-bold transition-colors group-hover:text-primary">{device.name}</h3>
+                        <p className="mt-0.5 text-sm text-muted-foreground">{device.description}</p>
+                      </div>
+                      <div className="flex flex-shrink-0 items-center gap-3">
+                        <span className="hidden text-right text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary sm:block">
+                          Included with<br />your stay
+                        </span>
+                        {device.href ? (
+                          <a
+                            href={`${import.meta.env.BASE_URL}${device.href.replace(/^\//, '')}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={`View ${device.name}`}
+                            className="flex h-8 w-8 items-center justify-center text-primary transition-transform group-hover:translate-x-1"
+                          >
+                            <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                          </a>
+                        ) : (
+                          <device.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                        )}
+                      </div>
                     </div>
                  </article>
                ))}
