@@ -281,9 +281,9 @@ export default function Treatments() {
 
            <div className="mx-auto mt-8 max-w-6xl rounded-3xl border border-border/60 bg-card/30 p-6 md:p-8">
              <div className="mb-6 text-center">
-               <h2 className="text-2xl font-bold gold-gradient">Light-Based Therapies</h2>
+               <h2 className="text-2xl font-bold gold-gradient">More Wellness &amp; Energy Medicine Devices</h2>
                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                 Explore light-based options that support restorative routines and wellness goals.
+                 Explore additional light-based and thermal options that support restorative routines and wellness goals.
                </p>
              </div>
              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
