@@ -409,19 +409,20 @@ export default function Dod5StarTreatments() {
              </div>
              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                {includedWellnessDevices.map((device) => (
-                  <article key={device.name} className="glass-panel flex h-full flex-col overflow-hidden rounded-2xl">
-                    {'image' in device && device.image ? (
-                      <div className="flex h-52 items-center justify-center bg-gradient-to-br from-primary/15 via-background/50 to-accent/10 p-5">
-                        <img
-                          src={`${import.meta.env.BASE_URL}${device.image}`}
-                          alt={device.imageAlt}
-                          className="h-full w-full object-contain drop-shadow-2xl"
-                          loading="lazy"
-                        />
-                      </div>
-                    ) : null}
+                  <article key={device.name} className="glass-panel flex h-full flex-col rounded-2xl">
                     <div className="flex flex-1 flex-col p-6">
-                      <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                      {'image' in device && device.image ? (
+                        <div className="mb-5 flex h-10 w-12 items-center justify-center">
+                          <img
+                            src={`${import.meta.env.BASE_URL}${device.image}`}
+                            alt=""
+                            className="h-full w-full object-contain drop-shadow-lg"
+                            loading="lazy"
+                          />
+                        </div>
+                      ) : (
+                        <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                      )}
                       <h3 className="text-lg font-bold">{device.name}</h3>
                       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                       <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
