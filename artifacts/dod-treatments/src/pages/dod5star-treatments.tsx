@@ -43,16 +43,12 @@ const includedWellnessDevices = [
     name: 'Bioptron Light',
     description: 'Full-spectrum light technology with a fullerene lens, available at the Residence.',
     href: '/treatments/bioptron-light',
-    image: 'images/bioptron-light.webp',
-    imageAlt: 'Bioptron polarized light therapy device',
   },
   {
     icon: CircleDot,
     name: 'Avacen',
     description: 'A microcirculation-support device available for resident use.',
     href: '/treatments/avacen',
-    image: 'images/avacen.webp',
-    imageAlt: 'Avacen thermal microcirculation device',
   },
   {
     icon: Sun,
@@ -411,28 +407,9 @@ export default function Dod5StarTreatments() {
                {includedWellnessDevices.map((device) => (
                   <article key={device.name} className="glass-panel flex h-full flex-col rounded-2xl">
                     <div className="flex flex-1 flex-col p-6">
-                      {'image' in device && device.image ? (
-                        <div className="flex flex-1 items-start gap-4">
-                          <div className="min-w-0 flex-1">
-                            <h3 className="text-lg font-bold">{device.name}</h3>
-                            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
-                          </div>
-                          <div className="flex h-20 w-24 flex-shrink-0 items-center justify-center">
-                            <img
-                              src={`${import.meta.env.BASE_URL}${device.image}`}
-                              alt=""
-                              className="h-full w-full object-contain drop-shadow-lg"
-                              loading="lazy"
-                            />
-                          </div>
-                        </div>
-                      ) : (
-                        <>
-                          <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
-                          <h3 className="text-lg font-bold">{device.name}</h3>
-                          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
-                        </>
-                      )}
+                      <device.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                      <h3 className="text-lg font-bold">{device.name}</h3>
+                      <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                       <span className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
                       {device.href && (
                         <Link
