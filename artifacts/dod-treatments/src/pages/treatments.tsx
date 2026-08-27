@@ -142,16 +142,13 @@ const treatmentGoalGroups = [
     treatments: [treatmentProducts[5]],
   },
   {
-    title: 'Light-Based Therapies',
-    description: 'Explore light-based options that support restorative routines and wellness goals.',
-    treatments: [treatmentProducts[6], treatmentProducts[7], treatmentProducts[8], treatmentProducts[9]],
-  },
-  {
     title: 'Personalized Guidance',
     description: 'Get a tailored roadmap and one-on-one guidance for your next steps.',
     treatments: [treatmentProducts[3]],
   },
 ];
+
+const lightTreatmentProducts = treatmentProducts.slice(6);
 
 function TreatmentGoalCard({ group }: { group: (typeof treatmentGoalGroups)[number] }) {
   return (
@@ -271,16 +268,63 @@ export default function Treatments() {
           </div>
           <div className="mx-auto hidden max-w-6xl grid-cols-2 gap-8 lg:grid">
             <div className="space-y-8">
-              {[0, 2, 4, 6].map((index) => (
+               {[0, 2, 4].map((index) => (
                 <TreatmentGoalCard key={treatmentGoalGroups[index].title} group={treatmentGoalGroups[index]} />
               ))}
             </div>
             <div className="space-y-8">
-              {[1, 3, 5].map((index) => (
+               {[1, 3, 5].map((index) => (
                 <TreatmentGoalCard key={treatmentGoalGroups[index].title} group={treatmentGoalGroups[index]} />
               ))}
             </div>
           </div>
+
+           <div className="mx-auto mt-8 max-w-6xl rounded-3xl border border-border/60 bg-card/30 p-6 md:p-8">
+             <div className="mb-6 text-center">
+               <h2 className="text-2xl font-bold gold-gradient">Light-Based Therapies</h2>
+               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                 Explore light-based options that support restorative routines and wellness goals.
+               </p>
+             </div>
+             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+               {lightTreatmentProducts.map((product) => (
+                 <Link key={product.href} href={product.href}>
+                   <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/30 transition-all duration-300 hover:border-primary/40">
+                     <div className="relative h-32 overflow-hidden bg-gradient-to-br from-primary/20 to-accent/10">
+                       {'image' in product ? (
+                         <img
+                           src={`${import.meta.env.BASE_URL}${product.image}`}
+                           alt={product.imageAlt}
+                           className={`h-full w-full ${
+                             product.name === 'Bioptron Light' || product.name === 'Avacen'
+                               ? 'object-contain p-3'
+                               : 'object-cover object-top'
+                           } transition-transform duration-500 group-hover:scale-105`}
+                         />
+                       ) : 'collage' in product && product.collage ? (
+                         <div className="grid h-full grid-cols-2 gap-px bg-primary/25">
+                           {product.collage.map((image) => (
+                             <img
+                               key={image.src}
+                               src={`${import.meta.env.BASE_URL}${image.src}`}
+                               alt={image.alt}
+                               className="h-full w-full bg-background/70 object-contain p-1"
+                             />
+                           ))}
+                         </div>
+                       ) : null}
+                     </div>
+                     <div className="flex flex-1 flex-col p-4">
+                       <p className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary">{product.category}</p>
+                       <h3 className="mt-2 font-bold transition-colors group-hover:text-primary">{product.name}</h3>
+                       <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{product.tagline}</p>
+                       <ArrowRight className="mt-4 h-4 w-4 self-end text-primary transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                     </div>
+                   </article>
+                 </Link>
+               ))}
+             </div>
+           </div>
         </div>
       </section>
 
