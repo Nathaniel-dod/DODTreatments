@@ -51,6 +51,8 @@ const includedWellnessDevices = [
     name: 'Avacen',
     description: 'A microcirculation-support device available for resident use.',
     href: '/treatments/avacen',
+    image: 'images/avacen.webp',
+    imageAlt: 'Avacen thermal microcirculation device',
   },
   {
     icon: Sun,

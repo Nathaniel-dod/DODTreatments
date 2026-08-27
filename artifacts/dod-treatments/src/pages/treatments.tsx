@@ -109,7 +109,9 @@ const treatmentProducts = [
     category: 'Thermal Wellness Technology',
     tagline: 'Gentle Thermal Microcirculation Support',
     blurb: 'A non-invasive hand-warming session designed to support temporary comfort, relaxation, and general wellness.',
-    glyph: '◉',
+    image: 'images/avacen.webp',
+    imageAlt: 'Avacen thermal microcirculation device',
+    imagePosition: 'object-contain p-5',
   },
 ];
 
@@ -193,8 +195,6 @@ function TreatmentGoalCard({ group }: { group: (typeof treatmentGoalGroups)[numb
                       </span>
                     </div>
                   </div>
-                ) : 'glyph' in product ? (
-                  <span className="text-5xl text-primary" aria-hidden="true">{product.glyph}</span>
                 ) : null}
                 <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-background/85 text-primary text-xs font-medium">
                   {product.category}

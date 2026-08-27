@@ -71,6 +71,17 @@ export default function Avacen() {
             </p>
             <TreatmentHeroCtas dod5StarLabel="Included with DOD5Star Stays" />
           </div>
+          <div className="mx-auto mt-10 flex max-w-3xl justify-center md:mt-12">
+            <div className="relative flex aspect-square w-full max-w-md items-center justify-center overflow-hidden rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/15 via-card/70 to-accent/10 p-8 shadow-2xl">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_58%,hsl(var(--primary)/0.18),transparent_48%)]" />
+              <img
+                src={`${import.meta.env.BASE_URL}images/avacen.webp`}
+                alt="Avacen thermal microcirculation device"
+                className="relative z-10 h-full w-full object-contain drop-shadow-2xl"
+                fetchPriority="high"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
