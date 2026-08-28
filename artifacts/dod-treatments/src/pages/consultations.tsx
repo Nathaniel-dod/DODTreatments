@@ -1,7 +1,7 @@
 import { Seo } from '@/components/Seo';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { InquiryForm } from '@/components/InquiryForm';
-import { Phone, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
+import { Phone, Mail, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const consultationFaqs = [
@@ -66,7 +66,7 @@ export default function Consultations() {
     {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
-      name: 'Health Consultations - Doc of Detox',
+      name: 'Perfect Day Consultations - Doc of Detox',
       description:
         'Book a personalized health consultation with Dr. Darrell Wolfe or a certified New World Master Practitioner. Emotional, Perfect Day, Nutritional, and Water Fasting consultations.',
       lastReviewed: '2025-01-15',
@@ -91,7 +91,7 @@ export default function Consultations() {
   return (
     <>
       <Seo
-        title="Health Consultations | Doc of Detox"
+        title="Perfect Day Consultations | Doc of Detox"
         description="Book a personalized $450 consultation with Dr. Darrell Wolfe including lifetime support, or choose Emotional, Perfect Day, Nutritional, or Water Fasting consultations."
         path="/treatments/consultations"
         structuredData={structuredData}
@@ -103,7 +103,7 @@ export default function Consultations() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
-              Health Consultations
+              Perfect Day Consultations
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               A personalized consultation gives you a step-by-step strategy for your health — nutritional, emotional, and physical — from Dr. Darrell Wolfe or a certified New World Master Practitioner.
@@ -135,13 +135,17 @@ export default function Consultations() {
               <div className="rounded-2xl border border-border/50 p-6">
                 <div className="flex items-center gap-2 mb-3">
                   <Phone className="w-5 h-5 text-primary" />
-                  <h3 className="text-lg font-bold">Call Cinthia to Book</h3>
+                  <h3 className="text-lg font-bold">Call or Email Cinthia to Book</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-2">
                   Toll-Free: <a className="text-primary font-medium" href="tel:1-855-900-4544">1-855-900-4544</a> ext. 1
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground mb-2">
                   Direct/WhatsApp: <a className="text-primary font-medium" href="tel:1-469-861-9872">1-469-861-9872</a>
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  <Mail className="inline-block w-4 h-4 mr-1.5 text-primary" />
+                  Email: <a className="text-primary font-medium break-all" href="mailto:office.docofdetox@gmail.com">office.docofdetox@gmail.com</a>
                 </p>
               </div>
               <div className="rounded-2xl border border-border/50 p-6">
