@@ -16,6 +16,9 @@ const basePath = process.env.BASE_PATH ?? '/';
 
 export default defineConfig(async ({ mode }) => ({
   base: basePath,
+  define: {
+    'import.meta.env.WEB3FORMS_ACCESS_KEY': JSON.stringify(process.env.WEB3FORMS_ACCESS_KEY ?? ''),
+  },
   plugins: [
     react(),
     tailwindcss(),

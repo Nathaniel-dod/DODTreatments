@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useCreateInquiry } from '@workspace/api-client-react';
-import { InquiryInputInquiryType } from '@workspace/api-client-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -19,19 +17,21 @@ const inquirySchema = z.object({
   interest: z.string().optional(),
   preferredLocation: z.string().optional(),
   message: z.string().min(1, 'Message is required'),
+  botcheck: z.string().optional(),
 });
 
 type InquiryFormData = z.infer<typeof inquirySchema>;
 
 interface InquiryFormProps {
-  defaultType?: keyof typeof InquiryInputInquiryType;
+  defaultType?: InquiryFormData['inquiryType'];
   defaultInterest?: string;
   defaultLocation?: string;
 }
 
 export function InquiryForm({ defaultType = 'general', defaultInterest = '', defaultLocation = '' }: InquiryFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
-  const createInquiry = useCreateInquiry();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const form = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
@@ -43,19 +43,51 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
       interest: defaultInterest,
       preferredLocation: defaultLocation,
       message: '',
+      botcheck: '',
     },
   });
 
-  const onSubmit = (data: InquiryFormData) => {
-    createInquiry.mutate(
-      { data },
-      {
-        onSuccess: () => {
-          setIsSuccess(true);
-          form.reset();
-        },
+  const onSubmit = async (data: InquiryFormData) => {
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const accessKey = import.meta.env.WEB3FORMS_ACCESS_KEY;
+      if (!accessKey) {
+        throw new Error('Web3Forms access key is not configured');
       }
-    );
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `New Doc of Detox Website Inquiry — ${data.interest || data.inquiryType}`,
+          from_name: 'Doc of Detox Treatments Website',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          inquiry_type: data.inquiryType,
+          area_of_interest: data.interest,
+          preferred_location: data.preferredLocation,
+          message: data.message,
+          botcheck: data.botcheck,
+          page_url: window.location.href,
+        }),
+      });
+      const result = await response.json() as { success?: boolean; message?: string };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Unable to submit inquiry');
+      }
+
+      setIsSuccess(true);
+      form.reset();
+    } catch {
+      setSubmitError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -76,6 +108,14 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="glass-panel rounded-2xl p-6 md:p-10 space-y-6">
+        <input
+          type="text"
+          autoComplete="off"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="hidden"
+          {...form.register('botcheck')}
+        />
         <div className="grid md:grid-cols-2 gap-6">
           <FormField
             control={form.control}
@@ -192,13 +232,13 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
           )}
         />
 
-        <Button type="submit" className="w-full" size="lg" disabled={createInquiry.isPending}>
-          {createInquiry.isPending ? 'Sending...' : 'Submit Inquiry'}
+        <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
         </Button>
 
-        {createInquiry.isError && (
+        {submitError && (
           <p className="text-destructive text-sm text-center">
-            Something went wrong. Please try again or call us directly.
+            {submitError}
           </p>
         )}
       </form>
