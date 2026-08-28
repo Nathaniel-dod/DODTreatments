@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'wouter';
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navigation = [
@@ -56,10 +56,6 @@ export function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center space-x-3">
-            <a href="tel:1-855-900-4544" className="text-sm text-muted-foreground hover:text-foreground flex items-center gap-2">
-              <Phone className="w-4 h-4" />
-              <span className="hidden 2xl:inline whitespace-nowrap">1-855-900-4544</span>
-            </a>
             {showConsultationCta && (
               <Link href="/treatments/consultations">
                 <Button size="sm" className="gold-glow">Book Consultation</Button>
@@ -97,10 +93,6 @@ export function Navbar() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-white/5 space-y-3">
-              <a href="tel:1-855-900-4544" className="flex items-center gap-2 px-4 text-sm text-muted-foreground">
-                <Phone className="w-4 h-4" />
-                1-855-900-4544
-              </a>
               {showConsultationCta && (
                 <Link href="/treatments/consultations" onClick={() => setMobileMenuOpen(false)}>
                   <Button className="w-full">Book Consultation</Button>
