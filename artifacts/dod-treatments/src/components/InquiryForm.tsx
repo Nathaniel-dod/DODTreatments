@@ -307,8 +307,11 @@ export function InquiryForm({
                           className="p-4 [--cell-size:2.75rem] sm:p-6 sm:[--cell-size:3.5rem]"
                           classNames={{
                             caption_label: 'text-lg font-semibold sm:text-xl',
-                            weekday: 'text-sm font-medium text-muted-foreground sm:text-base',
-                            day_button: 'text-base sm:text-lg',
+                            weekdays: 'flex gap-2',
+                            weekday: 'w-11 flex-none text-sm font-medium text-muted-foreground sm:w-12 sm:text-base',
+                            week: 'mt-2 flex w-full gap-2',
+                            day: 'h-11 w-11 flex-none p-0 sm:h-12 sm:w-12',
+                            day_button: 'h-11 w-11 min-w-11 text-base sm:h-12 sm:w-12 sm:min-w-12 sm:text-lg',
                           }}
                           initialFocus
                         />
@@ -358,8 +361,11 @@ export function InquiryForm({
                           className="p-4 [--cell-size:2.75rem] sm:p-6 sm:[--cell-size:3.5rem]"
                           classNames={{
                             caption_label: 'text-lg font-semibold sm:text-xl',
-                            weekday: 'text-sm font-medium text-muted-foreground sm:text-base',
-                            day_button: 'text-base sm:text-lg',
+                            weekdays: 'flex gap-2',
+                            weekday: 'w-11 flex-none text-sm font-medium text-muted-foreground sm:w-12 sm:text-base',
+                            week: 'mt-2 flex w-full gap-2',
+                            day: 'h-11 w-11 flex-none p-0 sm:h-12 sm:w-12',
+                            day_button: 'h-11 w-11 min-w-11 text-base sm:h-12 sm:w-12 sm:min-w-12 sm:text-lg',
                           }}
                           initialFocus
                         />
