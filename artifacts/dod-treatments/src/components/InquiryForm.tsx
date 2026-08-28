@@ -154,7 +154,7 @@ export function InquiryForm({
           className="hidden"
           {...form.register('botcheck')}
         />
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className={includeStayPlanning ? '' : 'grid gap-6 md:grid-cols-2'}>
           <FormField
             control={form.control}
             name="name"
@@ -197,60 +197,64 @@ export function InquiryForm({
               </FormItem>
             )}
           />
-          <FormField
-            control={form.control}
-            name="inquiryType"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Inquiry Type</FormLabel>
-                <Select onValueChange={field.onChange} defaultValue={field.value}>
-                  <FormControl>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select type" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    <SelectItem value="consultation">Consultation</SelectItem>
-                    <SelectItem value="treatment">Treatment</SelectItem>
-                    <SelectItem value="clinic">Clinic Visit</SelectItem>
-                    <SelectItem value="personal-treatment">Personal Treatment & Training</SelectItem>
-                    <SelectItem value="general">General Question</SelectItem>
-                  </SelectContent>
-                </Select>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          {!includeStayPlanning && (
+            <FormField
+              control={form.control}
+              name="inquiryType"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Inquiry Type</FormLabel>
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <FormControl>
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select type" />
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent>
+                      <SelectItem value="consultation">Consultation</SelectItem>
+                      <SelectItem value="treatment">Treatment</SelectItem>
+                      <SelectItem value="clinic">Clinic Visit</SelectItem>
+                      <SelectItem value="personal-treatment">Personal Treatment & Training</SelectItem>
+                      <SelectItem value="general">General Question</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          )}
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          <FormField
-            control={form.control}
-            name="interest"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Area of Interest (optional)</FormLabel>
-                <FormControl>
-                  <Input placeholder="e.g., Wolfe Non-Surgical, CellSonic" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="preferredLocation"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Preferred Location (optional)</FormLabel>
-                <FormControl>
-                  <Input placeholder="e.g., Ixtapa, Penticton, In-home" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+        {!includeStayPlanning && (
+          <div className="grid md:grid-cols-2 gap-6">
+            <FormField
+              control={form.control}
+              name="interest"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Area of Interest (optional)</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., Wolfe Non-Surgical, CellSonic" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="preferredLocation"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Preferred Location (optional)</FormLabel>
+                  <FormControl>
+                    <Input placeholder="e.g., Ixtapa, Penticton, In-home" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        )}
 
         {includeStayPlanning && (
           <div className="space-y-6 rounded-xl border border-primary/20 bg-primary/5 p-5 md:p-6">
