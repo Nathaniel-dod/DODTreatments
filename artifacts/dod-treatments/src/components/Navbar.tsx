@@ -20,6 +20,7 @@ function isActive(item: { href: string }, location: string) {
 export function Navbar() {
   const [location] = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const showConsultationCta = location.startsWith('/treatments/consultations');
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5">
@@ -59,9 +60,11 @@ export function Navbar() {
               <Phone className="w-4 h-4" />
               <span className="hidden 2xl:inline whitespace-nowrap">1-855-900-4544</span>
             </a>
-            <Link href="/treatments/consultations">
-              <Button size="sm" className="gold-glow">Book Consultation</Button>
-            </Link>
+            {showConsultationCta && (
+              <Link href="/treatments/consultations">
+                <Button size="sm" className="gold-glow">Book Consultation</Button>
+              </Link>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -98,9 +101,11 @@ export function Navbar() {
                 <Phone className="w-4 h-4" />
                 1-855-900-4544
               </a>
-              <Link href="/treatments/consultations" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full">Book Consultation</Button>
-              </Link>
+              {showConsultationCta && (
+                <Link href="/treatments/consultations" onClick={() => setMobileMenuOpen(false)}>
+                  <Button className="w-full">Book Consultation</Button>
+                </Link>
+              )}
             </div>
           </div>
         )}
