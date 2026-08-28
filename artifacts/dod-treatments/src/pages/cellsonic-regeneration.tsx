@@ -20,14 +20,14 @@ const benefits = [
 ];
 
 const treatmentAreas = [
-  { title: 'Joints & Mobility', image: 'images/cellsonic-joints.png' },
-  { title: 'Pain Relief', image: 'images/cellsonic-pain-relief.png' },
-  { title: 'Wounds', image: 'images/cellsonic-wounds.png' },
-  { title: 'Bones', image: 'images/cellsonic-bones.png' },
-  { title: 'Jaw, Mouth, & Dental', image: 'images/cellsonic-jaw.png' },
-  { title: 'Tissues', image: 'images/cellsonic-tissues.png' },
-  { title: 'Tendons & Ligaments', image: 'images/cellsonic-tendons.png' },
-  { title: 'Erectile Dysfunction', image: 'images/cellsonic-erectile-dysfunction.png' },
+  { title: 'Joints & Mobility', image: 'images/cellsonic-joints.webp' },
+  { title: 'Pain Relief', image: 'images/cellsonic-pain-relief.webp' },
+  { title: 'Wounds', image: 'images/cellsonic-wounds.webp' },
+  { title: 'Bones', image: 'images/cellsonic-bones.webp' },
+  { title: 'Jaw, Mouth, & Dental', image: 'images/cellsonic-jaw.webp' },
+  { title: 'Tissues', image: 'images/cellsonic-tissues.webp' },
+  { title: 'Tendons & Ligaments', image: 'images/cellsonic-tendons.webp' },
+  { title: 'Erectile Dysfunction', image: 'images/cellsonic-erectile-dysfunction.webp' },
 ];
 
 const mechanisms = [
