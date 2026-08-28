@@ -74,13 +74,18 @@ export default function Dod5StarInquire() {
             <p className="mt-2 text-lg font-semibold">Book a Cardio MedBed treatment during your retreat and receive a complimentary DOD Core Restore session.</p>
           </div>
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Request Information</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Request Your Stay</h2>
             <p className="text-lg text-muted-foreground">
-              Fill out the form below and we'll reach out personally within 24 hours.
+              Share your preferred dates and a little about your needs. Our founder or sales team will reach out personally to discuss availability and confirm the details.
             </p>
           </div>
           <div className="max-w-3xl mx-auto">
-            <InquiryForm defaultType="clinic" defaultLocation="Ixtapa-Zihuatanejo, México" />
+            <InquiryForm
+              defaultType="clinic"
+              defaultInterest="DOD5Star Retreat"
+              defaultLocation="Ixtapa-Zihuatanejo, México"
+              includeStayPlanning
+            />
           </div>
         </div>
       </section>

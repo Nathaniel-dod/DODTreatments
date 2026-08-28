@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { CheckCircle2 } from 'lucide-react';
 
 const inquirySchema = z.object({
@@ -16,6 +17,9 @@ const inquirySchema = z.object({
   inquiryType: z.enum(['consultation', 'treatment', 'clinic', 'personal-treatment', 'general']),
   interest: z.string().optional(),
   preferredLocation: z.string().optional(),
+  requestedArrival: z.string().optional(),
+  requestedDeparture: z.string().optional(),
+  healthStatus: z.enum(['chronic-critical', 'mild-moderate', 'healthy']).optional(),
   message: z.string().min(1, 'Message is required'),
   botcheck: z.string().optional(),
 });
@@ -26,9 +30,15 @@ interface InquiryFormProps {
   defaultType?: InquiryFormData['inquiryType'];
   defaultInterest?: string;
   defaultLocation?: string;
+  includeStayPlanning?: boolean;
 }
 
-export function InquiryForm({ defaultType = 'general', defaultInterest = '', defaultLocation = '' }: InquiryFormProps) {
+export function InquiryForm({
+  defaultType = 'general',
+  defaultInterest = '',
+  defaultLocation = '',
+  includeStayPlanning = false,
+}: InquiryFormProps) {
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
@@ -42,12 +52,37 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
       inquiryType: defaultType,
       interest: defaultInterest,
       preferredLocation: defaultLocation,
+      requestedArrival: '',
+      requestedDeparture: '',
+      healthStatus: undefined,
       message: '',
       botcheck: '',
     },
   });
 
   const onSubmit = async (data: InquiryFormData) => {
+    if (includeStayPlanning) {
+      let hasStayPlanningError = false;
+
+      if (!data.requestedArrival) {
+        form.setError('requestedArrival', { message: 'Requested arrival date is required' });
+        hasStayPlanningError = true;
+      }
+      if (!data.requestedDeparture) {
+        form.setError('requestedDeparture', { message: 'Requested departure date is required' });
+        hasStayPlanningError = true;
+      }
+      if (data.requestedArrival && data.requestedDeparture && data.requestedDeparture <= data.requestedArrival) {
+        form.setError('requestedDeparture', { message: 'Departure must be after arrival' });
+        hasStayPlanningError = true;
+      }
+      if (!data.healthStatus) {
+        form.setError('healthStatus', { message: 'Please select your current health status' });
+        hasStayPlanningError = true;
+      }
+      if (hasStayPlanningError) return;
+    }
+
     setIsSubmitting(true);
     setSubmitError('');
 
@@ -70,6 +105,9 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
           inquiry_type: data.inquiryType,
           area_of_interest: data.interest,
           preferred_location: data.preferredLocation,
+          requested_arrival: data.requestedArrival,
+          requested_departure: data.requestedDeparture,
+          current_health_status: data.healthStatus,
           message: data.message,
           botcheck: data.botcheck,
           page_url: window.location.href,
@@ -213,6 +251,78 @@ export function InquiryForm({ defaultType = 'general', defaultInterest = '', def
             )}
           />
         </div>
+
+        {includeStayPlanning && (
+          <div className="space-y-6 rounded-xl border border-primary/20 bg-primary/5 p-5 md:p-6">
+            <div>
+              <h3 className="text-lg font-bold">Request Your Preferred Stay Dates</h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                These dates are a request only. Our founder or sales team will contact you to discuss availability and confirm your stay.
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2">
+              <FormField
+                control={form.control}
+                name="requestedArrival"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Preferred Arrival Date</FormLabel>
+                    <FormControl>
+                      <Input type="date" min={new Date().toISOString().split('T')[0]} {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="requestedDeparture"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Preferred Departure Date</FormLabel>
+                    <FormControl>
+                      <Input
+                        type="date"
+                        min={form.watch('requestedArrival') || new Date().toISOString().split('T')[0]}
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            </div>
+
+            <FormField
+              control={form.control}
+              name="healthStatus"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>How would you describe your current health status?</FormLabel>
+                  <FormControl>
+                    <RadioGroup onValueChange={field.onChange} value={field.value} className="gap-3 pt-1">
+                      {[
+                        ['chronic-critical', 'Chronic or Critical Condition'],
+                        ['mild-moderate', 'Mild or Moderate Condition'],
+                        ['healthy', 'No Conditions and Healthy'],
+                      ].map(([value, label]) => (
+                        <label
+                          key={value}
+                          className="flex cursor-pointer items-center gap-3 rounded-lg border border-white/10 bg-background/30 px-4 py-3 transition-colors hover:border-primary/30"
+                        >
+                          <RadioGroupItem value={value} />
+                          <span className="text-sm font-medium">{label}</span>
+                        </label>
+                      ))}
+                    </RadioGroup>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+        )}
 
         <FormField
           control={form.control}
