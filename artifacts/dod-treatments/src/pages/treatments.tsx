@@ -368,15 +368,15 @@ export default function Treatments() {
                 </div>
               </div>
             </Link>
-            <Link href="/practitioners">
+            <Link href="/clinics">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="flex items-center gap-2 mb-4">
                   <Globe className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium text-primary">Worldwide</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Practitioner Map</h3>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Clinics & Practitioners</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Search the BraveHeartNation directory by location to find certified practitioners offering these treatments near you.
+                  Explore our clinic directory to find treatment locations and practitioner services near you.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Find a Practitioner <ArrowRight className="w-4 h-4" />
@@ -393,14 +393,11 @@ export default function Treatments() {
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Begin Your Healing Journey?</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Book a consultation with Dr. Darrell Wolfe or one of our Master Practitioners to create your personalized treatment plan.
+              Explore our clinic directory to find treatment options and practitioner services near you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/treatments/consultations">
-                <Button size="lg" className="gold-glow">Book Consultation</Button>
-              </Link>
-              <Link href="/practitioners">
-                <Button size="lg" variant="outline">Find a Practitioner</Button>
+              <Link href="/clinics">
+                <Button size="lg" className="gold-glow">Find a Practitioner</Button>
               </Link>
             </div>
           </div>

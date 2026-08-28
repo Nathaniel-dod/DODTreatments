@@ -128,14 +128,11 @@ export default function WolfeNonSurgical() {
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non-Surgical</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Find a certified practitioner near you or book a consultation to learn more about how Wolfe Non-Surgical can help you.
+              Explore our clinic directory to find Wolfe Non-Surgical services near you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/practitioners">
+              <Link href="/clinics">
                 <Button size="lg" className="gold-glow">Find a Practitioner Near You</Button>
-              </Link>
-              <Link href="/treatments/consultations">
-                <Button size="lg" variant="outline">Book Consultation</Button>
               </Link>
             </div>
           </div>
