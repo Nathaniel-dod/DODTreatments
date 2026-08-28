@@ -126,8 +126,13 @@ export function InquiryForm({
 
       setIsSuccess(true);
       form.reset();
-    } catch {
-      setSubmitError('Something went wrong. Please try again or call us directly.');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : '';
+      setSubmitError(
+        message.includes('domain TLD is blocked')
+          ? 'Web3Forms blocks submissions from the Replit preview domain. The form will work on the approved docofdetoxtreatments.com domain.'
+          : 'Something went wrong. Please try again or call us directly.',
+      );
     } finally {
       setIsSubmitting(false);
     }
