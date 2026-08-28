@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, MapPin, User } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MapPin } from 'lucide-react';
 
 export default function Home() {
   const structuredData = [
@@ -221,22 +221,6 @@ export default function Home() {
               />
               <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-primary/5" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Personal Treatment CTA */}
-      <section className="py-12 md:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
-            <User className="w-16 h-16 mx-auto mb-6 text-primary" />
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 gold-gradient">Personal Treatment & Training</h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Our elite Master Practitioners fly to your home anywhere in the world to deliver personalized multi-day intensive programs.
-            </p>
-            <Link href="/personal-treatment">
-              <Button size="lg" className="gold-glow">Learn More About In-Home Treatment</Button>
-            </Link>
           </div>
         </div>
       </section>
