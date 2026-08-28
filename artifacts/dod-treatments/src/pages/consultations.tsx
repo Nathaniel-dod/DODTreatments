@@ -1,6 +1,6 @@
+import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
-import { InquiryForm } from '@/components/InquiryForm';
 import { Phone, Mail, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -172,11 +172,17 @@ export default function Consultations() {
             Book a Consultation with a Qualified New World Master Practitioner
           </h2>
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-            Choose from Emotional, Perfect Day, Nutritional, or Water Fasting consultations with Master Practitioners Sandra and Rita.
+            Choose a personalized consultation with Master Practitioners Sandra, Rita, or Jesse.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
             <div className="glass-panel rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Consultations with Sandra</h3>
+              <img
+                src={`${import.meta.env.BASE_URL}images/sandra-consultation.webp`}
+                alt="Sandra, New World Master Practitioner"
+                className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Sandra</h3>
               <p className="text-foreground/80 leading-relaxed mb-6">
                 "Our bodies not only can heal, they were designed to stay healed when we master our perfect day. When we take personal action to become our own practitioner, true healing is not only obtainable but permanent. Let me be your Life Coach on your incredible journey to wellness."
               </p>
@@ -194,7 +200,13 @@ export default function Consultations() {
               </div>
             </div>
             <div className="glass-panel rounded-3xl p-8">
-              <h3 className="text-2xl font-bold mb-4">Consultations with Rita</h3>
+              <img
+                src={`${import.meta.env.BASE_URL}images/rita-consultation.webp`}
+                alt="Rita Marialaki, New World Master Practitioner"
+                className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Rita</h3>
               <p className="text-foreground/80 leading-relaxed mb-6">
                 "Everyone needs a personalized roadmap, along with repetition, focus and a coach to achieve optimal success. Let me guide you to experience the healing power of the Perfect Day Lifestyle and the enormous potential of Self Care & Self Love. 3-2-1 We got this!"
               </p>
@@ -212,6 +224,48 @@ export default function Consultations() {
                     </Button>
                   </a>
                 ))}
+              </div>
+            </div>
+            <div className="glass-panel rounded-3xl p-8">
+              <img
+                src={`${import.meta.env.BASE_URL}images/jesse-consultation.webp`}
+                alt="Jesse Malcolm, Wolfe Non-Surgical Master Practitioner"
+                className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
+                loading="lazy"
+              />
+              <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Jesse</h3>
+              <p className="text-foreground/80 leading-relaxed mb-4">
+                Jesse Malcolm is a Wolfe Non-Surgical Master Practitioner dedicated to helping clients improve mobility, ease physical restrictions, and support their overall well-being through advanced non-invasive deep tissue therapy.
+              </p>
+              <p className="text-foreground/80 leading-relaxed mb-6">
+                Known for his calm, professional, and approachable manner, Jesse listens carefully, assesses individual needs, and provides personalized support focused on restoring natural function.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4">
+                Call or email Cinthia to book with Jesse:
+              </p>
+              <div className="space-y-3">
+                <a href="tel:1-855-900-4544" className="block">
+                  <Button variant="outline" className="w-full justify-between">
+                    <span className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-primary" /> Toll-Free
+                    </span>
+                    <span className="text-xs">Ext. 1</span>
+                  </Button>
+                </a>
+                <a href="tel:1-469-861-9872" className="block">
+                  <Button variant="outline" className="w-full justify-between">
+                    <span className="flex items-center gap-2">
+                      <Phone className="w-4 h-4 text-primary" /> Direct / WhatsApp
+                    </span>
+                  </Button>
+                </a>
+                <a href="mailto:office.docofdetox@gmail.com" className="block">
+                  <Button variant="outline" className="w-full justify-between">
+                    <span className="flex items-center gap-2">
+                      <Mail className="w-4 h-4 text-primary" /> Email Cinthia
+                    </span>
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -235,17 +289,17 @@ export default function Consultations() {
         </div>
       </section>
 
-      {/* Inquiry Form */}
-      <section className="py-12 md:py-16">
+      {/* More Clinics */}
+      <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Request a Consultation</h2>
-            <p className="text-lg text-muted-foreground">
-              Prefer to write? Send your questions and we'll reach out personally within 24 hours.
+          <div className="max-w-3xl mx-auto text-center glass-panel rounded-3xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Looking for More Clinics?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Explore our clinic directory to find additional treatment locations and practitioner services.
             </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <InquiryForm defaultType="consultation" defaultInterest="Consultation" />
+            <Link href="/clinics">
+              <Button size="lg" className="gold-glow">Explore More Clinics</Button>
+            </Link>
           </div>
         </div>
       </section>
