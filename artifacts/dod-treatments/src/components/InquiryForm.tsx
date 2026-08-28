@@ -69,14 +69,6 @@ export function InquiryForm({
     if (includeStayPlanning) {
       let hasStayPlanningError = false;
 
-      if (!data.requestedArrival) {
-        form.setError('requestedArrival', { message: 'Requested arrival date is required' });
-        hasStayPlanningError = true;
-      }
-      if (!data.requestedDeparture) {
-        form.setError('requestedDeparture', { message: 'Requested departure date is required' });
-        hasStayPlanningError = true;
-      }
       if (data.requestedArrival && data.requestedDeparture && data.requestedDeparture <= data.requestedArrival) {
         form.setError('requestedDeparture', { message: 'Departure must be after arrival' });
         hasStayPlanningError = true;
@@ -281,7 +273,7 @@ export function InquiryForm({
                 name="requestedArrival"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Preferred Arrival Date</FormLabel>
+                    <FormLabel>Preferred Arrival Date (optional)</FormLabel>
                     <Popover open={arrivalCalendarOpen} onOpenChange={setArrivalCalendarOpen}>
                       <PopoverTrigger asChild>
                         <FormControl>
@@ -331,7 +323,7 @@ export function InquiryForm({
                 name="requestedDeparture"
                 render={({ field }) => (
                   <FormItem className="flex flex-col">
-                    <FormLabel>Preferred Departure Date</FormLabel>
+                    <FormLabel>Preferred Departure Date (optional)</FormLabel>
                     <Popover open={departureCalendarOpen} onOpenChange={setDepartureCalendarOpen}>
                       <PopoverTrigger asChild>
                         <FormControl>
