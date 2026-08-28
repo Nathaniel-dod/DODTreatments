@@ -17,28 +17,7 @@ export default function Dod5StarInquire() {
       <section className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Plan Your Stay</h1>
-            <p className="text-lg text-muted-foreground mb-8">
-              Call Dr. Darrell Wolfe directly for your 30-minute consultation. It will be an honor for him to help you create your Health & Healing Experience.
-            </p>
-            <div className="glass-panel rounded-2xl p-6 inline-block text-left">
-              <div className="space-y-3">
-                <a href="tel:1-469-861-8884" className="flex items-center gap-3 text-lg group">
-                  <Phone className="w-6 h-6 text-primary" />
-                  <div>
-                    <div className="font-medium group-hover:text-primary">USA Direct or WhatsApp</div>
-                    <div className="text-primary">1-469-861-8884</div>
-                  </div>
-                </a>
-                <a href="tel:1-855-900-4544" className="flex items-center gap-3 text-lg group">
-                  <Phone className="w-6 h-6 text-primary" />
-                  <div>
-                    <div className="font-medium group-hover:text-primary">Worldwide Toll-Free</div>
-                    <div className="text-primary">1-855-900-4544 ext. 5</div>
-                  </div>
-                </a>
-              </div>
-            </div>
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight gold-gradient gold-glow">Plan Your Stay</h1>
           </div>
         </div>
       </section>
@@ -80,6 +59,24 @@ export default function Dod5StarInquire() {
                 <h3 className="text-xl font-bold">{member.name}</h3>
                 <p className="mb-3 mt-1 text-sm font-medium text-primary">{member.role}</p>
                 <p className="text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
+                {member.name === 'Dr. Darrell Wolfe' && (
+                  <div className="mt-5 space-y-3 border-t border-white/10 pt-5 text-left">
+                    <a href="tel:1-469-861-8884" className="group flex items-center gap-3">
+                      <Phone className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                      <span>
+                        <span className="block text-sm font-medium group-hover:text-primary">USA Direct or WhatsApp</span>
+                        <span className="block text-sm text-primary">1-469-861-8884</span>
+                      </span>
+                    </a>
+                    <a href="tel:1-855-900-4544" className="group flex items-center gap-3">
+                      <Phone className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+                      <span>
+                        <span className="block text-sm font-medium group-hover:text-primary">Worldwide Toll-Free</span>
+                        <span className="block text-sm text-primary">1-855-900-4544 ext. 5</span>
+                      </span>
+                    </a>
+                  </div>
+                )}
               </article>
             ))}
           </div>
