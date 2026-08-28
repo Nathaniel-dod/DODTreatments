@@ -16,19 +16,8 @@ export default function Dod5StarInquire() {
 
       <section className="pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto mb-10 text-center md:mb-12">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight gold-gradient gold-glow">Plan Your Stay</h1>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-12 md:pb-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Request Your Stay</h2>
-            <p className="text-lg text-muted-foreground">
-              Share your preferred dates and a little about your needs. Our founder or sales team will reach out personally to discuss availability and confirm the details.
-            </p>
           </div>
           <div className="max-w-3xl mx-auto">
             <InquiryForm
