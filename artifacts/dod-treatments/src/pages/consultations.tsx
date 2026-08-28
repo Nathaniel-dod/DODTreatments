@@ -44,7 +44,7 @@ export default function Consultations() {
       name: 'Personalized Consultation with Dr. Darrell Wolfe',
       description:
         '1-hour personalized health consultation with Dr. Darrell Wolfe including lifetime support. Step-by-step strategy covering nutritional, emotional, and physical health.',
-      image: 'https://docofdetoxtreatments.com/images/og-default.jpg',
+      image: 'https://docofdetoxtreatments.com/images/hero-consultations.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/consultations',
       offers: {
         '@type': 'Offer',

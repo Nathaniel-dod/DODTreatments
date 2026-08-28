@@ -10,7 +10,7 @@ export default function Home() {
       '@type': 'Organization',
       name: 'Doc of Detox Treatments',
       url: 'https://docofdetoxtreatments.com',
-      logo: 'https://docofdetoxtreatments.com/images/logo.png',
+      logo: 'https://docofdetoxtreatments.com/favicon.svg',
       description: 'Advanced energy medicine treatments, clinics, and consultations for life-changing regenerative healing.',
       contactPoint: {
         '@type': 'ContactPoint',
