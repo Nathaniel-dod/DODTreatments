@@ -4,6 +4,30 @@ import { Smartphone, ExternalLink, Search, Phone, Mail, Globe, MapPin, Award, St
 import { practitioners } from '@/data/practitioners';
 import { PractitionerMap } from '@/components/PractitionerMap';
 
+const locationNames: Record<string, string> = {
+  AB: 'Alberta',
+  BC: 'British Columbia',
+  CA: 'California',
+  FL: 'Florida',
+  KY: 'Kentucky',
+  MO: 'Missouri',
+  MT: 'Montana',
+  NY: 'New York',
+  QC: 'Quebec',
+  SK: 'Saskatchewan',
+  TX: 'Texas',
+  UT: 'Utah',
+  WA: 'Washington',
+  WI: 'Wisconsin',
+};
+
+function getSearchableLocation(location: string) {
+  const regionCode = location.split(',').map(part => part.trim())[1];
+  const regionName = regionCode ? locationNames[regionCode] : '';
+  const countryName = location.includes('USA') ? 'United States' : '';
+  return `${location} ${regionName} ${countryName}`.toLowerCase();
+}
+
 export default function Practitioners() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -39,7 +63,7 @@ export default function Practitioners() {
     return practitioners.filter(p => 
       p.fullName.toLowerCase().includes(q) ||
       p.clinicName.toLowerCase().includes(q) ||
-      p.cityStateCountry.toLowerCase().includes(q) ||
+      getSearchableLocation(p.cityStateCountry).includes(q) ||
       p.treatments.some(t => t.toLowerCase().includes(q)) ||
       p.devices.some(d => d.toLowerCase().includes(q))
     );

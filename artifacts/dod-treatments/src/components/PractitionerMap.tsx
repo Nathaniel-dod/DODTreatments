@@ -1,6 +1,10 @@
-import React, { useState, useMemo, useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
+import L from 'leaflet';
+import 'leaflet.markercluster';
+import 'leaflet/dist/leaflet.css';
+import 'leaflet.markercluster/dist/MarkerCluster.css';
+import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import { Practitioner } from '@/data/practitioners';
-import { MapPin, Search, ChevronRight, X, Phone, Mail, Globe, Map as MapIcon, GraduationCap, Award, Stethoscope } from 'lucide-react';
 
 interface PractitionerMapProps {
   practitioners: Practitioner[];
@@ -8,280 +12,192 @@ interface PractitionerMapProps {
   onSelect: (id: string | null) => void;
 }
 
-// Convert lat/lng to x/y percentages on the map.
-// The SVG is roughly standard Web Mercator but cropped.
-// I'll define an offset and scale that aligns North America well.
-function latLngToXY(lat: number, lng: number) {
-  // Empirical linear calibration based on the map SVG for North America:
-  // Longitude: -125 (West coast) -> ~8% X.
-  // Longitude: -80 (Florida) -> ~18% X.
-  // 1 degree lng = ~0.00222 X
-  const x = (lng + 125) * 0.00222 + 0.08;
-
-  // Latitude: 50 (BC) -> ~20% Y.
-  // Latitude: 28 (Florida) -> ~35% Y.
-  // 1 degree lat = ~-0.00681 Y
-  const y = (lat - 50) * -0.00681 + 0.20;
-  
-  return { x, y };
-}
-
 export function PractitionerMap({ practitioners, selectedId, onSelect }: PractitionerMapProps) {
-  const [zoom, setZoom] = useState(1);
-  const [pan, setPan] = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-  const [activeCluster, setActiveCluster] = useState<Practitioner[] | null>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const mapContainer = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<L.Map | null>(null);
+  const clusterGroupRef = useRef<L.MarkerClusterGroup | null>(null);
+  const markersRef = useRef<{ [key: string]: L.Marker }>({});
+  const onSelectRef = useRef(onSelect);
 
-  // Group practitioners by rough location (to handle Ballwin/Manchester, etc)
-  const groupedPins = useMemo(() => {
-    const groups: { x: number, y: number, practitioners: Practitioner[] }[] = [];
-    
-    practitioners.forEach(p => {
-      const { x, y } = latLngToXY(p.lat, p.lng);
-      // find if there's a group within ~1.2% distance to cluster dense areas like Florida/BC
-      const existing = groups.find(g => Math.abs(g.x - x) < 0.012 && Math.abs(g.y - y) < 0.012);
-      if (existing) {
-        existing.practitioners.push(p);
-      } else {
-        groups.push({ x, y, practitioners: [p] });
-      }
-    });
-    
-    return groups;
-  }, [practitioners]);
-
-  const handleWheel = (e: React.WheelEvent) => {
-    e.preventDefault();
-    const zoomDelta = e.deltaY > 0 ? 0.9 : 1.1;
-    let newZoom = zoom * zoomDelta;
-    newZoom = Math.max(1, Math.min(newZoom, 8)); // clamp zoom between 1x and 8x
-    setZoom(newZoom);
-  };
-
-  const handlePointerDown = (e: React.PointerEvent) => {
-    setIsDragging(true);
-    setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
-    (e.target as HTMLElement).setPointerCapture(e.pointerId);
-  };
-
-  const handlePointerMove = (e: React.PointerEvent) => {
-    if (!isDragging) return;
-    setPan({
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y,
-    });
-  };
-
-  const handlePointerUp = (e: React.PointerEvent) => {
-    setIsDragging(false);
-    (e.target as HTMLElement).releasePointerCapture(e.pointerId);
-  };
-
-  // Center map on resize
-  const stateRef = useRef({ zoom, selectedId });
+  // Keep ref in sync so we don't trigger effects on every onSelect change
   useEffect(() => {
-    stateRef.current = { zoom, selectedId };
-  }, [zoom, selectedId]);
+    onSelectRef.current = onSelect;
+  }, [onSelect]);
 
+  // Initialize Leaflet
   useEffect(() => {
-    const el = containerRef.current;
-    if (!el) return;
+    if (!mapContainer.current) return;
+    if (mapRef.current) return; // Only initialize once
 
-    const ro = new ResizeObserver((entries) => {
-      for (const entry of entries) {
-        const { width, height } = entry.contentRect;
-        if (width === 0 || height === 0) continue;
-        
-        const current = stateRef.current;
-        
-        if (current.selectedId) {
-          const p = practitioners.find(p => p.id === current.selectedId);
-          if (p) {
-            const { x, y } = latLngToXY(p.lat, p.lng);
-            setPan({
-              x: width / 2 - (x * width * current.zoom),
-              y: height / 2 - (y * height * current.zoom),
-            });
-            continue;
-          }
-        }
-        
-        const z = current.zoom === 1 ? 3.5 : current.zoom;
-        if (current.zoom === 1) setZoom(z);
+    const map = L.map(mapContainer.current, {
+      center: [40, -95], // North America
+      zoom: 4,
+      zoomControl: false, // We'll add it in the bottom-right
+      maxBounds: [
+        [-90, -180],
+        [90, 180]
+      ],
+      maxBoundsViscosity: 1.0
+    });
 
-        setPan({
-          x: width / 2 - (0.15 * width * z),
-          y: height / 2 - (0.25 * height * z)
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      className: 'navy-osm-tiles',
+      maxZoom: 19
+    }).addTo(map);
+
+    const clusterGroup = L.markerClusterGroup({
+      iconCreateFunction: (cluster) => {
+        const count = cluster.getChildCount();
+        return L.divIcon({
+          html: `<div class="bg-primary text-primary-foreground font-bold rounded-full w-10 h-10 flex items-center justify-center border-2 border-[#0d1624] shadow-lg"><span>${count}</span></div>`,
+          className: 'custom-cluster bg-transparent',
+          iconSize: L.point(40, 40)
         });
-      }
+      },
+      maxClusterRadius: 40,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: false,
+      zoomToBoundsOnClick: true
     });
 
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [practitioners]);
+    map.addLayer(clusterGroup);
+    mapRef.current = map;
+    clusterGroupRef.current = clusterGroup;
 
-  useEffect(() => {
-    if (!activeCluster) return;
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') {
-        setActiveCluster(null);
-      }
+    return () => {
+      map.remove();
+      mapRef.current = null;
+      clusterGroupRef.current = null;
     };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [activeCluster]);
+  }, []);
 
-  // When a practitioner is selected from list, pan to them
+  // Update GeoJSON source when practitioners prop changes
   useEffect(() => {
-    if (selectedId && containerRef.current) {
-      const p = practitioners.find(p => p.id === selectedId);
-      if (p) {
-        const { x, y } = latLngToXY(p.lat, p.lng);
-        const rect = containerRef.current.getBoundingClientRect();
-        setZoom(5);
-        setPan({
-          x: rect.width / 2 - (x * rect.width * 5),
-          y: rect.height / 2 - (y * rect.height * 5),
-        });
+    if (!mapRef.current || !clusterGroupRef.current) return;
+    const map = mapRef.current;
+    const clusterGroup = clusterGroupRef.current;
+
+    clusterGroup.clearLayers();
+    markersRef.current = {};
+
+    practitioners.forEach(p => {
+      const marker = L.marker([p.lat, p.lng], {
+        icon: L.divIcon({
+          html: `<div class="w-4 h-4 bg-primary rounded-full border-2 border-[#0d1624] shadow-md transition-transform hover:scale-125"></div>`,
+          className: 'custom-marker bg-transparent',
+          iconSize: L.point(16, 16),
+          iconAnchor: [8, 8]
+        })
+      });
+
+      marker.on('click', () => {
+        onSelectRef.current(p.id);
+      });
+
+      markersRef.current[p.id] = marker;
+      clusterGroup.addLayer(marker);
+    });
+
+    // Fit bounds on first big load if we have items and no selection
+    if (practitioners.length > 0 && !selectedId) {
+      const group = new L.FeatureGroup(Object.values(markersRef.current));
+      map.fitBounds(group.getBounds(), { padding: [40, 40], maxZoom: 5 });
+    }
+  }, [practitioners]); // Exclude selectedId so we don't rebuild all markers on select
+
+  // Handle selectedId visually and fly to point
+  useEffect(() => {
+    if (!mapRef.current || !clusterGroupRef.current) return;
+    const map = mapRef.current;
+    const clusterGroup = clusterGroupRef.current;
+    const markers = markersRef.current;
+
+    // Reset old state and apply selected styles
+    practitioners.forEach(p => {
+      const marker = markers[p.id];
+      if (marker) {
+        const isSelected = p.id === selectedId;
+        marker.setIcon(L.divIcon({
+          html: isSelected 
+            ? `<div class="w-6 h-6 bg-[#fff7c6] rounded-full border-4 border-[#0d1624] shadow-[0_0_15px_rgba(244,190,69,0.8)] relative -top-1 -left-1 flex items-center justify-center z-50"><div class="w-2 h-2 bg-primary rounded-full"></div></div>`
+            : `<div class="w-4 h-4 bg-primary rounded-full border-2 border-[#0d1624] shadow-md transition-transform hover:scale-125"></div>`,
+          className: isSelected ? 'custom-marker-selected bg-transparent z-50' : 'custom-marker bg-transparent',
+          iconSize: isSelected ? L.point(24, 24) : L.point(16, 16),
+          iconAnchor: isSelected ? [12, 12] : [8, 8]
+        }));
+        
+        if (isSelected) {
+          marker.setZIndexOffset(1000);
+        } else {
+          marker.setZIndexOffset(0);
+        }
       }
+    });
+
+    if (selectedId && markers[selectedId]) {
+      const targetMarker = markers[selectedId];
+      // zoomToShowLayer will spiderfy if clustered, then callback
+      clusterGroup.zoomToShowLayer(targetMarker, () => {
+        map.flyTo(targetMarker.getLatLng(), Math.max(map.getZoom(), 12), {
+          animate: true,
+          duration: 1
+        });
+      });
     }
   }, [selectedId, practitioners]);
 
-  return (
-    <div 
-      ref={containerRef}
-      className="relative w-full h-full bg-[#0d1624] overflow-hidden rounded-2xl border border-white/10 select-none touch-none"
-      onWheel={handleWheel}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      onPointerCancel={handlePointerUp}
-    >
-      <div 
-        className="absolute inset-0"
-        style={{
-          transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
-          transformOrigin: '0 0',
-          transition: isDragging ? 'none' : 'transform 0.3s ease-out'
-        }}
-      >
-        <img 
-          src={`${import.meta.env.BASE_URL}images/world-map.svg`} 
-          alt="World Map" 
-          className="w-full h-full object-cover pointer-events-none opacity-40 mix-blend-screen"
-        />
-        
-        {groupedPins.map((group, idx) => {
-          const isSelected = group.practitioners.some(p => p.id === selectedId);
-          const pinSize = 24 / zoom; // scale down pin at high zooms
-          
-          const labelText = group.practitioners.length > 1
-            ? `Cluster of ${group.practitioners.length} practitioners. Click to view list.`
-            : `View ${group.practitioners[0].fullName} in ${group.practitioners[0].cityStateCountry}`;
-          
-          return (
-            <button
-              key={idx}
-              aria-label={labelText}
-              className={`absolute flex items-center justify-center transform -translate-x-1/2 -translate-y-1/2 transition-all ${isSelected ? 'z-20 text-primary-foreground' : 'z-10 text-primary hover:text-primary-foreground'}`}
-              style={{
-                left: `${group.x * 100}%`,
-                top: `${group.y * 100}%`,
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                if (group.practitioners.length === 1) {
-                  onSelect(group.practitioners[0].id);
-                } else {
-                  setActiveCluster(group.practitioners);
-                }
-              }}
-            >
-              <MapPin 
-                className={`transition-all drop-shadow-md ${isSelected ? 'fill-primary' : 'fill-primary/20'}`}
-                style={{ width: `${Math.max(20, pinSize)}px`, height: `${Math.max(20, pinSize)}px` }}
-              />
-              {group.practitioners.length > 1 && (
-                <span 
-                  className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center border border-[#0d1624]"
-                  style={{ transform: `scale(${1/zoom}) translate(50%, -50%)`, transformOrigin: 'bottom left' }}
-                >
-                  {group.practitioners.length}
-                </span>
-              )}
-            </button>
-          );
-        })}
-      </div>
+  // Handle resizing so the canvas stays tight
+  useEffect(() => {
+    const el = mapContainer.current;
+    if (!el) return;
+    const ro = new ResizeObserver(() => {
+      if (mapRef.current) {
+        mapRef.current.invalidateSize();
+      }
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
-      {/* Cluster Chooser Popover */}
-      {activeCluster && (
-        <div 
-          className="absolute inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
-          onPointerDown={e => e.stopPropagation()}
-          onWheel={e => e.stopPropagation()}
-          onClick={() => setActiveCluster(null)}
-        >
-          <div 
-            role="dialog"
-            aria-modal="true"
-            aria-label="Select a practitioner"
-            className="bg-[#0d1624] border border-white/10 shadow-2xl rounded-2xl p-4 max-w-sm w-full mx-4 max-h-[80%] overflow-y-auto"
-            onClick={e => e.stopPropagation()}
-          >
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="font-bold text-foreground">Select Practitioner</h3>
-              <button 
-                onClick={() => setActiveCluster(null)}
-                aria-label="Close"
-                className="text-muted-foreground hover:text-foreground transition-colors p-1"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="flex flex-col gap-2">
-              {activeCluster.map(p => (
-                <button
-                  key={p.id}
-                  className="flex flex-col text-left p-3 rounded-xl border border-white/5 bg-white/5 hover:bg-primary/10 hover:border-primary/30 transition-colors group"
-                  onClick={() => {
-                    onSelect(p.id);
-                    setActiveCluster(null);
-                  }}
-                >
-                  <span className="font-bold text-primary group-hover:text-primary-foreground transition-colors">{p.fullName}</span>
-                  <span className="text-xs text-muted-foreground group-hover:text-primary-foreground/70 transition-colors">{p.cityStateCountry}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-      
-      {/* Map Controls */}
-      <div className="absolute bottom-4 right-4 flex flex-col gap-2 z-30">
-        <button 
-          aria-label="Zoom in"
-          className="w-10 h-10 bg-card/80 backdrop-blur border border-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/10 transition-colors shadow-lg"
-          onClick={() => setZoom(z => Math.min(z * 1.5, 8))}
-        >
-          +
-        </button>
-        <button 
-          aria-label="Zoom out"
-          className="w-10 h-10 bg-card/80 backdrop-blur border border-white/10 rounded-lg flex items-center justify-center text-white hover:bg-white/10 transition-colors shadow-lg"
-          onClick={() => setZoom(z => Math.max(z / 1.5, 1))}
-        >
-          -
-        </button>
-      </div>
-      
-      {/* Zoom hint */}
-      <div className="absolute top-4 left-4 z-30 pointer-events-none bg-background/50 backdrop-blur px-3 py-1.5 rounded-md border border-white/5 text-xs text-muted-foreground">
-        Scroll to zoom, drag to pan
-      </div>
+  return (
+    <div className="relative w-full h-full bg-[#0d1624] overflow-hidden rounded-2xl border border-white/10">
+      <style>{`
+        .navy-osm-tiles {
+          filter: invert(1) hue-rotate(180deg) brightness(0.8) contrast(1.2) saturate(1.2);
+        }
+        .leaflet-container {
+          background: #0d1624 !important;
+          font-family: inherit;
+        }
+        .leaflet-control-zoom a {
+          background-color: rgba(13, 22, 36, 0.8) !important;
+          color: white !important;
+          border-color: rgba(255,255,255,0.1) !important;
+          backdrop-filter: blur(4px);
+        }
+        .leaflet-control-zoom a:hover {
+          background-color: rgba(255,255,255,0.1) !important;
+        }
+        .leaflet-control-attribution {
+          background-color: rgba(13, 22, 36, 0.7) !important;
+          color: rgba(255,255,255,0.5) !important;
+        }
+        .leaflet-control-attribution a {
+          color: rgba(255,255,255,0.8) !important;
+        }
+        .custom-cluster, .custom-marker, .custom-marker-selected {
+          background: transparent;
+          border: none;
+        }
+      `}</style>
+      <div 
+        ref={mapContainer} 
+        className="absolute inset-0"
+        style={{ width: '100%', height: '100%' }}
+      />
     </div>
   );
 }
