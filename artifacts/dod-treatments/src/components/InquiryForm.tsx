@@ -294,7 +294,7 @@ export function InquiryForm({
                       </PopoverTrigger>
                       <PopoverContent
                         align="start"
-                        className="w-auto rounded-xl border-primary/30 bg-card p-2 shadow-2xl"
+                        className="w-auto max-w-[calc(100vw-1rem)] overflow-x-auto rounded-2xl border-primary/30 bg-card p-2 shadow-2xl"
                       >
                         <Calendar
                           mode="single"
@@ -304,7 +304,12 @@ export function InquiryForm({
                             setArrivalCalendarOpen(false);
                           }}
                           disabled={{ before: startOfDay(new Date()) }}
-                          className="p-4 [--cell-size:2.65rem]"
+                          className="p-4 [--cell-size:2.75rem] sm:p-6 sm:[--cell-size:3.5rem]"
+                          classNames={{
+                            caption_label: 'text-lg font-semibold sm:text-xl',
+                            weekday: 'text-sm font-medium text-muted-foreground sm:text-base',
+                            day_button: 'text-base sm:text-lg',
+                          }}
                           initialFocus
                         />
                       </PopoverContent>
@@ -336,7 +341,7 @@ export function InquiryForm({
                       </PopoverTrigger>
                       <PopoverContent
                         align="start"
-                        className="w-auto rounded-xl border-primary/30 bg-card p-2 shadow-2xl"
+                        className="w-auto max-w-[calc(100vw-1rem)] overflow-x-auto rounded-2xl border-primary/30 bg-card p-2 shadow-2xl"
                       >
                         <Calendar
                           mode="single"
@@ -350,7 +355,12 @@ export function InquiryForm({
                               ? addDays(new Date(`${form.watch('requestedArrival')}T12:00:00`), 1)
                               : startOfDay(new Date()),
                           }}
-                          className="p-4 [--cell-size:2.65rem]"
+                          className="p-4 [--cell-size:2.75rem] sm:p-6 sm:[--cell-size:3.5rem]"
+                          classNames={{
+                            caption_label: 'text-lg font-semibold sm:text-xl',
+                            weekday: 'text-sm font-medium text-muted-foreground sm:text-base',
+                            day_button: 'text-base sm:text-lg',
+                          }}
                           initialFocus
                         />
                       </PopoverContent>
