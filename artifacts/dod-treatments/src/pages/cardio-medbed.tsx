@@ -204,7 +204,7 @@ export default function CardioMedBed() {
               Learn more about bringing Cardio MedBed EECP to your personal care setting or professional clinic.
             </p>
             <a
-              href="https://www.dodpowerpack.com/cardio-medbed"
+              href="https://www.dodpowerpack.com/blog"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
