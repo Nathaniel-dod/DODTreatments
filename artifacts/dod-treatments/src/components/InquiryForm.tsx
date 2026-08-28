@@ -8,7 +8,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { CheckCircle2 } from 'lucide-react';
+import { Calendar } from '@/components/ui/calendar';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { addDays, format, startOfDay } from 'date-fns';
+import { CalendarDays, CheckCircle2 } from 'lucide-react';
 
 const inquirySchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -42,6 +45,8 @@ export function InquiryForm({
   const [isSuccess, setIsSuccess] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [arrivalCalendarOpen, setArrivalCalendarOpen] = useState(false);
+  const [departureCalendarOpen, setDepartureCalendarOpen] = useState(false);
 
   const form = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
@@ -270,11 +275,40 @@ export function InquiryForm({
                 control={form.control}
                 name="requestedArrival"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="flex flex-col">
                     <FormLabel>Preferred Arrival Date</FormLabel>
-                    <FormControl>
-                      <Input type="date" min={new Date().toISOString().split('T')[0]} {...field} />
-                    </FormControl>
+                    <Popover open={arrivalCalendarOpen} onOpenChange={setArrivalCalendarOpen}>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            type="button"
+                            variant="outline"
+                            className="h-14 justify-start border-primary/25 bg-background/50 px-4 text-left text-base font-medium hover:border-primary/60 hover:bg-primary/10"
+                          >
+                            <CalendarDays className="mr-3 h-5 w-5 text-primary" aria-hidden="true" />
+                            {field.value
+                              ? format(new Date(`${field.value}T12:00:00`), 'MMMM d, yyyy')
+                              : <span className="text-muted-foreground">Choose arrival date</span>}
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent
+                        align="start"
+                        className="w-auto rounded-xl border-primary/30 bg-card p-2 shadow-2xl"
+                      >
+                        <Calendar
+                          mode="single"
+                          selected={field.value ? new Date(`${field.value}T12:00:00`) : undefined}
+                          onSelect={(date) => {
+                            field.onChange(date ? format(date, 'yyyy-MM-dd') : '');
+                            setArrivalCalendarOpen(false);
+                          }}
+                          disabled={{ before: startOfDay(new Date()) }}
+                          className="p-4 [--cell-size:2.65rem]"
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -283,15 +317,44 @@ export function InquiryForm({
                 control={form.control}
                 name="requestedDeparture"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="flex flex-col">
                     <FormLabel>Preferred Departure Date</FormLabel>
-                    <FormControl>
-                      <Input
-                        type="date"
-                        min={form.watch('requestedArrival') || new Date().toISOString().split('T')[0]}
-                        {...field}
-                      />
-                    </FormControl>
+                    <Popover open={departureCalendarOpen} onOpenChange={setDepartureCalendarOpen}>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            type="button"
+                            variant="outline"
+                            className="h-14 justify-start border-primary/25 bg-background/50 px-4 text-left text-base font-medium hover:border-primary/60 hover:bg-primary/10"
+                          >
+                            <CalendarDays className="mr-3 h-5 w-5 text-primary" aria-hidden="true" />
+                            {field.value
+                              ? format(new Date(`${field.value}T12:00:00`), 'MMMM d, yyyy')
+                              : <span className="text-muted-foreground">Choose departure date</span>}
+                          </Button>
+                        </FormControl>
+                      </PopoverTrigger>
+                      <PopoverContent
+                        align="start"
+                        className="w-auto rounded-xl border-primary/30 bg-card p-2 shadow-2xl"
+                      >
+                        <Calendar
+                          mode="single"
+                          selected={field.value ? new Date(`${field.value}T12:00:00`) : undefined}
+                          onSelect={(date) => {
+                            field.onChange(date ? format(date, 'yyyy-MM-dd') : '');
+                            setDepartureCalendarOpen(false);
+                          }}
+                          disabled={{
+                            before: form.watch('requestedArrival')
+                              ? addDays(new Date(`${form.watch('requestedArrival')}T12:00:00`), 1)
+                              : startOfDay(new Date()),
+                          }}
+                          className="p-4 [--cell-size:2.65rem]"
+                          initialFocus
+                        />
+                      </PopoverContent>
+                    </Popover>
                     <FormMessage />
                   </FormItem>
                 )}
