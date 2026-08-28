@@ -184,7 +184,7 @@ export default function CardioMedBed() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <a
-              href="https://www.dodpowerpack.com/research"
+              href="https://www.dodpowerpack.com/blog"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-primary px-8 text-base font-medium text-primary-foreground transition-colors hover:bg-primary/90 gold-glow"
