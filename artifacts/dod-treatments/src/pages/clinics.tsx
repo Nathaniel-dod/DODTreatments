@@ -74,7 +74,7 @@ export default function Clinics() {
             </Link>
 
             {/* Penticton */}
-            <Link href="/clinics/penticton">
+            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer">
               <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <img
@@ -97,7 +97,7 @@ export default function Clinics() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
 
           </div>
         </div>

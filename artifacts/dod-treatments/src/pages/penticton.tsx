@@ -113,15 +113,15 @@ export default function Penticton() {
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Book Your Treatment</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Click 'La Crème Health and Healing' then 'Consultations' or 'Treatments' to book with Master Practitioner Rita.
+              Visit Vital Vibes Wellness to book with Master Practitioner Rita.
             </p>
             <a 
-              href="https://booking.lacremeluxe.com/webstoreNew/services" 
+              href="https://vitalvibeswellness.com" 
               target="_blank" 
               rel="noopener noreferrer"
             >
               <Button size="lg" className="gold-glow">
-                Book at La Crème <ExternalLink className="ml-2 w-5 h-5" />
+                Visit Vital Vibes Wellness <ExternalLink className="ml-2 w-5 h-5" />
               </Button>
             </a>
           </div>

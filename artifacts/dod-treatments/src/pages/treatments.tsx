@@ -353,7 +353,7 @@ export default function Treatments() {
                 </div>
               </div>
             </Link>
-            <Link href="/clinics/penticton">
+            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="flex items-center gap-2 mb-4">
                   <MapPin className="w-5 h-5 text-primary" />
@@ -367,7 +367,7 @@ export default function Treatments() {
                   Explore the Clinic <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
-            </Link>
+            </a>
             <Link href="/clinics">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="flex items-center gap-2 mb-4">

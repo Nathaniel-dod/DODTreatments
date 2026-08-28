@@ -30,10 +30,10 @@ const sandraOptions = [
 ];
 
 const ritaOptions = [
-  { label: 'Emotional Consultation', href: 'https://booking.lacremeluxe.com/webstoreNew/services', icon: Heart },
-  { label: 'Perfect Day Consultation', href: 'https://booking.lacremeluxe.com/webstoreNew/services', icon: Sun },
-  { label: 'Nutritional Consultation', href: 'https://booking.lacremeluxe.com/webstoreNew/services', icon: Apple },
-  { label: 'Water Fasting Consultation', href: 'https://booking.lacremeluxe.com/webstoreNew/services', icon: Droplets },
+  { label: 'Emotional Consultation', href: 'https://vitalvibeswellness.com', icon: Heart },
+  { label: 'Perfect Day Consultation', href: 'https://vitalvibeswellness.com', icon: Sun },
+  { label: 'Nutritional Consultation', href: 'https://vitalvibeswellness.com', icon: Apple },
+  { label: 'Water Fasting Consultation', href: 'https://vitalvibeswellness.com', icon: Droplets },
 ];
 
 export default function Consultations() {
@@ -199,7 +199,7 @@ export default function Consultations() {
                 "Everyone needs a personalized roadmap, along with repetition, focus and a coach to achieve optimal success. Let me guide you to experience the healing power of the Perfect Day Lifestyle and the enormous potential of Self Care & Self Love. 3-2-1 We got this!"
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                Click 'La Crème Health and Healing' then 'Consultations' to book:
+                Visit Vital Vibes Wellness to book with Rita:
               </p>
               <div className="space-y-3">
                 {ritaOptions.map((opt) => (

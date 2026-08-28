@@ -155,7 +155,7 @@ export default function Home() {
             </Link>
 
             {/* Penticton */}
-            <Link href="/clinics/penticton" className="block h-full">
+            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer" className="block h-full">
               <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img
@@ -173,7 +173,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </a>
 
             {/* Practitioner Map */}
             <Link href="/practitioners" className="block h-full">
