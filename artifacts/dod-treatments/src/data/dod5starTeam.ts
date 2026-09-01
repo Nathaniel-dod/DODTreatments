@@ -24,7 +24,7 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
   {
     name: 'Jesse Malcolm',
     role: 'Host & Master Practitioner',
-    bio: 'Host Master Practitioner of the retreat, delivering personalized treatment and training throughout your stay. Full bio coming soon.',
+    bio: 'Jesse is a Wolfe Non-Surgical Master Practitioner dedicated to helping guests improve mobility, ease physical restrictions, and support overall well-being through advanced non-invasive deep tissue therapy. He is known for his calm, professional, and approachable manner.',
     image: 'images/jesse-consultation.webp',
     imageAlt: 'Jesse Malcolm',
   },
