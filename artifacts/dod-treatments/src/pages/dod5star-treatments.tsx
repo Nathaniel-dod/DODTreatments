@@ -427,14 +427,16 @@ export default function Dod5StarTreatments() {
                   );
 
                   return device.href ? (
-                    <Link
+                    <a
                       key={device.name}
-                      href={device.href}
+                      href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${device.href}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-label={`View ${device.name}`}
                       className="glass-panel group block rounded-xl px-6 py-4 transition-all hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {content}
-                    </Link>
+                    </a>
                   ) : (
                     <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
                       {content}
@@ -452,9 +454,11 @@ export default function Dod5StarTreatments() {
              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="space-y-3">
               {therapies.map((t) => (
-                <Link
+                 <a
                   key={t.href}
-                  href={t.href}
+                   href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${t.href}`}
+                   target="_blank"
+                   rel="noopener noreferrer"
                 >
                   <div className="glass-panel rounded-xl px-6 py-4 flex items-center justify-between hover:border-primary/30 transition-all group">
                     <div>
@@ -463,7 +467,7 @@ export default function Dod5StarTreatments() {
                     </div>
                     <ArrowRight className="w-5 h-5 text-primary shrink-0" />
                   </div>
-                </Link>
+                 </a>
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
