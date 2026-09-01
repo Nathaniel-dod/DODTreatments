@@ -208,7 +208,7 @@ export default function IxtapaZihuatanejo() {
             <div className="grid md:grid-cols-[minmax(13rem,0.72fr)_1.8fr] gap-8 md:gap-10 items-center">
               <div className="min-h-[20rem] md:min-h-0 self-stretch">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/dr-darrell-wolfe.png`}
+                  src={`${import.meta.env.BASE_URL}images/dr-darrell-wolfe.webp`}
                   alt="Dr. Darrell Wolfe, founder of the DOD5Star Healing Retreat"
                   width={4068}
                   height={3421}

@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, ExternalLink } from 'lucide-react';
 
 const benefits = [
-  'Increase Nitric Oxide, Improving Vascular Health',
-  'Decreased Amount of Work Needed by the Heart to Pump Blood',
-  'Increase Coronary Blood Flow to the Heart',
-  'Promotes Blood Vessel Formation (Angiogenesis)',
-  'Increases Flow of Oxygen and Nutrients, Thus Improving Organ Function',
-  'Increases Volume of Blood Pumped by the Heart (Cardiac Output)',
-  'Improves Anti-Inflammatory Processes',
+  'May Support Nitric Oxide and Vascular Health',
+  'Designed to Support More Efficient Cardiac Work',
+  'May Support Coronary Blood Flow to the Heart',
+  'May Encourage Natural Blood Vessel Formation (Angiogenesis)',
+  'Supports the Circulation of Oxygen and Nutrients',
+  'May Support Cardiac Output',
+  'May Support Healthy Inflammatory Processes',
 ];
 
 const steps = [
@@ -67,13 +67,13 @@ export default function CardioMedBed() {
               Cardio MedBed EECP
             </h1>
             <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
-              Complete Regeneration Of Heart & Circulatory System
+              Advanced Support For Heart & Circulatory Wellness
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Enhanced External Counter Pulsation (EECP) – A Non-Invasive Therapy Backed by Science. FDA-Approved (USA), endorsed by the European Society of Cardiology (ESC), and clinically validated for cardiovascular health.
+              Enhanced External Counter Pulsation (EECP) is a non-invasive therapy backed by a growing body of clinical research and used in cardiovascular care settings around the world.
             </p>
             <img
-              src={`${import.meta.env.BASE_URL}images/cardio-medbed-lifestyle.png`}
+              src={`${import.meta.env.BASE_URL}images/cardio-medbed-lifestyle.webp`}
               alt="Patient receiving Cardio MedBed EECP therapy with a practitioner"
               className="mt-10 h-[18rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[28rem]"
             />
@@ -87,28 +87,28 @@ export default function CardioMedBed() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center gold-gradient">
-              A Clinically Proven Method to Improve Blood Circulation
+              A Clinically Studied Approach to Supporting Blood Circulation
             </h2>
             <div className="glass-panel rounded-2xl p-8 md:p-12 space-y-4">
               <p className="text-lg text-foreground/90 leading-relaxed">
-                EECP is an internationally recognized, non-invasive treatment with clinically proven benefits for cardiovascular health.
+                EECP is an internationally recognized, non-invasive treatment that has been studied for cardiovascular health and circulation.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>FDA-Approved (USA)</strong> — Recognized as an effective therapy for angina and heart failure.</span>
+                  <span><strong>Used in Cardiovascular Care</strong> — EECP systems have recognized clinical applications in the United States.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Endorsed by the European Society of Cardiology (ESC)</strong> — Recommended for enhancing blood circulation and heart function.</span>
+                  <span><strong>Referenced in European Cardiology</strong> — EECP has been considered in cardiovascular care guidance and research.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                  <span><strong>Clinically Validated</strong> — Studies confirm EECP's effectiveness in patients with coronary artery disease.</span>
+                  <span><strong>Clinically Studied</strong> — Research has evaluated EECP in patients with coronary artery disease.</span>
                 </li>
               </ul>
               <p className="text-muted-foreground pt-4">
-                This technology is safe, medically approved, and widely used in leading cardiology centers worldwide.
+                This non-invasive technology is used in cardiology settings around the world.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function CardioMedBed() {
           <div className="glass-panel rounded-2xl p-8 mt-12 max-w-3xl mx-auto text-center">
             <h3 className="font-bold text-xl mb-3">How does Cardio MedBed increase blood flow?</h3>
             <p className="text-muted-foreground">
-              It stimulates the openings or formation of small branches of blood vessels to create a natural bypass around narrowed or blocked arteries.
+              EECP is designed to encourage circulation through small branches of blood vessels, which may support alternate pathways around narrowed arteries.
             </p>
           </div>
         </div>

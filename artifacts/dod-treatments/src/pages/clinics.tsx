@@ -45,10 +45,16 @@ export default function Clinics() {
       {/* Clinic Cards */}
       <section className="pb-20 md:pb-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="mx-auto mb-8 max-w-3xl rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 text-center text-sm leading-relaxed text-foreground/90">
+            Featured clinics are locations highlighted by Doc of Detox. Practitioners listed in the directory are independent providers responsible for their own services, advice, scheduling, fees, and policies.
+          </p>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             
             {/* Ixtapa */}
-            <Link href="/clinics/ixtapa-zihuatanejo">
+            <Link
+              href="/clinics/ixtapa-zihuatanejo"
+              className="rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+            >
               <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <img
@@ -64,7 +70,7 @@ export default function Clinics() {
                   <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h2>
                   <p className="text-muted-foreground mb-4">Hosted by Dr. Sage Wolfe & Jesse Malcolm</p>
                   <p className="text-sm text-foreground/80 leading-relaxed mb-6">
-                    Nestled within the captivating landscapes of Ixtapa-Zihuatanejo, Mexico, indulge in a beautiful picturesque jungle backdrop with life-changing, life-saving amenities as you immerse your whole being into our 5 Star Health & Healing Retreat.
+                    Nestled within the captivating landscapes of Ixtapa-Zihuatanejo, Mexico, settle into a picturesque jungle backdrop with restorative amenities designed to support your stay at our 5 Star Health & Healing Retreat.
                   </p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
@@ -74,7 +80,12 @@ export default function Clinics() {
             </Link>
 
             {/* Penticton */}
-            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://vitalvibeswellness.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+            >
               <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="aspect-[16/10] relative overflow-hidden">
                   <img
@@ -111,10 +122,11 @@ export default function Clinics() {
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Search our global network of certified practitioners through the BraveHeartNation directory.
             </p>
-            <Link href="/practitioners">
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-colors">
-                Search Practitioners
-              </button>
+            <Link
+              href="/practitioners"
+              className="inline-flex rounded-lg bg-primary px-8 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
+            >
+              Search Practitioners
             </Link>
           </div>
         </div>

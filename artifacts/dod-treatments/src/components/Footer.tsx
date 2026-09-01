@@ -1,5 +1,5 @@
 import { Link } from 'wouter';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react';
 
 const treatments = [
   { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical' },
@@ -12,6 +12,12 @@ const company = [
   { name: 'Clinics', href: '/clinics' },
   { name: 'Personal Treatment & Training', href: '/personal-treatment' },
   { name: 'Find Practitioners', href: '/practitioners' },
+];
+
+const legal = [
+  { name: 'Privacy Policy', href: '/privacy-policy' },
+  { name: 'Medical Disclaimer', href: '/medical-disclaimer' },
+  { name: 'Terms of Use', href: '/terms-of-use' },
 ];
 
 export function Footer() {
@@ -91,9 +97,14 @@ export function Footer() {
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Doc of Detox Treatments. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
+          <nav aria-label="Legal" className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs text-muted-foreground">
+            {legal.map((item) => (
+              <Link key={item.name} href={item.href} className="underline-offset-4 transition-colors hover:text-primary hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary">
+                {item.name}
+              </Link>
+            ))}
             <span>Reviewed by Dr. Darrell Wolfe, N.D.</span>
-          </div>
+          </nav>
         </div>
       </div>
     </footer>

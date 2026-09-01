@@ -29,7 +29,7 @@ import {
 } from 'lucide-react';
 
 const therapies = [
-  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical', note: "The World's Most Powerful Bodywork" },
+  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical', note: 'A powerful approach to focused bodywork' },
   { name: 'CellSonic Regeneration ESWT', href: '/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
   { name: 'Cardio MedBed EECP', href: '/treatments/cardio-medbed', note: 'Heart & circulatory regeneration' },
   { name: 'Health Consultations', href: '/treatments/consultations', note: 'Your personalized roadmap' },
@@ -427,16 +427,14 @@ export default function Dod5StarTreatments() {
                   );
 
                   return device.href ? (
-                    <a
+                    <Link
                       key={device.name}
-                      href={`${import.meta.env.BASE_URL}${device.href.replace(/^\//, '')}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={device.href}
                       aria-label={`View ${device.name}`}
                       className="glass-panel group block rounded-xl px-6 py-4 transition-all hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {content}
-                    </a>
+                    </Link>
                   ) : (
                     <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
                       {content}
@@ -454,11 +452,9 @@ export default function Dod5StarTreatments() {
              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="space-y-3">
               {therapies.map((t) => (
-                <a
+                <Link
                   key={t.href}
-                  href={`${import.meta.env.BASE_URL}${t.href.replace(/^\//, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={t.href}
                 >
                   <div className="glass-panel rounded-xl px-6 py-4 flex items-center justify-between hover:border-primary/30 transition-all group">
                     <div>
@@ -467,7 +463,7 @@ export default function Dod5StarTreatments() {
                     </div>
                     <ArrowRight className="w-5 h-5 text-primary shrink-0" />
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">

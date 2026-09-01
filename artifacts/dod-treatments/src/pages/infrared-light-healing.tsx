@@ -93,7 +93,7 @@ export default function InfraredLightHealing() {
             <article className="glass-panel rounded-3xl overflow-hidden">
               <div className="bg-background/40 h-80 p-6 flex items-center justify-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/rx-infrared-seat.png`}
+                  src={`${import.meta.env.BASE_URL}images/rx-infrared-seat.webp`}
                   alt="RX Infrared Light Healing seated device with an upward-facing light"
                   className="h-full max-w-full object-contain"
                 />
@@ -112,7 +112,7 @@ export default function InfraredLightHealing() {
             <article className="glass-panel rounded-3xl overflow-hidden">
               <div className="bg-background/40 h-80 p-6 flex items-center justify-center">
                 <img
-                  src={`${import.meta.env.BASE_URL}images/rx-infrared-stand.png`}
+                  src={`${import.meta.env.BASE_URL}images/rx-infrared-stand.webp`}
                   alt="RX Infrared Light Healing adjustable stand positioned above a treatment table"
                   className="h-full max-w-full object-contain"
                 />

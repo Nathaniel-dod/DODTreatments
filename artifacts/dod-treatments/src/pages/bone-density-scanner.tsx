@@ -84,7 +84,7 @@ export default function BoneDensityScanner() {
               Clinical-grade, radiation-free quantitative ultrasound measures the speed of sound through bone in minutes—giving you an objective baseline to track relative skeletal-health readings over time.
             </p>
             <img
-              src={`${import.meta.env.BASE_URL}images/bone-density-scanner-lifestyle.png`}
+              src={`${import.meta.env.BASE_URL}images/bone-density-scanner-lifestyle.webp`}
               alt="Practitioner performing a DOD Advanced Bone Density Scanner assessment"
               className="mt-10 h-[18rem] w-full rounded-3xl border border-primary/20 object-cover object-center shadow-2xl md:h-[28rem]"
             />

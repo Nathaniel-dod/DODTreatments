@@ -24,7 +24,7 @@ export default function WolfeNonSurgical() {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: 'Wolfe Non-Surgical',
-      description: "The World's Most Powerful Bodywork. Addresses scar tissue, inflammation, calcification, and crystallization for rapid pain relief and healing.",
+      description: 'A focused bodywork approach addressing scar tissue, inflammation, calcification, and crystallization. Patients have reported greater comfort and freedom of movement.',
       image: 'https://docofdetoxtreatments.com/images/wns-hero.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/wolfe-non-surgical',
     },
@@ -32,7 +32,7 @@ export default function WolfeNonSurgical() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Wolfe Non-Surgical Bodywork Treatment',
-      description: 'Non-invasive bodywork therapy targeting scar tissue, inflammation, and calcification for pain relief and healing in 1-3 sessions.',
+      description: 'Non-invasive bodywork focused on scar tissue, inflammation, and calcification. Some patients report meaningful changes within their first few sessions.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -46,8 +46,8 @@ export default function WolfeNonSurgical() {
   return (
     <>
       <Seo
-        title="Wolfe Non-Surgical | The World's Most Powerful Bodywork"
-        description="Wolfe Non-Surgical addresses scar tissue, inflammation, calcification, and crystallization that create pain and disease. Reverse issues in 1-3 treatments."
+        title="Wolfe Non-Surgical | Focused Bodywork"
+        description="Wolfe Non-Surgical focuses on scar tissue, inflammation, calcification, and crystallization. Patients have reported greater comfort and movement."
         path="/treatments/wolfe-non-surgical"
         structuredData={structuredData}
       />
@@ -69,10 +69,10 @@ export default function WolfeNonSurgical() {
               Wolfe Non-Surgical
             </h1>
             <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
-              The World's Most Powerful Bodywork
+              A Powerful Approach to Focused Bodywork
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the scar tissue, inflammation, calcification, and crystallization that create physical blocks.
+              Patients have noticed meaningful changes from their first treatment and say the focused approach to scar tissue, inflammation, calcification, and crystallization feels unlike other bodywork they have tried.
             </p>
             <TreatmentHeroCtas />
           </div>
@@ -91,7 +91,7 @@ export default function WolfeNonSurgical() {
                 className="w-full h-56 md:h-full object-cover"
               />
               <p className="text-lg text-foreground/90 leading-relaxed p-8 md:p-12">
-                You will notice better results from the first treatment than from anything else you have done so far because, unlike other therapies, we address the <strong>scar tissue, inflammation, calcification, and crystallization</strong> that create physical blocks. These blocks are the underlying source of aches, pains, lumps, bumps, and disease; by focusing on this root cause, Wolfe Non-Surgical practitioners can truly <strong>reverse issues in just a few treatments—and sometimes only one.</strong>
+                Wolfe Non-Surgical focuses on <strong>scar tissue, inflammation, calcification, and crystallization</strong> that may contribute to physical restrictions. We have had patients say they noticed greater comfort and freedom of movement within just a few treatments—and some report a meaningful change after their first session.
               </p>
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function WolfeNonSurgical() {
       {/* Conditions */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Effective On All Joints & Organs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Requested Across Joints & Areas of Wellness</h2>
           <div className="max-w-5xl mx-auto mb-8 rounded-2xl overflow-hidden">
             <img
               src={`${import.meta.env.BASE_URL}images/wns-spine.jpg`}
@@ -147,11 +147,11 @@ export default function WolfeNonSurgical() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Patient Testimonials</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {patientTestimonialVideos.map((videoId) => (
+            {patientTestimonialVideos.map((videoId, index) => (
               <div key={videoId} className="rounded-2xl overflow-hidden aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${videoId}`}
-                  title="Wolfe Non-Surgical patient testimonial"
+                  title={`Wolfe Non-Surgical patient testimonial ${index + 1}`}
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -183,11 +183,11 @@ export default function WolfeNonSurgical() {
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-8">
-            {certificationTestimonialVideos.map((videoId) => (
+            {certificationTestimonialVideos.map((videoId, index) => (
               <div key={videoId} className="rounded-2xl overflow-hidden aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${videoId}`}
-                  title="Wolfe Non-Surgical certification testimonial"
+                  title={`Wolfe Non-Surgical certification testimonial ${index + 1}`}
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen

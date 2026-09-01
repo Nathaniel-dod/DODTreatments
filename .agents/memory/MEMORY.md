@@ -5,3 +5,4 @@
 - [Treatment CTA routing](treatment-cta-routing.md) — treatment CTAs find services through Clinics; consultation CTAs belong only on the Perfect Day Consult treatment page.
 - [Rita and Penticton routing](rita-penticton-routing.md) — all Rita Marialaki and Penticton actions route to Vital Vibes Wellness.
 - [Visible contact details](visible-contact-details.md) — booking/contact actions must display the actual phone number or email, not only generic labels.
+- [Treatment claim voice](treatment-claim-voice.md) — soften strong benefit claims with attributed patient-experience language; do not add basic primers for the warm audience.

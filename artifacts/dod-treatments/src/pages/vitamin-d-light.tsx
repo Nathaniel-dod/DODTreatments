@@ -62,7 +62,7 @@ export default function VitaminDLight() {
         <div className="absolute inset-y-0 right-0 hidden md:flex w-[35%] items-center justify-center pointer-events-none">
           <div className="absolute inset-0 bg-gradient-to-l from-background via-background/50 to-transparent" />
           <img
-            src={`${import.meta.env.BASE_URL}images/solrx-e-series.png`}
+            src={`${import.meta.env.BASE_URL}images/solrx-e-series.webp`}
             alt=""
             aria-hidden="true"
             className="relative z-10 h-[75%] max-h-96 w-full object-contain mix-blend-screen opacity-90"

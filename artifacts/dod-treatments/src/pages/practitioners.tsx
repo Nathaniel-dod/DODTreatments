@@ -113,11 +113,13 @@ export default function Practitioners() {
               {/* Search Bar */}
               <div className="p-4 border-b border-white/10 bg-background/50 backdrop-blur-xl z-10 shrink-0">
                 <div className="relative">
-                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+                  <label htmlFor="practitioner-search" className="sr-only">Search practitioners by name, city, or treatment</label>
+                  <Search aria-hidden="true" className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
                   <input 
+                    id="practitioner-search"
                     type="text"
                     placeholder="Search by name, city, treatment..."
-                    className="w-full bg-black/20 border border-white/10 rounded-xl py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                    className="w-full rounded-xl border border-white/20 bg-black/20 py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     value={searchQuery}
                     onChange={e => setSearchQuery(e.target.value)}
                   />
@@ -208,7 +210,7 @@ export default function Practitioners() {
 
                       {/* Expanded content */}
                       {selectedId === p.id && (
-                        <div className="space-y-4 animate-fade-in mb-4">
+                        <div id={`practitioner-details-${p.id}`} className="space-y-4 animate-fade-in mb-4">
                           {p.treatments.length > 0 && (
                             <div>
                               <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1.5">

@@ -27,6 +27,9 @@ import Dod5StarLocation from '@/pages/dod5star-location';
 import Penticton from '@/pages/penticton';
 import PersonalTreatment from '@/pages/personal-treatment';
 import Practitioners from '@/pages/practitioners';
+import PrivacyPolicy from '@/pages/privacy-policy';
+import MedicalDisclaimer from '@/pages/medical-disclaimer';
+import TermsOfUse from '@/pages/terms-of-use';
 import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
@@ -71,6 +74,9 @@ function Router() {
           <Route path="/clinics/penticton" component={Penticton} />
           <Route path="/personal-treatment" component={PersonalTreatment} />
           <Route path="/practitioners" component={Practitioners} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
+          <Route path="/medical-disclaimer" component={MedicalDisclaimer} />
+          <Route path="/terms-of-use" component={TermsOfUse} />
           <Route component={NotFound} />
         </Switch>
       </main>

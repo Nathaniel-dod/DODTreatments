@@ -97,7 +97,7 @@ export const practitioners: Practitioner[] = [
     cityStateCountry: 'Winter Springs, FL, USA',
     phone: '+1 321-444-1148',
     email: 'In production',
-    website: 'https://www.creatingitwithNatnow.com',
+    website: '',
     treatments: ['Wolfe non-surgical', 'CellSonic regeneration', 'Nutraceuticals', 'Perfect day consultation in person or remotely', 'TheraGem light therapy'],
     devices: ['CellSonic Regeneration'],
     certifications: ['Wolfe Non Surgical Certified', 'Whole Life Health Certified', "Women's Pelvic Restoration"],

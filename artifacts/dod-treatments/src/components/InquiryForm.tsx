@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'wouter';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -8,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Checkbox } from '@/components/ui/checkbox';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { addDays, format, startOfDay } from 'date-fns';
@@ -24,6 +26,9 @@ const inquirySchema = z.object({
   requestedDeparture: z.string().optional(),
   healthStatus: z.enum(['chronic-critical', 'mild-moderate', 'healthy']).optional(),
   message: z.string().min(1, 'Message is required'),
+  consent: z.boolean().refine(value => value, {
+    message: 'Please confirm your consent before submitting',
+  }),
   botcheck: z.string().optional(),
 });
 
@@ -47,6 +52,8 @@ export function InquiryForm({
   const [submitError, setSubmitError] = useState('');
   const [arrivalCalendarOpen, setArrivalCalendarOpen] = useState(false);
   const [departureCalendarOpen, setDepartureCalendarOpen] = useState(false);
+  const successRef = useRef<HTMLDivElement>(null);
+  const errorRef = useRef<HTMLParagraphElement>(null);
 
   const form = useForm<InquiryFormData>({
     resolver: zodResolver(inquirySchema),
@@ -61,9 +68,18 @@ export function InquiryForm({
       requestedDeparture: '',
       healthStatus: undefined,
       message: '',
+      consent: false,
       botcheck: '',
     },
   });
+
+  useEffect(() => {
+    if (isSuccess) successRef.current?.focus();
+  }, [isSuccess]);
+
+  useEffect(() => {
+    if (submitError) errorRef.current?.focus();
+  }, [submitError]);
 
   const onSubmit = async (data: InquiryFormData) => {
     if (includeStayPlanning) {
@@ -106,6 +122,7 @@ export function InquiryForm({
           requested_departure: data.requestedDeparture,
           current_health_status: data.healthStatus,
           message: data.message,
+          consent_to_process_inquiry: data.consent ? 'Yes' : 'No',
           botcheck: data.botcheck,
           page_url: window.location.href,
         }),
@@ -132,7 +149,13 @@ export function InquiryForm({
 
   if (isSuccess) {
     return (
-      <div className="glass-panel rounded-2xl p-8 md:p-12 text-center">
+      <div
+        ref={successRef}
+        role="status"
+        aria-live="polite"
+        tabIndex={-1}
+        className="glass-panel rounded-2xl p-8 text-center outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-12"
+      >
         <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-primary" />
         <h3 className="text-2xl font-bold mb-3">Thank You</h3>
         <p className="text-muted-foreground max-w-md mx-auto">
@@ -422,12 +445,53 @@ export function InquiryForm({
           )}
         />
 
+        <div id="inquiry-privacy-note" className="rounded-xl border border-primary/25 bg-primary/5 p-4 text-sm leading-relaxed text-foreground/90">
+          <p className="font-semibold text-foreground">Please keep your inquiry general.</p>
+          <p className="mt-1">
+            Do not submit emergency information, medical records, payment details, government identification, or other highly
+            sensitive information. This form is processed by Web3Forms and is not an emergency service. For an emergency, call
+            your local emergency services immediately.
+          </p>
+        </div>
+
+        <FormField
+          control={form.control}
+          name="consent"
+          render={({ field }) => (
+            <FormItem className="rounded-xl border border-white/15 bg-background/30 p-4">
+              <div className="flex items-start gap-3">
+                <FormControl>
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={checked => field.onChange(checked === true)}
+                    aria-describedby="inquiry-privacy-note"
+                  />
+                </FormControl>
+                <div className="space-y-1">
+                  <FormLabel className="cursor-pointer text-sm leading-relaxed">
+                    I consent to Doc of Detox Treatments and Web3Forms processing the information I submit to respond to this
+                    inquiry. I have read the <Link href="/privacy-policy" className="text-primary underline underline-offset-4">Privacy Policy</Link> and{' '}
+                    <Link href="/terms-of-use" className="text-primary underline underline-offset-4">Terms of Use</Link>.
+                  </FormLabel>
+                  <FormMessage />
+                </div>
+              </div>
+            </FormItem>
+          )}
+        />
+
         <Button type="submit" className="w-full" size="lg" disabled={isSubmitting}>
-          {isSubmitting ? 'Sending...' : 'Submit Inquiry'}
+          <span aria-live="polite">{isSubmitting ? 'Sending...' : 'Submit Inquiry'}</span>
         </Button>
 
         {submitError && (
-          <p className="text-destructive text-sm text-center">
+          <p
+            ref={errorRef}
+            role="alert"
+            aria-live="assertive"
+            tabIndex={-1}
+            className="text-destructive text-sm text-center outline-none"
+          >
             {submitError}
           </p>
         )}

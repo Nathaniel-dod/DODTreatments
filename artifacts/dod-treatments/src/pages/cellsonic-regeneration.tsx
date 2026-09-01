@@ -5,18 +5,18 @@ import { Button } from '@/components/ui/button';
 import { CheckCircle2, ExternalLink, Play } from 'lucide-react';
 
 const benefits = [
-  { title: 'Pain Relief', desc: 'Reduce inflammation and accelerate natural healing.' },
+  { title: 'Comfort Support', desc: 'May support a healthy inflammatory response and natural recovery.' },
   { title: 'Scar Tissue Repair', desc: 'Support regeneration for healthier skin and muscles.' },
-  { title: 'Joint & Organ Rejuvenation', desc: 'Reduce calcification and improve mobility.' },
-  { title: 'Unlock Your Potential', desc: 'Enhance strength, flexibility, and motion.' },
-  { title: 'Supercharge Your System', desc: 'Boost circulation, lymphatic flow, and cellular function.' },
-  { title: 'Restore Balance', desc: 'Optimize body harmony and long-term wellness.' },
-  { title: 'Accelerated Healing', desc: 'Activate self-repair for faster recovery.' },
-  { title: 'Cellular Revolution', desc: 'Reduce inflammation and restore vitality.' },
-  { title: 'Cellular Harmony', desc: 'Optimize mitochondrial efficiency.' },
-  { title: 'Energize from Within', desc: 'Increase natural energy production.' },
-  { title: 'Mitochondrial Restoration', desc: 'Repair and enhance mitochondrial function for sustained energy.' },
-  { title: 'Cellular Recharge', desc: 'Replenish and optimize cellular energy for improved resilience and longevity.' },
+  { title: 'Joint & Mobility Support', desc: 'May help address calcification and support mobility.' },
+  { title: 'Unlock Your Potential', desc: 'Designed to support strength, flexibility, and motion.' },
+  { title: 'Supercharge Your System', desc: 'May support circulation, lymphatic flow, and cellular function.' },
+  { title: 'Restore Balance', desc: 'Complement body harmony and long-term wellness goals.' },
+  { title: 'Recovery Support', desc: 'Encourage the body’s natural repair processes.' },
+  { title: 'Cellular Vitality', desc: 'Support a healthy inflammatory response and renewed vitality.' },
+  { title: 'Cellular Harmony', desc: 'Designed to support mitochondrial efficiency.' },
+  { title: 'Energize from Within', desc: 'May support natural energy production.' },
+  { title: 'Mitochondrial Support', desc: 'Designed to support mitochondrial function and sustained energy.' },
+  { title: 'Cellular Recharge', desc: 'Support cellular energy, resilience, and vitality.' },
 ];
 
 const treatmentAreas = [
@@ -31,11 +31,11 @@ const treatmentAreas = [
 ];
 
 const mechanisms = [
-  { title: 'Better Blood Flow, More Oxygen, ED Treatment', icon: '◈' },
-  { title: 'Collagen Stimulation & Cellulite Reduction', icon: '◈' },
-  { title: 'Breaks Down Calcium Deposits', icon: '◈' },
-  { title: 'Activates Stem Cell Growth', icon: '◈' },
-  { title: 'Reduces Cellular Inflammation', icon: '◈' },
+  { title: 'May Support Blood Flow, Oxygenation & Sexual Wellness', icon: '◈' },
+  { title: 'May Support Collagen & Smoother-Looking Skin', icon: '◈' },
+  { title: 'Designed to Address Calcium Deposits', icon: '◈' },
+  { title: 'May Encourage Natural Cellular Renewal', icon: '◈' },
+  { title: 'Supports a Healthy Inflammatory Response', icon: '◈' },
 ];
 
 const testimonialPlaylist = 'PLGL9YQNm1Tc9CCiVV3aHxohHgCBUFroPI';
@@ -110,12 +110,12 @@ export default function CellSonicRegeneration() {
                 Extracorporeal Shock Wave Therapy for Cell & Tissue Regeneration
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                A healthy body generates 0.04 volts per cell, and with 50 trillion cells, your body battery holds an incredible 2 trillion volts of energy. Extracorporeal Shock Wave Therapy harnesses this power.
+                Extracorporeal Shock Wave Therapy delivers focused acoustic waves designed to complement the body's natural cellular and tissue-recovery processes.
               </p>
               <TreatmentHeroCtas className="md:justify-start" />
             </div>
             <img
-              src={`${import.meta.env.BASE_URL}images/cellsonic-ankle-treatment.png`}
+              src={`${import.meta.env.BASE_URL}images/cellsonic-ankle-treatment.webp`}
               alt="CellSonic Regeneration treatment being applied to an ankle"
               className="w-full max-w-sm mx-auto md:max-w-none h-[20rem] md:h-[28rem] rounded-3xl border border-primary/20 object-cover object-center shadow-2xl"
             />
@@ -165,7 +165,7 @@ export default function CellSonicRegeneration() {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient">SWT Shockwave Therapy for Regeneration & Pain Relief</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Extracorporeal Shock Wave Therapy promotes tissue regeneration, pain relief, and accelerated healing. As a non-invasive therapy, it is widely used in orthopedics, sports medicine, urology, and rehabilitation, helping restore your body's natural balance and vitality.
+              Extracorporeal Shock Wave Therapy is designed to support tissue renewal, comfort, and natural recovery. This non-invasive therapy is used across orthopedics, sports medicine, urology, and rehabilitation to complement the body's own restorative processes.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">

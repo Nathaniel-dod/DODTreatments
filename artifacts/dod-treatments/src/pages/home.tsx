@@ -62,7 +62,7 @@ export default function Home() {
               Total Regeneration Starts Here
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-               From the world's most powerful bodywork to the world's most advanced energy medicine technology, find the clinics and practitioners dedicated to reversing the root cause of pain and disease.
+               From powerful focused bodywork to advanced energy medicine technology, find clinics and practitioners centered on the physical restrictions and wellness factors that may contribute to discomfort.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
               <Link href="/treatments">
@@ -88,7 +88,7 @@ export default function Home() {
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <h3 className="text-2xl font-bold mb-3 gold-gradient">Treatments</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Wolfe Non-Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, and personalized health consultations — therapies that target the root cause of pain and disease.
+                  Wolfe Non-Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, and personalized health consultations — therapies designed to support comfort, mobility, circulation, and whole-body wellness.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Explore Treatments <ArrowRight className="w-4 h-4" />
@@ -207,10 +207,10 @@ export default function Home() {
             <div className="order-1 text-center lg:order-2 lg:text-left">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 gold-gradient">45 Years in the Trenches of Functional Medicine</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Wolfe Non-Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. Personalized to each patient, these strategies have helped reverse the so-called irreversible in thousands of people living with chronic conditions.
+                 Wolfe Non-Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. We have had patients living with chronic conditions say these personalized strategies helped them experience meaningful changes they once thought were out of reach.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Together they address healing at every level — from the cells to inflammation, scar tissue, calcification, emotions, and nutrition — for true whole-body regeneration.
+                 Together they offer support at every level — from cellular wellness to inflammation, scar tissue, calcification, emotions, and nutrition — for a truly whole-body approach.
               </p>
             </div>
             <div className="relative order-2 self-stretch overflow-hidden lg:order-1 [mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)] [-webkit-mask-image:radial-gradient(ellipse_78%_86%_at_62%_48%,black_53%,transparent_100%)]">
