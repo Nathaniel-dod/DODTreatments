@@ -65,7 +65,7 @@ export default function PersonalTreatment() {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How Personal Treatment Works</h2>
             <div className="glass-panel rounded-3xl p-8 md:p-12 space-y-6">
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Our elite Master Practitioners—<strong>Master Practitioner Rita Marialaki</strong> and <strong>Master Practitioner Sandra</strong>—travel to your home anywhere in the world to deliver intensive, personalized healing and training programs.
+                Our elite <strong>Master Practitioner Rita Marialaki</strong> travels to your home anywhere in the world to deliver intensive, personalized healing and training programs.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
                 Whether you're seeking deep healing, learning advanced techniques to treat yourself and your family, or both, our practitioners bring decades of experience directly to you.
@@ -82,7 +82,7 @@ export default function PersonalTreatment() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Our Elite Practitioners</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             
             {/* Rita */}
             <div className="glass-panel rounded-3xl p-8">
@@ -94,18 +94,6 @@ export default function PersonalTreatment() {
                 As a Practitioner, I realized that everyone needs a personalized roadmap, along with repetition, focus and a coach to achieve optimal success. Let me guide You on your way to experience the healing power of the Perfect Day Lifestyle and empower You to master Your God-given Precious Life.
               </p>
               <p className="text-xs text-primary font-medium">Specialties: Wolfe Non-Surgical, Perfect Day Protocols, Emotional Healing</p>
-            </div>
-
-            {/* Sandra */}
-            <div className="glass-panel rounded-3xl p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Star className="w-6 h-6 text-primary" />
-                <h3 className="text-2xl font-bold">Master Practitioner Sandra</h3>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                I now know and realize the truth - that our bodies not only can heal, they were designed to stay healed when we master our perfect day. When we take personal action to become our own practitioner, true healing is not only obtainable but permanent throughout our lives.
-              </p>
-              <p className="text-xs text-primary font-medium">Specialties: Perfect Day Lifestyle, Nutritional Protocols, Water Fasting</p>
             </div>
 
           </div>

@@ -13,20 +13,13 @@ const consultationFaqs = [
   {
     question: 'What types of consultations do Doc of Detox Master Practitioners offer?',
     answer:
-      'Doc of Detox Master Practitioners Sandra and Rita each offer four consultation types: Emotional Consultation, Perfect Day Consultation, Nutritional Consultation, and Water Fasting Consultation. Each consultation delivers a personalized roadmap for your health goals.',
+      'Doc of Detox Master Practitioners offer personalized consultation options designed to provide a clear roadmap for your health goals.',
   },
   {
     question: 'How do I book a Doc of Detox consultation?',
     answer:
       'To book a Doc of Detox consultation, call Cinthia toll-free at 1-855-900-4544 ext. 1 or direct/WhatsApp at 1-469-861-9872. You can also book practitioner consultations online through the booking links on this page, or submit the inquiry form for a personal follow-up.',
   },
-];
-
-const sandraOptions = [
-  { label: 'Emotional Consultation', href: 'https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/17', icon: Heart },
-  { label: 'Perfect Day Consultation', href: 'https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/18', icon: Sun },
-  { label: 'Nutritional Consultation', href: 'https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/19', icon: Apple },
-  { label: 'Water Fasting Consultation', href: 'https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/20', icon: Droplets },
 ];
 
 const ritaOptions = [
@@ -172,33 +165,9 @@ export default function Consultations() {
             Book a Consultation with a Qualified New World Master Practitioner
           </h2>
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-            Choose a personalized consultation with Master Practitioners Sandra, Rita, or Jesse.
+            Choose a personalized consultation with Master Practitioners Rita or Jesse.
           </p>
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            <div className="glass-panel rounded-3xl p-8">
-              <img
-                src={`${import.meta.env.BASE_URL}images/sandra-consultation.webp`}
-                alt="Sandra, New World Master Practitioner"
-                className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Sandra</h3>
-              <p className="text-foreground/80 leading-relaxed mb-6">
-                "Our bodies not only can heal, they were designed to stay healed when we master our perfect day. When we take personal action to become our own practitioner, true healing is not only obtainable but permanent. Let me be your Life Coach on your incredible journey to wellness."
-              </p>
-              <div className="space-y-3">
-                {sandraOptions.map((opt) => (
-                  <a key={opt.label} href={opt.href} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button variant="outline" className="w-full justify-between">
-                      <span className="flex items-center gap-2">
-                        <opt.icon className="w-4 h-4 text-primary" /> {opt.label}
-                      </span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </a>
-                ))}
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="glass-panel rounded-3xl p-8">
               <img
                 src={`${import.meta.env.BASE_URL}images/rita-consultation.webp`}

@@ -44,24 +44,6 @@ Dr. Darrell Wolfe (Toll-Free): [1-855-900-4544](tel:1-855-900-4544) ext. 5
 
 # BOOK YOUR CONSULTATION WITH A QUALIFIED NEW WORLD MASTER PRACTITIONER
 
-![](https://cdn.prod.website-files.com/678eab18f8fcb0d17dafcd47/69e69c06d58be700d3091338_Sandra.jpeg)
-
-## BOOK YOUR PERSONALIZED CONSULTATION SANDRA
-
-I now know and realize the truth - that our bodies not only can heal, they were designed to stay healed when we master our perfect day; the same techniques and strategies that create vibrant health allow us to keep it.
-
-When we take personal action to become our own practitioner, true healing is not only obtainable but permanent throughout our lives. Let me be your Life Coach on your incredible journey to wellness.
-
-**Choose from one of the options below:**
-
-[Emotional Consultation](https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/17)
-
-[Perfect Day Consultation](https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/18)
-
-[Nutritional Consultation](https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/19)
-
-[Water Fasting Consultation](https://lacremeluxe.janeapp.com/#/staff_member/3/treatment/20)
-
 ![](https://cdn.prod.website-files.com/678eab18f8fcb0d17dafcd47/686d847b0788af6a49dfd610_Untitled-3.png)
 
 ## BOOK YOUR PERSONALIZED CONSULTATION RITA
