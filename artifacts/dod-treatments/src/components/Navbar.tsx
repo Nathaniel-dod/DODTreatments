@@ -23,7 +23,7 @@ export function Navbar() {
   const showConsultationCta = location.startsWith('/treatments/consultations');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-background/95 shadow-[0_8px_30px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-[#0a1422]/98 shadow-[0_8px_30px_rgba(0,0,0,0.28)] backdrop-blur-xl">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 min-h-20 py-2">
           {/* Logo */}
