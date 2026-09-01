@@ -55,7 +55,18 @@ export function Dod5StarNav() {
                 {item.name}
               </a>
             ) : (
-              <Link key={item.href} href={item.href} className={className}>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={className}
+                onClick={(event) => {
+                  if (item.name === 'The Residence' && location === item.href) {
+                    event.preventDefault();
+                    window.history.replaceState(null, '', window.location.pathname + window.location.search);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+              >
                 {item.name}
               </Link>
             );
