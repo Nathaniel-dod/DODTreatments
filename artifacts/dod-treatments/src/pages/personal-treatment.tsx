@@ -1,6 +1,5 @@
 import { Seo } from '@/components/Seo';
-import { InquiryForm } from '@/components/InquiryForm';
-import { Plane, Users, GraduationCap } from 'lucide-react';
+import { Plane, Users, GraduationCap, Mail, Phone } from 'lucide-react';
 
 export default function PersonalTreatment() {
   const structuredData = [
@@ -104,17 +103,39 @@ export default function PersonalTreatment() {
         </div>
       </section>
 
-      {/* Inquiry Form */}
+      {/* Contact */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Request Your Personal Program</h2>
-            <p className="text-lg text-muted-foreground">
-              Tell us about your health goals and preferred dates. We'll design a custom program and provide a detailed proposal within 24 hours.
+            <p className="text-lg text-muted-foreground mb-8">
+              Email Cinthia or call Dr. Darrell Wolfe directly to discuss a personalized treatment and training experience for you or your group.
             </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <InquiryForm defaultType="personal-treatment" defaultLocation="In-home (worldwide)" />
+            <div className="glass-panel rounded-2xl p-6 inline-block text-left">
+              <div className="space-y-4">
+                <a href="mailto:office.docofdetox@gmail.com" className="flex items-center gap-3 text-lg group">
+                  <Mail className="w-6 h-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <div className="font-medium group-hover:text-primary">Email Cinthia</div>
+                    <div className="text-primary break-all">office.docofdetox@gmail.com</div>
+                  </div>
+                </a>
+                <a href="tel:1-469-861-8884" className="flex items-center gap-3 text-lg group">
+                  <Phone className="w-6 h-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <div className="font-medium group-hover:text-primary">Dr. Darrell Wolfe — USA Direct or WhatsApp</div>
+                    <div className="text-primary">1-469-861-8884</div>
+                  </div>
+                </a>
+                <a href="tel:1-855-900-4544" className="flex items-center gap-3 text-lg group">
+                  <Phone className="w-6 h-6 shrink-0 text-primary" aria-hidden="true" />
+                  <div>
+                    <div className="font-medium group-hover:text-primary">Dr. Darrell Wolfe — Worldwide Toll-Free</div>
+                    <div className="text-primary">1-855-900-4544 ext. 5</div>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
