@@ -17,7 +17,7 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
   {
     name: 'Dr. Sage Wolfe',
     role: 'Host & Master Practitioner',
-    bio: 'Host Master Practitioner of the retreat, guiding guests through their personalized healing and training experience. Full bio coming soon.',
+    bio: 'Dr. Sage is a Doctor of Natural Medicine and Indigenous Medicine, Certified Wolfe Non-Surgical Master Trainer, and primary author of the BHNUniversity training manual. Drawing on 17 years of experience and a background as a professional gymnast, he combines natural medicine, hands-on bodywork, movement, recovery, psychology, and human performance.',
     image: 'images/sage-team.webp',
     imageAlt: 'Dr. Sage Wolfe performing a hands-on treatment',
   },
