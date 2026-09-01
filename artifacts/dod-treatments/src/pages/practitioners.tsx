@@ -1,7 +1,8 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Seo } from '@/components/Seo';
-import { Smartphone, ExternalLink, Search, Phone, Mail, Globe, MapPin, Award, Stethoscope, ChevronRight, GraduationCap, ChevronDown } from 'lucide-react';
+import { Smartphone, ExternalLink, Search, Phone, Mail, Globe, MapPin, Award, Stethoscope, ChevronRight, GraduationCap, ChevronDown, Quote } from 'lucide-react';
 import { practitioners } from '@/data/practitioners';
+import { practitionerTestimonials } from '@/data/practitionerTestimonials';
 import { PractitionerMap } from '@/components/PractitionerMap';
 
 const locationNames: Record<string, string> = {
@@ -289,6 +290,42 @@ export default function Practitioners() {
             </div>
             
           </div>
+        </div>
+      </section>
+
+      {/* Practitioner testimonials */}
+      <section className="border-t border-white/5 bg-card/20 py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-10 max-w-3xl text-center">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">Individual Experiences</p>
+            <h2 className="gold-gradient text-3xl font-bold md:text-4xl">What Clients Have Shared</h2>
+          </div>
+
+          <div className="mx-auto max-w-4xl space-y-6">
+            {practitionerTestimonials.map((testimonial) => (
+              <article key={`${testimonial.practitionerId}-${testimonial.author}`} className="glass-panel rounded-3xl p-7 md:p-10">
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Quote className="h-5 w-5" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold">{testimonial.practitionerName}</h3>
+                    <p className="text-sm text-muted-foreground">Practitioner testimonial</p>
+                  </div>
+                </div>
+                <blockquote className="space-y-4 text-base leading-relaxed text-foreground/85">
+                  {testimonial.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                  <footer className="pt-2 font-semibold text-primary">— {testimonial.author}</footer>
+                </blockquote>
+              </article>
+            ))}
+          </div>
+
+          <p className="mx-auto mt-6 max-w-3xl text-center text-xs leading-relaxed text-muted-foreground">
+            This testimonial reflects one individual&apos;s personal experience. Results vary, and no particular treatment or outcome is guaranteed. Testimonials are not a substitute for professional medical advice.
+          </p>
         </div>
       </section>
 
