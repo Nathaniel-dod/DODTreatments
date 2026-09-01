@@ -117,7 +117,7 @@ export default function IxtapaZihuatanejo() {
                 <Sparkles className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Treatments</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Daily Wolfe Non-Surgical, CellSonic, Cardio MedBed, and personalized healing protocols.
+                  Wolfe Non-Surgical, CellSonic Regeneration, Cardio MedBed, in-house Energy Medicine therapies included with your stay, and personalized healing protocols.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
                   See the Treatments <ArrowRight className="w-4 h-4" />
