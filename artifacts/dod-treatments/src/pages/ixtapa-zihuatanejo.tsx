@@ -105,7 +105,7 @@ export default function IxtapaZihuatanejo() {
                 <BedDouble className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">The Residence</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Private suites, a salt-water pool, wellness technology, airport support, and more in a luxury jungle estate.
+                  Private suites, a structured salt-water pool, on-site practitioners, airport shuttles, and more in a luxury jungle estate.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
                   Explore the Residence <ArrowRight className="w-4 h-4" />
