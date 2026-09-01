@@ -157,7 +157,7 @@ export default function IxtapaZihuatanejo() {
                 'People seeking more intensive support than an occasional appointment',
                 'People combining several treatments as part of a personalized plan',
                 'People who want to learn how to continue supporting themselves at home',
-                'People comfortable travelling for a private healing experience',
+                'People comfortable travelling for a private healing experience and want to experience the gem of Mexico',
               ].map((point, index) => (
                 <div key={point} className="glass-panel flex items-start gap-5 rounded-2xl p-6">
                   <span className="mt-0.5 text-sm font-semibold tracking-[0.16em] text-primary">0{index + 1}</span>
