@@ -1,6 +1,6 @@
 import { Seo } from '@/components/Seo';
 import { InquiryForm } from '@/components/InquiryForm';
-import { Plane, Calendar } from 'lucide-react';
+import { Plane, Users, GraduationCap } from 'lucide-react';
 
 export default function PersonalTreatment() {
   const structuredData = [
@@ -56,59 +56,50 @@ export default function PersonalTreatment() {
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How Personal Treatment Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">A Program Built Around You</h2>
             <div className="glass-panel rounded-3xl p-8 md:p-12 space-y-6">
               <p className="text-lg text-foreground/90 leading-relaxed">
-                 Intensive, personalized treatment and training programs are available in your home anywhere in the world.
+                Personal Treatment &amp; Training is available for individuals, families, friends, caregivers, groups, and organizations anywhere in the world.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                 Whether you're seeking deep healing, learning advanced techniques to treat yourself and your family, or both, the experience is designed around your individual goals.
+                Each experience is personalized to the needs of the person or group. Programs can range from 5 to 33 days, with a minimum of seven hours per day, depending on your goals and circumstances.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Programs are fully customized based on your health goals, timeline, and desired outcomes. All travel, accommodation, and logistics are handled seamlessly.
+                Treatment, hands-on training, strategies, and practical tools are brought together so what you learn can become part of your daily lifestyle.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Program Options */}
+      {/* Personalized paths */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Program Options</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            
-            <div className="glass-panel rounded-2xl p-6 text-center">
-              <Calendar className="w-10 h-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-bold mb-2">3-Day Intensive</h3>
-              <p className="text-sm text-muted-foreground mb-3">Focused healing or training</p>
-              <p className="text-xs text-primary font-medium">Inquire for pricing</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Two Personalized Paths</h2>
+          <div className="grid gap-6 md:grid-cols-2 max-w-5xl mx-auto">
+            <div className="glass-panel rounded-3xl p-8 md:p-10">
+              <Users className="w-10 h-10 mb-5 text-primary" aria-hidden="true" />
+              <h3 className="text-2xl font-bold mb-4">Treatment &amp; Training for You and Your Loved Ones</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Receive personalized treatments while you, your friends, and your family learn and practice techniques on yourselves. The experience is built around your group so you can continue supporting your own well-being and the people you love.
+              </p>
+              <p className="mt-6 border-t border-white/10 pt-5 text-sm font-medium text-primary">
+                Best for individuals and families who want to treat themselves and their loved ones.
+              </p>
             </div>
-
-            <div className="glass-panel rounded-2xl p-6 text-center">
-              <Calendar className="w-10 h-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-bold mb-2">5-Day Deep Dive</h3>
-              <p className="text-sm text-muted-foreground mb-3">Comprehensive treatment + training</p>
-              <p className="text-xs text-primary font-medium">Inquire for pricing</p>
+            <div className="glass-panel rounded-3xl p-8 md:p-10">
+              <GraduationCap className="w-10 h-10 mb-5 text-primary" aria-hidden="true" />
+              <h3 className="text-2xl font-bold mb-4">Professional Wolfe Non-Surgical Certification</h3>
+              <p className="text-foreground/90 leading-relaxed">
+                Wolfe Non-Surgical certification can be completed individually or with a group of friends and family. Training comes to you, helping participants build the skills and confidence to become a light in their communities and begin or strengthen a clinic or home practice.
+              </p>
+              <p className="mt-6 border-t border-white/10 pt-5 text-sm font-medium text-primary">
+                Best for those who want to begin or advance a professional healing career.
+              </p>
             </div>
-
-            <div className="glass-panel rounded-2xl p-6 text-center">
-              <Calendar className="w-10 h-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-bold mb-2">7-Day Transformation</h3>
-              <p className="text-sm text-muted-foreground mb-3">Full immersion healing journey</p>
-              <p className="text-xs text-primary font-medium">Inquire for pricing</p>
-            </div>
-
-            <div className="glass-panel rounded-2xl p-6 text-center">
-              <Calendar className="w-10 h-10 mx-auto mb-4 text-primary" />
-              <h3 className="font-bold mb-2">Fully Customized</h3>
-              <p className="text-sm text-muted-foreground mb-3">Tailored to your exact needs</p>
-              <p className="text-xs text-primary font-medium">Inquire for pricing</p>
-            </div>
-
           </div>
-          <p className="text-center text-sm text-muted-foreground mt-8 max-w-2xl mx-auto">
-             All programs include coordinated travel and accommodations, personalized treatment protocols, training materials, and lifetime support. Contact us to design your custom program.
+          <p className="text-center text-sm text-muted-foreground mt-8 max-w-3xl mx-auto">
+            Every experience is shaped around the needs, goals, size, and location of the individual or group.
           </p>
         </div>
       </section>
