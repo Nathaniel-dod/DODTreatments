@@ -46,7 +46,7 @@ export function Dod5StarNav() {
     ) ?? items[0];
 
   return (
-    <div className="sticky top-20 z-40 border-b border-white/5 bg-background/80 backdrop-blur-md">
+    <div className="sticky top-20 z-40 mb-10 border-b border-white/5 bg-background/80 backdrop-blur-md md:mb-0">
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-3 md:hidden">
           <button
