@@ -176,9 +176,14 @@ export default function BioptronLight() {
             <p className="mx-auto mb-8 max-w-2xl text-lg text-muted-foreground">
               Resident access to Bioptron Light is included with your DOD5Star stay. The team can help you understand setup, positioning, and appropriate use.
             </p>
-            <Button asChild size="lg" className="gold-glow">
-              <Link href="/clinics/ixtapa-zihuatanejo/inquire">Plan Your Stay</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="gold-glow">
+                <Link href="/clinics/ixtapa-zihuatanejo/inquire">Plan Your Stay</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/clinics/ixtapa-zihuatanejo">Available at DOD5Star — Free with Your Stay</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>

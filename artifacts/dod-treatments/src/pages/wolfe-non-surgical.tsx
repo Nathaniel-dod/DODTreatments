@@ -134,6 +134,9 @@ export default function WolfeNonSurgical() {
               <Link href="/clinics">
                 <Button size="lg" className="gold-glow">Find a Practitioner Near You</Button>
               </Link>
+              <Link href="/clinics/ixtapa-zihuatanejo">
+                <Button size="lg" variant="outline">Available at DOD5Star</Button>
+              </Link>
             </div>
           </div>
         </div>

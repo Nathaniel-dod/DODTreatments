@@ -174,6 +174,9 @@ export default function CardioMedBed() {
               <Link href="/clinics">
                 <Button size="lg" className="gold-glow">Find a Clinic</Button>
               </Link>
+              <Link href="/clinics/ixtapa-zihuatanejo">
+                <Button size="lg" variant="outline">Available at DOD5Star</Button>
+              </Link>
             </div>
           </div>
         </div>

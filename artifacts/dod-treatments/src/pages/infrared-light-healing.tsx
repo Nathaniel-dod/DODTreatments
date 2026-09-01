@@ -246,6 +246,9 @@ export default function InfraredLightHealing() {
               <Button size="lg" className="gold-glow" asChild>
                 <Link href="/clinics">Explore Clinics</Link>
               </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/clinics/ixtapa-zihuatanejo">Available at DOD5Star — Free with Your Stay</Link>
+              </Button>
             </div>
           </div>
         </div>

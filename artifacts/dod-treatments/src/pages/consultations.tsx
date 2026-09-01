@@ -255,9 +255,14 @@ export default function Consultations() {
             <p className="text-lg text-muted-foreground mb-8">
               Explore our clinic directory to find additional treatment locations and practitioner services.
             </p>
-            <Link href="/clinics">
-              <Button size="lg" className="gold-glow">Explore More Clinics</Button>
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/clinics">
+                <Button size="lg" className="gold-glow">Explore More Clinics</Button>
+              </Link>
+              <Link href="/clinics/ixtapa-zihuatanejo">
+                <Button size="lg" variant="outline">Available at DOD5Star</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
