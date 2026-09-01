@@ -40,6 +40,7 @@ export function PractitionerMap({ practitioners, selectedId, onSelect }: Practit
       maxBoundsViscosity: 1.0
     });
 
+    map.attributionControl.setPrefix(false);
     L.control.zoom({ position: 'bottomright' }).addTo(map);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
