@@ -260,8 +260,11 @@ export default function IxtapaZihuatanejo() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Book Your Retreat</h2>
+            <Link href="/clinics/ixtapa-zihuatanejo/inquire">
+              <Button size="lg" className="gold-glow mb-8">Plan Your Stay <ArrowRight className="ml-2 w-5 h-5" /></Button>
+            </Link>
             <p className="text-lg text-muted-foreground mb-8">
-              Call Dr. Darrell Wolfe directly for your 30-minute consultation. It will be an honor for him to help you create your Health & Healing Experience.
+              If you have any questions or would like to see which plan of action is best for your specific situation, don&apos;t hesitate to call Dr. Darrell Wolfe directly.
             </p>
             <div className="glass-panel rounded-2xl p-6 inline-block">
               <div className="space-y-3">
@@ -282,15 +285,6 @@ export default function IxtapaZihuatanejo() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Plan Your Stay CTA */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link href="/clinics/ixtapa-zihuatanejo/inquire">
-            <Button size="lg" className="gold-glow">Plan Your Stay <ArrowRight className="ml-2 w-5 h-5" /></Button>
-          </Link>
         </div>
       </section>
     </>
