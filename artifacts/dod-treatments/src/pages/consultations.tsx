@@ -18,7 +18,7 @@ const consultationFaqs = [
   {
     question: 'How do I book a Doc of Detox consultation?',
     answer:
-      'To book a Doc of Detox consultation, call Cinthia toll-free at 1-855-900-4544 ext. 1 or direct/WhatsApp at 1-469-861-9872. You can also book practitioner consultations online through the booking links on this page, or submit the inquiry form for a personal follow-up.',
+      'To book a Doc of Detox consultation, call Cinthia toll-free at 1-855-900-4544 ext. 1, direct/WhatsApp at 1-469-861-9872, or email office.docofdetox@gmail.com. You can also use the practitioner booking links on this page.',
   },
 ];
 
@@ -214,24 +214,35 @@ export default function Consultations() {
               </p>
               <div className="space-y-3">
                 <a href="tel:1-855-900-4544" className="block">
-                  <Button variant="outline" className="w-full justify-between">
+                  <Button variant="outline" className="w-full h-auto min-h-12 justify-start whitespace-normal py-2">
                     <span className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-primary" /> Toll-Free
+                      <Phone className="w-4 h-4 text-primary" />
+                      <span className="text-left">
+                        <span className="block text-xs text-muted-foreground">Toll-Free</span>
+                        <span className="block">1-855-900-4544 ext. 1</span>
+                      </span>
                     </span>
-                    <span className="text-xs">Ext. 1</span>
                   </Button>
                 </a>
                 <a href="tel:1-469-861-9872" className="block">
-                  <Button variant="outline" className="w-full justify-between">
+                  <Button variant="outline" className="w-full h-auto min-h-12 justify-start whitespace-normal py-2">
                     <span className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-primary" /> Direct / WhatsApp
+                      <Phone className="w-4 h-4 text-primary" />
+                      <span className="text-left">
+                        <span className="block text-xs text-muted-foreground">Direct / WhatsApp</span>
+                        <span className="block">1-469-861-9872</span>
+                      </span>
                     </span>
                   </Button>
                 </a>
                 <a href="mailto:office.docofdetox@gmail.com" className="block">
-                  <Button variant="outline" className="w-full justify-between">
+                  <Button variant="outline" className="w-full h-auto min-h-10 justify-start whitespace-normal py-2">
                     <span className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 text-primary" /> Email Cinthia
+                      <Mail className="w-4 h-4 shrink-0 text-primary" />
+                      <span className="text-left break-all">
+                        <span className="block text-xs text-muted-foreground">Email Cinthia</span>
+                        <span className="block">office.docofdetox@gmail.com</span>
+                      </span>
                     </span>
                   </Button>
                 </a>
