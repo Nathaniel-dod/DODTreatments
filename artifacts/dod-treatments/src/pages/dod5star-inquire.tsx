@@ -2,7 +2,7 @@ import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { InquiryForm } from '@/components/InquiryForm';
 import { dod5StarTeam } from '@/data/dod5starTeam';
-import { Phone, User } from 'lucide-react';
+import { User } from 'lucide-react';
 
 export default function Dod5StarInquire() {
   return (
@@ -57,24 +57,6 @@ export default function Dod5StarInquire() {
                 <h3 className="text-xl font-bold">{member.name}</h3>
                 <p className="mb-3 mt-1 text-sm font-medium text-primary">{member.role}</p>
                 <p className="text-sm leading-relaxed text-muted-foreground">{member.bio}</p>
-                {member.name === 'Dr. Darrell Wolfe' && (
-                  <div className="mt-5 space-y-3 border-t border-white/10 pt-5 text-left">
-                    <a href="tel:1-469-861-8884" className="group flex items-center gap-3">
-                      <Phone className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                      <span>
-                        <span className="block text-sm font-medium group-hover:text-primary">USA Direct or WhatsApp</span>
-                        <span className="block text-sm text-primary">1-469-861-8884</span>
-                      </span>
-                    </a>
-                    <a href="tel:1-855-900-4544" className="group flex items-center gap-3">
-                      <Phone className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-                      <span>
-                        <span className="block text-sm font-medium group-hover:text-primary">Worldwide Toll-Free</span>
-                        <span className="block text-sm text-primary">1-855-900-4544 ext. 5</span>
-                      </span>
-                    </a>
-                  </div>
-                )}
               </article>
             ))}
           </div>
