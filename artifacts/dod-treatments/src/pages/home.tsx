@@ -88,21 +88,10 @@ export default function Home() {
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <h3 className="text-2xl font-bold mb-3 gold-gradient">Treatments</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Wolfe Non-Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, and personalized health consultations — therapies designed to support comfort, mobility, circulation, and whole-body wellness.
+                  Wolfe Non-Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, Energy Medicine, &amp; Perfect Day Consultations - designed to support mobility, circulation, and whole-body wellness while reducing inflammation and calcification.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Explore Treatments <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </Link>
-            <Link href="/personal-treatment">
-              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <h3 className="text-2xl font-bold mb-3 gold-gradient">Personal Treatments & Training</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Elite Master Practitioners fly to your home anywhere in the world for multi-day intensive treatment and training programs, built entirely around you.
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
-                  Learn More <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             </Link>
@@ -114,6 +103,17 @@ export default function Home() {
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Visit the Retreat <ArrowRight className="w-4 h-4" />
+                </div>
+              </div>
+            </Link>
+            <Link href="/personal-treatment">
+              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
+                <h3 className="text-2xl font-bold mb-3 gold-gradient">Personal Treatments & Training</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                  Elite Master Practitioners fly to your home anywhere in the world for multi-day intensive treatment and training programs, built entirely around you.
+                </p>
+                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
+                  Learn More <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
             </Link>
