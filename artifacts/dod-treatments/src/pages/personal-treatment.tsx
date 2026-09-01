@@ -1,6 +1,6 @@
 import { Seo } from '@/components/Seo';
 import { InquiryForm } from '@/components/InquiryForm';
-import { Plane, Star, Calendar } from 'lucide-react';
+import { Plane, Calendar } from 'lucide-react';
 
 export default function PersonalTreatment() {
   const structuredData = [
@@ -8,7 +8,7 @@ export default function PersonalTreatment() {
       '@context': 'https://schema.org',
       '@type': 'Product',
       name: 'Personal Treatment & Training - In-Home',
-      description: 'Elite Master Practitioners fly to your home anywhere in the world to deliver personalized multi-day intensive advanced energy medicine programs.',
+      description: 'Personalized multi-day intensive advanced energy medicine programs are available in your home anywhere in the world.',
       image: 'https://docofdetoxtreatments.com/images/hero-personal-treatment.jpg',
       url: 'https://docofdetoxtreatments.com/personal-treatment',
     },
@@ -16,14 +16,8 @@ export default function PersonalTreatment() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Personal Treatment & Training - In-Home Service',
-      description: 'Elite Master Practitioners deliver advanced energy medicine treatments and training in your home anywhere in the world. Multi-day intensive programs available.',
+      description: 'Advanced energy medicine treatments and training are available in your home anywhere in the world through personalized multi-day intensive programs.',
       lastReviewed: '2025-01-15',
-      reviewedBy: {
-        '@type': 'Person',
-        name: 'Dr. Darrell Wolfe',
-        honorificSuffix: 'N.D.',
-        jobTitle: 'Doctor of Naturopathic Medicine',
-      },
     },
   ];
 
@@ -31,7 +25,7 @@ export default function PersonalTreatment() {
     <>
       <Seo
         title="Personal Treatment & Training | Doc of Detox"
-        description="Elite Master Practitioners fly to your home anywhere in the world to deliver multi-day intensive programs in Wolfe Non-Surgical and energy medicine."
+        description="Personalized multi-day intensive programs in Wolfe Non-Surgical and energy medicine are available in your home anywhere in the world."
         path="/personal-treatment"
         structuredData={structuredData}
       />
@@ -49,10 +43,10 @@ export default function PersonalTreatment() {
               Personal Treatment & Training
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
-              Elite Master Practitioners Fly to You — Anywhere in the World
+              Private Multi-Day Programs — Anywhere in the World
             </p>
             <p className="text-lg text-foreground/80 leading-relaxed max-w-3xl mx-auto">
-              Experience advanced energy medicine in the comfort of your own home with personalized multi-day intensive programs delivered by our two elite Master Practitioners.
+              Experience advanced energy medicine in the comfort of your own home through a personalized multi-day intensive program.
             </p>
           </div>
         </div>
@@ -65,37 +59,15 @@ export default function PersonalTreatment() {
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">How Personal Treatment Works</h2>
             <div className="glass-panel rounded-3xl p-8 md:p-12 space-y-6">
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Our elite <strong>Master Practitioner Rita Marialaki</strong> travels to your home anywhere in the world to deliver intensive, personalized healing and training programs.
+                 Intensive, personalized treatment and training programs are available in your home anywhere in the world.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
-                Whether you're seeking deep healing, learning advanced techniques to treat yourself and your family, or both, our practitioners bring decades of experience directly to you.
+                 Whether you're seeking deep healing, learning advanced techniques to treat yourself and your family, or both, the experience is designed around your individual goals.
               </p>
               <p className="text-lg text-foreground/90 leading-relaxed">
                 Programs are fully customized based on your health goals, timeline, and desired outcomes. All travel, accommodation, and logistics are handled seamlessly.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Practitioners */}
-      <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Our Elite Practitioners</h2>
-          <div className="max-w-3xl mx-auto">
-            
-            {/* Rita */}
-            <div className="glass-panel rounded-3xl p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <Star className="w-6 h-6 text-primary" />
-                <h3 className="text-2xl font-bold">Master Practitioner Rita Marialaki</h3>
-              </div>
-              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                As a Practitioner, I realized that everyone needs a personalized roadmap, along with repetition, focus and a coach to achieve optimal success. Let me guide You on your way to experience the healing power of the Perfect Day Lifestyle and empower You to master Your God-given Precious Life.
-              </p>
-              <p className="text-xs text-primary font-medium">Specialties: Wolfe Non-Surgical, Perfect Day Protocols, Emotional Healing</p>
-            </div>
-
           </div>
         </div>
       </section>
@@ -136,7 +108,7 @@ export default function PersonalTreatment() {
 
           </div>
           <p className="text-center text-sm text-muted-foreground mt-8 max-w-2xl mx-auto">
-            All programs include practitioner travel, accommodations, personalized treatment protocols, training materials, and lifetime support. Contact us to design your custom program.
+             All programs include coordinated travel and accommodations, personalized treatment protocols, training materials, and lifetime support. Contact us to design your custom program.
           </p>
         </div>
       </section>
