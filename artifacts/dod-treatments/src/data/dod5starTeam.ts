@@ -10,7 +10,7 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
   {
     name: 'Dr. Darrell Wolfe',
     role: 'Founder',
-    bio: 'Creator of the DOD5Star retreat. With 45 years in the trenches of functional medicine, Dr. Wolfe created Wolfe Non-Surgical and the Doc of Detox approach to reversing the so-called irreversible.',
+    bio: 'Dr. Darrell Wolfe, Ac., Ph.D., D.N.M., D.H.S., has over 45 years of experience in Advanced Energy Medicine Therapy and Psychology. Known as the “Doc of Detox,” he is a medical intuitive, professor, and director of the BraveHeartNation World Healing & Training Movement. His whole-body philosophy informs the New World Practitioner Certification Program, including Whole Life Health, Wolfe Non-Surgical Bodywork, and Pain Free Pelvic Restoration.',
     image: 'images/darrell-team.webp',
     imageAlt: 'Dr. Darrell Wolfe',
   },
