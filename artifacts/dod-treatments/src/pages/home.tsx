@@ -62,7 +62,7 @@ export default function Home() {
               Total Regeneration Starts Here
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-               From powerful focused bodywork to advanced energy medicine technology, find clinics and practitioners centered on the physical restrictions and wellness factors that may contribute to discomfort.
+               From Wolfe Non-Surgical to advanced energy medicine technology, find clinics and practitioners dedicated to helping people explore new possibilities when they&apos;ve been told nothing more can be done.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
               <Link href="/treatments">
