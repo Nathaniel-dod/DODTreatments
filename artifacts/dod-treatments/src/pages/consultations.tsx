@@ -210,38 +210,16 @@ export default function Consultations() {
                 Known for his calm, professional, and approachable manner, Jesse listens carefully, assesses individual needs, and provides personalized support focused on restoring natural function.
               </p>
               <p className="text-sm text-muted-foreground mb-4">
-                Call or email Cinthia to book with Jesse:
+                Contact Jesse directly:
               </p>
-              <div className="space-y-3">
-                <a href="tel:1-855-900-4544" className="block">
+              <div>
+                <a href="tel:+12508788178" className="block">
                   <Button variant="outline" className="w-full h-auto min-h-12 justify-start whitespace-normal py-2">
                     <span className="flex items-center gap-2">
                       <Phone className="w-4 h-4 text-primary" />
                       <span className="text-left">
-                        <span className="block text-xs text-muted-foreground">Toll-Free</span>
-                        <span className="block">1-855-900-4544 ext. 1</span>
-                      </span>
-                    </span>
-                  </Button>
-                </a>
-                <a href="tel:1-469-861-9872" className="block">
-                  <Button variant="outline" className="w-full h-auto min-h-12 justify-start whitespace-normal py-2">
-                    <span className="flex items-center gap-2">
-                      <Phone className="w-4 h-4 text-primary" />
-                      <span className="text-left">
-                        <span className="block text-xs text-muted-foreground">Direct / WhatsApp</span>
-                        <span className="block">1-469-861-9872</span>
-                      </span>
-                    </span>
-                  </Button>
-                </a>
-                <a href="mailto:office.docofdetox@gmail.com" className="block">
-                  <Button variant="outline" className="w-full h-auto min-h-10 justify-start whitespace-normal py-2">
-                    <span className="flex items-center gap-2">
-                      <Mail className="w-4 h-4 shrink-0 text-primary" />
-                      <span className="text-left break-all">
-                        <span className="block text-xs text-muted-foreground">Email Cinthia</span>
-                        <span className="block">office.docofdetox@gmail.com</span>
+                        <span className="block text-xs text-muted-foreground">Call or text, Direct/WhatsApp</span>
+                        <span className="block">+1 (250) 878-8178</span>
                       </span>
                     </span>
                   </Button>
