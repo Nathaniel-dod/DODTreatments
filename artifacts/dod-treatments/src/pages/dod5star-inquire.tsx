@@ -42,8 +42,17 @@ export default function Dod5StarInquire() {
           <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2">
             {dod5StarTeam.map((member) => (
               <article key={member.name} className="glass-panel rounded-2xl p-7 text-center">
-                <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 to-accent/10">
-                  <User className="h-7 w-7 text-primary/70" aria-hidden="true" />
+                <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-primary/20 to-accent/10 ring-2 ring-primary/25">
+                  {member.image ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${member.image}`}
+                      alt={member.imageAlt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <User className="h-9 w-9 text-primary/70" aria-hidden="true" />
+                  )}
                 </div>
                 <h3 className="text-xl font-bold">{member.name}</h3>
                 <p className="mb-3 mt-1 text-sm font-medium text-primary">{member.role}</p>

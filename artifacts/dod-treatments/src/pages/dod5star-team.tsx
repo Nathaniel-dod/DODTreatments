@@ -31,8 +31,17 @@ export default function Dod5StarTeam() {
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {dod5StarTeam.map((member) => (
               <div key={member.name} className="glass-panel rounded-2xl p-8 text-center">
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center mx-auto mb-6">
-                  <User className="w-10 h-10 text-primary/60" />
+                <div className="w-24 h-24 rounded-full overflow-hidden bg-gradient-to-br from-primary/20 to-accent/10 flex items-center justify-center mx-auto mb-6 ring-2 ring-primary/25">
+                  {member.image ? (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${member.image}`}
+                      alt={member.imageAlt}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <User className="w-10 h-10 text-primary/60" aria-hidden="true" />
+                  )}
                 </div>
                 <h2 className="text-xl font-bold mb-1">{member.name}</h2>
                 <p className="text-sm text-primary font-medium mb-4">{member.role}</p>
@@ -41,7 +50,7 @@ export default function Dod5StarTeam() {
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-10">
-            Consultant and practitioner profiles with photos are coming soon.
+            Cinthia's photo is coming soon.
           </p>
         </div>
       </section>
