@@ -24,7 +24,7 @@ export default function Home() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Doc of Detox Treatments - Advanced Energy Medicine',
-      description: 'Wolfe Non-Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP treatments for non-invasive regenerative healing.',
+      description: 'Wolfe Non Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP treatments for non-invasive regenerative healing.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -39,7 +39,7 @@ export default function Home() {
     <>
       <Seo
         title="DOCOFDETOX TREATMENTS"
-        description="Wolfe Non-Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP. Life-changing regenerative treatments at our clinics or in your home."
+        description="Wolfe Non Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP. Life-changing regenerative treatments at our clinics or in your home."
         path="/"
         structuredData={structuredData}
       />
@@ -62,7 +62,7 @@ export default function Home() {
               Total Regeneration Starts Here
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
-               From Wolfe Non-Surgical to advanced energy medicine technology, find clinics and practitioners dedicated to helping people explore practical strategies when they&apos;ve been told nothing more can be done.
+               From Wolfe Non Surgical to advanced energy medicine technology, find clinics and practitioners dedicated to helping people explore practical strategies when they&apos;ve been told nothing more can be done.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up stagger-2">
               <Link href="/treatments">
@@ -88,7 +88,7 @@ export default function Home() {
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <h3 className="text-2xl font-bold mb-3 gold-gradient">Treatments</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Wolfe Non-Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, Energy Medicine, &amp; Perfect Day Consultations - designed to support mobility, circulation, and whole-body wellness while reducing inflammation and calcification.
+                  Wolfe Non Surgical, CellSonic Regeneration ESWT, Cardio MedBed EECP, Energy Medicine, &amp; Perfect Day Consultations - designed to support mobility, circulation, and whole-body wellness while reducing inflammation and calcification.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Explore Treatments <ArrowRight className="w-4 h-4" />
@@ -99,7 +99,7 @@ export default function Home() {
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <h3 className="text-2xl font-bold mb-3 gold-gradient">DOD5Star</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  The 5-Star Healing & Training Retreat in Ixtapa-Zihuatanejo, México — hosted by Dr. Sage Wolfe and Jesse Malcolm for total-body transformation.
+                  The 5 Star Healing & Training Retreat in Ixtapa-Zihuatanejo, México — hosted by Dr. Sage Wolfe and Jesse Malcolm for total-body transformation.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Visit the Retreat <ArrowRight className="w-4 h-4" />
@@ -145,7 +145,7 @@ export default function Home() {
                 </div>
                 <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h3>
-                  <p className="text-muted-foreground mb-4">5-Star Healing & Training Retreat</p>
+                  <p className="text-muted-foreground mb-4">5 Star Healing & Training Retreat</p>
                   <p className="text-sm text-foreground/70 mb-4">Hosted by Dr. Sage Wolfe & Jesse Malcolm</p>
                   <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all mt-auto">
                     Learn More <ArrowRight className="w-4 h-4" />
@@ -186,7 +186,7 @@ export default function Home() {
             <div className="order-1 text-center lg:order-2 lg:text-left">
               <h2 className="text-3xl md:text-5xl font-bold mb-6 gold-gradient">45 Years in the Trenches of Functional Medicine</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                 Wolfe Non-Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. We have had patients living with chronic conditions say these personalized strategies helped them experience meaningful changes they once thought were out of reach.
+                 Wolfe Non Surgical, DOD Energy Medicine, and Perfect Day Consultations are the culmination of Dr. Darrell Wolfe's 45 years in the trenches of functional medicine. We have had patients living with chronic conditions say these personalized strategies helped them experience meaningful changes they once thought were out of reach.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                  Together they offer support at every level — from cellular wellness to inflammation, scar tissue, calcification, emotions, and nutrition — for a truly whole-body approach.

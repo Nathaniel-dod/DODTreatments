@@ -9,8 +9,8 @@ export default function IxtapaZihuatanejo() {
     {
       '@context': 'https://schema.org',
       '@type': 'MedicalBusiness',
-      name: 'Doc of Detox 5-Star Healing & Training Retreat',
-       description: 'DOD5Star is a 5-star healing retreat in Ixtapa-Zihuatanejo, México offering personalized treatments, practitioner support, and restorative stays.',
+      name: 'Doc of Detox 5 Star Healing & Training Retreat',
+       description: 'DOD5Star is a 5 Star healing retreat in Ixtapa-Zihuatanejo, México offering personalized treatments, practitioner support, and restorative stays.',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Ixtapa-Zihuatanejo',
@@ -23,7 +23,7 @@ export default function IxtapaZihuatanejo() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
        name: 'DOD5Star Healing Retreat in Ixtapa-Zihuatanejo, México',
-       description: 'Take control of your healing at DOD5Star, a 5-star retreat in Ixtapa-Zihuatanejo, México with personalized treatments and restorative stays.',
+       description: 'Take control of your healing at DOD5Star, a 5 Star retreat in Ixtapa-Zihuatanejo, México with personalized treatments and restorative stays.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -38,7 +38,7 @@ export default function IxtapaZihuatanejo() {
     <>
       <Seo
          title="DOD5Star Healing Retreat in Ixtapa-Zihuatanejo, Mexico"
-         description="Take control of your healing at DOD5Star, a 5-star retreat in Ixtapa-Zihuatanejo, Mexico with personalized treatments, support, and restorative stays."
+         description="Take control of your healing at DOD5Star, a 5 Star retreat in Ixtapa-Zihuatanejo, Mexico with personalized treatments, support, and restorative stays."
         path="/clinics/ixtapa-zihuatanejo"
         structuredData={structuredData}
       />
@@ -66,7 +66,7 @@ export default function IxtapaZihuatanejo() {
             </div>
             <h1 className="gold-glow mx-auto max-w-5xl overflow-visible text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
               <span className="block">
-                <span className="gold-gradient inline-block pb-[0.04em]">5-Star Healing &amp;</span>
+                <span className="gold-gradient inline-block pb-[0.04em]">5 Star Healing &amp;</span>
               </span>
               <span className="block">
                 <span className="gold-gradient inline-block pb-[0.16em]">Training Retreat</span>
@@ -117,7 +117,7 @@ export default function IxtapaZihuatanejo() {
                 <Sparkles className="w-8 h-8 text-primary mb-4" />
                 <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">Treatments</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Wolfe Non-Surgical, CellSonic Regeneration, Cardio MedBed, in-house Energy Medicine therapies included with your stay, and personalized healing protocols.
+                  Wolfe Non Surgical, CellSonic Regeneration, Cardio MedBed, in-house Energy Medicine therapies included with your stay, and personalized healing protocols.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium gap-1 group-hover:gap-2 transition-all">
                   See the Treatments <ArrowRight className="w-4 h-4" />
@@ -249,7 +249,7 @@ export default function IxtapaZihuatanejo() {
             <p className="text-sm font-semibold tracking-[0.18em] uppercase text-primary mb-4">Mexico&apos;s peaceful hidden gem</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 gold-gradient">A Restorative Setting in Ixtapa-Zihuatanejo</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At the end of a cobblestone street beside a 5-star golf course, the retreat is surrounded by beautiful jungle and moments from the coastal calm of Ixtapa-Zihuatanejo.
+              At the end of a cobblestone street beside a 5 Star golf course, the retreat is surrounded by beautiful jungle and moments from the coastal calm of Ixtapa-Zihuatanejo.
             </p>
           </div>
         </div>

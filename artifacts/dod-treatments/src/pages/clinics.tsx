@@ -65,7 +65,7 @@ export default function Clinics() {
                 </div>
                 <div className="p-8">
                   <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
-                    5-Star Healing & Training Retreat
+                    5 Star Healing & Training Retreat
                   </div>
                   <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Ixtapa-Zihuatanejo, México</h2>
                   <p className="text-muted-foreground mb-4">Hosted by Dr. Sage Wolfe & Jesse Malcolm</p>

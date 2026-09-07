@@ -30,12 +30,12 @@ import {
 
 const therapies = [
   {
-    name: 'Wolfe Non-Surgical',
+    name: 'Wolfe Non Surgical',
     category: 'Focused Bodywork',
     href: '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical',
     note: 'A powerful approach to focused bodywork, selected around your comfort and retreat plan.',
     image: 'images/wns-hero.jpg',
-    imageAlt: "Wolfe Non-Surgical practitioner treating a patient's neck and shoulder",
+    imageAlt: "Wolfe Non Surgical practitioner treating a patient's neck and shoulder",
     imagePosition: 'object-[center_35%]',
   },
   {
@@ -138,7 +138,7 @@ const protocolBlocks = [
     title: 'Build the right treatment mix',
     items: [
       { label: 'Practitioner assessment', description: 'Review your goals, current condition, and response to shape the day’s therapy mix.' },
-      { label: 'Wolfe Non-Surgical bodywork', description: 'Begin with focused bodywork selected around your comfort and practitioner plan.' },
+      { label: 'Wolfe Non Surgical bodywork', description: 'Begin with focused bodywork selected around your comfort and practitioner plan.' },
       { label: 'Movement & restoration', description: 'Use breath, mobility, and recovery practices to prepare for and integrate sessions.' },
     ],
     icon: Sunrise,
@@ -249,7 +249,7 @@ export default function Dod5StarTreatments() {
     <>
       <Seo
         title="Treatments at the Retreat | DOD5Star Ixtapa-Zihuatanejo"
-        description="Daily Wolfe Non-Surgical bodywork, CellSonic ESWT, Cardio MedBed EECP, and personalized protocols at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
+        description="Daily Wolfe Non Surgical bodywork, CellSonic ESWT, Cardio MedBed EECP, and personalized protocols at the DOD5Star retreat in Ixtapa-Zihuatanejo, México."
         path="/clinics/ixtapa-zihuatanejo/treatments"
       />
       <Dod5StarNav />

@@ -259,7 +259,7 @@ export function InquiryForm({
                 <FormItem>
                   <FormLabel>Area of Interest (optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., Wolfe Non-Surgical, CellSonic" {...field} />
+                    <Input placeholder="e.g., Wolfe Non Surgical, CellSonic" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

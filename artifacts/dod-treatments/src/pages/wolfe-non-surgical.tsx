@@ -24,7 +24,7 @@ export default function WolfeNonSurgical() {
     {
       '@context': 'https://schema.org',
       '@type': 'Product',
-      name: 'Wolfe Non-Surgical',
+      name: 'Wolfe Non Surgical',
       description: 'A focused bodywork approach addressing scar tissue, inflammation, calcification, and crystallization. Patients have reported greater comfort and freedom of movement.',
       image: 'https://docofdetoxtreatments.com/images/wns-hero.jpg',
       url: 'https://docofdetoxtreatments.com/treatments/wolfe-non-surgical',
@@ -32,7 +32,7 @@ export default function WolfeNonSurgical() {
     {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
-      name: 'Wolfe Non-Surgical Bodywork Treatment',
+      name: 'Wolfe Non Surgical Bodywork Treatment',
       description: 'Non-invasive bodywork focused on scar tissue, inflammation, and calcification. Some patients report meaningful changes within their first few sessions.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
@@ -47,8 +47,8 @@ export default function WolfeNonSurgical() {
   return (
     <>
       <Seo
-        title="Wolfe Non-Surgical | Focused Bodywork"
-        description="Wolfe Non-Surgical focuses on scar tissue, inflammation, calcification, and crystallization. Patients have reported greater comfort and movement."
+        title="Wolfe Non Surgical | Focused Bodywork"
+        description="Wolfe Non Surgical focuses on scar tissue, inflammation, calcification, and crystallization. Patients have reported greater comfort and movement."
         path="/treatments/wolfe-non-surgical"
         structuredData={structuredData}
       />
@@ -57,7 +57,7 @@ export default function WolfeNonSurgical() {
       <section className="pt-28 pb-14 md:pt-36 md:pb-16 relative overflow-hidden">
         <img
           src={`${import.meta.env.BASE_URL}images/wns-hero.jpg`}
-          alt="Wolfe Non-Surgical practitioner treating a patient's neck and shoulder"
+          alt="Wolfe Non Surgical practitioner treating a patient's neck and shoulder"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background" />
@@ -67,7 +67,7 @@ export default function WolfeNonSurgical() {
               Bodywork Therapy
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 gold-gradient gold-glow">
-              Wolfe Non-Surgical
+              Wolfe Non Surgical
             </h1>
             <p className="text-2xl md:text-3xl text-foreground/80 mb-8 font-medium">
               A Powerful Approach to Focused Bodywork
@@ -84,15 +84,15 @@ export default function WolfeNonSurgical() {
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Why Wolfe Non-Surgical Works</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Why Wolfe Non Surgical Works</h2>
             <div className="glass-panel rounded-2xl overflow-hidden md:grid md:grid-cols-2">
               <img
                 src={`${import.meta.env.BASE_URL}images/wns-treatment.jpg`}
-                alt="Practitioner's hands working along a patient's spine during a Wolfe Non-Surgical treatment"
+                alt="Practitioner's hands working along a patient's spine during a Wolfe Non Surgical treatment"
                 className="w-full h-56 md:h-full object-cover"
               />
               <p className="text-lg text-foreground/90 leading-relaxed p-8 md:p-12">
-                Wolfe Non-Surgical focuses on <strong>scar tissue, inflammation, calcification, and crystallization</strong> that may contribute to physical restrictions. We have had patients say they noticed greater comfort and freedom of movement within just a few treatments—and some report a meaningful change after their first session.
+                Wolfe Non Surgical focuses on <strong>scar tissue, inflammation, calcification, and crystallization</strong> that may contribute to physical restrictions. We have had patients say they noticed greater comfort and freedom of movement within just a few treatments—and some report a meaningful change after their first session.
               </p>
             </div>
           </div>
@@ -127,9 +127,9 @@ export default function WolfeNonSurgical() {
       <GeneralTreatmentCta className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non-Surgical</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non Surgical</h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Explore our clinic directory to find Wolfe Non-Surgical services near you.
+              Explore our clinic directory to find Wolfe Non Surgical services near you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/clinics">
@@ -152,7 +152,7 @@ export default function WolfeNonSurgical() {
               <div key={videoId} className="rounded-2xl overflow-hidden aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${videoId}`}
-                  title={`Wolfe Non-Surgical patient testimonial ${index + 1}`}
+                  title={`Wolfe Non Surgical patient testimonial ${index + 1}`}
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -178,7 +178,7 @@ export default function WolfeNonSurgical() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Want to Get Trained in Wolfe Non-Surgical?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Want to Get Trained in Wolfe Non Surgical?</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Your clients are looking for answers. This is the training that gives you the tools to truly deliver them.
             </p>
@@ -188,7 +188,7 @@ export default function WolfeNonSurgical() {
               <div key={videoId} className="rounded-2xl overflow-hidden aspect-video">
                 <iframe
                   src={`https://www.youtube.com/embed/${videoId}`}
-                  title={`Wolfe Non-Surgical certification testimonial ${index + 1}`}
+                  title={`Wolfe Non Surgical certification testimonial ${index + 1}`}
                   className="w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -204,7 +204,7 @@ export default function WolfeNonSurgical() {
               rel="noopener noreferrer"
               className="inline-block px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
             >
-              Become Wolfe Non-Surgical Certified
+              Become Wolfe Non Surgical Certified
             </a>
             <a
               href="https://youtube.com/playlist?list=PLGL9YQNm1Tc9mEQ1Nk2JZabjphRhxuZDn"

@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Phone, MapPin } from 'lucide-react';
 
 const treatments = [
-  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical' },
+  { name: 'Wolfe Non Surgical', href: '/treatments/wolfe-non-surgical' },
   { name: 'CellSonic Regeneration ESWT', href: '/treatments/cellsonic-regeneration' },
   { name: 'Cardio MedBed EECP', href: '/treatments/cardio-medbed' },
 ];

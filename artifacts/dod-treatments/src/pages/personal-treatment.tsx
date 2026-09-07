@@ -24,7 +24,7 @@ export default function PersonalTreatment() {
     <>
       <Seo
         title="Personal Treatment & Training | Doc of Detox"
-        description="Personalized multi-day intensive programs in Wolfe Non-Surgical and energy medicine are available in your home anywhere in the world."
+        description="Personalized multi-day intensive programs in Wolfe Non Surgical and energy medicine are available in your home anywhere in the world."
         path="/personal-treatment"
         structuredData={structuredData}
       />
@@ -88,9 +88,9 @@ export default function PersonalTreatment() {
             </div>
             <div className="glass-panel rounded-3xl p-8 md:p-10">
               <GraduationCap className="w-10 h-10 mb-5 text-primary" aria-hidden="true" />
-              <h3 className="text-2xl font-bold mb-4">Professional Wolfe Non-Surgical Certification</h3>
+              <h3 className="text-2xl font-bold mb-4">Professional Wolfe Non Surgical Certification</h3>
               <p className="text-foreground/90 leading-relaxed">
-                Wolfe Non-Surgical certification can be completed individually or with a group of friends and family. Training comes to you, helping participants build the skills and confidence to become a light in their communities and begin or strengthen a clinic or home practice.
+                Wolfe Non Surgical certification can be completed individually or with a group of friends and family. Training comes to you, helping participants build the skills and confidence to become a light in their communities and begin or strengthen a clinic or home practice.
               </p>
               <p className="mt-6 border-t border-white/10 pt-5 text-sm font-medium text-primary">
                 Best for those who want to begin or advance a professional healing career.

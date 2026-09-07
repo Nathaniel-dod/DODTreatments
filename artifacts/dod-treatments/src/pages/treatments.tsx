@@ -6,13 +6,13 @@ import { ArrowRight, Globe, MapPin } from 'lucide-react';
 const treatmentProducts = [
   {
     href: '/treatments/wolfe-non-surgical',
-    name: 'Wolfe Non-Surgical',
+    name: 'Wolfe Non Surgical',
     category: 'Bodywork Therapy',
     tagline: 'A Powerful Approach to Focused Bodywork',
     blurb: 'Focused bodywork addressing scar tissue, inflammation, calcification, and crystallization that may contribute to physical restrictions.',
     glyph: '✦',
     image: 'images/wns-hero.jpg',
-    imageAlt: "Wolfe Non-Surgical practitioner treating a patient's neck and shoulder",
+    imageAlt: "Wolfe Non Surgical practitioner treating a patient's neck and shoulder",
     imagePosition: 'object-[center_35%]',
   },
   {
@@ -221,7 +221,7 @@ export default function Treatments() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Advanced Energy Medicine Treatments',
-      description: 'Wolfe Non-Surgical bodywork, CellSonic Regeneration ESWT, and Cardio MedBed EECP therapy for regenerative healing.',
+      description: 'Wolfe Non Surgical bodywork, CellSonic Regeneration ESWT, and Cardio MedBed EECP therapy for regenerative healing.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -236,7 +236,7 @@ export default function Treatments() {
     <>
       <Seo
         title="Treatments | Advanced Energy Medicine Therapies"
-        description="Wolfe Non-Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP. Non-invasive regenerative treatments addressing pain, tissue damage, and cardiovascular health."
+        description="Wolfe Non Surgical, CellSonic Regeneration ESWT, and Cardio MedBed EECP. Non-invasive regenerative treatments addressing pain, tissue damage, and cardiovascular health."
         path="/treatments"
         structuredData={structuredData}
       />
@@ -344,7 +344,7 @@ export default function Treatments() {
                   <MapPin className="w-5 h-5 text-primary" />
                   <span className="text-sm font-medium text-primary">Ixtapa-Zihuatanejo, México</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">5-Star Healing & Training Retreat</h3>
+                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">5 Star Healing & Training Retreat</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
                   A luxury oceanside retreat hosted by Dr. Sage Wolfe and Jesse Malcolm — immersive treatment and training for total-body transformation.
                 </p>

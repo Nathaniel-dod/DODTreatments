@@ -165,13 +165,13 @@ export default function Consultations() {
             <div className="glass-panel rounded-3xl p-8">
               <img
                 src={`${import.meta.env.BASE_URL}images/jesse-consultation.webp`}
-                alt="Jesse Malcolm, Wolfe Non-Surgical Master Practitioner"
+                alt="Jesse Malcolm, Wolfe Non Surgical Master Practitioner"
                 className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
                 loading="lazy"
               />
               <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Jesse</h3>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Jesse Malcolm is a Wolfe Non-Surgical Master Practitioner dedicated to helping clients improve mobility, ease physical restrictions, and support their overall well-being through advanced non-invasive deep tissue therapy.
+                Jesse Malcolm is a Wolfe Non Surgical Master Practitioner dedicated to helping clients improve mobility, ease physical restrictions, and support their overall well-being through advanced non-invasive deep tissue therapy.
               </p>
               <p className="text-foreground/80 leading-relaxed mb-6">
                 Known for his calm, professional, and approachable manner, Jesse listens carefully, assesses individual needs, and provides personalized support focused on restoring natural function.

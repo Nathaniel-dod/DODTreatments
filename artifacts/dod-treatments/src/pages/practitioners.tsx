@@ -38,7 +38,7 @@ export default function Practitioners() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Find a Doc of Detox Practitioner Near You',
-      description: 'Search the directory to find certified Doc of Detox practitioners offering Wolfe Non-Surgical, CellSonic, and advanced energy medicine worldwide.',
+      description: 'Search the directory to find certified Doc of Detox practitioners offering Wolfe Non Surgical, CellSonic, and advanced energy medicine worldwide.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -74,7 +74,7 @@ export default function Practitioners() {
     <>
       <Seo
         title="Find Practitioners | Doc of Detox Network"
-        description="Find certified Doc of Detox practitioners near you. Wolfe Non-Surgical, CellSonic, and advanced energy medicine worldwide."
+        description="Find certified Doc of Detox practitioners near you. Wolfe Non Surgical, CellSonic, and advanced energy medicine worldwide."
         path="/practitioners"
         structuredData={structuredData}
       />
@@ -87,7 +87,7 @@ export default function Practitioners() {
               Find a Practitioner
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-              Search our global network of certified practitioners offering Wolfe Non-Surgical and advanced therapies.
+              Search our global network of certified practitioners offering Wolfe Non Surgical and advanced therapies.
             </p>
           </div>
         </div>
