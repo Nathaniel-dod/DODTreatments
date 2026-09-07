@@ -100,7 +100,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold gold-gradient">DOD5Star</h3>
                 <p className="mb-3 mt-2 text-sm font-semibold text-primary">Ixtapa-Zihuatanejo, Mexico</p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  The 5 Star Healing & Training Retreat — hosted by Dr. Sage Wolfe and Jesse Malcolm for total-body transformation.
+                  A private, residential healing and training retreat with personalized therapies, daily practitioner support, and wellness technologies included throughout your stay. Hosted by Dr. Sage Wolfe and Jesse Malcolm.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Visit the Retreat <ArrowRight className="w-4 h-4" />
