@@ -17,12 +17,23 @@ const treatmentPageFiles = [
   'avacen',
 ];
 
+const retreatPages = [
+  { file: 'ixtapa-zihuatanejo', route: '/clinics/ixtapa-zihuatanejo' },
+  { file: 'dod5star-residence', route: '/clinics/ixtapa-zihuatanejo/residence' },
+  { file: 'dod5star-treatments', route: '/clinics/ixtapa-zihuatanejo/treatments' },
+  { file: 'dod5star-team', route: '/clinics/ixtapa-zihuatanejo/team' },
+  { file: 'dod5star-inquire', route: '/clinics/ixtapa-zihuatanejo/inquire' },
+  { file: 'dod5star-location', route: '/clinics/ixtapa-zihuatanejo/location' },
+];
+
 const [
   appSource,
   treatmentsSource,
   routeShellSource,
   heroCtasSource,
   generalCtaSource,
+  dod5StarNavSource,
+  retreatPageSources,
   ...treatmentPageSources
 ] = await Promise.all([
   readFile(new URL('../src/App.tsx', import.meta.url), 'utf8'),
@@ -30,6 +41,12 @@ const [
   readFile(new URL('../src/components/Dod5StarTreatmentRoute.tsx', import.meta.url), 'utf8'),
   readFile(new URL('../src/components/TreatmentHeroCtas.tsx', import.meta.url), 'utf8'),
   readFile(new URL('../src/components/GeneralTreatmentCta.tsx', import.meta.url), 'utf8'),
+  readFile(new URL('../src/components/Dod5StarNav.tsx', import.meta.url), 'utf8'),
+  Promise.all(
+    retreatPages.map(({ file }) =>
+      readFile(new URL(`../src/pages/${file}.tsx`, import.meta.url), 'utf8'),
+    ),
+  ),
   ...treatmentPageFiles.map((file) =>
     readFile(new URL(`../src/pages/${file}.tsx`, import.meta.url), 'utf8'),
   ),
@@ -42,6 +59,50 @@ function linkedTreatmentPaths() {
     ),
   ].map((match) => match[1]);
 }
+
+function staticClinicPaths(source) {
+  return [
+    ...source.matchAll(/(?:href\s*=\s*|href:\s*)['"]([^'"]+)['"]/g),
+  ]
+    .map((match) => match[1])
+    .filter((path) => path.startsWith('/clinics'));
+}
+
+test('every DOD5Star page route uses the established retreat navigation', () => {
+  for (const [{ route }, source] of retreatPages.map((page, index) => [
+    page,
+    retreatPageSources[index],
+  ])) {
+    const escapedRoute = route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+    assert.match(
+      appSource,
+      new RegExp(`<Route\\s+path=["']${escapedRoute}["']`),
+      `missing DOD5Star page route for ${route}`,
+    );
+    assert.match(source, /<Dod5StarNav\s*\/>/, `missing DOD5Star navigation on ${route}`);
+  }
+});
+
+test('DOD5Star navigation and retreat-page actions stay in the retreat namespace', () => {
+  const retreatSources = [
+    ['Dod5StarNav.tsx', dod5StarNavSource],
+    ...retreatPages.map(({ file }, index) => [
+      `${file}.tsx`,
+      retreatPageSources[index],
+    ]),
+  ];
+
+  for (const [file, source] of retreatSources) {
+    for (const path of staticClinicPaths(source)) {
+      assert.ok(
+        path === '/clinics/ixtapa-zihuatanejo'
+          || path.startsWith('/clinics/ixtapa-zihuatanejo/'),
+        `DOD5Star navigation escaped the retreat journey in ${file}: ${path}`,
+      );
+    }
+  }
+});
 
 test('every linked DOD5Star treatment stays in the DOD5Star route namespace', () => {
   const paths = linkedTreatmentPaths();
