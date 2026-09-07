@@ -29,47 +29,104 @@ import {
 } from 'lucide-react';
 
 const therapies = [
-  { name: 'Wolfe Non-Surgical', href: '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical', note: 'A powerful approach to focused bodywork' },
-  { name: 'CellSonic Regeneration ESWT', href: '/clinics/ixtapa-zihuatanejo/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
-  { name: 'Cardio MedBed EECP', href: '/clinics/ixtapa-zihuatanejo/treatments/cardio-medbed', note: 'Heart & circulatory regeneration' },
-  { name: 'Health Consultations', href: '/clinics/ixtapa-zihuatanejo/treatments/consultations', note: 'Your personalized roadmap' },
-  { name: 'DOD Core Restore', href: '/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore', note: 'Pelvic floor, incontinence, sexual wellness & deep core — for women and men' },
-  { name: 'DOD Advanced Bone Density Scanner', href: '/clinics/ixtapa-zihuatanejo/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
+  {
+    name: 'Wolfe Non-Surgical',
+    category: 'Focused Bodywork',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical',
+    note: 'A powerful approach to focused bodywork, selected around your comfort and retreat plan.',
+    image: 'images/wns-hero.jpg',
+    imageAlt: "Wolfe Non-Surgical practitioner treating a patient's neck and shoulder",
+    imagePosition: 'object-[center_35%]',
+  },
+  {
+    name: 'CellSonic Regeneration ESWT',
+    category: 'Shock Wave Therapy',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/cellsonic-regeneration',
+    note: 'Focused acoustic-wave technology designed to support tissue renewal and natural recovery.',
+    image: 'images/cellsonic-ankle-treatment.webp',
+    imageAlt: 'CellSonic Regeneration treatment being applied to an ankle',
+  },
+  {
+    name: 'Cardio MedBed EECP',
+    category: 'Cardiovascular Therapy',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/cardio-medbed',
+    note: 'A guided treatment experience designed to support healthy blood flow and circulation.',
+    image: 'images/cardio-medbed-lifestyle.webp',
+    imageAlt: 'Guest receiving Cardio MedBed EECP therapy',
+  },
+  {
+    name: 'Health Consultations',
+    category: 'Personalized Guidance',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/consultations',
+    note: 'One-on-one guidance to help shape a personalized roadmap before and during your stay.',
+    image: 'images/perfect-day-consultation.jpg',
+    imageAlt: 'Woman taking part in a personal health consultation',
+  },
+  {
+    name: 'DOD Core Restore',
+    category: 'Core & Pelvic Wellness',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore',
+    note: 'Focused support for pelvic-floor wellness, deep core strength, and personal comfort.',
+    image: 'images/dod-core-restore-lifestyle.webp',
+    imageAlt: 'Guest receiving a DOD Core Restore session',
+  },
+  {
+    name: 'DOD Advanced Bone Density Scanner',
+    category: 'Wellness Assessment',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/bone-density-scanner',
+    note: 'A radiation-free way to establish and track a skeletal-health baseline during your journey.',
+    image: 'images/bone-density-scanner-lifestyle.webp',
+    imageAlt: 'Practitioner performing a DOD Advanced Bone Density Scanner assessment',
+  },
 ];
 
 const includedWellnessDevices = [
   {
     icon: Sun,
     name: 'Bioptron Light',
+    category: 'Polarized Light',
     description: 'Full-spectrum light technology with a fullerene lens, available at the Residence.',
     href: '/clinics/ixtapa-zihuatanejo/treatments/bioptron-light',
+    image: 'images/bioptron-light.webp',
+    imageAlt: 'Bioptron polarized light therapy device',
   },
   {
     icon: CircleDot,
     name: 'Avacen',
+    category: 'Thermal Wellness',
     description: 'A microcirculation-support device available for resident use.',
     href: '/clinics/ixtapa-zihuatanejo/treatments/avacen',
+    image: 'images/avacen.webp',
+    imageAlt: 'Avacen thermal microcirculation device',
   },
   {
     icon: Sun,
     name: 'Vitamin D Crystal Panel',
+    category: 'Light Therapy',
     description: 'Vitamin D light with a crystal panel, included as part of your stay.',
     href: '/clinics/ixtapa-zihuatanejo/treatments/vitamin-d-light',
+    image: 'images/solrx-e-series.webp',
+    imageAlt: 'Vitamin D light panel available at the Residence',
   },
   {
     icon: Sunrise,
     name: 'RX Infrared Light Healing',
+    category: 'Infrared Light',
     description: 'RX infrared light technology available for residents to use at the Residence.',
     href: '/clinics/ixtapa-zihuatanejo/treatments/infrared-light-healing',
+    image: 'images/rx-infrared-seat.webp',
+    imageAlt: 'RX infrared light device available at the Residence',
   },
   {
     icon: Activity,
     name: 'Vibration Plate',
+    category: 'Movement & Recovery',
     description: 'A movement and recovery device available for resident use throughout your stay.',
   },
   {
     icon: RadioTower,
     name: 'Sentient Element PEMF',
+    category: 'Energy Medicine',
     description: 'PEMF technology with an extensive range of frequencies available during your stay.',
   },
 ];
@@ -423,27 +480,41 @@ export default function Dod5StarTreatments() {
                  In addition to your personalized therapy plan, DOD5Star residents have access to selected wellness and energy medicine devices at the Residence with no additional treatment fee.
                </p>
              </div>
-             <div className="mx-auto max-w-3xl space-y-3">
+             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {includedWellnessDevices.map((device) => {
                   const content = (
-                    <div className="flex items-center justify-between gap-5">
-                      <div className="min-w-0">
-                        <h3 className="font-bold transition-colors group-hover:text-primary">{device.name}</h3>
-                        <p className="mt-0.5 text-sm text-muted-foreground">{device.description}</p>
+                     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/30 transition-all duration-300 hover:border-primary/40">
+                       <div className="relative h-36 overflow-hidden bg-gradient-to-br from-primary/15 via-card to-accent/10">
+                         {'image' in device && device.image ? (
+                           <img
+                             src={`${import.meta.env.BASE_URL}${device.image}`}
+                             alt={device.imageAlt}
+                             className="h-full w-full object-contain p-3 transition-transform duration-500 group-hover:scale-105"
+                             loading="lazy"
+                           />
+                         ) : (
+                           <div className="flex h-full items-center justify-center">
+                             <device.icon className="h-12 w-12 text-primary/80" aria-hidden="true" />
+                           </div>
+                         )}
+                         <span className="absolute left-3 top-3 rounded-full border border-primary/20 bg-background/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-primary">
+                           Included
+                         </span>
                       </div>
-                      <div className="flex flex-shrink-0 items-center gap-3">
-                        <span className="hidden text-right text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary sm:block">
-                          Included with<br />your stay
-                        </span>
+                       <div className="flex flex-1 flex-col p-5">
+                         <p className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary">{device.category}</p>
+                         <h3 className="mt-2 font-bold transition-colors group-hover:text-primary">{device.name}</h3>
+                         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                         {device.href ? (
-                           <span className="flex h-8 w-8 items-center justify-center text-primary transition-transform group-hover:translate-x-1">
-                            <ArrowRight className="h-5 w-5" aria-hidden="true" />
+                            <span className="mt-5 flex items-center justify-end gap-1 text-sm font-medium text-primary">
+                              Explore
+                              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                            </span>
                         ) : (
-                          <device.icon className="h-5 w-5 text-primary" aria-hidden="true" />
+                           <span className="mt-5 text-right text-xs font-semibold uppercase tracking-[0.1em] text-primary">Available on-site</span>
                         )}
                       </div>
-                    </div>
+                     </article>
                   );
 
                   return device.href ? (
@@ -451,14 +522,14 @@ export default function Dod5StarTreatments() {
                       key={device.name}
                       href={device.href}
                       aria-label={`View ${device.name}`}
-                      className="glass-panel group block rounded-xl px-6 py-4 transition-all hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                      className="group block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {content}
                     </Link>
                   ) : (
-                    <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
+                    <div key={device.name} className="h-full">
                       {content}
-                    </article>
+                    </div>
                   );
                 })}
              </div>
@@ -467,23 +538,39 @@ export default function Dod5StarTreatments() {
              </p>
            </div>
 
-          <div className="max-w-3xl mx-auto">
+          <div className="mx-auto max-w-6xl">
              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-primary">Practitioner-delivered care</p>
              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
-            <div className="space-y-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {therapies.map((t) => (
-                 <Link
+                <Link
                   key={t.href}
-                    href={t.href}
+                   href={t.href}
+                   className="group block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
-                  <div className="glass-panel rounded-xl px-6 py-4 flex items-center justify-between hover:border-primary/30 transition-all group">
-                    <div>
-                      <div className="font-bold group-hover:text-primary transition-colors">{t.name}</div>
-                      <div className="text-sm text-muted-foreground">{t.note}</div>
+                   <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/30 transition-all duration-300 hover:border-primary/40">
+                     <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-primary/20 to-accent/10">
+                       <img
+                         src={`${import.meta.env.BASE_URL}${t.image}`}
+                         alt={t.imageAlt}
+                         className={`absolute inset-0 h-full w-full object-cover ${t.imagePosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
+                         loading="lazy"
+                       />
+                       <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                       <span className="absolute left-3 top-3 rounded-full border border-primary/20 bg-background/90 px-3 py-1 text-xs font-medium text-primary">
+                         {t.category}
+                       </span>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-primary shrink-0" />
-                  </div>
-                  </Link>
+                     <div className="flex flex-1 flex-col p-6">
+                       <h3 className="text-xl font-bold transition-colors group-hover:text-primary">{t.name}</h3>
+                       <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{t.note}</p>
+                       <span className="mt-5 flex items-center justify-end gap-1 text-sm font-medium text-primary">
+                         Explore at DOD5Star
+                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                       </span>
+                     </div>
+                   </article>
+                </Link>
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
