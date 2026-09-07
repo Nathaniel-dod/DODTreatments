@@ -29,12 +29,12 @@ import {
 } from 'lucide-react';
 
 const therapies = [
-  { name: 'Wolfe Non-Surgical', href: '/treatments/wolfe-non-surgical', note: 'A powerful approach to focused bodywork' },
-  { name: 'CellSonic Regeneration ESWT', href: '/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
-  { name: 'Cardio MedBed EECP', href: '/treatments/cardio-medbed', note: 'Heart & circulatory regeneration' },
-  { name: 'Health Consultations', href: '/treatments/consultations', note: 'Your personalized roadmap' },
-  { name: 'DOD Core Restore', href: '/treatments/dod-core-restore', note: 'Pelvic floor, incontinence, sexual wellness & deep core — for women and men' },
-  { name: 'DOD Advanced Bone Density Scanner', href: '/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
+  { name: 'Wolfe Non-Surgical', href: '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical', note: 'A powerful approach to focused bodywork' },
+  { name: 'CellSonic Regeneration ESWT', href: '/clinics/ixtapa-zihuatanejo/treatments/cellsonic-regeneration', note: 'Cell & tissue regeneration' },
+  { name: 'Cardio MedBed EECP', href: '/clinics/ixtapa-zihuatanejo/treatments/cardio-medbed', note: 'Heart & circulatory regeneration' },
+  { name: 'Health Consultations', href: '/clinics/ixtapa-zihuatanejo/treatments/consultations', note: 'Your personalized roadmap' },
+  { name: 'DOD Core Restore', href: '/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore', note: 'Pelvic floor, incontinence, sexual wellness & deep core — for women and men' },
+  { name: 'DOD Advanced Bone Density Scanner', href: '/clinics/ixtapa-zihuatanejo/treatments/bone-density-scanner', note: 'Radiation-free skeletal health tracking' },
 ];
 
 const includedWellnessDevices = [
@@ -42,25 +42,25 @@ const includedWellnessDevices = [
     icon: Sun,
     name: 'Bioptron Light',
     description: 'Full-spectrum light technology with a fullerene lens, available at the Residence.',
-    href: '/treatments/bioptron-light',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/bioptron-light',
   },
   {
     icon: CircleDot,
     name: 'Avacen',
     description: 'A microcirculation-support device available for resident use.',
-    href: '/treatments/avacen',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/avacen',
   },
   {
     icon: Sun,
     name: 'Vitamin D Crystal Panel',
     description: 'Vitamin D light with a crystal panel, included as part of your stay.',
-    href: '/treatments/vitamin-d-light',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/vitamin-d-light',
   },
   {
     icon: Sunrise,
     name: 'RX Infrared Light Healing',
     description: 'RX infrared light technology available for residents to use at the Residence.',
-    href: '/treatments/infrared-light-healing',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/infrared-light-healing',
   },
   {
     icon: Activity,
@@ -427,16 +427,14 @@ export default function Dod5StarTreatments() {
                   );
 
                   return device.href ? (
-                    <a
+                    <Link
                       key={device.name}
-                      href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${device.href}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={device.href}
                       aria-label={`View ${device.name}`}
                       className="glass-panel group block rounded-xl px-6 py-4 transition-all hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                     >
                       {content}
-                    </a>
+                    </Link>
                   ) : (
                     <article key={device.name} className="glass-panel group rounded-xl px-6 py-4 transition-all hover:border-primary/30">
                       {content}
@@ -454,11 +452,9 @@ export default function Dod5StarTreatments() {
              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="space-y-3">
               {therapies.map((t) => (
-                 <a
+                 <Link
                   key={t.href}
-                   href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${t.href}`}
-                   target="_blank"
-                   rel="noopener noreferrer"
+                    href={t.href}
                 >
                   <div className="glass-panel rounded-xl px-6 py-4 flex items-center justify-between hover:border-primary/30 transition-all group">
                     <div>
@@ -467,7 +463,7 @@ export default function Dod5StarTreatments() {
                     </div>
                     <ArrowRight className="w-5 h-5 text-primary shrink-0" />
                   </div>
-                 </a>
+                  </Link>
               ))}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">

@@ -38,15 +38,21 @@ export function Dod5StarNav() {
     setIsMenuOpen(false);
   }, [location]);
 
+  const isItemActive = (item: (typeof items)[number]) => {
+    if ('anchor' in item) {
+      return location === '/clinics/ixtapa-zihuatanejo/residence' && isAmenitiesVisible;
+    }
+    if (item.href === '/clinics/ixtapa-zihuatanejo/treatments') {
+      return location.startsWith(item.href) && !isAmenitiesVisible;
+    }
+    return location === item.href && !isAmenitiesVisible;
+  };
+
   const currentItem =
-    items.find((item) =>
-      'anchor' in item
-        ? location === '/clinics/ixtapa-zihuatanejo/residence' && isAmenitiesVisible
-        : location === item.href && !isAmenitiesVisible,
-    ) ?? items[0];
+    items.find(isItemActive) ?? items[0];
 
   return (
-    <div className="sticky top-20 z-40 mb-10 border-b border-white/5 bg-background/80 backdrop-blur-md md:mb-0">
+    <div className="sticky top-0 z-50 mb-10 border-b border-white/5 bg-background/95 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur-md md:mb-0">
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-3 md:hidden">
           <button
@@ -73,10 +79,7 @@ export function Dod5StarNav() {
               aria-label="DOD5Star retreat"
             >
               {items.map((item) => {
-                const isActive =
-                  'anchor' in item
-                    ? location === '/clinics/ixtapa-zihuatanejo/residence' && isAmenitiesVisible
-                    : location === item.href && !isAmenitiesVisible;
+                const isActive = isItemActive(item);
                 const className = `block border-b border-white/5 px-4 py-3 text-sm font-medium transition-colors last:border-b-0 ${
                   isActive ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-white/5 hover:text-foreground'
                 }`;
@@ -112,10 +115,7 @@ export function Dod5StarNav() {
             DOD5Star
           </span>
           {items.map((item) => {
-            const isActive =
-              'anchor' in item
-                ? location === '/clinics/ixtapa-zihuatanejo/residence' && isAmenitiesVisible
-                : location === item.href && !isAmenitiesVisible;
+            const isActive = isItemActive(item);
             const className = `px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
               isActive
                 ? 'bg-primary/10 text-primary'

@@ -159,7 +159,7 @@ export default function BoneDensityScanner() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24" data-general-treatment-cta>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Know Your Baseline. Track Your Regeneration.</h2>
@@ -179,7 +179,7 @@ export default function BoneDensityScanner() {
       </section>
 
       {/* Home & Clinic CTA */}
-      <section className="pb-16 md:pb-24">
+      <section className="pb-16 md:pb-24" data-general-treatment-cta>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold gold-gradient">Want This for Your Home or Clinic?</h2>

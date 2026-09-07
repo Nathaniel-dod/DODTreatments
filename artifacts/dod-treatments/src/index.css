@@ -3,6 +3,10 @@
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
+.dod5star-treatment-context [data-general-treatment-cta] {
+  display: none;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

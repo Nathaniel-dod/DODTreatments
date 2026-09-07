@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { Redirect, Route, Switch, Router as WouterRouter, useLocation } from 'wouter';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
+import { Dod5StarTreatmentRoute } from '@/components/Dod5StarTreatmentRoute';
 import Home from '@/pages/home';
 import Treatments from '@/pages/treatments';
 import WolfeNonSurgical from '@/pages/wolfe-non-surgical';
@@ -43,10 +44,13 @@ function ScrollToTop() {
 }
 
 function Router() {
+  const [location] = useLocation();
+  const isDod5StarJourney = location.startsWith('/clinics/ixtapa-zihuatanejo');
+
   return (
     <>
       <ScrollToTop />
-      <Navbar />
+      {!isDod5StarJourney && <Navbar />}
       <main className="min-h-[100dvh]">
         <Switch>
           <Route path="/" component={Home} />
@@ -68,6 +72,36 @@ function Router() {
           <Route path="/clinics/ixtapa-zihuatanejo" component={IxtapaZihuatanejo} />
           <Route path="/clinics/ixtapa-zihuatanejo/residence" component={Dod5StarResidence} />
           <Route path="/clinics/ixtapa-zihuatanejo/treatments" component={Dod5StarTreatments} />
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical">
+            <Dod5StarTreatmentRoute><WolfeNonSurgical /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/cellsonic-regeneration">
+            <Dod5StarTreatmentRoute><CellSonicRegeneration /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/cardio-medbed">
+            <Dod5StarTreatmentRoute><CardioMedBed /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/consultations">
+            <Dod5StarTreatmentRoute><Consultations /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore">
+            <Dod5StarTreatmentRoute><DodCoreRestore /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/bone-density-scanner">
+            <Dod5StarTreatmentRoute><BoneDensityScanner /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/infrared-light-healing">
+            <Dod5StarTreatmentRoute><InfraredLightHealing /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/vitamin-d-light">
+            <Dod5StarTreatmentRoute><VitaminDLight /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/bioptron-light">
+            <Dod5StarTreatmentRoute><BioptronLight /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/avacen">
+            <Dod5StarTreatmentRoute><Avacen /></Dod5StarTreatmentRoute>
+          </Route>
           <Route path="/clinics/ixtapa-zihuatanejo/team" component={Dod5StarTeam} />
           <Route path="/clinics/ixtapa-zihuatanejo/inquire" component={Dod5StarInquire} />
           <Route path="/clinics/ixtapa-zihuatanejo/location" component={Dod5StarLocation} />

@@ -40,6 +40,30 @@ for (const file of pageFiles) {
   pages.push({ title, description, route, image });
 }
 
+const dod5StarTreatmentSlugs = new Set([
+  'wolfe-non-surgical',
+  'cellsonic-regeneration',
+  'cardio-medbed',
+  'consultations',
+  'dod-core-restore',
+  'bone-density-scanner',
+  'infrared-light-healing',
+  'vitamin-d-light',
+  'bioptron-light',
+  'avacen',
+]);
+
+for (const page of [...pages]) {
+  const slug = page.route.match(/^\/treatments\/([^/]+)$/)?.[1];
+  if (!slug || !dod5StarTreatmentSlugs.has(slug)) continue;
+
+  pages.push({
+    ...page,
+    route: `/clinics/ixtapa-zihuatanejo/treatments/${slug}`,
+    canonicalRoute: page.route,
+  });
+}
+
 if (pages.length === 0) {
   throw new Error('No pages with static SEO attributes were found');
 }
@@ -55,7 +79,8 @@ const headTagPatterns = [
 ];
 
 for (const page of pages) {
-  const canonical = `${siteUrl}${page.route === '/' ? '/' : page.route}`;
+  const canonicalRoute = page.canonicalRoute ?? page.route;
+  const canonical = `${siteUrl}${canonicalRoute === '/' ? '/' : canonicalRoute}`;
   const structuredData = JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'WebPage',

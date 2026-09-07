@@ -123,7 +123,7 @@ export default function WolfeNonSurgical() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16" data-general-treatment-cta>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Wolfe Non-Surgical</h2>

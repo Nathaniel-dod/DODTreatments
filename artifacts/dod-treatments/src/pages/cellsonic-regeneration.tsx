@@ -180,7 +180,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* CTA */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16" data-general-treatment-cta>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience CellSonic Regeneration</h2>
@@ -267,7 +267,7 @@ export default function CellSonicRegeneration() {
       </section>
 
       {/* At-Home, Clinic & Practitioner Stories */}
-      <section className="pb-20 md:pb-32">
+      <section className="pb-20 md:pb-32" data-general-treatment-cta>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel max-w-4xl mx-auto rounded-3xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold gold-gradient">Want a CellSonic Regeneration in Your Home or Clinic?</h2>
