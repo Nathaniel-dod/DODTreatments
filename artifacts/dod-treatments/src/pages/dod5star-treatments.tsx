@@ -502,7 +502,7 @@ export default function Dod5StarTreatments() {
                          </span>
                       </div>
                        <div className="flex flex-1 flex-col p-5">
-                         <p className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary">{device.category}</p>
+                         <p className="text-[0.65rem] font-semibold uppercase tracking-[0.12em] text-primary">Included With Your Stay</p>
                          <h3 className="mt-2 font-bold transition-colors group-hover:text-primary">{device.name}</h3>
                          <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{device.description}</p>
                         {device.href ? (
