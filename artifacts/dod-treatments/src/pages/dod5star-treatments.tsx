@@ -472,8 +472,8 @@ export default function Dod5StarTreatments() {
 
            <div className="mx-auto mb-12 max-w-5xl">
              <div className="mx-auto mb-9 max-w-3xl text-center">
-               <span className="inline-flex rounded-full bg-primary/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
-                 Included With Your Stay
+               <span className="inline-flex rounded-full border border-primary/70 bg-primary px-5 py-2.5 text-xs font-extrabold uppercase tracking-[0.16em] text-primary-foreground shadow-[0_10px_32px_rgba(244,190,69,0.3)] ring-4 ring-primary/10">
+                 Included Free With Your Stay
                </span>
                <h2 className="mt-5 text-2xl font-bold md:text-3xl gold-gradient">Wellness &amp; Energy Medicine Devices</h2>
                <p className="mt-4 leading-relaxed text-muted-foreground">

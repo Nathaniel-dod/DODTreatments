@@ -359,9 +359,7 @@ export default function Dod5StarResidence() {
            <div className="grid gap-5 md:grid-cols-2">
              <article className="glass-panel flex h-full flex-col rounded-2xl p-7">
                <Sparkles className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
-               <span className="mb-4 inline-flex w-fit rounded-full border border-primary/70 bg-primary px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-primary-foreground shadow-[0_8px_28px_rgba(244,190,69,0.28)] ring-4 ring-primary/10">
-                 Included Free with Your Stay
-               </span>
+               <span className="mb-3 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
                <h3 className="text-xl font-bold">Wellness &amp; Energy Medicine Devices</h3>
                <p className="mb-5 mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
                  Explore the wellness and energy medicine devices available for residents to use at the Residence with no additional treatment fee.
