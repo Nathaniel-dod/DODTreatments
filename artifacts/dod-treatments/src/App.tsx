@@ -18,6 +18,7 @@ import InfraredLightHealing from '@/pages/infrared-light-healing';
 import VitaminDLight from '@/pages/vitamin-d-light';
 import BioptronLight from '@/pages/bioptron-light';
 import Avacen from '@/pages/avacen';
+import SentientElementPemf from '@/pages/sentient-element-pemf';
 import Clinics from '@/pages/clinics';
 import IxtapaZihuatanejo from '@/pages/ixtapa-zihuatanejo';
 import Dod5StarResidence from '@/pages/dod5star-residence';
@@ -100,6 +101,9 @@ function Router() {
           </Route>
           <Route path="/clinics/ixtapa-zihuatanejo/treatments/avacen">
             <Dod5StarTreatmentRoute><Avacen /></Dod5StarTreatmentRoute>
+          </Route>
+          <Route path="/clinics/ixtapa-zihuatanejo/treatments/sentient-element-pemf">
+            <Dod5StarTreatmentRoute><SentientElementPemf /></Dod5StarTreatmentRoute>
           </Route>
           <Route path="/clinics/ixtapa-zihuatanejo/team" component={Dod5StarTeam} />
           <Route path="/clinics/ixtapa-zihuatanejo/inquire" component={Dod5StarInquire} />

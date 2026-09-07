@@ -128,6 +128,7 @@ const includedWellnessDevices = [
     name: 'Sentient Element PEMF',
     category: 'Energy Medicine',
     description: 'An adjustable PEMF system offering frequencies from 7 Hz to 10,000 Hz, with options ranging from longer, lower-intensity sessions to shorter, higher-intensity sessions.',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/sentient-element-pemf',
     image: 'images/sentient-element-pemf.png',
     imageAlt: 'Sentient Element PEMF system with padded coil accessories',
   },
