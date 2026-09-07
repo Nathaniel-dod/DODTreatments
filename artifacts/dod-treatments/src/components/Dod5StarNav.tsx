@@ -4,7 +4,7 @@ import { ArrowUpRight, Menu, X } from 'lucide-react';
 import dod5StarLogo from '../../../../attached_assets/5star_logo_1788800787470.png';
 
 const items = [
-  { name: 'Overview', href: '/clinics/ixtapa-zihuatanejo' },
+  { name: 'Welcome', href: '/clinics/ixtapa-zihuatanejo' },
   { name: 'The Residence', href: '/clinics/ixtapa-zihuatanejo/residence' },
   { name: 'Amenities', href: '/clinics/ixtapa-zihuatanejo/residence#amenities', anchor: true },
   { name: 'Treatments', href: '/clinics/ixtapa-zihuatanejo/treatments' },
