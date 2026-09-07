@@ -37,9 +37,9 @@ const residencePhotoGroups = [
     title: 'Three Restful Suites',
     description: 'Comfortable, individually named rooms give each guest a private place to rest and reset.',
     photos: [
-      { src: 'king-palm-suite.webp', alt: 'King Palm Suite at the DOD5Star Residence', label: 'King Palm Suite' },
-      { src: 'lions-den-king-suite.webp', alt: 'Lions Den King Suite at the DOD5Star Residence', label: 'Lions Den King Suite' },
-      { src: 'coconut-grove-queen-room.webp', alt: 'Coconut Grove Queen Room at the DOD5Star Residence', label: 'Coconut Grove Queen Room' },
+      { src: 'lions-den-king-suite.webp', alt: 'Ground Floor Lions Den King Suite at the DOD5Star Residence', label: 'Ground Floor - Lions Den King Suite' },
+      { src: 'king-palm-suite.webp', alt: 'Second Floor King Palm Suite at the DOD5Star Residence', label: 'Second Floor - King Palm Suite' },
+      { src: 'coconut-grove-queen-room.webp', alt: 'Second Floor Coconut Grove Queen Room at the DOD5Star Residence', label: 'Second Floor - Coconut Grove Queen Room' },
     ],
   },
   {
