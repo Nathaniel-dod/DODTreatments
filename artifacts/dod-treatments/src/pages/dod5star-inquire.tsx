@@ -2,7 +2,7 @@ import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { InquiryForm } from '@/components/InquiryForm';
 import { dod5StarTeam } from '@/data/dod5starTeam';
-import { User } from 'lucide-react';
+import { Phone, User } from 'lucide-react';
 
 export default function Dod5StarInquire() {
   return (
@@ -18,6 +18,35 @@ export default function Dod5StarInquire() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto mb-10 text-center md:mb-12">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight gold-gradient gold-glow">Plan Your Stay</h1>
+            <div className="glass-panel mt-8 rounded-3xl p-6 text-left md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Your Health Matters</p>
+              <h2 className="mt-3 text-2xl font-bold md:text-3xl">Start with a Personalized Strategy</h2>
+              <p className="mt-4 leading-relaxed text-muted-foreground">
+                You matter, and your health matters. To make your retreat experience as powerful and personal as possible, we encourage you to call Dr. Wolfe directly. Strategy is everything, and a conversation gives him the opportunity to understand your needs and help shape the very best approach for you. You are also welcome to fill out the form below.
+              </p>
+              <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <a
+                  href="tel:1-469-861-9454"
+                  className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/5 p-4 transition-colors hover:border-primary/50 hover:bg-primary/10"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0 text-primary" aria-hidden="true" />
+                  <span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.12em] text-primary">Direct / WhatsApp</span>
+                    <span className="mt-1 block font-bold">1-469-861-9454</span>
+                  </span>
+                </a>
+                <a
+                  href="tel:1-855-900-4544"
+                  className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/5 p-4 transition-colors hover:border-primary/50 hover:bg-primary/10"
+                >
+                  <Phone className="h-5 w-5 flex-shrink-0 text-primary" aria-hidden="true" />
+                  <span>
+                    <span className="block text-xs font-semibold uppercase tracking-[0.12em] text-primary">Toll-Free · Extension 5</span>
+                    <span className="mt-1 block font-bold">1-855-900-4544</span>
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
           <div className="max-w-3xl mx-auto">
             <InquiryForm
