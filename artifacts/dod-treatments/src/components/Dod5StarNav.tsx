@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'wouter';
-import { ChevronDown } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const items = [
   { name: 'Overview', href: '/clinics/ixtapa-zihuatanejo' },
@@ -52,41 +52,53 @@ export function Dod5StarNav() {
     items.find(isItemActive) ?? items[0];
 
   return (
-    <div className="sticky top-0 z-50 mb-10 border-b border-white/5 bg-background/95 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur-md md:mb-0">
-      <div className="container relative mx-auto min-w-0 max-w-full px-4 sm:px-6 lg:px-8">
-        <div className="py-3 md:hidden">
+    <header className="sticky top-0 z-50 border-b border-primary/20 bg-[#071421]/95 shadow-[0_18px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+      <div className="h-px bg-gradient-to-r from-transparent via-primary/75 to-transparent" aria-hidden="true" />
+      <div className="container relative mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex min-h-[4.75rem] items-center justify-between lg:hidden">
+          <Link href="/clinics/ixtapa-zihuatanejo" className="group flex min-w-0 items-center gap-3">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/45 bg-primary/10 text-sm font-bold text-primary shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-colors group-hover:bg-primary/15">
+              D5
+            </span>
+            <span className="min-w-0">
+              <span className="block text-sm font-bold tracking-[0.16em] text-primary">DOD5STAR</span>
+              <span className="block truncate text-[0.65rem] font-medium uppercase tracking-[0.14em] text-foreground/55">
+                Healing &amp; Training Retreat
+              </span>
+            </span>
+          </Link>
           <button
             type="button"
-            className="flex w-full max-w-full min-w-0 items-center justify-between rounded-xl border border-white/10 bg-card/80 px-4 py-3 text-left"
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-white/10 bg-white/[0.04] text-primary transition-colors hover:border-primary/35 hover:bg-primary/10"
             aria-expanded={isMenuOpen}
             aria-controls="dod5star-mobile-menu"
+            aria-label={isMenuOpen ? 'Close retreat menu' : 'Open retreat menu'}
             onClick={() => setIsMenuOpen((open) => !open)}
           >
-            <span className="min-w-0">
-              <span className="block text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-primary">DOD5Star</span>
-              <span className="mt-0.5 block truncate text-sm font-medium text-foreground">{currentItem.name}</span>
-            </span>
-            <ChevronDown
-              className={`h-5 w-5 shrink-0 text-primary transition-transform ${isMenuOpen ? 'rotate-180' : ''}`}
-              aria-hidden="true"
-            />
+            {isMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
           </button>
 
           {isMenuOpen && (
             <nav
               id="dod5star-mobile-menu"
-              className="absolute inset-x-4 top-full mt-2 max-w-[calc(100%-2rem)] overflow-hidden rounded-xl border border-white/10 bg-card shadow-2xl"
+              className="absolute inset-x-4 top-[calc(100%+0.75rem)] overflow-hidden rounded-2xl border border-primary/20 bg-[#0b1b2d]/[0.99] p-2 shadow-[0_26px_60px_rgba(0,0,0,0.48)]"
               aria-label="DOD5Star retreat"
             >
               {items.map((item) => {
                 const isActive = isItemActive(item);
-                const className = `block border-b border-white/5 px-4 py-3 text-sm font-medium transition-colors last:border-b-0 ${
-                  isActive ? 'bg-primary/10 text-primary' : 'text-foreground/80 hover:bg-white/5 hover:text-foreground'
+                const isPrimary = item.name === 'Plan Your Stay';
+                const className = `my-0.5 flex items-center justify-between rounded-xl px-4 py-3 text-sm font-semibold transition-colors ${
+                  isPrimary
+                    ? 'bg-primary text-primary-foreground hover:bg-primary/90'
+                    : isActive
+                      ? 'bg-primary/12 text-primary'
+                      : 'text-foreground/75 hover:bg-white/5 hover:text-foreground'
                 }`;
 
                 return 'anchor' in item ? (
                   <a key={item.href} href={item.href} className={className} onClick={() => setIsMenuOpen(false)}>
-                    {item.name}
+                    <span>{item.name}</span>
+                    {isPrimary && <ArrowUpRight className="h-4 w-4" aria-hidden="true" />}
                   </a>
                 ) : (
                   <Link
@@ -102,24 +114,38 @@ export function Dod5StarNav() {
                       }
                     }}
                   >
-                    {item.name}
+                      <span>{item.name}</span>
+                      {isPrimary && <ArrowUpRight className="h-4 w-4" aria-hidden="true" />}
                   </Link>
                 );
               })}
+              <div className="mx-4 mt-2 border-t border-white/8 pt-3 pb-2 text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-foreground/40">
+                Currently viewing: <span className="text-foreground/65">{currentItem.name}</span>
+              </div>
             </nav>
           )}
         </div>
 
-        <nav className="hidden items-center gap-1 py-3 md:flex" aria-label="DOD5Star retreat">
-          <span className="text-xs font-semibold tracking-[0.2em] text-primary uppercase whitespace-nowrap pr-3 border-r border-white/10 mr-2">
-            DOD5Star
-          </span>
-          {items.map((item) => {
+        <div className="hidden min-h-[5.25rem] items-center lg:flex">
+          <Link href="/clinics/ixtapa-zihuatanejo" className="group flex shrink-0 items-center gap-3 pr-7">
+            <span className="grid h-11 w-11 place-items-center rounded-full border border-primary/45 bg-primary/10 text-sm font-bold text-primary shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-all group-hover:border-primary/70 group-hover:bg-primary/15">
+              D5
+            </span>
+            <span>
+              <span className="block text-sm font-bold tracking-[0.18em] text-primary">DOD5STAR</span>
+              <span className="mt-0.5 block text-[0.62rem] font-medium uppercase tracking-[0.15em] text-foreground/45">
+                Ixtapa · México
+              </span>
+            </span>
+          </Link>
+
+          <nav className="flex flex-1 items-center justify-center gap-1" aria-label="DOD5Star retreat">
+            {items.filter((item) => item.name !== 'Plan Your Stay').map((item) => {
             const isActive = isItemActive(item);
-            const className = `px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-all ${
+            const className = `relative rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap transition-colors after:absolute after:inset-x-3 after:-bottom-[1.34rem] after:h-px after:origin-center after:bg-primary after:transition-transform ${
               isActive
-                ? 'bg-primary/10 text-primary'
-                : 'text-foreground/70 hover:text-foreground hover:bg-white/5'
+                ? 'text-primary after:scale-x-100'
+                : 'text-foreground/65 after:scale-x-0 hover:bg-white/[0.035] hover:text-foreground'
             }`;
 
             return 'anchor' in item ? (
@@ -143,8 +169,17 @@ export function Dod5StarNav() {
               </Link>
             );
           })}
-        </nav>
+          </nav>
+
+          <Link
+            href="/clinics/ixtapa-zihuatanejo/inquire"
+            className="ml-7 inline-flex shrink-0 items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground shadow-[0_8px_25px_rgba(244,190,69,0.16)] transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-[0_12px_30px_rgba(244,190,69,0.24)]"
+          >
+            Plan Your Stay
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+        </div>
       </div>
-    </div>
+    </header>
   );
 }
