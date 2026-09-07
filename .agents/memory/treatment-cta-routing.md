@@ -13,4 +13,4 @@ DOD5Star is a separate visitor journey. Its treatment links must stay within the
 
 **Why:** Retreat visitors should not be diverted to competing clinic or practitioner choices while they are evaluating a DOD5Star stay.
 
-**How to apply:** Follow these rules when adding or revising treatment cards, shared treatment CTAs, detail-page closing sections, and the main Treatments page. Do not label a treatment free without explicit inclusion evidence. Never expose clinic-directory actions inside the DOD5Star journey.
+**How to apply:** Follow these rules when adding or revising treatment cards, shared treatment CTAs, detail-page closing sections, and the main Treatments page. Do not label a treatment free without explicit inclusion evidence. Never expose clinic-directory actions inside the DOD5Star journey; remove those actions from the rendered markup rather than hiding them with CSS.

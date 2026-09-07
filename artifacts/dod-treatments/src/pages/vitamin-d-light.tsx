@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { GeneralTreatmentCta } from '@/components/GeneralTreatmentCta';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, Clock3, Eye, ShieldCheck, Sparkles, Sun } from 'lucide-react';
@@ -186,7 +187,7 @@ export default function VitaminDLight() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24" data-general-treatment-cta>
+      <GeneralTreatmentCta className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel rounded-3xl p-8 md:p-16 text-center max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Vitamin D Light Therapy</h2>
@@ -203,7 +204,7 @@ export default function VitaminDLight() {
             </div>
           </div>
         </div>
-      </section>
+      </GeneralTreatmentCta>
     </>
   );
 }

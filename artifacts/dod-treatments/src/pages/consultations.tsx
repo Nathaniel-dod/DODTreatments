@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
+import { GeneralTreatmentCta } from '@/components/GeneralTreatmentCta';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
 import { Phone, Mail, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -248,7 +249,7 @@ export default function Consultations() {
       </section>
 
       {/* More Clinics */}
-      <section className="py-12 md:py-16 bg-card/30" data-general-treatment-cta>
+      <GeneralTreatmentCta className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center glass-panel rounded-3xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">Looking for More Clinics?</h2>
@@ -265,7 +266,7 @@ export default function Consultations() {
             </div>
           </div>
         </div>
-      </section>
+      </GeneralTreatmentCta>
     </>
   );
 }
