@@ -37,9 +37,9 @@ const residencePhotoGroups = [
     title: 'Three Restful Suites',
     description: 'Comfortable, individually named rooms give each guest a private place to rest and reset.',
     photos: [
-      { src: 'lions-den-king-suite.webp', alt: 'Ground Floor Lions Den King Suite at the DOD5Star Residence', label: 'Ground Floor - Lions Den King Suite' },
-      { src: 'king-palm-suite.webp', alt: 'Second Floor King Palm Suite at the DOD5Star Residence', label: 'Second Floor - King Palm Suite' },
-      { src: 'coconut-grove-queen-room.webp', alt: 'Second Floor Coconut Grove Queen Room at the DOD5Star Residence', label: 'Second Floor - Coconut Grove Queen Room' },
+      { src: 'lions-den-king-suite.webp', alt: 'Ground Floor Lions Den King Suite at the DOD5Star Residence', label: 'Lions Den King Suite', floor: 'Ground Floor' },
+      { src: 'king-palm-suite.webp', alt: 'Second Floor King Palm Suite at the DOD5Star Residence', label: 'King Palm Suite', floor: 'Second Floor' },
+      { src: 'coconut-grove-queen-room.webp', alt: 'Second Floor Coconut Grove Queen Room at the DOD5Star Residence', label: 'Coconut Grove Queen Room', floor: 'Second Floor' },
     ],
   },
   {
@@ -225,6 +225,11 @@ export default function Dod5StarResidence() {
                           className="aspect-[4/3] h-full min-h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.025]"
                           loading="lazy"
                         />
+                        {'floor' in photo && (
+                          <span className="pointer-events-none absolute left-4 top-4 rounded-full border border-primary/35 bg-background/85 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-primary shadow-lg backdrop-blur-md">
+                            {photo.floor}
+                          </span>
+                        )}
                         <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-14">
                           <figcaption className="text-sm font-semibold text-white">{photo.label}</figcaption>
                         </div>
