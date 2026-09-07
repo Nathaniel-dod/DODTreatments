@@ -122,6 +122,33 @@ async function inspectOverflow(page) {
   })()`);
 }
 
+async function inspectElementBounds(page, selector) {
+  return page.evaluate(`(() => {
+    const viewportWidth = window.innerWidth;
+    const root = document.querySelector(${JSON.stringify(selector)});
+    if (!root) return null;
+    const elements = [root, ...root.querySelectorAll('*')];
+    const offenders = elements
+      .map((element) => {
+        const rect = element.getBoundingClientRect();
+        return {
+          tag: element.tagName.toLowerCase(),
+          testId: element.getAttribute('data-testid'),
+          text: element.textContent?.trim().slice(0, 80) ?? '',
+          left: Math.round(rect.left * 100) / 100,
+          right: Math.round(rect.right * 100) / 100,
+          width: Math.round(rect.width * 100) / 100,
+        };
+      })
+      .filter(({ left, right, width }) => width > 0 && (left < -0.5 || right > viewportWidth + 0.5));
+    const rect = root.getBoundingClientRect();
+    return {
+      bounds: { left: rect.left, right: rect.right },
+      offenders: offenders.slice(0, 8),
+    };
+  })()`);
+}
+
 async function waitForRetreatDocument(page, targetUrl, timeoutMs = 10_000) {
   const deadline = Date.now() + timeoutMs;
   let lastError;
@@ -212,6 +239,85 @@ test('DOD5Star retreat routes and mobile menu stay within narrow viewports', { t
       assert.ok(
         menuBounds.left >= 0 && menuBounds.right <= width,
         `${route} mobile menu is outside ${width}px viewport: ${JSON.stringify(menuBounds)}`,
+      );
+    }
+  }
+});
+
+test('therapy planner dialog and every tab stay within narrow viewports', { timeout: 90_000 }, async (t) => {
+  const appPort = await availablePort();
+  const debugPort = await availablePort();
+  const app = spawn('pnpm', ['exec', 'vite', '--config', 'vite.config.ts', '--host', '127.0.0.1'], {
+    cwd: new URL('..', import.meta.url),
+    env: { ...process.env, PORT: String(appPort), NODE_ENV: 'test' },
+    stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  const chromium = spawn(chromiumPath, [
+    '--headless',
+    '--disable-gpu',
+    '--no-sandbox',
+    '--disable-dev-shm-usage',
+    `--remote-debugging-port=${debugPort}`,
+    '--remote-debugging-address=127.0.0.1',
+    'about:blank',
+  ], { stdio: ['ignore', 'pipe', 'pipe'] });
+
+  t.after(() => {
+    app.kill('SIGTERM');
+    chromium.kill('SIGTERM');
+  });
+
+  await Promise.all([
+    waitForUrl(`http://127.0.0.1:${appPort}`, 'Vite'),
+    waitForUrl(`http://127.0.0.1:${debugPort}/json/version`, 'Chromium'),
+  ]);
+
+  const page = await openPage(debugPort);
+  t.after(() => page.close());
+
+  const route = '/clinics/ixtapa-zihuatanejo/treatments';
+  const tabs = [
+    'therapy-tab-therapies',
+    'therapy-tab-nutraceutical-support',
+    'therapy-tab-diet-nutrition',
+  ];
+
+  for (const width of viewportWidths) {
+    await page.send('Emulation.setDeviceMetricsOverride', {
+      width,
+      height: 844,
+      deviceScaleFactor: 1,
+      mobile: true,
+    });
+
+    const targetUrl = `http://127.0.0.1:${appPort}${route}?dialog-overflow-test=${width}`;
+    await page.send('Page.navigate', { url: targetUrl });
+    await waitForRetreatDocument(page, targetUrl);
+    await page.evaluate(`document.querySelector('[data-testid="button-view-sample-protocol"]').click()`);
+    await page.evaluate(`new Promise((resolve) => setTimeout(resolve, 250))`);
+
+    for (const tab of tabs) {
+      await page.evaluate(`document.querySelector('[data-testid="${tab}"]').click()`);
+      const dialog = await inspectElementBounds(page, '[data-testid="therapy-planner-dialog"]');
+      assert.ok(dialog, `therapy planner dialog did not open at ${width}px`);
+      assert.ok(
+        dialog.bounds.left >= 0 && dialog.bounds.right <= width,
+        `therapy planner dialog is outside ${width}px viewport: ${JSON.stringify(dialog.bounds)}`,
+      );
+      assert.deepEqual(
+        dialog.offenders,
+        [],
+        `${tab} has content outside ${width}px viewport: ${JSON.stringify(dialog.offenders)}`,
+      );
+    }
+
+    for (const control of ['therapy-planner-tabs', 'dialog-close', 'link-discuss-protocol']) {
+      const bounds = await inspectElementBounds(page, `[data-testid="${control}"]`);
+      assert.ok(bounds, `${control} was not found at ${width}px`);
+      assert.deepEqual(
+        bounds.offenders,
+        [],
+        `${control} is outside ${width}px viewport: ${JSON.stringify(bounds.offenders)}`,
       );
     }
   }

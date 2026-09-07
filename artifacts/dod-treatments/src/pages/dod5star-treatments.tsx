@@ -239,7 +239,10 @@ export default function Dod5StarTreatments() {
               </div>
             </div>
 
-            <DialogContent className="w-[calc(100%-2rem)] max-w-5xl border-primary/30 bg-card p-0">
+            <DialogContent
+              className="w-[calc(100%-2rem)] max-w-5xl border-primary/30 bg-card p-0"
+              data-testid="therapy-planner-dialog"
+            >
               <div className="overflow-hidden rounded-[inherit]">
                 <DialogHeader className="border-b border-primary/20 bg-gradient-to-r from-primary/15 via-card/70 to-accent/10 p-6 text-center sm:p-10">
                   <div className="mx-auto inline-flex items-center justify-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
@@ -255,22 +258,28 @@ export default function Dod5StarTreatments() {
                 <div className="p-5 sm:p-8 md:p-10">
                    <Tabs defaultValue="therapies" className="w-full">
                      <div className="mb-8 flex justify-center">
-                       <TabsList className="grid h-auto w-full max-w-3xl grid-cols-3 gap-1 rounded-xl border border-primary/20 bg-background/60 p-1.5 shadow-inner">
+                        <TabsList
+                          className="grid h-auto w-full min-w-0 max-w-3xl grid-cols-[repeat(3,minmax(0,1fr))] gap-1 rounded-xl border border-primary/20 bg-background/60 p-1.5 shadow-inner"
+                          data-testid="therapy-planner-tabs"
+                        >
                          <TabsTrigger
                            value="therapies"
-                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            className="min-h-12 min-w-0 whitespace-normal break-words rounded-lg px-1 py-3 text-center text-xs font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            data-testid="therapy-tab-therapies"
                          >
                            Internal / External Therapies
                          </TabsTrigger>
                          <TabsTrigger
                            value="nutraceutical-support"
-                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            className="min-h-12 min-w-0 whitespace-normal break-words rounded-lg px-1 py-3 text-center text-xs font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            data-testid="therapy-tab-nutraceutical-support"
                          >
                            Nutraceutical Support
                          </TabsTrigger>
                          <TabsTrigger
                            value="diet-nutrition"
-                           className="min-h-12 whitespace-normal rounded-lg px-2.5 py-3 text-center text-sm font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            className="min-h-12 min-w-0 whitespace-normal break-words rounded-lg px-1 py-3 text-center text-xs font-semibold leading-tight sm:px-4 sm:text-base data-[state=active]:bg-primary/15 data-[state=active]:text-primary data-[state=active]:shadow-md"
+                            data-testid="therapy-tab-diet-nutrition"
                          >
                            Diet &amp; Nutrition
                          </TabsTrigger>
@@ -385,10 +394,15 @@ export default function Dod5StarTreatments() {
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Make it personal</p>
                     <p className="mt-2 text-lg font-semibold">Ready to talk through your own therapy plan?</p>
                     </div>
-                    <Button asChild size="lg" className="gold-glow" data-testid="button-discuss-protocol">
+                    <Button
+                      asChild
+                      size="lg"
+                      className="gold-glow h-auto min-h-10 w-full max-w-full whitespace-normal text-center sm:w-auto"
+                      data-testid="button-discuss-protocol"
+                    >
                       <Link href="/clinics/ixtapa-zihuatanejo/inquire" data-testid="link-discuss-protocol">
                         Discuss Your Therapy Plan
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        <ArrowRight className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
                       </Link>
                     </Button>
                   </div>
