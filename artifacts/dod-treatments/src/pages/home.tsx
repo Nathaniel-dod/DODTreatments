@@ -97,9 +97,10 @@ export default function Home() {
             </Link>
             <Link href="/clinics/ixtapa-zihuatanejo">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <h3 className="text-2xl font-bold mb-3 gold-gradient">DOD5Star</h3>
+                <h3 className="text-2xl font-bold gold-gradient">DOD5Star</h3>
+                <p className="mb-3 mt-2 text-sm font-semibold text-primary">Ixtapa-Zihuatanejo, Mexico</p>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  The 5 Star Healing & Training Retreat in Ixtapa-Zihuatanejo, México — hosted by Dr. Sage Wolfe and Jesse Malcolm for total-body transformation.
+                  The 5 Star Healing & Training Retreat — hosted by Dr. Sage Wolfe and Jesse Malcolm for total-body transformation.
                 </p>
                 <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
                   Visit the Retreat <ArrowRight className="w-4 h-4" />
