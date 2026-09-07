@@ -53,11 +53,11 @@ export function Dod5StarNav() {
 
   return (
     <div className="sticky top-0 z-50 mb-10 border-b border-white/5 bg-background/95 shadow-[0_8px_30px_rgba(0,0,0,0.2)] backdrop-blur-md md:mb-0">
-      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative mx-auto min-w-0 max-w-full px-4 sm:px-6 lg:px-8">
         <div className="py-3 md:hidden">
           <button
             type="button"
-            className="flex w-full items-center justify-between rounded-xl border border-white/10 bg-card/80 px-4 py-3 text-left"
+            className="flex w-full max-w-full min-w-0 items-center justify-between rounded-xl border border-white/10 bg-card/80 px-4 py-3 text-left"
             aria-expanded={isMenuOpen}
             aria-controls="dod5star-mobile-menu"
             onClick={() => setIsMenuOpen((open) => !open)}
@@ -75,7 +75,7 @@ export function Dod5StarNav() {
           {isMenuOpen && (
             <nav
               id="dod5star-mobile-menu"
-              className="absolute left-4 right-4 top-full mt-2 overflow-hidden rounded-xl border border-white/10 bg-card shadow-2xl"
+              className="absolute inset-x-4 top-full mt-2 max-w-[calc(100%-2rem)] overflow-hidden rounded-xl border border-white/10 bg-card shadow-2xl"
               aria-label="DOD5Star retreat"
             >
               {items.map((item) => {
