@@ -27,11 +27,8 @@ export function Navbar() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-2 min-h-20 py-2">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-accent to-primary/80 flex items-center justify-center shadow-lg">
-              <span className="text-background font-bold text-lg">D</span>
-            </div>
-            <div className="hidden sm:block">
+          <Link href="/" className="group flex items-center">
+            <div>
               <div className="text-lg font-bold gold-gradient tracking-wide">DOCOFDETOX</div>
               <div className="text-xs text-muted-foreground -mt-1 tracking-[0.2em]">TREATMENTS</div>
             </div>
