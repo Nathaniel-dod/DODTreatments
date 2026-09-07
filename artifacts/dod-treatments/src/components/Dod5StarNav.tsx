@@ -58,8 +58,8 @@ export function Dod5StarNav() {
       <div className="container relative mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-[4.75rem] items-center justify-between lg:hidden">
           <Link href="/clinics/ixtapa-zihuatanejo" className="group flex min-w-0 items-center gap-3">
-            <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/45 bg-primary/10 p-2 shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-colors group-hover:bg-primary/15">
-              <img src={dod5StarLogo} alt="" className="h-full w-full object-contain" aria-hidden="true" />
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-primary/45 bg-primary/10 shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-colors group-hover:bg-primary/15">
+              <img src={dod5StarLogo} alt="" className="h-7 w-auto max-w-6 object-contain" aria-hidden="true" />
             </span>
             <span className="min-w-0">
               <span className="block text-sm font-bold tracking-[0.16em] text-primary">DOD5STAR</span>
@@ -129,8 +129,8 @@ export function Dod5StarNav() {
 
         <div className="hidden min-h-[5.25rem] items-center lg:flex">
           <Link href="/clinics/ixtapa-zihuatanejo" className="group flex shrink-0 items-center gap-3 pr-7">
-            <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-full border border-primary/45 bg-primary/10 p-2 shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-all group-hover:border-primary/70 group-hover:bg-primary/15">
-              <img src={dod5StarLogo} alt="" className="h-full w-full object-contain" aria-hidden="true" />
+            <span className="grid h-11 w-11 place-items-center rounded-full border border-primary/45 bg-primary/10 shadow-[0_0_24px_rgba(244,190,69,0.1)] transition-all group-hover:border-primary/70 group-hover:bg-primary/15">
+              <img src={dod5StarLogo} alt="" className="h-8 w-auto max-w-7 object-contain" aria-hidden="true" />
             </span>
             <span>
               <span className="block text-sm font-bold tracking-[0.18em] text-primary">DOD5STAR</span>
