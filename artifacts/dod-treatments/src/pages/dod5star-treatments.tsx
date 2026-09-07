@@ -127,7 +127,9 @@ const includedWellnessDevices = [
     icon: RadioTower,
     name: 'Sentient Element PEMF',
     category: 'Energy Medicine',
-    description: 'PEMF technology with an extensive range of frequencies available during your stay.',
+    description: 'An adjustable PEMF system offering frequencies from 7 Hz to 10,000 Hz, with options ranging from longer, lower-intensity sessions to shorter, higher-intensity sessions.',
+    image: 'images/sentient-element-pemf.png',
+    imageAlt: 'Sentient Element PEMF system with padded coil accessories',
   },
 ];
 
