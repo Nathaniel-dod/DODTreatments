@@ -422,7 +422,7 @@ export default function Dod5StarResidence() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                   Get chauffeured around Ixtapa, be dropped off and picked up later, or have the driver stay with you.
                 </p>
-                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Optional paid service · $25 per hour</span>
+                <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Additional Cost</span>
               </article>
             </div>
           </div>
