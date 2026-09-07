@@ -47,9 +47,9 @@ const residencePhotoGroups = [
     title: 'Thoughtful Spaces Throughout',
     description: 'Shared, wellness, and practical home spaces support both restorative routines and longer stays.',
     photos: [
-      { src: 'living-room.webp', alt: 'Living room at the DOD5Star Residence', label: 'Living Room' },
-      { src: 'zen-room.webp', alt: 'Zen room at the DOD5Star Residence', label: 'Zen Room' },
-      { src: 'laundry-room-area.webp', alt: 'Laundry room area at the DOD5Star Residence', label: 'Laundry Room Area' },
+      { src: 'living-room.webp', alt: 'Ground Floor living room at the DOD5Star Residence', label: 'Living Room', floor: 'Ground Floor' },
+      { src: 'zen-room.webp', alt: 'Second Floor sitting room at the DOD5Star Residence', label: 'Sitting Room', floor: 'Second Floor' },
+      { src: 'laundry-room-area.webp', alt: 'Ground Floor laundry room area at the DOD5Star Residence', label: 'Laundry Room Area', floor: 'Ground Floor' },
     ],
   },
 ] as const;
