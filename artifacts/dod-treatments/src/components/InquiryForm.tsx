@@ -272,7 +272,7 @@ export function InquiryForm({
                 <FormItem>
                   <FormLabel>Preferred Location (optional)</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., Ixtapa, Penticton, In-home" {...field} />
+                    <Input placeholder="e.g., Ixtapa, In-home, or your city" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>

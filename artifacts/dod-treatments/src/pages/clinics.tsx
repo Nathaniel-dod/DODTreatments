@@ -8,7 +8,7 @@ export default function Clinics() {
       '@context': 'https://schema.org',
       '@type': 'MedicalWebPage',
       name: 'Doc of Detox Treatment Clinics',
-      description: 'Find Doc of Detox treatment clinics in Ixtapa-Zihuatanejo México and Penticton BC Canada. Advanced energy medicine at world-class facilities.',
+      description: 'Explore the DOD5Star healing and training retreat in Ixtapa-Zihuatanejo, México, plus a worldwide directory of independent practitioners.',
       lastReviewed: '2025-01-15',
       reviewedBy: {
         '@type': 'Person',
@@ -23,7 +23,7 @@ export default function Clinics() {
     <>
       <Seo
         title="Clinics | Doc of Detox Treatment Centers"
-        description="Experience advanced energy medicine treatments at our clinics in Ixtapa-Zihuatanejo México (5-Star Healing & Training Retreat) and Penticton BC Canada."
+        description="Explore the DOD5Star healing and training retreat in Ixtapa-Zihuatanejo, México, plus a worldwide directory of independent practitioners."
         path="/clinics"
         structuredData={structuredData}
       />
@@ -36,7 +36,7 @@ export default function Clinics() {
               Our Clinics
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Experience world-class advanced energy medicine at our healing centers in México and Canada.
+              Explore the DOD5Star retreat in México and find independent practitioners around the world.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Clinics() {
           <p className="mx-auto mb-8 max-w-3xl rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 text-center text-sm leading-relaxed text-foreground/90">
             Featured clinics are locations highlighted by Doc of Detox. Practitioners listed in the directory are independent providers responsible for their own services, advice, scheduling, fees, and policies.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="mx-auto max-w-3xl">
             
             {/* Ixtapa */}
             <Link
@@ -78,37 +78,6 @@ export default function Clinics() {
                 </div>
               </div>
             </Link>
-
-            {/* Penticton */}
-            <a
-              href="https://vitalvibeswellness.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4 focus-visible:ring-offset-background"
-            >
-              <div className="glass-panel rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full">
-                <div className="aspect-[16/10] relative overflow-hidden">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/penticton.jpg`}
-                    alt="View of Penticton, BC and Okanagan Lake with mountains"
-                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-8">
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
-                    Professional Clinic
-                  </div>
-                  <h2 className="text-3xl font-bold mb-2 group-hover:text-primary transition-colors">Penticton, BC Canada</h2>
-                  <p className="text-muted-foreground mb-4">Hosted by Master Practitioner Rita Marialaki</p>
-                  <p className="text-sm text-foreground/80 leading-relaxed mb-6">
-                    Experience advanced energy medicine treatments at our Penticton clinic, where Master Practitioner Rita Marialaki provides personalized Wolfe Non-Surgical therapy and comprehensive health consultations in a professional, welcoming environment.
-                  </p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            </a>
 
           </div>
         </div>

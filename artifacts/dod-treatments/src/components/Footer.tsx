@@ -87,7 +87,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3 text-sm text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
-                <span>Clinics in Ixtapa-Zihuatanejo, México & Penticton, BC Canada</span>
+                <span>DOD5Star retreat in Ixtapa-Zihuatanejo, México</span>
               </li>
             </ul>
           </div>

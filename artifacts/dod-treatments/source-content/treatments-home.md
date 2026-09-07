@@ -30,14 +30,6 @@ Hosted by Dr. Darrell Wolfe & Dr. Sage Wolfe
 
 [Learn More](https://dod5star.com/)
 
-![](https://cdn.prod.website-files.com/6a036c393e53022ce2ad6e26/6a1867dea37dcea6514dc7b3_pexels-jack-borno-2159592889-36182821.jpg)
-
-### Penticton, BC. Canada
-
-Hosted by Master Practitioner Rita Marialaki
-
-[Learn More](https://booking.lacremeluxe.com/webstoreNew/services/8bfb5c38-41cc-483f-9d90-c0aa720942a0?_gl=1*13siv8x*_gcl_au*MzYwMDE0NDI0LjE3Nzk5ODQxMDk.)
-
 ## Find a DOD PowerPack Clinic Near You
 
 BraveHeartNation

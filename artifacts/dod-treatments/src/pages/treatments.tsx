@@ -337,7 +337,7 @@ export default function Treatments() {
               Visit one of our destination clinics or find a certified practitioner near you.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="mx-auto grid max-w-4xl md:grid-cols-2 gap-6 lg:gap-8">
             <Link href="/clinics/ixtapa-zihuatanejo">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="flex items-center gap-2 mb-4">
@@ -353,21 +353,6 @@ export default function Treatments() {
                 </div>
               </div>
             </Link>
-            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer">
-              <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
-                <div className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-sm font-medium text-primary">Penticton, BC Canada</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Penticton Clinic</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                  Wolfe Non-Surgical treatments and health consultations in British Columbia, hosted by Master Practitioner Rita Marialaki.
-                </p>
-                <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all">
-                  Explore the Clinic <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </a>
             <Link href="/clinics">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
                 <div className="flex items-center gap-2 mb-4">

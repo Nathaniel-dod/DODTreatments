@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { GeneralTreatmentCta } from '@/components/GeneralTreatmentCta';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
-import { Phone, Mail, ExternalLink, Heart, Sun, Apple, Droplets } from 'lucide-react';
+import { Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const consultationFaqs = [
@@ -21,13 +21,6 @@ const consultationFaqs = [
     answer:
       'To book a Doc of Detox consultation, call Cinthia toll-free at 1-855-900-4544 ext. 1, direct/WhatsApp at 1-469-861-9872, or email office.docofdetox@gmail.com. You can also use the practitioner booking links on this page.',
   },
-];
-
-const ritaOptions = [
-  { label: 'Emotional Consultation', href: 'https://vitalvibeswellness.com', icon: Heart },
-  { label: 'Perfect Day Consultation', href: 'https://vitalvibeswellness.com', icon: Sun },
-  { label: 'Nutritional Consultation', href: 'https://vitalvibeswellness.com', icon: Apple },
-  { label: 'Water Fasting Consultation', href: 'https://vitalvibeswellness.com', icon: Droplets },
 ];
 
 export default function Consultations() {
@@ -166,36 +159,9 @@ export default function Consultations() {
             Book a Consultation with a Qualified New World Master Practitioner
           </h2>
           <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12">
-            Choose a personalized consultation with Master Practitioners Rita or Jesse.
+            Choose a personalized consultation with Master Practitioner Jesse Malcolm.
           </p>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="glass-panel rounded-3xl p-8">
-              <img
-                src={`${import.meta.env.BASE_URL}images/rita-consultation.webp`}
-                alt="Rita Marialaki, New World Master Practitioner"
-                className="w-36 h-36 mx-auto rounded-full object-cover mb-6 ring-2 ring-primary/30"
-                loading="lazy"
-              />
-              <h3 className="text-2xl font-bold mb-4 text-center">Consultations with Rita</h3>
-              <p className="text-foreground/80 leading-relaxed mb-6">
-                "Everyone needs a personalized roadmap, along with repetition, focus and a coach to achieve optimal success. Let me guide you to experience the healing power of the Perfect Day Lifestyle and the enormous potential of Self Care & Self Love. 3-2-1 We got this!"
-              </p>
-              <p className="text-sm text-muted-foreground mb-4">
-                Visit Vital Vibes Wellness to book with Rita:
-              </p>
-              <div className="space-y-3">
-                {ritaOptions.map((opt) => (
-                  <a key={opt.label} href={opt.href} target="_blank" rel="noopener noreferrer" className="block">
-                    <Button variant="outline" className="w-full justify-between">
-                      <span className="flex items-center gap-2">
-                        <opt.icon className="w-4 h-4 text-primary" /> {opt.label}
-                      </span>
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </a>
-                ))}
-              </div>
-            </div>
+          <div className="mx-auto max-w-3xl">
             <div className="glass-panel rounded-3xl p-8">
               <img
                 src={`${import.meta.env.BASE_URL}images/jesse-consultation.webp`}

@@ -132,7 +132,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {/* Ixtapa */}
             <Link href="/clinics/ixtapa-zihuatanejo" className="block h-full">
               <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
@@ -153,27 +153,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            {/* Penticton */}
-            <a href="https://vitalvibeswellness.com" target="_blank" rel="noopener noreferrer" className="block h-full">
-              <div className="glass-panel rounded-2xl overflow-hidden hover:scale-[1.02] transition-all duration-300 group h-full flex flex-col">
-                <div className="aspect-[4/3] relative overflow-hidden">
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/penticton.jpg`}
-                    alt="View of Penticton, BC and Okanagan Lake with mountains"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">Penticton, BC Canada</h3>
-                  <p className="text-muted-foreground mb-4">Professional Clinic</p>
-                  <p className="text-sm text-foreground/70 mb-4">Hosted by Master Practitioner Rita Marialaki</p>
-                  <div className="flex items-center text-primary text-sm font-medium group-hover:gap-3 gap-2 transition-all mt-auto">
-                    Learn More <ArrowRight className="w-4 h-4" />
-                  </div>
-                </div>
-              </div>
-            </a>
 
             {/* Practitioner Map */}
             <Link href="/practitioners" className="block h-full">
