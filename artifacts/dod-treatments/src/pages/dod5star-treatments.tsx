@@ -259,6 +259,7 @@ export default function Dod5StarTreatments() {
                    <Tabs defaultValue="therapies" className="w-full">
                      <div className="mb-8 flex justify-center">
                         <TabsList
+                           tabIndex={-1}
                           className="grid h-auto w-full min-w-0 max-w-3xl grid-cols-[repeat(3,minmax(0,1fr))] gap-1 rounded-xl border border-primary/20 bg-background/60 p-1.5 shadow-inner"
                           data-testid="therapy-planner-tabs"
                         >
@@ -286,7 +287,7 @@ export default function Dod5StarTreatments() {
                       </TabsList>
                     </div>
 
-                    <TabsContent value="therapies" className="mt-0">
+                    <TabsContent value="therapies" className="mt-0" data-testid="therapy-panel-therapies">
                       <div className="mb-7 flex items-center justify-between gap-4">
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Therapies at a glance</p>
@@ -300,7 +301,7 @@ export default function Dod5StarTreatments() {
                       <ProtocolTimeline blocks={protocolBlocks} testIdPrefix="therapy" />
                     </TabsContent>
 
-                    <TabsContent value="nutraceutical-support" className="mt-0">
+                    <TabsContent value="nutraceutical-support" className="mt-0" data-testid="therapy-panel-nutraceutical-support">
                       <div className="mb-7 flex items-center justify-between gap-4">
                         <div>
                           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized internal support</p>
@@ -329,7 +330,7 @@ export default function Dod5StarTreatments() {
                       </div>
                     </TabsContent>
 
-                     <TabsContent value="diet-nutrition" className="mt-0">
+                     <TabsContent value="diet-nutrition" className="mt-0" data-testid="therapy-panel-diet-nutrition">
                        <div className="mb-7 flex items-center justify-between gap-4">
                          <div>
                            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Personalized nourishment</p>
@@ -355,6 +356,7 @@ export default function Dod5StarTreatments() {
                                href="https://braveheartnationlibrary.com"
                                target="_blank"
                                rel="noopener noreferrer"
+                                data-testid="link-dod-4-pillar"
                                className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary underline decoration-primary/50 underline-offset-4 transition-colors hover:text-primary/80"
                              >
                                Open the DOD 4 Pillar Ultimate Healing Masterclass

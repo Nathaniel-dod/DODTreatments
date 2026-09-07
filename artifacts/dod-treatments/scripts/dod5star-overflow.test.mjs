@@ -83,6 +83,50 @@ class DevToolsPage {
     return result.result.value;
   }
 
+  async pressKey(key, modifiers = 0) {
+    const windowsVirtualKeyCode = {
+      ArrowRight: 39,
+      Escape: 27,
+      Enter: 13,
+      Tab: 9,
+      ' ': 32,
+    }[key];
+    const code = key === ' ' ? 'Space' : key;
+    const activatesControl = key === 'Enter' || key === ' ';
+    if (modifiers & 8) {
+      await this.send('Input.dispatchKeyEvent', {
+        type: 'rawKeyDown',
+        key: 'Shift',
+        code: 'ShiftLeft',
+        windowsVirtualKeyCode: 16,
+        modifiers: 8,
+      });
+    }
+    await this.send('Input.dispatchKeyEvent', {
+      type: activatesControl ? 'keyDown' : 'rawKeyDown',
+      key,
+      code,
+      windowsVirtualKeyCode,
+      ...(activatesControl ? { text: key === 'Enter' ? '\r' : ' ', unmodifiedText: key === 'Enter' ? '\r' : ' ' } : {}),
+      modifiers,
+    });
+    await this.send('Input.dispatchKeyEvent', {
+      type: 'keyUp',
+      key,
+      code,
+      windowsVirtualKeyCode,
+      modifiers,
+    });
+    if (modifiers & 8) {
+      await this.send('Input.dispatchKeyEvent', {
+        type: 'keyUp',
+        key: 'Shift',
+        code: 'ShiftLeft',
+        windowsVirtualKeyCode: 16,
+      });
+    }
+  }
+
   close() {
     this.socket.close();
   }
@@ -96,7 +140,9 @@ async function openPage(debugPort) {
   const target = await response.json();
   const socket = new WebSocket(target.webSocketDebuggerUrl);
   await once(socket, 'open');
-  return new DevToolsPage(socket);
+  const page = new DevToolsPage(socket);
+  await page.send('Page.bringToFront');
+  return page;
 }
 
 async function inspectOverflow(page) {
@@ -147,6 +193,28 @@ async function inspectElementBounds(page, selector) {
       offenders: offenders.slice(0, 8),
     };
   })()`);
+}
+
+async function inspectPlannerFocus(page) {
+  return page.evaluate(`(() => {
+    const dialog = document.querySelector('[data-testid="therapy-planner-dialog"]');
+    const active = document.activeElement;
+    return {
+      dialogOpen: dialog !== null,
+      focusInsideDialog: dialog?.contains(active) ?? false,
+      activeTestId: active?.getAttribute('data-testid') ?? null,
+      activeRole: active?.getAttribute('role') ?? null,
+    };
+  })()`);
+}
+
+async function waitForCondition(page, expression, label, timeoutMs = 2_000) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    if (await page.evaluate(expression)) return;
+    await new Promise((resolve) => setTimeout(resolve, 25));
+  }
+  throw new Error(`Timed out waiting for ${label}`);
 }
 
 async function waitForRetreatDocument(page, targetUrl, timeoutMs = 10_000) {
@@ -287,14 +355,64 @@ test('therapy planner dialog and every tab stay within narrow viewports', { time
       width,
       height: 844,
       deviceScaleFactor: 1,
-      mobile: true,
+      mobile: false,
     });
 
     const targetUrl = `http://127.0.0.1:${appPort}${route}?dialog-overflow-test=${width}`;
     await page.send('Page.navigate', { url: targetUrl });
     await waitForRetreatDocument(page, targetUrl);
-    await page.evaluate(`document.querySelector('[data-testid="button-view-sample-protocol"]').click()`);
+    await page.evaluate(`document.querySelector('[data-testid="button-view-sample-protocol"]').focus()`);
+    await page.pressKey('Enter');
+    await waitForCondition(
+      page,
+      `document.querySelector('[data-testid="therapy-planner-dialog"]') !== null`,
+      `therapy planner to open at ${width}px`,
+    );
+
+    const openingFocus = await inspectPlannerFocus(page);
+    assert.equal(
+      openingFocus.focusInsideDialog,
+      true,
+      `opening the therapy planner did not move focus into the dialog at ${width}px: ${JSON.stringify(openingFocus)}`,
+    );
     await page.evaluate(`new Promise((resolve) => setTimeout(resolve, 250))`);
+
+    await page.evaluate(`document.querySelector('[data-testid="${tabs[0]}"]').focus()`);
+    for (const tab of tabs.slice(1)) {
+      await page.pressKey('ArrowRight');
+      await waitForCondition(
+        page,
+        `document.querySelector('[role="tab"][data-state="active"]')?.getAttribute('data-testid') === ${JSON.stringify(tab)}`,
+        `ArrowRight to select ${tab} at ${width}px`,
+      );
+      const selectedTab = await page.evaluate(
+        `document.querySelector('[role="tab"][data-state="active"]')?.getAttribute('data-testid')`,
+      );
+      assert.equal(selectedTab, tab, `ArrowRight did not select ${tab} at ${width}px`);
+      const tabFocus = await inspectPlannerFocus(page);
+      assert.equal(tabFocus.activeTestId, tab, `ArrowRight did not move focus to ${tab} at ${width}px`);
+    }
+
+    for (const control of ['therapy-panel-diet-nutrition', 'link-dod-4-pillar', 'link-discuss-protocol', 'dialog-close', tabs.at(-1)]) {
+      await page.pressKey('Tab');
+      await waitForCondition(
+        page,
+        `document.activeElement?.getAttribute('data-testid') === ${JSON.stringify(control)}`,
+        `Tab to move focus to ${control} at ${width}px`,
+      );
+      const tabFocus = await inspectPlannerFocus(page);
+      assert.equal(
+        tabFocus.focusInsideDialog,
+        true,
+        `Tab allowed focus to escape the therapy planner at ${width}px: ${JSON.stringify(tabFocus)}`,
+      );
+    }
+    await page.pressKey('Tab', 8);
+    await waitForCondition(
+      page,
+      `document.activeElement?.getAttribute('data-testid') === 'dialog-close'`,
+      `Shift+Tab to wrap focus to the close control at ${width}px`,
+    );
 
     for (const tab of tabs) {
       await page.evaluate(`document.querySelector('[data-testid="${tab}"]').click()`);
@@ -320,5 +438,36 @@ test('therapy planner dialog and every tab stay within narrow viewports', { time
         `${control} is outside ${width}px viewport: ${JSON.stringify(bounds.offenders)}`,
       );
     }
+
+    await page.evaluate(`document.querySelector('[data-testid="dialog-close"]').focus()`);
+    await page.pressKey('Enter');
+    await waitForCondition(
+      page,
+      `document.querySelector('[data-testid="therapy-planner-dialog"]') === null`,
+      `close control to close the therapy planner at ${width}px`,
+    );
+    assert.equal(
+      await page.evaluate(`document.activeElement?.getAttribute('data-testid')`),
+      'button-view-sample-protocol',
+      `the close control did not return focus to the therapy planner trigger at ${width}px`,
+    );
+
+    await page.pressKey(' ');
+    await waitForCondition(
+      page,
+      `document.querySelector('[data-testid="therapy-planner-dialog"]') !== null`,
+      `therapy planner to reopen at ${width}px`,
+    );
+    await page.pressKey('Escape');
+    await waitForCondition(
+      page,
+      `document.querySelector('[data-testid="therapy-planner-dialog"]') === null`,
+      `Escape to close the therapy planner at ${width}px`,
+    );
+    assert.equal(
+      await page.evaluate(`document.activeElement?.getAttribute('data-testid')`),
+      'button-view-sample-protocol',
+      `Escape did not return focus to the therapy planner trigger at ${width}px`,
+    );
   }
 });
