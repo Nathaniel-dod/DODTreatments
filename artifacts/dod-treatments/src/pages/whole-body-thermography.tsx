@@ -26,7 +26,7 @@ export default function WholeBodyThermography() {
       ]}
       limitations={[
         'Thermography measures temperature at the skin surface; it does not see inside the body and cannot determine the cause of a warm or cool area.',
-        'It is an adjunctive informational tool, not a stand-alone method for diagnosing disease. It must not replace mammography or other standard cancer screening, examination, laboratory testing, or medical imaging recommended by a qualified clinician.',
+        'It is an adjunctive informational tool, not a stand-alone method for diagnosing disease. It should not replace other medical tests.',
         'An unusual thermal pattern should be discussed with an appropriate healthcare professional, who can determine whether established diagnostic testing is needed.',
       ]}
     />
