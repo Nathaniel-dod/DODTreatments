@@ -27,7 +27,6 @@ export default function OligoHeavyMetalScan() {
       limitations={[
         'OligoScan results are estimates produced from skin-surface optical measurements. They do not establish heavy-metal toxicity, mineral deficiency, or any medical diagnosis.',
         'When exposure or toxicity is a concern, validated laboratory testing—typically using blood or urine selected for the specific metal—should be ordered and interpreted by a qualified healthcare professional.',
-        'Do not begin chelation, supplementation, or another treatment solely because of an OligoScan result.',
       ]}
     />
   );
