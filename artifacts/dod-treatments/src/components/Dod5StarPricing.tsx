@@ -17,7 +17,7 @@ const pricingByRoute: Record<string, PricingDetails> = {
   '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical': {
     title: 'Wolfe Non Surgical Pricing',
     options: [
-      { name: 'Wolfe Non Surgical with Dr. Sage', price: 'From $250/hour USD' },
+      { name: 'Wolfe Non Surgical with Dr. Sage Wolfe', price: 'From $250/hour USD' },
       { name: 'Wolfe Non Surgical', price: 'From $175/hour USD' },
     ],
   },

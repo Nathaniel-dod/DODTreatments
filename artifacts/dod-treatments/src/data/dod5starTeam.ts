@@ -17,7 +17,7 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
   {
     name: 'Dr. Sage Wolfe',
     role: 'Host & Master Practitioner',
-    bio: 'Dr. Sage is a Doctor of Natural Medicine and Indigenous Medicine, Certified Wolfe Non Surgical Master Trainer, and primary author of the Wolfe Non Surgical training manual. Drawing on 17 years of experience, he combines natural medicine, hands-on bodywork, movement, recovery, psychology, and human performance.',
+    bio: 'Dr. Sage Wolfe is a Doctor of Natural Medicine and Indigenous Medicine, Certified Wolfe Non Surgical Master Trainer, and primary author of the Wolfe Non Surgical training manual. Drawing on 17 years of experience, he combines natural medicine, hands-on bodywork, movement, recovery, psychology, and human performance.',
     image: 'images/sage-team.webp',
     imageAlt: 'Dr. Sage Wolfe performing a hands-on treatment',
   },
