@@ -20,11 +20,13 @@ import {
   Clock3,
   Moon,
   RadioTower,
+  ScanLine,
   ShieldCheck,
   Sparkles,
   Sunrise,
   Sun,
   Sunset,
+  ThermometerSun,
   Utensils,
 } from 'lucide-react';
 
@@ -77,6 +79,20 @@ const therapies = [
     note: 'A radiation-free way to establish and track a skeletal-health baseline during your journey.',
     image: 'images/bone-density-scanner-lifestyle.webp',
     imageAlt: 'Practitioner performing a DOD Advanced Bone Density Scanner assessment',
+  },
+  {
+    name: 'Oligo Heavy Metal Scan',
+    category: 'Wellness Assessment',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/oligo-heavy-metal-scan',
+    note: 'A quick, non-invasive optical scan that estimates selected mineral, trace-element, and metal patterns.',
+    icon: ScanLine,
+  },
+  {
+    name: 'Whole Body Thermography',
+    category: 'Thermal Assessment',
+    href: '/clinics/ixtapa-zihuatanejo/treatments/whole-body-thermography',
+    note: 'Radiation-free infrared imaging that maps relative skin-surface temperature patterns and asymmetries.',
+    icon: ThermometerSun,
   },
 ];
 
@@ -545,20 +561,30 @@ export default function Dod5StarTreatments() {
              <p className="mb-3 text-center text-xs font-semibold uppercase tracking-[0.16em] text-primary">Practitioner-delivered care</p>
              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Therapies Available On-Site</h2>
             <div className="grid gap-6 md:grid-cols-2">
-              {therapies.map((t) => (
-                <Link
+              {therapies.map((t) => {
+                const Icon = 'icon' in t && t.icon ? t.icon : Activity;
+                return (
+                  <Link
                   key={t.href}
-                   href={t.href}
-                   className="group block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                >
-                   <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/30 transition-all duration-300 hover:border-primary/40">
-                     <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-primary/20 to-accent/10">
-                       <img
-                         src={`${import.meta.env.BASE_URL}${t.image}`}
-                         alt={t.imageAlt}
-                         className={`absolute inset-0 h-full w-full object-cover ${t.imagePosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
-                         loading="lazy"
-                       />
+                    href={t.href}
+                    className="group block h-full rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-border/60 bg-background/30 transition-all duration-300 hover:border-primary/40">
+                      <div className="relative aspect-[16/9] overflow-hidden bg-gradient-to-br from-primary/20 to-accent/10">
+                        {'image' in t ? (
+                          <img
+                            src={`${import.meta.env.BASE_URL}${t.image}`}
+                            alt={t.imageAlt}
+                            className={`absolute inset-0 h-full w-full object-cover ${t.imagePosition ?? 'object-top'} transition-transform duration-500 group-hover:scale-105`}
+                            loading="lazy"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="flex h-24 w-24 items-center justify-center rounded-full border border-primary/30 bg-background/35 shadow-[0_0_55px_hsl(var(--primary)/0.2)] transition-transform duration-500 group-hover:scale-110">
+                              <Icon className="h-11 w-11 text-primary" strokeWidth={1.35} aria-hidden="true" />
+                            </div>
+                          </div>
+                        )}
                        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
                        <span className="absolute left-3 top-3 rounded-full border border-primary/20 bg-background/90 px-3 py-1 text-xs font-medium text-primary">
                          {t.category}
@@ -573,8 +599,9 @@ export default function Dod5StarTreatments() {
                        </span>
                      </div>
                    </article>
-                </Link>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
             <p className="text-center text-sm text-muted-foreground mt-8">
                Your treatment plan is built with your team before your arrival, then refined throughout your stay according to your goals, condition, and daily response.
