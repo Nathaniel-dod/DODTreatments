@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'wouter';
 import { ArrowRight } from 'lucide-react';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
+import { Dod5StarPricing } from '@/components/Dod5StarPricing';
 import { Button } from '@/components/ui/button';
 
 export function Dod5StarTreatmentRoute({ children }: { children: ReactNode }) {
@@ -9,6 +10,7 @@ export function Dod5StarTreatmentRoute({ children }: { children: ReactNode }) {
     <>
       <Dod5StarNav />
       <div className="dod5star-treatment-context">{children}</div>
+      <Dod5StarPricing />
       <section className="pb-16 pt-4 md:pb-24">
         <div className="container mx-auto px-4 text-center sm:px-6 lg:px-8">
           <div className="glass-panel mx-auto max-w-4xl rounded-3xl p-8 md:p-12">

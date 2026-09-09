@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'wouter';
 import { Button } from '@/components/ui/button';
+import { Dod5StarPricing } from '@/components/Dod5StarPricing';
 
 interface TreatmentHeroCtasProps {
   className?: string;
@@ -15,10 +16,13 @@ export function TreatmentHeroCtas({
 
   if (isDod5StarJourney) {
     return (
-      <div className={`mt-8 flex justify-center ${className}`}>
-        <Button size="lg" className="gold-glow" asChild>
-          <Link href="/clinics/ixtapa-zihuatanejo/inquire">Plan Your DOD5Star Stay</Link>
-        </Button>
+      <div className={`mx-auto max-w-3xl ${className}`}>
+        <Dod5StarPricing variant="hero" />
+        <div className="mt-6 flex justify-center">
+          <Button size="lg" className="gold-glow" asChild>
+            <Link href="/clinics/ixtapa-zihuatanejo/inquire">Plan Your DOD5Star Stay</Link>
+          </Button>
+        </div>
       </div>
     );
   }

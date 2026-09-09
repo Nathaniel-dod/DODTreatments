@@ -36,6 +36,7 @@ const therapies = [
     category: 'Focused Bodywork',
     href: '/clinics/ixtapa-zihuatanejo/treatments/wolfe-non-surgical',
     note: 'A powerful approach to focused bodywork, selected around your comfort and retreat plan.',
+    price: 'From $175/hour USD',
     image: 'images/wns-hero.jpg',
     imageAlt: "Wolfe Non Surgical practitioner treating a patient's neck and shoulder",
     imagePosition: 'object-[center_35%]',
@@ -45,6 +46,7 @@ const therapies = [
     category: 'Shock Wave Therapy',
     href: '/clinics/ixtapa-zihuatanejo/treatments/cellsonic-regeneration',
     note: 'Focused acoustic-wave technology designed to support tissue renewal and natural recovery.',
+    price: 'From $0.50/pulse USD',
     image: 'images/cellsonic-ankle-treatment.webp',
     imageAlt: 'CellSonic Regeneration treatment being applied to an ankle',
   },
@@ -53,6 +55,7 @@ const therapies = [
     category: 'Cardiovascular Therapy',
     href: '/clinics/ixtapa-zihuatanejo/treatments/cardio-medbed',
     note: 'A guided treatment experience designed to support healthy blood flow and circulation.',
+    price: 'Options from $125/session USD',
     image: 'images/cardio-medbed-lifestyle.webp',
     imageAlt: 'Guest receiving Cardio MedBed EECP therapy',
   },
@@ -61,6 +64,7 @@ const therapies = [
     category: 'Personalized Guidance',
     href: '/clinics/ixtapa-zihuatanejo/treatments/consultations',
     note: 'One-on-one guidance to help shape a personalized roadmap before and during your stay.',
+    price: 'From $450 USD',
     image: 'images/perfect-day-consultation.jpg',
     imageAlt: 'Woman taking part in a personal health consultation',
   },
@@ -69,6 +73,7 @@ const therapies = [
     category: 'Core & Pelvic Wellness',
     href: '/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore',
     note: 'Focused support for pelvic-floor wellness, deep core strength, and personal comfort.',
+    price: 'From $75/session USD',
     image: 'images/dod-core-restore-lifestyle.webp',
     imageAlt: 'Guest receiving a DOD Core Restore session',
   },
@@ -77,6 +82,7 @@ const therapies = [
     category: 'Wellness Assessment',
     href: '/clinics/ixtapa-zihuatanejo/treatments/bone-density-scanner',
     note: 'A radiation-free way to establish and track a skeletal-health baseline during your journey.',
+    price: 'From $75 USD',
     image: 'images/bone-density-scanner-lifestyle.webp',
     imageAlt: 'Practitioner performing a DOD Advanced Bone Density Scanner assessment',
   },
@@ -85,6 +91,7 @@ const therapies = [
     category: 'Wellness Assessment',
     href: '/clinics/ixtapa-zihuatanejo/treatments/oligo-heavy-metal-scan',
     note: 'A quick, non-invasive optical scan that estimates selected mineral, trace-element, and metal patterns.',
+    price: 'From $250 USD',
     icon: ScanLine,
   },
   {
@@ -92,6 +99,7 @@ const therapies = [
     category: 'Thermal Assessment',
     href: '/clinics/ixtapa-zihuatanejo/treatments/whole-body-thermography',
     note: 'Radiation-free infrared imaging that maps relative skin-surface temperature patterns and asymmetries.',
+    price: 'From $325 USD',
     icon: ThermometerSun,
   },
 ];
@@ -593,6 +601,7 @@ export default function Dod5StarTreatments() {
                      <div className="flex flex-1 flex-col p-6">
                        <h3 className="text-xl font-bold transition-colors group-hover:text-primary">{t.name}</h3>
                        <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{t.note}</p>
+                        <p className="mt-4 text-sm font-bold text-primary">{t.price}</p>
                        <span className="mt-5 flex items-center justify-end gap-1 text-sm font-medium text-primary">
                          Explore at DOD5Star
                          <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />

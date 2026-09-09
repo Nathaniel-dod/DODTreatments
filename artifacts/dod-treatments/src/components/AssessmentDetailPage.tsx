@@ -3,6 +3,7 @@ import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
+import { Dod5StarPricing } from '@/components/Dod5StarPricing';
 
 type AssessmentDetailPageProps = {
   title: string;
@@ -57,6 +58,7 @@ export function AssessmentDetailPage({
               <h1 className="gold-glow gold-gradient text-5xl font-bold leading-tight md:text-6xl lg:text-7xl">{title}</h1>
               <p className="mt-6 text-2xl font-medium text-foreground/80 md:text-3xl">{subtitle}</p>
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">{introduction}</p>
+              <Dod5StarPricing variant="hero" />
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Button asChild size="lg" className="gold-glow">
                   <Link href="/clinics/ixtapa-zihuatanejo/inquire">Plan Your Stay</Link>
