@@ -45,16 +45,16 @@ export default function Home() {
       />
 
       {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <section className="relative isolate min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#392d59]">
         <img
           aria-hidden="true"
           src={`${import.meta.env.BASE_URL}images/home-3d-world-map.jpg`}
           alt=""
-          className="absolute inset-0 z-0 h-full w-full object-cover object-center brightness-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center brightness-150 grayscale"
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071421]/35 via-[#071421]/15 to-background" />
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_72%_62%_at_center,_rgba(7,20,33,0.15)_0%,_transparent_75%)]" />
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--gold-core)_0%,_transparent_50%)] opacity-10" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,#66508f_0%,#b65c87_36%,#ed9064_64%,#46385f_100%)] mix-blend-color" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,rgba(105,69,140,0.4)_0%,rgba(207,97,134,0.28)_38%,rgba(241,139,85,0.25)_64%,rgba(33,27,61,0.3)_100%)] mix-blend-screen" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-gradient-to-b from-[#20192e]/15 via-transparent to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
