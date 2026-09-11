@@ -58,8 +58,9 @@ export default function Home() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6 gold-gradient gold-glow animate-fade-in-up">
-              Total Regeneration Starts Here
+            <h1 className="font-bold leading-tight mb-6 gold-glow animate-fade-in-up">
+              <span className="block text-4xl sm:text-5xl md:text-7xl lg:text-8xl gold-gradient">REVERSE THE IRREVERSIBLE</span>
+              <span className="mt-5 block text-xl sm:text-2xl md:text-3xl lg:text-4xl gold-gradient">RENEW &amp; RESTORE STARTS HERE</span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up stagger-1">
                From Wolfe Non Surgical to advanced energy medicine technology, find clinics and practitioners dedicated to helping people explore practical strategies when they&apos;ve been told nothing more can be done.
