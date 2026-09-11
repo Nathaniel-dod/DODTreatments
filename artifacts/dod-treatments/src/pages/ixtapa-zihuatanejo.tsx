@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone, MapPin, BedDouble, CalendarDays, Sparkles, Users, Languages } from 'lucide-react';
+import { ArrowRight, Phone, MapPin, BedDouble, CalendarDays, Sparkles, Star, Users, Languages } from 'lucide-react';
 
 export default function IxtapaZihuatanejo() {
   const structuredData = [
@@ -58,6 +58,16 @@ export default function IxtapaZihuatanejo() {
 
         <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 md:py-32 lg:px-8 lg:py-40">
           <div className="mx-auto max-w-5xl text-center">
+            <div className="mb-6 flex h-12 items-start justify-center gap-3 text-primary sm:gap-4" aria-hidden="true">
+              {[16, 5, 0, 5, 16].map((offset, index) => (
+                <Star
+                  key={index}
+                  className="h-6 w-6 fill-current sm:h-7 sm:w-7"
+                  strokeWidth={1}
+                  style={{ transform: `translateY(${offset}px)` }}
+                />
+              ))}
+            </div>
             <div className="mb-8 flex items-center justify-center gap-3 text-primary">
               <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
               <MapPin className="h-5 w-5" strokeWidth={1.75} />
