@@ -281,7 +281,7 @@ export default function Dod5StarTreatments() {
       />
       <Dod5StarNav />
 
-      <section className="pt-16 pb-12 md:pt-24 md:pb-16">
+      <section className="bg-[radial-gradient(ellipse_at_top,#30465c_0%,#1b2c3e_55%,transparent_100%)] pt-16 pb-12 md:pt-24 md:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6 gold-gradient gold-glow">Treatments at the Retreat</h1>
