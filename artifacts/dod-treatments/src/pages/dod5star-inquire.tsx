@@ -49,6 +49,11 @@ export default function Dod5StarInquire() {
             </div>
           </div>
           <div className="max-w-3xl mx-auto">
+            <aside className="mb-6 rounded-2xl border border-primary/30 bg-primary/10 px-6 py-5 text-center">
+              <p className="text-lg font-semibold leading-relaxed text-primary md:text-xl">
+                Most Guests Say They Wish They Would’ve Booked a Longer Stay.
+              </p>
+            </aside>
             <InquiryForm
               defaultType="clinic"
               defaultInterest="DOD5Star Retreat"
