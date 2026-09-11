@@ -55,6 +55,7 @@ export default function Home() {
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,#66508f_0%,#b65c87_36%,#ed9064_64%,#46385f_100%)] mix-blend-color" />
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,rgba(105,69,140,0.4)_0%,rgba(207,97,134,0.28)_38%,rgba(241,139,85,0.25)_64%,rgba(33,27,61,0.3)_100%)] mix-blend-screen" />
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-gradient-to-b from-[#20192e]/15 via-transparent to-background" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#071421]/25" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
           <div className="max-w-4xl mx-auto text-center">
