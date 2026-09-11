@@ -52,8 +52,8 @@ export default function Home() {
           alt=""
           className="absolute inset-0 z-0 h-full w-full object-cover object-center brightness-150 grayscale"
         />
-        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,#66508f_0%,#b65c87_36%,#ed9064_64%,#46385f_100%)] mix-blend-color" />
-        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,rgba(105,69,140,0.4)_0%,rgba(207,97,134,0.28)_38%,rgba(241,139,85,0.25)_64%,rgba(33,27,61,0.3)_100%)] mix-blend-screen" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,#66508f_0%,#855cb6_36%,#9975c4_64%,#46385f_100%)] mix-blend-color" />
+        <div aria-hidden="true" className="absolute inset-0 z-0 bg-[linear-gradient(165deg,rgba(105,69,140,0.4)_0%,rgba(140,97,190,0.28)_38%,rgba(157,125,210,0.25)_64%,rgba(33,27,61,0.3)_100%)] mix-blend-screen" />
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-gradient-to-b from-[#20192e]/15 via-transparent to-background" />
         <div aria-hidden="true" className="absolute inset-0 z-0 bg-[#071421]/25" />
         
