@@ -260,6 +260,40 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
+      {/* Couples */}
+      <section id="healing-together" className="py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-primary/20 bg-card/40 md:grid-cols-2">
+            <img
+              src={`${import.meta.env.BASE_URL}images/couple-beach-sunset.jpg`}
+              alt="A couple holding hands beside ocean waves on a beach at sunset"
+              loading="lazy"
+              width={1400}
+              height={933}
+              className="h-72 w-full object-cover object-[25%_center] sm:h-96 md:h-full"
+            />
+            <div className="p-6 sm:p-8 lg:p-10">
+              <BraveHeartEmblem className="mb-5 h-16 w-20" />
+              <h2 className="mb-6 text-3xl font-bold leading-tight gold-gradient md:text-4xl">
+                Come Together.<br />Rise Together.<br />Heal Together.
+              </h2>
+              <p className="text-lg leading-relaxed text-foreground/90">
+                Healing together can be a powerful experience. When couples come together with shared intention, they can support one another, deepen their connection, and make space for meaningful change.
+              </p>
+              <p className="mt-5 text-lg font-bold leading-relaxed text-primary">
+                Come together. Rise together. Heal together.
+              </p>
+              <Link href="/clinics/ixtapa-zihuatanejo/inquire">
+                <Button size="lg" className="mt-7 h-auto min-h-11 max-w-full whitespace-normal gold-glow">
+                  Plan Your Stay Together
+                  <ArrowRight className="ml-2 h-5 w-5 shrink-0" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* The setting */}
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
