@@ -47,13 +47,13 @@ export default function IxtapaZihuatanejo() {
       {/* Hero */}
       <section className="relative isolate flex min-h-[34rem] items-center overflow-hidden md:min-h-[40rem]">
         <img
-          src={`${import.meta.env.BASE_URL}images/ixtapa-aerial.jpg`}
-          alt="Aerial view of Ixtapa-Zihuatanejo, México — jungle, marina, and Pacific coastline"
+          src={`${import.meta.env.BASE_URL}images/beach-sunset-hero.jpg`}
+          alt="Golden sunset over the ocean, with gentle waves washing onto the sandy beach"
           className="absolute inset-0 -z-30 h-full w-full scale-[1.03] object-cover"
         />
-        <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(5,18,29,0.9)_0%,rgba(5,18,29,0.63)_43%,rgba(5,18,29,0.16)_100%)]" aria-hidden="true" />
-        <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071421]/95 via-[#071421]/20 to-[#071421]/55" aria-hidden="true" />
-        <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-gradient-to-b from-background/45 to-transparent" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-[#071421]/30" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071421]/80 via-[#071421]/15 to-[#071421]/25" aria-hidden="true" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-gradient-to-b from-background/20 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" aria-hidden="true" />
 
         <div className="container relative z-10 mx-auto px-4 py-24 sm:px-6 md:py-32 lg:px-8 lg:py-40">
