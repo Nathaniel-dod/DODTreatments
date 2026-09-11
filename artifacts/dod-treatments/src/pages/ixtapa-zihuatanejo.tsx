@@ -47,8 +47,8 @@ export default function IxtapaZihuatanejo() {
       {/* Hero */}
       <section className="relative isolate flex min-h-[34rem] items-center overflow-hidden md:min-h-[40rem]">
         <img
-          src={`${import.meta.env.BASE_URL}images/beach-sunset-hero.jpg`}
-          alt="Golden sunset over the ocean, with gentle waves washing onto the sandy beach"
+          src={`${import.meta.env.BASE_URL}images/beach-pink-sunset-hero.jpg`}
+          alt="Pink, purple, and orange sunset over ocean waves and a sandy shoreline"
           className="absolute inset-0 -z-30 h-full w-full scale-[1.03] object-cover"
         />
         <div className="absolute inset-0 -z-20 bg-[#071421]/30" aria-hidden="true" />
