@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
+import { BraveHeartEmblem } from '@/components/BraveHeartEmblem';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone, MapPin, BedDouble, CalendarDays, Sparkles, Star, Users, Languages } from 'lucide-react';
 
@@ -57,7 +58,7 @@ export default function IxtapaZihuatanejo() {
         <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" aria-hidden="true" />
 
         <div className="container relative z-10 mx-auto px-4 pt-12 pb-12 sm:px-6 md:pt-16 md:pb-16 lg:px-8 lg:pt-20 lg:pb-20">
-          <div className="mx-auto max-w-5xl text-center">
+          <div className="mx-auto max-w-6xl text-center">
             <div className="mb-6 flex h-12 items-start justify-center gap-3 text-primary sm:gap-4" aria-hidden="true">
               {[16, 5, 0, 5, 16].map((offset, index) => (
                 <Star
@@ -82,10 +83,14 @@ export default function IxtapaZihuatanejo() {
                 <span className="gold-gradient inline-block pb-[0.16em]">Training Retreat</span>
               </span>
             </h1>
-            <p className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/10 bg-[#071421]/65 px-6 py-5 text-lg leading-relaxed text-foreground/95 md:mt-10 md:px-8 md:py-6 md:text-xl">
+            <div className="mx-auto mt-8 grid max-w-6xl grid-cols-[2rem_minmax(0,1fr)_2rem] items-center gap-2 sm:grid-cols-[4rem_minmax(0,1fr)_4rem] sm:gap-4 md:mt-10 lg:grid-cols-[8rem_minmax(0,1fr)_8rem] lg:gap-6">
+              <BraveHeartEmblem variant="male" className="h-16 w-full sm:h-28 lg:h-48" />
+            <p className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#071421]/65 px-4 py-5 text-lg leading-relaxed text-foreground/95 md:px-8 md:py-6 md:text-xl">
               What you get for your money, you won't get this anywhere else. You get Dr. Darrell Wolfe's 45 years of in-the-trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life.{' '}
               <strong className="font-bold">It’s Time To Wake Up &amp; Remember.</strong>
             </p>
+              <BraveHeartEmblem variant="female" className="h-16 w-full sm:h-28 lg:h-48" />
+            </div>
             <p className="mx-auto mt-3 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:text-base">
               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
             </p>
@@ -109,6 +114,7 @@ export default function IxtapaZihuatanejo() {
       {/* Explore the Retreat */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <BraveHeartEmblem className="mx-auto mb-5 h-20 w-24" />
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
           <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Link href="/clinics/ixtapa-zihuatanejo/residence">
@@ -228,6 +234,7 @@ export default function IxtapaZihuatanejo() {
               </div>
               <div>
                 <div className="mb-7">
+                  <BraveHeartEmblem className="mb-5 h-16 w-20" />
                   <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-3">A founder&apos;s message</p>
                   <h2 className="text-3xl md:text-[2.6rem] font-bold leading-[1.08] tracking-tight">
                     <span className="block">Take Back Your</span>
@@ -270,6 +277,7 @@ export default function IxtapaZihuatanejo() {
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
+            <BraveHeartEmblem className="mx-auto mb-6 h-24 w-28" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Book Your Retreat</h2>
             <Link href="/clinics/ixtapa-zihuatanejo/inquire">
               <Button size="lg" className="gold-glow mb-8">Plan Your Stay <ArrowRight className="ml-2 w-5 h-5" /></Button>
