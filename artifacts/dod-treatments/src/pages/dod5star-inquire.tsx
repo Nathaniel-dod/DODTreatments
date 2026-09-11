@@ -1,4 +1,5 @@
 import { Seo } from '@/components/Seo';
+import { Link } from 'wouter';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { InquiryForm } from '@/components/InquiryForm';
 import { dod5StarTeam } from '@/data/dod5starTeam';
@@ -54,6 +55,13 @@ export default function Dod5StarInquire() {
                 Most Guests Say They Wish They Would’ve Booked a Longer Stay.
               </p>
             </aside>
+            <div className="mb-6 rounded-2xl border border-primary/20 p-6">
+              <h2 className="text-xl font-semibold text-primary">Staying at a Nearby Hotel?</h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                You’re welcome to visit for scheduled treatments. Treatment rates are slightly higher for guests staying outside the retreat house, and the additional wellness devices included for house guests are not included. Our team will confirm your rates before booking.
+              </p>
+              <Link href="/clinics/ixtapa-zihuatanejo/residence#nearby-hotels" className="mt-4 inline-block text-sm font-semibold text-primary underline underline-offset-4">Explore Nearby Hotel Options</Link>
+            </div>
             <InquiryForm
               defaultType="clinic"
               defaultInterest="DOD5Star Retreat"

@@ -24,6 +24,7 @@ const inquirySchema = z.object({
   preferredLocation: z.string().optional(),
   requestedArrival: z.string().optional(),
   requestedDeparture: z.string().optional(),
+  accommodationPreference: z.enum(['Stay at DOD5Star', 'Stay elsewhere and visit for treatments', 'Undecided']).optional(),
   healthStatus: z.enum(['chronic-critical', 'mild-moderate', 'healthy']).optional(),
   message: z.string().min(1, 'Message is required'),
   consent: z.boolean().refine(value => value, {
@@ -66,6 +67,7 @@ export function InquiryForm({
       preferredLocation: defaultLocation,
       requestedArrival: '',
       requestedDeparture: '',
+      accommodationPreference: 'Undecided',
       healthStatus: undefined,
       message: '',
       consent: false,
@@ -120,6 +122,7 @@ export function InquiryForm({
           preferred_location: data.preferredLocation,
           requested_arrival: data.requestedArrival,
           requested_departure: data.requestedDeparture,
+          accommodation_preference: includeStayPlanning ? data.accommodationPreference : undefined,
           current_health_status: data.healthStatus,
           message: data.message,
           consent_to_process_inquiry: data.consent ? 'Yes' : 'No',
@@ -286,9 +289,27 @@ export function InquiryForm({
             <div>
               <h3 className="text-lg font-bold">Request Your Preferred Stay Dates</h3>
               <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                These dates are a request only. Our founder or sales team will contact you to discuss availability and confirm your stay.
+                These dates are a request only. Our founder or sales team will contact you to discuss availability and coordinate your stay or treatment visits.
               </p>
             </div>
+
+            <FormField
+              control={form.control}
+              name="accommodationPreference"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Where Would You Like to Stay?</FormLabel>
+                  <FormControl>
+                    <select {...field} className="flex h-11 w-full min-w-0 rounded-md border border-input bg-background px-3 text-sm">
+                      <option value="Stay at DOD5Star">Stay at DOD5Star</option>
+                      <option value="Stay elsewhere and visit for treatments">Stay elsewhere and visit for treatments</option>
+                      <option value="Undecided">Undecided</option>
+                    </select>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
             <div className="grid gap-6 md:grid-cols-2">
               <FormField
