@@ -83,7 +83,7 @@ export default function IxtapaZihuatanejo() {
               </span>
             </h1>
             <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
-              A winning strategy for taking control of your healing
+              What you get for your money, you won't get this anywhere else. You get Dr. Wolfe's 45 years of in the trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life. It’s time to wake up &amp; remember.
             </p>
             <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:mt-11 md:text-base">
               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
