@@ -37,7 +37,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Advanced energy medicine for life-changing regenerative healing.
+              Wake Up &amp; Remember. Be Here Now, Heal Here Now.
             </p>
           </div>
 
