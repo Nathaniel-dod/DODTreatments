@@ -56,7 +56,7 @@ export default function IxtapaZihuatanejo() {
         <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-gradient-to-b from-background/20 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" aria-hidden="true" />
 
-        <div className="container relative z-10 mx-auto px-4 pt-12 pb-24 sm:px-6 md:pt-16 md:pb-32 lg:px-8 lg:pt-20 lg:pb-40">
+        <div className="container relative z-10 mx-auto px-4 pt-12 pb-12 sm:px-6 md:pt-16 md:pb-16 lg:px-8 lg:pt-20 lg:pb-20">
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-6 flex h-12 items-start justify-center gap-3 text-primary sm:gap-4" aria-hidden="true">
               {[16, 5, 0, 5, 16].map((offset, index) => (
