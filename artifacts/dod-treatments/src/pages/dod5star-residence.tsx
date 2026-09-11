@@ -241,12 +241,6 @@ export default function Dod5StarResidence() {
                       </figure>
                     ))}
                   </div>
-                  {group.eyebrow === 'Private accommodations' && (
-                    <p className="mt-4 text-sm text-muted-foreground">
-                      Starting nightly rates are cash prices. Credit-card prices are higher and vary by room.{' '}
-                      <Link href="/payment-information" className="text-primary underline underline-offset-4">Payment information</Link>
-                    </p>
-                  )}
                 </div>
               ))}
             </div>
