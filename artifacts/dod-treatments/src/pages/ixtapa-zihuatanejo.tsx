@@ -82,8 +82,9 @@ export default function IxtapaZihuatanejo() {
                 <span className="gold-gradient inline-block pb-[0.16em]">Training Retreat</span>
               </span>
             </h1>
-            <p className="mx-auto mt-8 max-w-3xl text-xl leading-relaxed text-foreground/95 md:mt-10 md:text-2xl">
-              What you get for your money, you won't get this anywhere else. You get Dr. Wolfe's 45 years of in the trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life. It’s time to wake up &amp; remember.
+            <p className="mx-auto mt-8 max-w-3xl rounded-2xl border border-white/10 bg-[#071421]/65 px-6 py-5 text-lg leading-relaxed text-foreground/95 md:mt-10 md:px-8 md:py-6 md:text-xl">
+              What you get for your money, you won't get this anywhere else. You get Dr. Darrell Wolfe's 45 years of in-the-trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life.{' '}
+              <strong className="font-bold">It’s Time To Wake Up &amp; Remember.</strong>
             </p>
             <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:mt-11 md:text-base">
               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
