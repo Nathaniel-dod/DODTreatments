@@ -33,6 +33,7 @@ import Practitioners from '@/pages/practitioners';
 import PrivacyPolicy from '@/pages/privacy-policy';
 import MedicalDisclaimer from '@/pages/medical-disclaimer';
 import TermsOfUse from '@/pages/terms-of-use';
+import PaymentInformation from '@/pages/payment-information';
 import NotFound from '@/pages/not-found';
 
 const queryClient = new QueryClient();
@@ -121,6 +122,7 @@ function Router() {
           <Route path="/privacy-policy" component={PrivacyPolicy} />
           <Route path="/medical-disclaimer" component={MedicalDisclaimer} />
           <Route path="/terms-of-use" component={TermsOfUse} />
+          <Route path="/payment-information" component={PaymentInformation} />
           <Route component={NotFound} />
         </Switch>
       </main>

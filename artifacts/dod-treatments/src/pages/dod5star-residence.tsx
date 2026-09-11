@@ -37,9 +37,9 @@ const residencePhotoGroups = [
     title: 'Three Restful Suites',
     description: 'Comfortable, individually named rooms give each guest a private place to rest and reset.',
     photos: [
-      { src: 'lions-den-king-suite.webp', alt: 'Ground Floor Lions Den King Suite at the DOD5Star Residence', label: 'Lions Den King Suite', floor: 'Ground Floor' },
-      { src: 'king-palm-suite.webp', alt: 'Second Floor King Palm Suite at the DOD5Star Residence', label: 'King Palm Suite', floor: 'Second Floor' },
-      { src: 'coconut-grove-queen-room.webp', alt: 'Second Floor Coconut Grove Queen Room at the DOD5Star Residence', label: 'Coconut Grove Queen Room', floor: 'Second Floor' },
+      { src: 'lions-den-king-suite.webp', alt: 'Ground Floor Lions Den King Suite at the DOD5Star Residence', label: 'Lions Den King Suite', floor: 'Ground Floor', price: 'From $125/NIGHT USD' },
+      { src: 'king-palm-suite.webp', alt: 'Second Floor King Palm Suite at the DOD5Star Residence', label: 'King Palm Suite', floor: 'Second Floor', price: 'From $95/NIGHT USD' },
+      { src: 'coconut-grove-queen-room.webp', alt: 'Second Floor Coconut Grove Queen Room at the DOD5Star Residence', label: 'Coconut Grove Queen Room', floor: 'Second Floor', price: 'From $75/NIGHT USD' },
     ],
   },
   {
@@ -231,11 +231,22 @@ export default function Dod5StarResidence() {
                           </span>
                         )}
                         <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent px-5 pb-4 pt-14">
-                          <figcaption className="text-sm font-semibold text-white">{photo.label}</figcaption>
+                          <figcaption className="text-sm font-semibold text-white">
+                            {photo.label}
+                            {'price' in photo && (
+                              <span className="mt-2 block text-base font-bold text-primary">{photo.price}</span>
+                            )}
+                          </figcaption>
                         </div>
                       </figure>
                     ))}
                   </div>
+                  {group.eyebrow === 'Private accommodations' && (
+                    <p className="mt-4 text-sm text-muted-foreground">
+                      Starting nightly rates are cash prices. Credit-card prices are higher and vary by room.{' '}
+                      <Link href="/payment-information" className="text-primary underline underline-offset-4">Payment information</Link>
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
