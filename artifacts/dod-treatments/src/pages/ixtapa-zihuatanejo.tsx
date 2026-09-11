@@ -265,12 +265,12 @@ export default function IxtapaZihuatanejo() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-primary/20 bg-card/40 md:grid-cols-2">
             <img
-              src={`${import.meta.env.BASE_URL}images/couple-warm-beach.jpg`}
-              alt="A smiling woman embraced by her partner on a sandy beach at golden sunset"
+              src={`${import.meta.env.BASE_URL}images/couple-forties-beach.jpg`}
+              alt="A mature couple smiling at each other on a tropical beach at sunset"
               loading="lazy"
-              width={1400}
-              height={2100}
-              className="h-72 w-full object-cover object-[center_60%] sm:h-96 md:h-full"
+              width={1024}
+              height={1024}
+              className="h-72 w-full object-cover object-center sm:h-96 md:h-full"
             />
             <div className="p-6 sm:p-8 lg:p-10">
               <BraveHeartEmblem className="mb-5 h-16 w-20" />
