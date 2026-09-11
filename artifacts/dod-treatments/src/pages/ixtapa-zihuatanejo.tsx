@@ -64,7 +64,7 @@ export default function IxtapaZihuatanejo() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm">Ixtapa-Zihuatanejo, México</span>
               <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
             </div>
-            <h1 className="mx-auto max-w-5xl overflow-visible text-5xl font-bold leading-[1.04] tracking-[-0.045em] [filter:drop-shadow(0_0_1px_rgba(2,12,21,0.9))_drop-shadow(0_3px_4px_rgba(2,12,21,0.65))] md:text-7xl lg:text-8xl">
+            <h1 className="gold-glow mx-auto max-w-5xl overflow-visible text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
               <span className="block">
                 <span className="gold-gradient inline-block pb-[0.04em]">5 Star Healing &amp;</span>
               </span>
