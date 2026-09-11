@@ -86,10 +86,10 @@ export default function IxtapaZihuatanejo() {
               What you get for your money, you won't get this anywhere else. You get Dr. Darrell Wolfe's 45 years of in-the-trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life.{' '}
               <strong className="font-bold">It’s Time To Wake Up &amp; Remember.</strong>
             </p>
-            <p className="mx-auto mt-9 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:mt-11 md:text-base">
+            <p className="mx-auto mt-3 max-w-3xl text-center text-sm leading-relaxed text-foreground/80 md:text-base">
               Created by Dr. Darrell Wolfe — hosted by Master Practitioners Dr. Sage Wolfe & Jesse Malcolm
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10">
+            <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/clinics/ixtapa-zihuatanejo/residence">
                 <Button size="lg" className="gold-glow min-w-56">
                   View the Property &amp; Amenities
