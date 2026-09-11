@@ -50,10 +50,10 @@ export default function Home() {
           aria-hidden="true"
           src={`${import.meta.env.BASE_URL}images/home-3d-world-map.jpg`}
           alt=""
-          className="absolute inset-0 z-0 h-full w-full object-cover object-center opacity-80"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-center brightness-125"
         />
-        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071421]/85 via-[#071421]/45 to-background" />
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_72%_62%_at_center,_rgba(7,20,33,0.4)_0%,_transparent_75%)]" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#071421]/35 via-[#071421]/15 to-background" />
+        <div className="absolute inset-0 z-0 bg-[radial-gradient(ellipse_72%_62%_at_center,_rgba(7,20,33,0.15)_0%,_transparent_75%)]" />
         <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top_right,_var(--gold-core)_0%,_transparent_50%)] opacity-10" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-24 md:py-32">
