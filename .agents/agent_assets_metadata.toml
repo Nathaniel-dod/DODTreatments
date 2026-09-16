@@ -1,0 +1,16 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "5Q10wUMhUx2imw6vsJYj9"
+uri = "file://attached_assets/cinthia-face-crop.jpg"
+type = "image"
+title = "Cinthia — Face Crop"
+description = "Tightly cropped portrait, keeping her face, hair, and glasses in frame."
+logical_id = "95d6b496-4584-48df-b3d9-f308f3eaaba8"
+content_hash = "sha256:a67c29e0956bac2afcd7ee191fbc6dee548164199f20346889e27699c4508d36"
+size = 241463
+mtime_ms = 1789575409346
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3331090e-a3c5-4334-9d62-4fd9a384b1b6/95d6b496-4584-48df-b3d9-f308f3eaaba8/401eb749-9ebe-4f6c-9f19-8ead63748e41"
+storage_version_token = "1789575419137566"
+content_type = "image/jpeg"
