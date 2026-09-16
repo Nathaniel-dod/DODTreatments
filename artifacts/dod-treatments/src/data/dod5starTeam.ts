@@ -32,5 +32,7 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
     name: 'Cinthia',
     role: 'House Manager',
     bio: 'Your house manager at the retreat, making sure every detail of your stay is taken care of.',
+    image: 'images/cinthia-team.webp',
+    imageAlt: 'Cinthia, DOD5Star House Manager',
   },
 ];
