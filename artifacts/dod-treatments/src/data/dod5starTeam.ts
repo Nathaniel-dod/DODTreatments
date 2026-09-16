@@ -42,4 +42,11 @@ export const dod5StarTeam: Dod5StarTeamMember[] = [
     image: 'images/francisco-team.webp',
     imageAlt: 'Francisco, DOD5Star Property Maintenance',
   },
+  {
+    name: 'Jessy',
+    role: 'Housekeeper',
+    bio: 'Jessy takes care of housekeeping, keeping the retreat house clean and comfortable throughout your stay.',
+    image: 'images/jessy-team.webp',
+    imageAlt: 'Jessy, DOD5Star Housekeeper',
+  },
 ];
