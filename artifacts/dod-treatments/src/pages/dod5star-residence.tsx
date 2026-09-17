@@ -60,6 +60,13 @@ const movementAmenities = [
     icon: Dumbbell,
     title: 'Professional Rebounder',
     description: 'A professional-grade rebounder for movement and daily wellness routines.',
+    photo: { src: 'rebounder.webp', alt: 'Professional rebounder on the covered terrace' },
+  },
+  {
+    icon: Table2,
+    title: 'Ping Pong Table',
+    description: 'A fun, easy way to unwind between sessions or at the end of the day.',
+    photo: { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table beside a comfortable lounge area' },
   },
 ];
 
@@ -80,14 +87,6 @@ const featuredHomeAmenities = [
     description: 'A covered, open-air terrace with comfortable seating and views of the surrounding greenery—a welcoming place to relax between treatments.',
     photos: [
       { src: 'upstairs-terrace.webp', alt: 'Covered upstairs terrace with lounge seating, a ping pong table, and views of tropical greenery' },
-    ],
-  },
-  {
-    icon: Table2,
-    title: 'Ping Pong Table',
-    description: 'A fun, easy way to unwind between sessions or at the end of the day.',
-    photos: [
-      { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table beside a comfortable lounge area' },
     ],
   },
   {
@@ -302,8 +301,8 @@ export default function Dod5StarResidence() {
                       <div className="p-6">
                         <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
                         <img
-                          src={`${import.meta.env.BASE_URL}images/residence/rebounder.webp`}
-                          alt="Professional rebounder on the covered terrace"
+                          src={`${import.meta.env.BASE_URL}images/residence/${amenity.photo.src}`}
+                          alt={amenity.photo.alt}
                           className="float-right ml-3 mb-3 h-24 w-28 rounded-xl object-cover"
                           loading="lazy"
                         />
