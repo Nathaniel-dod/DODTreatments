@@ -293,6 +293,12 @@ export default function Dod5StarResidence() {
                     <article key={amenity.title} className="glass-panel h-full rounded-2xl">
                       <div className="p-6">
                         <amenity.icon className="mb-5 h-7 w-7 text-primary" aria-hidden="true" />
+                        <img
+                          src={`${import.meta.env.BASE_URL}images/residence/rebounder.webp`}
+                          alt="Professional rebounder on the covered terrace"
+                          className="float-right ml-3 mb-3 h-24 w-28 rounded-xl object-cover"
+                          loading="lazy"
+                        />
                         <h4 className="mb-2 text-lg font-bold">{amenity.title}</h4>
                         <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{amenity.description}</p>
                         <span className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Included with your stay</span>
