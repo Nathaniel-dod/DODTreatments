@@ -6,11 +6,18 @@ export default function PaymentInformation() {
       title="Payment Information"
       description="Cash pricing, credit-card price adjustments, and payment arrangements for treatments and rooms."
       path="/payment-information"
-      updated="September 11, 2026"
+      updated="September 16, 2026"
     >
       <p>
         All prices displayed on this website are based on payment in cash. Where a price is
         marked “from,” it is a starting rate, not a guaranteed final total.
+      </p>
+
+      <h2>Pricing changes</h2>
+      <p>
+        All pricing is subject to change, and changes may not be reflected on this website.
+        Please confirm current room and treatment rates with the team before booking or
+        making payment arrangements.
       </p>
 
       <h2>Cash prices</h2>
