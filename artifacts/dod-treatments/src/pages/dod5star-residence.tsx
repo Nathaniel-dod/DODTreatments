@@ -75,6 +75,14 @@ const poolAmenity = {
 
 const featuredHomeAmenities = [
   {
+    icon: Sparkles,
+    title: 'Upstairs Terrace',
+    description: 'A covered, open-air terrace with comfortable seating and views of the surrounding greenery—a welcoming place to relax between treatments.',
+    photos: [
+      { src: 'upstairs-terrace.webp', alt: 'Covered upstairs terrace with lounge seating, a ping pong table, and views of tropical greenery' },
+    ],
+  },
+  {
     icon: Table2,
     title: 'Ping Pong Table',
     description: 'A fun, easy way to unwind between sessions or at the end of the day.',
