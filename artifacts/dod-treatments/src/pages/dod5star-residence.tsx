@@ -68,7 +68,7 @@ const poolAmenity = {
   title: 'Structured Ionized Salt-Water Pool',
   description: 'A beautiful pool for restorative time and gentle movement outdoors.',
   photos: [
-    { src: 'pool.webp', alt: 'Structured ionized salt-water pool in daylight' },
+    { src: 'pool-updated.webp', alt: 'Structured ionized salt-water pool in daylight with a blue-and-white umbrella and tiled canopy' },
     { src: 'pool-and-lounge-at-night.webp', alt: 'Pool and surrounding terrace illuminated at night' },
   ],
 };
