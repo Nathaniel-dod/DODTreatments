@@ -66,7 +66,7 @@ const movementAmenities = [
     icon: Table2,
     title: 'Ping Pong Table',
     description: 'A fun, easy way to unwind between sessions or at the end of the day.',
-    photo: { src: 'ping-pong-and-lounge.webp', alt: 'Ping pong table beside a comfortable lounge area' },
+    photo: { src: 'ping-pong-closeup.webp', alt: 'Close-up of the ping pong table on the covered terrace' },
   },
 ];
 
