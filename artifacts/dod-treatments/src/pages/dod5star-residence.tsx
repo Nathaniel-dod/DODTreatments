@@ -140,11 +140,20 @@ const homeAndLifestyleAmenities = [
 
 export default function Dod5StarResidence() {
   useEffect(() => {
-    if (window.location.hash !== '#amenities') return;
-
-    window.requestAnimationFrame(() => {
-      document.getElementById('amenities')?.scrollIntoView({ block: 'start' });
-    });
+    let frame: number;
+    const scrollToSection = () => {
+      const id = window.location.hash.slice(1);
+      if (id !== 'amenities' && id !== 'nearby-hotels') return;
+      frame = window.requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({ block: 'start' });
+      });
+    };
+    scrollToSection();
+    window.addEventListener('hashchange', scrollToSection);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener('hashchange', scrollToSection);
+    };
   }, []);
 
   const structuredData = [
