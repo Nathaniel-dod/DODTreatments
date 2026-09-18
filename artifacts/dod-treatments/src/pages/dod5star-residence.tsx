@@ -232,7 +232,7 @@ export default function Dod5StarResidence() {
                     {group.photos.map((photo) => (
                       <figure
                         key={photo.src}
-                        className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg ${
+                        className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm shadow-lg ${
                           'wide' in photo && photo.wide ? 'sm:col-span-2 lg:col-span-2' : ''
                         }`}
                       >
@@ -285,7 +285,7 @@ export default function Dod5StarResidence() {
                  <h3 className="text-2xl font-bold">Movement &amp; Recovery</h3>
                </div>
                <div className="space-y-5">
-                 <article className="grid overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg lg:grid-cols-[0.8fr_1.2fr]">
+                 <article className="grid overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm shadow-lg lg:grid-cols-[0.8fr_1.2fr]">
                    <div className="flex flex-col justify-center p-7 md:p-9">
                      <poolAmenity.icon className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />
                      <h4 className="mb-3 text-xl font-bold">{poolAmenity.title}</h4>
@@ -334,7 +334,7 @@ export default function Dod5StarResidence() {
                  {featuredHomeAmenities.map((amenity, amenityIndex) => (
                    <article
                      key={amenity.title}
-                     className="grid overflow-hidden rounded-2xl border border-white/10 bg-card shadow-lg lg:grid-cols-[0.8fr_1.2fr]"
+                     className="grid overflow-hidden rounded-2xl border border-white/10 bg-card/40 backdrop-blur-sm shadow-lg lg:grid-cols-[0.8fr_1.2fr]"
                    >
                      <div className={`flex flex-col justify-center p-7 md:p-9 ${amenityIndex % 2 === 1 ? 'lg:order-2' : ''}`}>
                        <amenity.icon className="mb-5 h-8 w-8 text-primary" aria-hidden="true" />

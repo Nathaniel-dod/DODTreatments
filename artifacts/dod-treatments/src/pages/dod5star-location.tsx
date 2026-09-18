@@ -88,7 +88,7 @@ export default function Dod5StarLocation() {
           alt="Aerial view of the Ixtapa-Zihuatanejo coastline and marina"
           className="absolute inset-0 -z-30 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#071421]/70 via-[#071421]/50 to-background" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-b from-[#2A112A]/70 via-[#2A112A]/50 to-background" aria-hidden="true" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 flex items-center justify-center gap-2 text-primary">

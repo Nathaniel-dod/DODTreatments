@@ -52,8 +52,8 @@ export default function IxtapaZihuatanejo() {
           alt="Pink, purple, and orange sunset over ocean waves and a sandy shoreline"
           className="absolute inset-0 -z-30 h-full w-full scale-[1.03] object-cover"
         />
-        <div className="absolute inset-0 -z-20 bg-[#071421]/30" aria-hidden="true" />
-        <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#071421]/80 via-[#071421]/15 to-[#071421]/25" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-[#2A112A]/40" aria-hidden="true" />
+        <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#2A112A]/90 via-[#2A112A]/20 to-[#2A112A]/30" aria-hidden="true" />
         <div className="absolute inset-x-0 top-0 -z-10 h-36 bg-gradient-to-b from-background/20 to-transparent" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-primary/70 to-transparent" aria-hidden="true" />
 
@@ -85,7 +85,7 @@ export default function IxtapaZihuatanejo() {
             </h1>
             <div className="mx-auto mt-8 grid max-w-6xl grid-cols-[2rem_minmax(0,1fr)_2rem] items-center gap-2 sm:grid-cols-[4rem_minmax(0,1fr)_4rem] sm:gap-4 md:mt-10 lg:grid-cols-[8rem_minmax(0,1fr)_8rem] lg:gap-6">
               <BraveHeartEmblem variant="male" className="h-16 w-full sm:h-28 lg:h-48" />
-            <p className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#071421]/65 px-4 py-5 text-lg leading-relaxed text-foreground/95 md:px-8 md:py-6 md:text-xl">
+            <p className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#2A112A]/65 px-4 py-5 text-lg leading-relaxed text-foreground/95 md:px-8 md:py-6 md:text-xl">
               What you get for your money, you won't get this anywhere else. You get Dr. Darrell Wolfe's 45 years of in-the-trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life.{' '}
               <strong className="font-bold">It’s Time To Wake Up &amp; Remember.</strong>
             </p>

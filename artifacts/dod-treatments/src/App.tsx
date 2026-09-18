@@ -50,6 +50,14 @@ function Router() {
   const [location] = useLocation();
   const isDod5StarJourney = location.startsWith('/clinics/ixtapa-zihuatanejo');
 
+  useEffect(() => {
+    if (isDod5StarJourney) {
+      document.body.classList.add('dod5star-theme');
+    } else {
+      document.body.classList.remove('dod5star-theme');
+    }
+  }, [isDod5StarJourney]);
+
   return (
     <>
       <ScrollToTop />

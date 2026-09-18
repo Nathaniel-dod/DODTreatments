@@ -53,7 +53,7 @@ export function Dod5StarNav() {
     items.find(isItemActive) ?? items[0];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-primary/20 bg-[#071421]/95 shadow-[0_18px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-primary/20 bg-[#2A112A]/90 shadow-[0_18px_45px_rgba(0,0,0,0.28)] backdrop-blur-xl">
       <div className="h-px bg-gradient-to-r from-transparent via-primary/75 to-transparent" aria-hidden="true" />
       <div className="container relative mx-auto min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex min-h-[4.75rem] items-center justify-between lg:hidden">
@@ -82,7 +82,7 @@ export function Dod5StarNav() {
           {isMenuOpen && (
             <nav
               id="dod5star-mobile-menu"
-              className="absolute inset-x-4 top-[calc(100%+0.75rem)] overflow-hidden rounded-2xl border border-primary/20 bg-[#0b1b2d]/[0.99] p-2 shadow-[0_26px_60px_rgba(0,0,0,0.48)]"
+              className="absolute inset-x-4 top-[calc(100%+0.75rem)] overflow-hidden rounded-2xl border border-primary/20 bg-[#2A112A]/95 p-2 shadow-[0_26px_60px_rgba(0,0,0,0.48)] backdrop-blur-xl"
               aria-label="DOD5Star retreat"
             >
               {items.map((item) => {
