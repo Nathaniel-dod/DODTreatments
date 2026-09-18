@@ -304,7 +304,7 @@ export default function Dod5StarTreatments() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Internal / External Therapies</p>
-                    <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Shaped Around You</h2>
+                    <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Created For You</h2>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                       Explore the external therapies and internal support that may be considered throughout your retreat.
                     </p>

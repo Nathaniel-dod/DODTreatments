@@ -205,7 +205,7 @@ export default function IxtapaZihuatanejo() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Internal / External Therapies</p>
-                <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Shaped Around You</h2>
+                <h2 className="mt-2 text-2xl font-bold gold-gradient">Personalized Therapies, Created For You</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
                   Explore the external therapies, internal support, and nutrition options that may be considered throughout your retreat.
                 </p>
@@ -278,10 +278,10 @@ export default function IxtapaZihuatanejo() {
             <div className="p-6 sm:p-8 lg:p-10">
               <BraveHeartEmblem className="mb-5 h-16 w-20" />
               <h2 className="mb-6 text-3xl font-bold leading-tight gold-gradient md:text-4xl">
-                Come Together.<br />Rise Together.<br />Heal Together.
+                Couples Come Together.<br />They Rise Together.<br />They Heal Together.
               </h2>
               <p className="text-lg leading-relaxed text-foreground/90">
-                Healing together can be a powerful experience. When couples come together with shared intention, they can support one another, deepen their connection, and make space for meaningful change.
+                Healing together can be a powerful experience. When couples come together with shared intention, they can support one another, deepen their connection which creates an authentic relationship that will last a lifetime.
               </p>
               <p className="mt-5 text-lg font-bold leading-relaxed text-primary">
                 Come together. Rise together. Heal together.
