@@ -168,16 +168,16 @@ export default function IxtapaZihuatanejo() {
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Considering a stay</p>
               <h2 className="text-3xl font-bold leading-tight md:text-4xl">Is DOD5Star Right for You?</h2>
               <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-                DOD5Star may be a fit for people who want a more immersive and supported healing experience than an occasional appointment.
+                DOD5Star is the perfect fit for those who wish to take not just their health but their life back.
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                'People seeking more intensive support than an occasional appointment',
-                'People combining several treatments as part of a personalized plan',
-                'People who want to learn how to continue supporting themselves at home',
-                'People comfortable travelling for a private healing experience and want to experience the gem of Mexico',
+                'People seeking more intensive therapy, treatments and training',
+                'People who wish to take massive personal action on a personal level',
+                'People who want to learn how to create the perfect day on an emotional, nutritional and physical level',
+                'People who wish a powerful personal healing experience that will empower them for the rest of their life',
               ].map((point, index) => (
                 <div key={point} className="glass-panel flex items-start gap-5 rounded-2xl p-6">
                   <span className="mt-0.5 text-sm font-semibold tracking-[0.16em] text-primary">0{index + 1}</span>
