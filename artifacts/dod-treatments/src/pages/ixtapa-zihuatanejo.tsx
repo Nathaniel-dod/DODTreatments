@@ -241,7 +241,7 @@ export default function IxtapaZihuatanejo() {
                   <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-3">A founder&apos;s message</p>
                   <h2 className="text-3xl md:text-[2.6rem] font-bold leading-[1.08] tracking-tight">
                     <span className="block">Take Back Your</span>
-                    <span className="block gold-gradient">Personal Power to Heal</span>
+                    <span className="block gold-gradient">Personal Power to Heal &amp; Stay Healed</span>
                   </h2>
                   <div className="mt-5 h-px w-16 bg-primary/70" aria-hidden="true" />
                 </div>
@@ -250,7 +250,7 @@ export default function IxtapaZihuatanejo() {
                     DOD5Star is a winning strategy for people ready to take control of their healing journey for the first time in their lives. It is designed to help you reclaim the personal power to heal that may have been taken from you without your knowledge or consent. From the moment you arrive until the moment you leave, get ready for what can become the most amazing holiday healing experience of your life.
                   </p>
                   <p className="text-lg text-foreground/90 leading-relaxed">
-                    For those who have taken life to the edge of the cliff and need more support, this is where you come to bring the thunder down. Your personalized experience is built on 40 years of Dr. Darrell Wolfe's clinical and in-the-trenches work, with care and guidance from our team.
+                    For those who have taken life to the edge of the cliff and need more support, this is where you come to bring the thunder down. Your personalized experience is built on 45 years of Dr. Darrell Wolfe's clinical and in-the-trenches work, with care and guidance from our team.
                   </p>
                   <footer className="mt-6 flex items-center gap-3 text-primary font-semibold">
                     <span className="w-8 h-px bg-primary/70" aria-hidden="true" />
