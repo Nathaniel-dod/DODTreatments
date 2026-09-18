@@ -75,19 +75,22 @@ export default function IxtapaZihuatanejo() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] sm:text-sm">Ixtapa-Zihuatanejo, México</span>
               <span className="h-px w-9 bg-primary/70" aria-hidden="true" />
             </div>
-            <h1 className="gold-glow mx-auto max-w-5xl overflow-visible text-5xl font-bold leading-[1.04] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] md:text-7xl lg:text-8xl">
+            <h1 className="gold-glow mx-auto max-w-5xl overflow-visible text-4xl font-bold leading-[1.08] tracking-[-0.045em] drop-shadow-[0_16px_36px_rgba(2,12,21,0.62)] sm:text-5xl md:text-6xl lg:text-7xl">
               <span className="block">
-                <span className="gold-gradient inline-block pb-[0.04em]">5 Star Healing &amp;</span>
+                <span className="gold-gradient inline-block pb-[0.04em]">5 Star Health &amp; Healing</span>
               </span>
               <span className="block">
-                <span className="gold-gradient inline-block pb-[0.16em]">Training Retreat</span>
+                <span className="gold-gradient inline-block pb-[0.16em]">Personal Training Retreat</span>
               </span>
             </h1>
+            <p className="mx-auto mt-5 max-w-3xl text-xl font-medium leading-relaxed text-foreground md:text-2xl">
+              <span className="block">Your Authentic Healing Starts &amp; Ends Here.</span>
+              <span className="block">Awaken, Remember, &amp; Heal.</span>
+            </p>
             <div className="mx-auto mt-8 grid max-w-6xl grid-cols-[2rem_minmax(0,1fr)_2rem] items-center gap-2 sm:grid-cols-[4rem_minmax(0,1fr)_4rem] sm:gap-4 md:mt-10 lg:grid-cols-[8rem_minmax(0,1fr)_8rem] lg:gap-6">
               <BraveHeartEmblem variant="male" className="h-16 w-full sm:h-28 lg:h-48" />
             <p className="mx-auto max-w-3xl rounded-2xl border border-white/10 bg-[#2A112A]/65 px-4 py-5 text-lg leading-relaxed text-foreground/95 md:px-8 md:py-6 md:text-xl">
-              What you get for your money, you won't get this anywhere else. You get Dr. Darrell Wolfe's 45 years of in-the-trenches healing and expertise to create the perfect day for your personal healing that will last for the rest of your life.{' '}
-              <strong className="font-bold">It’s Time To Wake Up &amp; Remember.</strong>
+              Dr. Darrell Wolfe's 45 Years Of Professional In-The-Trenches Healing &amp; Expertise Is The Foundation Which Your Perfect Day Personal Healing Will Be Built &amp; Based On.
             </p>
               <BraveHeartEmblem variant="female" className="h-16 w-full sm:h-28 lg:h-48" />
             </div>
