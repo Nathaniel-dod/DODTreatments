@@ -114,11 +114,11 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
-      {/* Explore the Retreat */}
+      {/* Experience the Retreat */}
       <section className="py-12 md:py-16 bg-card/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <BraveHeartEmblem className="mx-auto mb-5 h-20 w-24" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Explore the Retreat</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center gold-gradient">Experience the Retreat</h2>
           <div className="grid sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Link href="/clinics/ixtapa-zihuatanejo/residence">
               <div className="glass-panel rounded-2xl p-8 hover:scale-[1.02] transition-all duration-300 group h-full">
