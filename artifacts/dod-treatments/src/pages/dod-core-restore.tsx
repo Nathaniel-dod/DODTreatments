@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import { coreRestoreHifemBlurb } from '@/data/coreRestore';
 import { Seo } from '@/components/Seo';
 import { GeneralTreatmentCta } from '@/components/GeneralTreatmentCta';
 import { TreatmentHeroCtas } from '@/components/TreatmentHeroCtas';
@@ -23,7 +24,7 @@ const howItWorks = [
   {
     step: '02',
     title: 'Focused 28-Minute Session',
-    desc: 'High-Intensity Focused Electromagnetic (HIFEM) energy activates the pelvic floor and deep-core muscles beyond voluntary effort.',
+    desc: coreRestoreHifemBlurb,
   },
   {
     step: '03',
@@ -84,6 +85,9 @@ export default function DodCoreRestore() {
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Clinical-grade High-Intensity Focused Electromagnetic (HIFEM) therapy designed to support pelvic-floor strength, deep-core stability, continence, and sexual wellness—for women and men, fully clothed in 28-minute sessions.
             </p>
+            <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              {coreRestoreHifemBlurb}
+            </p>
             <img
               src={`${import.meta.env.BASE_URL}images/dod-core-restore-lifestyle.webp`}
               alt="Person receiving DOD Core Restore therapy beside the treatment device"
@@ -100,8 +104,34 @@ export default function DodCoreRestore() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-gradient">How HIFEM Works</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Focused electromagnetic energy activates deep pelvic-floor and core muscles to help rebuild the lumbo-pelvic foundation that supports the back, hips, posture, and everyday movement.
+              {coreRestoreHifemBlurb}
             </p>
+          </div>
+          <div className="glass-panel mx-auto mb-10 max-w-4xl rounded-3xl p-6 md:p-9">
+            <h3 className="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-primary">What’s a Kegel?</h3>
+            <div className="space-y-4 text-base leading-relaxed text-foreground/90">
+              <p>
+                A Kegel is a voluntary squeeze-and-release of the pelvic floor muscles — the same muscles you'd use to stop the flow of urine mid-stream. Done consistently, Kegels strengthen the pelvic floor and improve bladder control, core stability, and sexual function.
+              </p>
+              <p>
+                The catch: most people can't do them correctly, can't sustain them long enough, and rarely come close to the volume needed for real change. A focused home routine might total 30–100 contractions per day.
+              </p>
+              <p>
+                <strong className="text-primary">One 28-minute Core Restore session delivers approximately 12,000 supramaximal contractions</strong> — equivalent to months of perfect Kegels, with every contraction at a depth and intensity the body can't generate on its own.
+              </p>
+            </div>
+            <dl className="mt-6 grid grid-cols-1 divide-y divide-primary/20 overflow-hidden rounded-2xl border border-primary/20 bg-primary/5 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+              {[
+                { value: '~12,000', label: 'Contractions / Session' },
+                { value: '28', label: 'Minutes' },
+                { value: '0', label: 'Effort Required' },
+              ].map(stat => (
+                <div key={stat.label} className="flex flex-col items-center gap-2 px-4 py-5 text-center">
+                  <dt className="order-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">{stat.label}</dt>
+                  <dd className="text-3xl font-bold text-primary">{stat.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {howItWorks.map((item) => (

@@ -1,0 +1,1 @@
+export const coreRestoreHifemBlurb = 'HIFEM (High-Intensity Focused Electromagnetic) energy penetrates the pelvic floor and triggers approximately 12,000 Kegel-equivalent supramaximal contractions in a single 28-minute session — far beyond what voluntary Kegel exercises can achieve.';

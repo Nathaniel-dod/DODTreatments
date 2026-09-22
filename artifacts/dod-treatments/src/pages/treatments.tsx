@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import { coreRestoreHifemBlurb } from '@/data/coreRestore';
 import { Seo } from '@/components/Seo';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Globe, MapPin } from 'lucide-react';
@@ -50,7 +51,7 @@ const treatmentProducts = [
     name: 'DOD Core Restore',
     category: 'Core & Pelvic Therapy',
     tagline: 'Pelvic Floor & Deep Core Strengthening',
-    blurb: 'Pelvic floor restoration, urinary incontinence, sexual wellness, and deep core strengthening — for both women and men.',
+    blurb: coreRestoreHifemBlurb,
     glyph: '◆',
     image: 'images/dod-core-restore-lifestyle.webp',
     imageAlt: 'Person receiving DOD Core Restore therapy beside the treatment device',

@@ -1,4 +1,5 @@
 import { Link } from 'wouter';
+import { coreRestoreHifemBlurb } from '@/data/coreRestore';
 import { Seo } from '@/components/Seo';
 import { Dod5StarNav } from '@/components/Dod5StarNav';
 import { Button } from '@/components/ui/button';
@@ -72,7 +73,7 @@ const therapies = [
     name: 'DOD Core Restore',
     category: 'Core & Pelvic Wellness',
     href: '/clinics/ixtapa-zihuatanejo/treatments/dod-core-restore',
-    note: 'Focused support for pelvic-floor wellness, deep core strength, and personal comfort.',
+    note: coreRestoreHifemBlurb,
     price: 'From $75/session USD',
     image: 'images/dod-core-restore-lifestyle.webp',
     imageAlt: 'Guest receiving a DOD Core Restore session',
@@ -177,7 +178,7 @@ const protocolBlocks = [
     items: [
       { label: 'CellSonic Regeneration ESWT', description: 'Explore a focused CellSonic ESWT session when selected by your team.' },
       { label: 'Cardio MedBed EECP', description: 'Make space for Cardio MedBed EECP when it fits your goals and daily plan.' },
-      { label: 'DOD Core Restore', description: 'Include a Core Restore session when selected by your practitioners.' },
+      { label: 'DOD Core Restore', description: coreRestoreHifemBlurb },
     ],
     icon: Sun,
   },
