@@ -24,7 +24,7 @@ const howItWorks = [
   {
     step: '02',
     title: 'Focused 28-Minute Session',
-    desc: coreRestoreHifemBlurb,
+    desc: 'Focused electromagnetic pulses engage the pelvic-floor and deep-core muscles while you remain seated and fully clothed.',
   },
   {
     step: '03',
@@ -84,9 +84,6 @@ export default function DodCoreRestore() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Clinical-grade High-Intensity Focused Electromagnetic (HIFEM) therapy designed to support pelvic-floor strength, deep-core stability, continence, and sexual wellness—for women and men, fully clothed in 28-minute sessions.
-            </p>
-            <p className="mt-5 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              {coreRestoreHifemBlurb}
             </p>
             <img
               src={`${import.meta.env.BASE_URL}images/dod-core-restore-lifestyle.webp`}
