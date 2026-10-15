@@ -42,3 +42,17 @@ mtime_ms = 1789137224914
 storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3331090e-a3c5-4334-9d62-4fd9a384b1b6/32dea54b-f15d-4239-9689-08612e5f3fb7/729867e3-287e-49a8-9cab-463c615c1217"
 storage_version_token = "1792093915187874"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "bOkaXSBeu9nWRuT3lpaaa"
+uri = "file://artifacts/dod-treatments/public/images/home-3d-world-map.jpg"
+type = "image"
+title = "Treatments Home Page — World Map"
+description = "Original world-map background image, without the website’s purple color overlays or text."
+logical_id = "f771a644-d729-447d-b107-f8b4bef25216"
+content_hash = "sha256:c490e882e8326f0bbfca8d4655d49a37877fda6f05fb6a80cb438dfccb19593f"
+size = 170281
+mtime_ms = 1788269370760
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3331090e-a3c5-4334-9d62-4fd9a384b1b6/f771a644-d729-447d-b107-f8b4bef25216/f56027bf-83b3-4742-a8b7-3732ba2bdc89"
+storage_version_token = "1792093944707781"
+content_type = "image/jpeg"
