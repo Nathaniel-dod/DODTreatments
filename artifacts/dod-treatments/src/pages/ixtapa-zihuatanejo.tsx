@@ -263,6 +263,43 @@ export default function IxtapaZihuatanejo() {
         </div>
       </section>
 
+      {/* Guest experience */}
+      <section id="blaizes-stay" className="scroll-mt-32 py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-8 text-center">
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">A Guest’s Experience</p>
+              <h2 className="text-3xl font-bold leading-tight gold-gradient md:text-4xl">Blaize’s Six-Week Stay at DOD5Star</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              <figure className="overflow-hidden rounded-2xl border border-primary/20 bg-card/40">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/blaize-before.webp`}
+                  alt="Blaize resting in a hospital bed with a loved one before his stay"
+                  width={900}
+                  height={1200}
+                  loading="lazy"
+                  className="block h-auto w-full"
+                />
+                <figcaption className="px-6 py-5 text-center text-lg font-semibold text-primary">Before His Stay</figcaption>
+              </figure>
+              <figure className="overflow-hidden rounded-2xl border border-primary/20 bg-card/40">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/blaize-after.webp`}
+                  alt="Blaize standing with two women after his six-week stay at DOD5Star"
+                  width={900}
+                  height={1200}
+                  loading="lazy"
+                  className="block h-auto w-full"
+                />
+                <figcaption className="px-6 py-5 text-center text-lg font-semibold text-primary">After Six Weeks at DOD5Star</figcaption>
+              </figure>
+            </div>
+            <p className="mt-5 text-center text-sm leading-relaxed text-muted-foreground">One guest’s experience. Individual results vary.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Couples */}
       <section id="healing-together" className="py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
