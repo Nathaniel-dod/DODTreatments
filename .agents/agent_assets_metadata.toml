@@ -28,3 +28,17 @@ mtime_ms = 1789575485422
 storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3331090e-a3c5-4334-9d62-4fd9a384b1b6/2bcfda89-d5a6-4c7d-a410-3494b18b8011/4af4f189-de72-4526-b7b6-900b1c0b7bd3"
 storage_version_token = "1789575495521799"
 content_type = "image/jpeg"
+
+[[outputs]]
+id = "k9D175-jM_NN0hufGo7Oy"
+uri = "file://artifacts/dod-treatments/public/images/beach-pink-sunset-hero.jpg"
+type = "image"
+title = "DOD5Star Home Page — Sunset Image"
+description = "The original sunset beach image used in the DOD5Star hero, without text or overlays."
+logical_id = "32dea54b-f15d-4239-9689-08612e5f3fb7"
+content_hash = "sha256:fe59036860f2ae677e61de98d29e4c9476ebb3873969121687cc3e8ac3ccf039"
+size = 488541
+mtime_ms = 1789137224914
+storage_uri = "gcs://replit-rams-assets-janeway/rams/assets/repl:3331090e-a3c5-4334-9d62-4fd9a384b1b6/32dea54b-f15d-4239-9689-08612e5f3fb7/729867e3-287e-49a8-9cab-463c615c1217"
+storage_version_token = "1792093915187874"
+content_type = "image/jpeg"
