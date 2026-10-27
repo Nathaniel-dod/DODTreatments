@@ -2,6 +2,8 @@ export interface Practitioner {
   id: string;
   fullName: string;
   clinicName: string;
+  address?: string;
+  additionalInfo?: string;
   cityStateCountry: string;
   phone: string;
   email: string;
@@ -374,5 +376,23 @@ export const practitioners: Practitioner[] = [
     trainingInfo: 'Wolfe Non Surgical 1x (Stuart, Florida 2025)',
     lat: 38.68,
     lng: -121.18,
+  },
+  {
+    id: 'p28',
+    fullName: 'Darcelle Burandt, LPC',
+    clinicName: 'Sozo Wellness Center',
+    address: '5029 County Rd 159',
+    cityStateCountry: 'Wildwood, FL, USA',
+    phone: '+1 352-802-2248',
+    email: 'Info@sozorootedwellness.com',
+    website: 'https://sozorootedwellness.com',
+    treatments: ['Hyperbaric Oxygen Therapy', 'EBOO Therapy', 'TheraWellness Therapy', 'Ozone Therapy', 'BrainTap Therapy', 'CellSonic and Radial Shockwave Therapy', 'Pulse Light Therapy', 'Cryogenics Therapy', 'H-Wave Therapy', 'RIFE Frequency Therapy', 'Foot Detox Therapy', 'Vitalyzer Assessment', 'NeuralChek Assessment', 'Live Blood Analysis Assessment'],
+    devices: ['Cardio MedBed', 'CellSonic Regeneration', 'Core Restore'],
+    certifications: ['Wolfe Non Surgical Certified', 'Whole Life Health Certified', 'Whole Life Health Online'],
+    trainingInfo: 'Wolfe Non Surgical 1x (Stuart, FL September 2026) | Whole Life Health 1x (Stuart, FL September 2026) | Whole Life Health Online 1x (Stuart, FL September 2026)',
+    additionalInfo: 'We also offer Chiropractic services and we have independent physicians who offer services at our wellness center, including stem cell therapy, BHRT, plasma injections and more.',
+    // City-level marker, consistent with the other practitioner listings.
+    lat: 28.87,
+    lng: -82.04,
   },
 ];

@@ -174,7 +174,7 @@ export default function Practitioners() {
                       {/* Location */}
                       <div className="flex items-start gap-2 text-sm text-foreground/80 mb-4">
                         <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                        <span>{p.cityStateCountry}</span>
+                        <span>{p.address && <>{p.address}<br /></>}{p.cityStateCountry}</span>
                       </div>
                       
                       {/* Contact */}
@@ -249,6 +249,12 @@ export default function Practitioners() {
                             </div>
                           )}
                           
+                          {p.additionalInfo && (
+                            <div>
+                              <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">Additional Clinic Information</h4>
+                              <p className="text-xs text-foreground/80 leading-relaxed">{p.additionalInfo}</p>
+                            </div>
+                          )}
                           {p.trainingInfo && (
                             <div className="mt-4">
                               <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1.5">
