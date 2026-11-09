@@ -295,6 +295,25 @@ export default function IxtapaZihuatanejo() {
                 <figcaption className="px-6 py-5 text-center text-lg font-semibold text-primary">After Six Weeks at DOD5Star</figcaption>
               </figure>
             </div>
+            <div className="mt-8">
+              <h3 className="mb-4 text-center text-xl font-semibold text-primary">Watch Blaize’s Experience</h3>
+              <div className="aspect-video overflow-hidden rounded-2xl border border-primary/20 bg-black">
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/-ZCYWaVn9yc"
+                  title="Blaize’s DOD5Star guest experience"
+                  className="h-full w-full border-0"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-3 text-center text-sm">
+                <a href="https://www.youtube.com/watch?v=-ZCYWaVn9yc" target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 hover:text-primary/80">
+                  Watch on YouTube
+                </a>
+              </p>
+            </div>
             <p className="mt-5 text-center text-sm leading-relaxed text-muted-foreground">One guest’s experience. Individual results vary.</p>
           </div>
         </div>
