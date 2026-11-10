@@ -7,3 +7,4 @@
 - [Visible contact details](visible-contact-details.md) — booking/contact actions must display the actual phone number or email, not only generic labels.
 - [Treatment claim voice](treatment-claim-voice.md) — soften strong benefit claims with attributed patient-experience language; do not add basic primers for the warm audience.
 - [Radix dialog tab boundaries](radix-dialog-tab-boundaries.md) — avoid a redundant tablist-container stop at a modal focus-loop boundary; keep the active tab as the entry stop.
+- [Hosting and analytics preference](hosting-analytics.md) — Cloudflare hosts the live site; the user wants direct GA4 rather than Tag Manager.
